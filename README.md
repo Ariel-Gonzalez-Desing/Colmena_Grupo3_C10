@@ -20,7 +20,7 @@ También creamos una imagen exclusiva, centrándonos en el diseño y la modernid
 ## Integrantes:
 
 ### Fernanda Elola
-Soy Fernanda, tengo 36 años y vivo en un barrio sustentable en Tornquist, interior de Buenos Aires, con mi marido y mi hija. Me gusta la repostería, la música y la naturaleza. Actualmente estoy formandome para ser desarrolladora Full Stack.
+Soy Fernanda, tengo 36 años y vivo en Tornquist, interior de Buenos Aires, con mi marido y mi hija. Me gusta la repostería, la música y la naturaleza. Actualmente estoy formandome para ser desarrolladora Full Stack.
 
 ### Joel Jurado
 Mi nombre es Joel, soy de Florencio Varela y tengo 26 años. Doy clases particulares de primaria y secundaria a alumnos del barrio, principalmente de matemática e inglés. En mis tiempos libres juego con amigos en internet.
