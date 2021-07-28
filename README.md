@@ -17,6 +17,17 @@ También creamos una imagen exclusiva, centrándonos en el diseño y la modernid
 - [GoRaw](https://www.gorawhoney.com/) - Nos gustó la paleta de colores de la página en general.
 - [UnMate](https://un-mate.com.ar/) - Elegimos esta página por la impronta juvenil y premium de la página, similar al tipo de cliente que apuntamos.
 
+## Paletas de colores:
+Cute Honey Bee Color Scheme » Black » http://www.SchemeColor.com (paleta de colores)
+Honey In A Pot Color Scheme » Orange » http://www.SchemeColor.com (segunda paleta de colores)
+
+## Colores:
+#FCB43A
+#3A3637
+#FFFEF1
+#F1C780
+
+
 ## Integrantes:
 
 ### Fernanda Elola
