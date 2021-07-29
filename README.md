@@ -1,14 +1,13 @@
-# Grupo3---C10
+# Proyecto del grupo 3 - Comisión 10
 
 ## Temática del sitio y público objetivo:
 
 ### Descripción del producto:
-Ofrecemos miel orgánica y cruda, de calidad premium, y productos relacionados con la miel, como llaveros o utensilios.
+Nuestra página ofrece miel orgánica de calidad premium y productos relacionados con la miel, como llaveros o utensilios.
 
 ### Audiencia
-Nuestra audiencia es un público joven, que cuida su salud, que busca opciones más saludables evitando el azúcar y demanda  productos de calidad superior, por lo que estan dispuestos a pagar un monto adicional.
-Ajustamos la oferta a esa audiencia poniendo precios más elevados que la media, lo que provoca al público una sensación de no estar adquiriendo un producto común.
-También creamos una imagen exclusiva, centrándonos en el diseño y la modernidad de la página.
+La audiencia es un público joven que cuida su salud, busca opciones más saludables y demanda productos de calidad superior, por lo que estan dispuestos a pagar un monto adicional.  
+Para lograr llegada a este público creamos una pagina con una imagen exclusiva, centrándonos en el diseño y la modernidad, en la adaptabilidad a los diferentes dispositivos y en la efectividad de la navegación por el sitio, que haga dinámica la experiencia del usuario.
 
 ## Referentes:
 - [PetBag](https://www.petbag.com.ar/) - Nos gustó la estética general de la página y en particular el header.
@@ -17,16 +16,21 @@ También creamos una imagen exclusiva, centrándonos en el diseño y la modernid
 - [GoRaw](https://www.gorawhoney.com/) - Nos gustó la paleta de colores de la página en general.
 - [UnMate](https://un-mate.com.ar/) - Elegimos esta página por la impronta juvenil y premium de la página, similar al tipo de cliente que apuntamos.
 
-## Paletas de colores:
-Cute Honey Bee Color Scheme » Black » http://www.SchemeColor.com (paleta de colores)
-Honey In A Pot Color Scheme » Orange » http://www.SchemeColor.com (segunda paleta de colores)
+## Logo:
+
+
+## Inspiración de paleta de colores y mas opciones:
+- [Honey in a pot](https://www.schemecolor.com/honey-in-a-pot.php)
+- [Cute Honey Bee](https://www.schemecolor.com/cute-honey-bee-color-scheme)
 
 ## Colores:
-#FCB43A
-#3A3637
-#FFFEF1
-#F1C780
+- ![#FCB43A](https://via.placeholder.com/15/FCB43A/000000?text=+) `#FCB43A`
+- ![#3A3637](https://via.placeholder.com/15/3A3637/000000?text=+) `#3A3637`
+- ![#FFFEF1](https://via.placeholder.com/15/FFFEF1/000000?text=+) `#FFFEF1`
+- ![#F1C780](https://via.placeholder.com/15/F1C780/000000?text=+) `#F1C780`
 
+## Tipografía:
+- [Roboto](https://fonts.google.com/specimen/Roboto)
 
 ## Integrantes:
 
