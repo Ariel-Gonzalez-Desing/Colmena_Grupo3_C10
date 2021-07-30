@@ -42,10 +42,11 @@ Soy Fernanda, tengo 36 años y vivo en Tornquist, interior de Buenos Aires, con 
 Mi nombre es Joel, soy de Florencio Varela y tengo 26 años. Doy clases particulares de primaria y secundaria a alumnos del barrio, principalmente de matemática e inglés. En mis tiempos libres juego con amigos en internet.
 
 ### Ariel Gonzalez
-Soy Ariel Gonzalez, tengo 36 años y vivo en Merlo, Buenos Aires, trabajo en un emprendimiento junto con mi pareja, actualmente estoy cursando Desarrollador Full Stack, mis pasatiempos son la música, el cine y actividades al aire libre.
+Soy Ariel González, tengo 36 años y vivo en Merlo, Buenos Aires, trabajo en un emprendimiento junto a mi pareja, actualmente estoy cursando Desarrollador Full Stack, mis pasatiempos son la música, el cine y actividades al aire libre.
 
 ### Daniel Rodriguez
-Soy Daniel Rodriguez, vivo con mi señora e hija en San Miguel BS. AS. Trabajo en una fabrica y estudio programacion.
+Soy Daniel Rodriguez tengo 36 años vivo en San Miguel Bs. As. con mi esposa e hija,trabajo en una fábrica y estudio programación. Me gusta la informática, el futbool, ver películas y actividades al aire libre.
+
 
 
 
