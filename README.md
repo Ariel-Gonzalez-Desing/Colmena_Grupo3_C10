@@ -1,5 +1,4 @@
-# Colmena
-## Proyecto del grupo 3 - Comisión 10
+# Colmena - Proyecto del grupo 3 - Comisión 10
 
 ## Temática del sitio y público objetivo:
 
