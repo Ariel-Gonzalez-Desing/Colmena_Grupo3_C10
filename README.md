@@ -40,7 +40,7 @@ Mi nombre es Joel, soy de Florencio Varela y tengo 26 años. Doy clases particul
 Soy Ariel Gonzalez, tengo 36 años y vivo en Merlo, Buenos Aires, trabajo en un emprendimiento junto con mi pareja, actualmente estoy cursando Desarrollador Full Stack, mis pasatiempos son la música, el cine y actividades al aire libre.
 
 ### Daniel Rodriguez
-Soy Daniel Rodriguez, vivo con mi señora e hija en San Miguel BS. AS. Trabajo en una fabrica y estudio programacion.
+Soy Daniel Rodriguez, vivo con mi señora e hija en San Miguel BS. AS. Trabajo en una fábrica y estudio programación.
 
 
 
