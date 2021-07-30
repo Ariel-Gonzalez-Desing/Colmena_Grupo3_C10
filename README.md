@@ -1,4 +1,5 @@
-# Proyecto del grupo 3 - Comisión 10
+# Colmena
+## Proyecto del grupo 3 - Comisión 10
 
 ## Temática del sitio y público objetivo:
 
@@ -17,7 +18,7 @@ Para lograr llegada a este público creamos una pagina con una imagen exclusiva,
 - [UnMate](https://un-mate.com.ar/) - Elegimos esta página por la impronta juvenil y premium de la página, similar al tipo de cliente que apuntamos.
 
 ## Logo:
-
+![Logo](https://user-images.githubusercontent.com/51853956/127640414-55e9ad0c-40a1-4332-856e-a9e49d2ccdf4.png)
 
 ## Inspiración de paleta de colores y mas opciones:
 - [Honey in a pot](https://www.schemecolor.com/honey-in-a-pot.php)
