@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Colmena - Proyecto del grupo 3 - Comisión 10
 
 ## Temática del sitio y público objetivo:
@@ -50,6 +49,3 @@ Soy Daniel Rodriguez tengo 36 años vivo en San Miguel Bs. As. con mi esposa e h
 
 
 
-=======
-# Grupo3---C10 Colmena.
->>>>>>> main
