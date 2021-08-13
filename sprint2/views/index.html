@@ -4,13 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Colmena - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="stylesheet" href="/css/general.css">
     <script src="https://kit.fontawesome.com/018e74bdce.js" crossorigin="anonymous"></script>
 </head>
-<body> 
-    <h1>titulo</h1>
+<body"> 
+    <article class="destacados">
+        <h2>Destacados</h2>
+        <section>
+            <div class="productos">
+                <div>
+                    <img src="/public/images/frasco75gr.jpg" alt="">
+                    <p>Pote de 75Gr.<br>Pura Miel Orgánica</p>
+                    <a href="/views/listadoProductos.html" class="button">VER MAS</a>
+                </div>
+                <div>
+                    <img src="/public/images/frasco200gr.jpg" alt="">
+                    <p>Pote de 200Gr.<br>Pura Miel Orgánica</p>
+                    <a href="/views/listadoProductos.html" class="button">VER MAS</a>
+                </div>
+                <div>
+                    <img src="/public/images/frasco125gr.png" alt="">
+                    <p>Pote de 125Gr.<br>Pura Miel Orgánica</p>
+                    <a href="/views/listadoProductos.html" class="button">VER MAS</a>
+                </div>
+            </div>
+            <div class="hexagonos">
+                <img src="/public/images/hexagono1.png" alt="100% pura miel organica">
+                <img src="/public/images/hexagono2.png" alt="cuidamos las abejas">
+                <img src="/public/images/hexagono3.png" alt="testeamos calidad y pureza">
+                <img src="/public/images/hexagono4.png" alt="el mejor sabor y textura">
+            </div>
+            <p>Ofrecemos la mejor miel en diferentes presentaciones, utensilios e indumentaria, chequeá nuestra sección de productos.</p>
+        </section>
+        <a href="/views/listadoProductos.html" class="button">VER TODOS LOS PRODUCTOS</a>
+    </article>
+
+    <article class="artNos">
+        <h2>Sobre Nosotros</h2>
+        <div class="sobreNosotros"><img src="/public/images/trajePanal4.jpg" alt="panal y trajes">
+        <p>Somos un grupo de expertos, compuesto de 300 mil abejas y 20 humanos, dedicados a llevar a tu hogar la miel de la mejor calidad, directo de nuestras colmenas a tu mesa.
+        Con la energía vibrante de Sierra de la Ventana, nuestros productos son naturales y organicos, y nos concentramos en la sustentabilidad y el respeto por la naturaleza.
+        </p>
+        </div>        
+    </article>
+
+    <article>
+        <h2>Cuidemos a las abejas</h2>
+        <div class="cuidemosImagen">
+            <div><img src="/public/images/salvemosAbejas.png" alt=""></div>
+        <p>Las abejas desempeñan un papel imprescindible para el equilibrio ecológico en la naturaleza y para la vida humana, por su papel como polinizadoras y por su capacidad para producir miel, jalea real, cera y propóleo.</p>
+        </div>
+        <section class="hexagonoInfo">
+            <div class="hexa">
+                <img src="/public/images/abejas1.png" alt="">
+                <p>Los cientificos dicen que las abejas son responsables de uno de cada tres bocados de alimento que ingerimos.</p>
+            </div>
+            <div class="hexa">
+                <img src="/public/images/abejas2.png" alt="">
+                <p>La presencia de abejas en los ecosistemas favorece la biodiversidad y contribuye a su preservación y a la estabilidad ecológica de los espacios naturales.</p>
+            </div>
+            <div class="hexa">
+                <img src="/public/images/abejas3.png" alt="">
+                <p>Muchos frutos y hortalizas dependen de la polinización para su correcto cultivo, y las abejas son responsables del 80% de la polinización de las plantas</p>
+            </div>
+        </section>
+        <a href="https://sada.org.ar/protegeunacolmena/" class="button">QUIERO AYUDAR A LAS ABEJAS</a>
+    </article>
+</main>
+<script src="/javascript/index.js"></script>
 </body>
 </html>

@@ -1,3 +1,134 @@
 *{
-    font-family: "Roboto";    
+    font-family: 'Roboto';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --colorOnyx : #3A3637;
+    --colorNaranja: #FCB43A;
+    --colorNaranjaClaro:  #F1C780;
+    --colorCremita: #FFFEF1;
+    --colorOnyxHover: rgb(44, 42, 43, 0.8);
+    --colorDarkVanilla: #DCC4A4;
+    --colorCremitaHover: rgb(252, 180, 58, 0.4);
+}
+
+h2{
+    text-align: center;
+    margin: 50px;
+}
+
+.button {
+    background-color: var(--colorOnyx); 
+    border: none;
+    color: var(--colorNaranja);
+    padding: 5px 60px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);    
+  }
+
+.button:hover{
+    background-color: var(--colorOnyxHover);
+}
+
+/* Destacados */
+
+body .destacados .productos{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.productos .button {
+    background-color: var(--colorCremita); 
+    border: 1px solid var(--colorOnyx);
+    color: var(--colorOnyx);
+    padding: 5px 25px;
+    margin-top: 10px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+  }
+
+.productos .button:hover{
+    background-color: var(--colorCremitaHover);
+}
+
+body .destacados .productos img{
+    max-width: 30%;
+    justify-content: center;  
+    margin-top: 30px;  
+}
+
+body .destacados .hexagonos {
+    display: flex;
+    justify-content: center;
+    margin: 30px 10px 30px;
+}
+
+body .destacados .hexagonos img{
+    margin: 30px 10px 10px 10px;
+}
+
+body .destacados p{
+    text-align: center;
+}
+
+body .destacados button{
+    justify-content: center;
+}
+
+/* Sobre Nosotros */
+
+body .artNos{
+    background-color: var(--colorNaranja);
+}
+
+body .sobreNosotros{
+    display: flex;
+}
+
+body .sobreNosotros img{
+    max-width: 50%;
+}
+
+body .sobreNosotros p{
+   text-align: center;  
+   align-items: center;
+}
+
+/* Salvemos a las abejas */
+
+body .cuidemosImagen{
+    text-align: center;
+    margin: 0px 200px;
+}
+
+body .cuidemosImagen p{
+    margin-top: 30px;
+}
+
+body .hexagonoInfo{
+    display: flex;
+    justify-content: center;
+    margin: 30px 20px;
+}
+
+body .hexagonoInfo p{
+    max-width: 300px;
+    text-align: center;
+}
+
+body .hexa{
+    max-width: 20%;
 }

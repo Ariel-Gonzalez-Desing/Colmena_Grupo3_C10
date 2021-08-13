@@ -1,0 +1,12 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --colorOnyx : #3A3637;
+    --colorNaranja: #FCB43A;
+    --colorNaranjaClaro:  #F1C780;
+    --colorCremita: #FFFEF1;
+    --colorOnyxHover: rgb(44, 42, 43, 0.5);
+    --colorDarkVanilla : #DCC4A4;
+}
