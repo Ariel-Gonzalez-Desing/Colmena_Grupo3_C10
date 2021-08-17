@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    padding: 10px;
+}
+
+h4{
+    color: #FCB43A;
+    margin-bottom: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: #FCB43A;
+    display: block;
+}
+
+footer{
+    background-color: #3A3637;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+footer .logo{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer .columnas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+footer .contactanos{
+    text-align: center;
+    color: rgb(180, 169, 169);
+    margin-top: 30px;
+    width: 100%;
+}
+
+footer .seguinos{
+    position: relative;
+    margin-top: 30px;
+}
+
+footer .facebook i{
+    position: absolute;
+    right: 89px;
+    top: 57px;
+    font-size: 20px;
+}
+
+footer .twitter i{
+    position: absolute;
+    right: 88px;
+    top: 120px;
+    font-size: 20px;
+}
+
+footer .pinterest i{
+    position: absolute;
+    right: 155px;
+    top: 88px;
+    font-size: 20px;
+}
+
+footer .instagram i{
+    position: absolute;
+    right: 23px;
+    top: 86px;
+    font-size: 20px;
+}
+
+footer .informacion{
+    margin-top: 30px;
+}
+
+footer .informacion a{
+    padding: 3px;
+}
+
+footer .copyright{
+    background-color: #514b4d;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    margin: 40px 20px 10px 20px;
+    color: rgb(180, 169, 169);
+    padding: 0;
+}
+
+@media (min-width: 768px){  
+    footer .columnas{
+        align-items: center;
+        width: 100%;
+    }
+    
+    footer .contactanos{
+        width: 28%;
+}
+}
+
+@media (min-width: 1024px){  
+    footer .columnas{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;      
+    }
+
+    footer .logo{
+        width: 20%;
+    }
+    
+    footer .contactanos{
+        width: 28%;
+        margin-right: 30px;
+    }
+
+    footer .informacion{
+        padding: 0 40px;
+    }
+
+    footer .copyright{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        margin-top: 10px;
+    }
+}
+
