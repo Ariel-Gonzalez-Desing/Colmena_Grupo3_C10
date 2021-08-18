@@ -7,74 +7,117 @@
     <title>Colmena - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/general.css">
     <script src="https://kit.fontawesome.com/018e74bdce.js" crossorigin="anonymous"></script>
 </head>
-<body"> 
+<body> 
+
+     <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="/images/carrusel1.png" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="/imgages/carrusel2.png" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="/images/carrusel3.png" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+      
+
     <article class="destacados">
-        <h2>Destacados</h2>
+        <h2>Miel COLMENA</h2>
         <section>
             <div class="productos">
-                <div>
-                    <img src="/public/images/frasco75gr.jpg" alt="">
-                    <p>Pote de 75Gr.<br>Pura Miel Orgánica</p>
-                    <a href="/views/listadoProductos.html" class="button">VER MAS</a>
+                <div class="productosCompleto">
+                    <div>
+                        <img src="/images/frascoChico.jpg" alt="">
+                        <p>Pote de 75Gr.<br>Pura Miel Orgánica</p>
+                        <a href="/views/listadoProductos.html" class="button">VER MAS</a>
+                    </div>
+                    <div>
+                        <img src="/images/frascoGrande.jpg" alt="">
+                        <p>Pote de 200Gr.<br>Pura Miel Orgánica</p>
+                        <a href="/views/listadoProductos.html" class="button">VER MAS</a>
+                    </div>
+                    <div>
+                        <img src="/images/frascoMediano.jpg" alt="">
+                        <p>Pote de 125Gr.<br>Pura Miel Orgánica</p>
+                        <a href="/views/listadoProductos.html" class="button">VER MAS</a>
+                    </div>
                 </div>
-                <div>
-                    <img src="/public/images/frasco200gr.jpg" alt="">
-                    <p>Pote de 200Gr.<br>Pura Miel Orgánica</p>
-                    <a href="/views/listadoProductos.html" class="button">VER MAS</a>
-                </div>
-                <div>
-                    <img src="/public/images/frasco125gr.png" alt="">
-                    <p>Pote de 125Gr.<br>Pura Miel Orgánica</p>
-                    <a href="/views/listadoProductos.html" class="button">VER MAS</a>
+                <div class="mobileProd">
+                    <div>
+                        <img src="/images/frascoGrande.jpg" alt="">
+                        <p>Pote de 200Gr.<br>Pura Miel Orgánica</p>
+                        <a href="/views/listadoProductos.html" class="button">VER MAS</a>
+                    </div>
                 </div>
             </div>
             <div class="hexagonos">
-                <img src="/public/images/hexagono1.png" alt="100% pura miel organica">
-                <img src="/public/images/hexagono2.png" alt="cuidamos las abejas">
-                <img src="/public/images/hexagono3.png" alt="testeamos calidad y pureza">
-                <img src="/public/images/hexagono4.png" alt="el mejor sabor y textura">
+                <div class="hexaMobile"><img src="/images/hexaMobile.png" alt=""></div>
+                <div class="hexaDesktop"><img src="/images/hexaDesktop.png" alt=""></div>
+                <p>Ofrecemos la mejor miel en diferentes presentaciones, utensilios e indumentaria, chequeá nuestra sección de productos.</p>
             </div>
-            <p>Ofrecemos la mejor miel en diferentes presentaciones, utensilios e indumentaria, chequeá nuestra sección de productos.</p>
         </section>
         <a href="/views/listadoProductos.html" class="button">VER TODOS LOS PRODUCTOS</a>
     </article>
 
-    <article class="artNos">
+    <article class="sobreNosotros">
         <h2>Sobre Nosotros</h2>
-        <div class="sobreNosotros"><img src="/public/images/trajePanal4.jpg" alt="panal y trajes">
-        <p>Somos un grupo de expertos, compuesto de 300 mil abejas y 20 humanos, dedicados a llevar a tu hogar la miel de la mejor calidad, directo de nuestras colmenas a tu mesa.
-        Con la energía vibrante de Sierra de la Ventana, nuestros productos son naturales y organicos, y nos concentramos en la sustentabilidad y el respeto por la naturaleza.
-        </p>
+        <div class="imagen">
+            <p>Ofrecemos productos son naturales y organicos con la energía vibrante de Sierra de la Ventana, nos concentramos en la sustentabilidad y el respeto por la naturaleza.</p>
+        <div><img src="/images/trajePanal4.jpg" alt="panal y trajes"></div>
         </div>        
     </article>
 
     <article>
         <h2>Cuidemos a las abejas</h2>
         <div class="cuidemosImagen">
-            <div><img src="/public/images/salvemosAbejas.png" alt=""></div>
+            <div class="salvemos"><img src="/images/salvemosAbejas.png" alt=""></div>
         <p>Las abejas desempeñan un papel imprescindible para el equilibrio ecológico en la naturaleza y para la vida humana, por su papel como polinizadoras y por su capacidad para producir miel, jalea real, cera y propóleo.</p>
         </div>
         <section class="hexagonoInfo">
             <div class="hexa">
-                <img src="/public/images/abejas1.png" alt="">
+                <img src="/images/abejas1.png" alt="">
                 <p>Los cientificos dicen que las abejas son responsables de uno de cada tres bocados de alimento que ingerimos.</p>
             </div>
             <div class="hexa">
-                <img src="/public/images/abejas2.png" alt="">
+                <img src="/images/abejas2.png" alt="">
                 <p>La presencia de abejas en los ecosistemas favorece la biodiversidad y contribuye a su preservación y a la estabilidad ecológica de los espacios naturales.</p>
             </div>
             <div class="hexa">
-                <img src="/public/images/abejas3.png" alt="">
+                <img src="/images/abejas3.png" alt="">
                 <p>Muchos frutos y hortalizas dependen de la polinización para su correcto cultivo, y las abejas son responsables del 80% de la polinización de las plantas</p>
             </div>
         </section>
         <a href="https://sada.org.ar/protegeunacolmena/" class="button">QUIERO AYUDAR A LAS ABEJAS</a>
     </article>
 </main>
-<script src="/javascript/index.js"></script>
+<script src="/index.js"></script>
 </body>
 </html>
