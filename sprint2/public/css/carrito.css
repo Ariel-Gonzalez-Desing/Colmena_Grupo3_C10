@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.carrito h2{
+   
+}
+
+.carrito {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 50px;
+}
+
+.carrito .carritoProductos article{
+    display: flex;    
+    align-items: center;
+}
+
+.carrito .carritoProductos article div{
+    padding: 40px;
+    text-align: center;
+}
+
+.carrito .subtotal{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 50px;
+    border-top: 1px solid wheat;
+}
+
+.carrito .carritoResumen{
+    width: 30%;
+}
+
+.carrito .recuadroResumen{
+    border: 1px solid wheat;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
