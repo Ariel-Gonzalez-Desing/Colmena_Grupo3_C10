@@ -79,6 +79,18 @@ footer .instagram i{
     font-size: 20px;
 }
 
+footer .instagram i:hover, footer .facebook i:hover, footer .pinterest i:hover, footer .twitter i:hover{
+    font-size: 22px;
+    color: wheat;
+    transition: 0.3s ease;
+}
+
+footer a:hover{
+    font-size: 17px;
+    color: wheat;
+    transition: 0.3s ease;
+}
+
 footer .informacion{
     margin-top: 30px;
 }
