@@ -6,14 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COLMENA - Carrito de Compras</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body class="carrito">
-    <!-- <h2>CARRITO DE COMPRAS</h2> -->
+<body>
+    <h2>CARRITO DE COMPRAS</h2>
+    <div class="carrito">
     <section class="carritoProductos">
         <article>
+            
             <div><img src="/images/logoColmena.png" alt=""></div>
             <div class="sumar"><p>Miel Orgánica 500gr.</p>
-                <button>-   1   +</button></div>
+
+                
+                <form action="">
+                    <button id='disminuir' onclick="disminuir()">-</button>
+                    <input type='text' id="cantidad" value="0">
+                    <button id='aumentar' onclick="aumentar()">+</button>
+                </form>
+    
+    <!-- <script>
+    var inicio = 0; //se inicializa una variable en 0
+
+function aumentar(){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id aumentar
+
+var cantidad = document.getElementById('cantidad').value = ++inicio; //se obtiene el valor del input, y se incrementa en 1 el valor que tenga.
+}
+
+function disminuir(){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id disminuir
+
+var cantidad = document.getElementById('cantidad').value = --inicio; //se obtiene el valor del input, y se decrementa en 1 el valor que tenga.
+}
+    </script> -->
+            </div>
+        
             <div class="precio">
                 <a href=""><i class="fas fa-trash"></i></a>
                 <p>$1200.-</p>
@@ -22,35 +49,63 @@
         <article>
             <div><img src="/images/logoColmena.png" alt=""></div>
             <div class="sumar"><p>Miel Orgánica 500gr.</p>
-                <button>-   1   +</button></div>
+
+                <!-- ----Boton---- -->
+                <form action="">
+                    <button id='disminuir' onclick="disminuir()">-</button>
+                    <input type='text' id="cantidad" value="0">
+                    <button id='aumentar' onclick="aumentar()">+</button>
+                </form>
+                <!-- <script>
+                    var inicio = 0;                 
+                function aumentar(){ 
+                var cantidad = document.getElementById('cantidad').value = ++inicio; 
+                }
+                function disminuir(){ 
+                var cantidad = document.getElementById('cantidad').value = --inicio; 
+                }
+                    </script> -->
+                <!-- ------- -->
+            </div>
+        
             <div class="precio">
                 <a href=""><i class="fas fa-trash"></i></a>
                 <p>$1200.-</p>
             </div>
         </article>
         <div class="subtotal">
-            <p>Subtotal(sin envío):</p>
-        <p>$1550.-</p>
+            <h4>Subtotal(sin envío):</h4>
+        <h4>$1550.-</h4>
         </div>
     </section>
 
     <section class="carritoResumen">
         <div class="recuadroResumen">
-            <h4>RESUMEN</h4>
-        <a href=""><i class="fas fa-truck"></i></a><p>Medios de envío</p>
-        <form action="">
-            <input type="number" name="codigoPostal"><button>CALCULAR</button>
+            <h3>RESUMEN</h3>
+        <div><a href=""><i class="fas fa-truck"></i></a><h4>Medios de envío</h4></div>
+
+
+        <form class="cp" action="">            
+            <input type="text" name="username" id="Username">
+            <input type="button" value="CALCULAR">
         </form>
-        <a href=""><i class="fas fa-store"></i></a><p>Medios de envío</p>
-        <input type="radio" name="envio">Depósito. ¡Te avisamos por mail cuando esté listo para retirar! - Carranza 826, Villa Lynch, San Martín - Atención de Lun. a Vie de 11 a 15hs. ¡Acordate tu número de pedido!
-        <p>Gratis!</p>
+
+
+        <div><a href=""><i class="fas fa-store"></i></a><h4>Nuestro local</h4></div>
+        <div class="depositoGratis">
+
+            <input type="radio" name="envio"><span>Depósito. ¡Te avisamos por mail cuando esté listo para retirar! - Carranza 826, Villa Lynch, San Martín - Atención de Lun. a Vie de 11 a 15hs. ¡Acordate tu número de pedido!</span>
+        <h4>Gratis!</h4>
+        </div>
         </div>
         <div class="total">
-            <p>Total:</p>
-            <p>$1550.-</p>
+            <h4>Total:</h4>
+            <h4>$1550.-</h4>
         </div>
-        <button>FINALIZAR COMPRA</button>
-        <a href="">Ver mas productos</a>
+        <div class="finalizar"><button>FINALIZAR COMPRA</button>
+            <div class="verMas"><a href="">Ver mas productos</a></div>
+        </div>
     </section>
+</div>
 </body>
 </html>

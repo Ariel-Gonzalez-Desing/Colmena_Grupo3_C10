@@ -2,44 +2,169 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: #3A3637;
+    font-family: 'Roboto', sans-serif;
 }
 
-.carrito h2{
-   
+a{
+    text-decoration: none;
+    color: #3A3637;
+}
+
+h2{
+   padding: 15px 0;
+   border-bottom: 1px solid wheat;
+   margin: 0 10px;
+}
+
+.carrito p{
+    font-size: 14px;
 }
 
 .carrito {
-    display: flex;
-    justify-content: space-between;
-    margin: 30px 50px;
+    margin: 0 10px;
 }
 
 .carrito .carritoProductos article{
     display: flex;    
-    align-items: center;
+    align-items: center;       
+    justify-content: space-between; 
+}
+
+.carrito .carritoProductos article i{
+    margin-bottom: 12px;
+}
+
+.carrito .carritoProductos article img{
+    width: 70px;
 }
 
 .carrito .carritoProductos article div{
-    padding: 40px;
+    
+    margin: 30px 0;
     text-align: center;
+}
+
+.carrito .carritoProductos article .precio{
+   
+}
+
+.carrito form{
+    /* This bit sets up the horizontal layout */
+  display:flex;
+  flex-direction:row;  
+  /* This bit draws the box around it */  
+  /* I've used padding so you can see the edges of the elements. */
+    border:1px solid wheat;
+    border-radius: 10px;
+    padding:5px;  
+    margin: auto;
+    /* max-width: 60px; */
+}
+
+.carrito form input {
+    /* Tell the input to use all the available space */
+    flex-grow:2;
+    /* And hide the input's outline, so the form looks like the outline */
+    border:none;
+    text-align: center;
+  }
+  
+  .carrito form input:focus {
+    /* removing the input focus blue box. Put this on the form if you like. */
+    outline: none;
+  }
+  
+  .carrito form button {
+      border: none;
+      background-color: #fff;
+      cursor: pointer;
+  }
+
+  .carrito .sumar{
+    position: absolute;
+    left: 120px;
+}
+.carrito .sumar input{
+    width: 40px;
+}
+
+.carrito .sumar p{
+    margin-bottom: 10px;
+}
+
+.carrito .precio{
+    
 }
 
 .carrito .subtotal{
     display: flex;
-    justify-content: space-between;
-    margin: 0 50px;
-    border-top: 1px solid wheat;
+    justify-content: space-between;    
+    border-bottom: 1px solid wheat;    
+    padding-bottom: 15px;
 }
 
-.carrito .carritoResumen{
-    width: 30%;
+.carrito .carritoResumen h3{
+    display: none;   
 }
 
-.carrito .recuadroResumen{
-    border: 1px solid wheat;
-    border-radius: 20px;
+.carrito .carritoResumen h4{
+    display: inline-block; 
     padding: 20px;
+}
+
+.carrito .recuadroResumen{    
+    border-radius: 20px;    
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
 }
+
+.carrito .cp input{
+    background-color: #fff;
+    padding: 0 10px;
+    display: inline-block;
+}
+
+.carrito .cp input:last-child{
+    border-left: 1px solid wheat;
+}
+
+.carrito .depositoGratis{
+    display: flex;
+    border-bottom: 1px solid wheat;
+}
+
+.carrito .depositoGratis span{
+    padding: 0 10px;
+    font-size: 13px;
+    margin-bottom: 20px;
+    margin-right: 30px;
+}
+
+.carrito .total{
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrito .finalizar{
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+}
+.carrito .finalizar button{
+    margin: 0 20vw;
+}
+.carrito .finalizar .verMas{
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 768px){
+
+}
+
+@media (min-width: 1024px){
+    
+}
+
