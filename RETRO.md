@@ -11,8 +11,15 @@ Poner fecha para terminar cada tarea.
 Hacer reunion de revision pre entrega.
 Usar targetas de Trello para comunicar cosas importantes.
 Hacer Checklist en Trello para avisar el visto de una actividad.
+
 Hacer menos:
 Los opcionales antes que las tareas obligatorias de los sprint.
 Dejar de hacer.
+
+
+
+
+
+
 
 
