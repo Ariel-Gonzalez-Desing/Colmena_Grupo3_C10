@@ -6,14 +6,43 @@
     font-family: 'Roboto', sans-serif;
 }
 
+:root{
+    --colorOnyx : #3A3637;
+    --colorNaranja: #FCB43A;
+    --colorNaranjaClaro:  #F1C780;
+    --colorCremita: #FFFEF1;
+    --colorOnyxHover: rgb(58, 54, 55, 0.7);
+    --colorDarkVanilla: #DCC4A4;
+    --colorCremitaHover: rgb(252, 180, 58, 0.4);
+}
+
+.button {
+    background-color: var(--colorOnyx); 
+    border: none;
+    color: var(--colorNaranja);
+    padding: 5px 40px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);       
+  }
+
+.button:hover{
+    background-color: var(--colorOnyxHover);
+}
+
 a{
     text-decoration: none;
-    color: #3A3637;
+    color: var(--colorOnyx);
 }
 
 h2{
    padding: 15px 0;
-   border-bottom: 1px solid wheat;
+   border-bottom: 1px solid var(--colorDarkVanilla);
    margin: 0 10px;
 }
 
@@ -55,7 +84,7 @@ h2{
   flex-direction:row;  
   /* This bit draws the box around it */  
   /* I've used padding so you can see the edges of the elements. */
-    border:1px solid wheat;
+    border:1px solid var(--colorDarkVanilla);
     border-radius: 10px;
     padding:5px;  
     margin: auto;
@@ -100,7 +129,7 @@ h2{
 .carrito .subtotal{
     display: flex;
     justify-content: space-between;    
-    border-bottom: 1px solid wheat;    
+    border-bottom: 1px solid var(--colorDarkVanilla);    
     padding-bottom: 15px;
 }
 
@@ -127,12 +156,12 @@ h2{
 }
 
 .carrito .cp input:last-child{
-    border-left: 1px solid wheat;
+    border-left: 1px solid var(--colorDarkVanilla);
 }
 
 .carrito .depositoGratis{
     display: flex;
-    border-bottom: 1px solid wheat;
+    border-bottom: 1px solid var(--colorDarkVanilla);
 }
 
 .carrito .depositoGratis span{
@@ -152,12 +181,11 @@ h2{
     flex-direction: column;
    justify-content: center;
 }
-.carrito .finalizar button{
-    margin: 0 20vw;
-}
+
 .carrito .finalizar .verMas{
     display: flex;
     justify-content: center;
+    padding-top: 5px;
 }
 
 @media (min-width: 768px){
