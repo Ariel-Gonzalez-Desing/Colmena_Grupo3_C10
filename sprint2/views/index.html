@@ -14,46 +14,43 @@
 <body class="home">     
 
     <!-- /* ------------Carrusel--------------- */ -->
-
     <div class="carrusel">
-        <!-- Slideshow container -->
+        <!-- Container -->
   <div class="slideshow-container fade">
   
-    <!-- Full images with numbers and message Info -->
+    <!-- Imagenes y mensajes -->
     <div class="Containers">
       <div class="MessageInfo"></div>
-      <img src="/img/carrusel1.png" style="width:100%">
+      <img src="/images/carrusel1.png" style="width:100%">
       <div class="Info"><h1>Miel pura y orgánica</h1><h4>Descubrí su sabor único</h4></div>
     </div>
   
     <div class="Containers">
       <div class="MessageInfo"></div>
       <img src="/images/carrusel2.png" style="width:100%">
-      <div class="Info"><h1>Hecha con cuidado y respeto</h1><h4>De la colmena a tu mesa</h4></div>
+      <div class="Info"><h1>Cosechado con cuidado</h1><h4>De la colmena a tu mesa</h4></div>
     </div>
   
     <div class="Containers">
       <div class="MessageInfo"></div>
       <img src="/images/carrusel3.png" style="width:100%">
-      <div class="Info"><h1>Cuidamos a las abejas</h1><h4>Ayudanos comprando productos relacionados</h4></div>
+      <div class="Info"><h1>Cuidamos a las abejas</h1><h4>Ayudalas comprando productos relacionados</h4></div>
     </div>
   
-    <!-- Back and forward buttons -->
+    <!-- Botones atrás y adelante -->
     <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
     <a class="forward" onclick="plusSlides(1)">&#10095;</a>
   </div>
   <br>
   
-  <!-- The circles/dots -->
+  <!-- Círculos -->
   <div style="text-align:center">
     <span class="dots" onclick="currentSlide(1)"></span>
     <span class="dots" onclick="currentSlide(2)"></span>
     <span class="dots" onclick="currentSlide(3)"></span>
   </div> 
     </div>
-
-    <!-- /* ------------Fin del Carrusel--------------- */ -->
-
+    <!--------------Fin del Carrusel----------------->
 
     <article class="destacados">
         <h2>Destacados</h2>
@@ -124,8 +121,7 @@
     </article>
 </main>
 
-<footer class="footer">
-        
+<footer class="footer">        
     <div class="columnas">
         <div class="logo">
             <img src="/images/logoOscuro.png" alt="logo">
@@ -136,15 +132,13 @@
             <div class="redes">
              <img src="/images/hexagonosRedes.png" alt="">
             </div>
-            <div class="facebook"><a href="www.facebook.com"><i class="fab fa-facebook"></i></a></div>
- 
-            <div class="twitter"><a href="www.twitter.com"><i class="fab fa-twitter"></i></a></div>
- 
-            <div class="pinterest"><a href="www.pinterest.com"><i class="fab fa-pinterest"></i></a></div>
- 
-            <div class="instagram"><a href="www.instagram.com"><i class="fab fa-instagram"></i></a></div>
-             
+            
+            <div class="facebook"><a href="www.facebook.com"><i class="fab fa-facebook"></i></a></div> 
+            <div class="twitter"><a href="www.twitter.com"><i class="fab fa-twitter"></i></a></div> 
+            <div class="pinterest"><a href="www.pinterest.com"><i class="fab fa-pinterest"></i></a></div> 
+            <div class="instagram"><a href="www.instagram.com"><i class="fab fa-instagram"></i></a></div>             
          </div>
+
          <div class="informacion">
              <h4>INFORMACIÓN</h4>
              <a href="/index.html">Inicio</a>
@@ -166,6 +160,35 @@
     </div>
 </footer>
 
-<script src="/javascript/main.js"></script>
+<script>
+var slidePosition = 1;
+SlideShow(slidePosition);
+
+    // forward/Back controls
+function plusSlides(n) {
+  SlideShow(slidePosition += n);
+}
+
+//  images controls
+function currentSlide(n) {
+  SlideShow(slidePosition = n);
+}
+
+function SlideShow(n) {
+  var i;
+  var slides = document.getElementsByClassName("Containers");
+  var circles = document.getElementsByClassName("dots");
+  if (n > slides.length) {slidePosition = 1}
+  if (n < 1) {slidePosition = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < circles.length; i++) {
+      circles[i].className = circles[i].className.replace(" enable", "");
+  }
+  slides[slidePosition-1].style.display = "block";
+  circles[slidePosition-1].className += " enable";
+} 
+</script>
 </body>
 </html>
