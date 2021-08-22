@@ -14,31 +14,14 @@
     <h2>CARRITO DE COMPRAS</h2>
     <div class="general">
     <section class="carritoProductos">
-        <article>
-            
+        <article>            
             <div><img src="/images/logoColmena.png" alt=""></div>
-            <div class="sumar"><p>Miel Orgánica 500gr.</p>
-
-                
+            <div class="sumar"><p>Miel Orgánica 500gr.</p>                
                 <form action="">
                     <button id='disminuir' onclick="disminuir()">-</button>
                     <input type='text' id="cantidad" value="0">
                     <button id='aumentar' onclick="aumentar()">+</button>
                 </form>
-    
-    <!-- <script>
-    var inicio = 0; //se inicializa una variable en 0
-
-function aumentar(){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id aumentar
-
-var cantidad = document.getElementById('cantidad').value = ++inicio; //se obtiene el valor del input, y se incrementa en 1 el valor que tenga.
-}
-
-function disminuir(){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id disminuir
-
-var cantidad = document.getElementById('cantidad').value = --inicio; //se obtiene el valor del input, y se decrementa en 1 el valor que tenga.
-}
-    </script> -->
             </div>
         
             <div class="precio">
@@ -46,26 +29,15 @@ var cantidad = document.getElementById('cantidad').value = --inicio; //se obtien
                 <p>$1200.-</p>
             </div>
         </article>
+
         <article>
             <div><img src="/images/logoColmena.png" alt=""></div>
             <div class="sumar"><p>Miel Orgánica 500gr.</p>
-
-                <!-- ----Boton---- -->
                 <form action="">
                     <button id='disminuir' onclick="disminuir()">-</button>
                     <input type='text' id="cantidad" value="0">
                     <button id='aumentar' onclick="aumentar()">+</button>
-                </form>
-                <!-- <script>
-                    var inicio = 0;                 
-                function aumentar(){ 
-                var cantidad = document.getElementById('cantidad').value = ++inicio; 
-                }
-                function disminuir(){ 
-                var cantidad = document.getElementById('cantidad').value = --inicio; 
-                }
-                    </script> -->
-                <!-- ------- -->
+                </form>                
             </div>
         
             <div class="precio">
@@ -73,6 +45,7 @@ var cantidad = document.getElementById('cantidad').value = --inicio; //se obtien
                 <p>$1200.-</p>
             </div>
         </article>
+
         <div class="subtotal">
             <h4>Subtotal(sin envío):</h4>
         <h4>$1550.-</h4>
@@ -83,7 +56,6 @@ var cantidad = document.getElementById('cantidad').value = --inicio; //se obtien
         <div class="recuadroResumen">
             <h3>RESUMEN</h3>
         <div><a href=""><i class="fas fa-truck"></i></a><h4>Medios de envío</h4></div>
-
 
         <form class="cp" action="">            
             <input type="number" name="codigo postal" id="number" value="Tu código postal">

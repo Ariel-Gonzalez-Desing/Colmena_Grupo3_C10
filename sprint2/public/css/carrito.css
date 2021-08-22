@@ -16,8 +16,8 @@
   --colorCremitaHover: rgb(252, 180, 58, 0.4);
 }
 
-.carrito{
-    background-color: var(--colorCremita);
+.carrito {
+  background-color: var(--colorCremita);
 }
 
 .carrito .button {
@@ -89,7 +89,7 @@
 }
 
 .carrito .general form input {
-  flex-grow: 2;  
+  flex-grow: 2;
   border: none;
   text-align: center;
   background-color: var(--colorCremita);
@@ -140,7 +140,8 @@
   flex-direction: column;
 }
 
-.carrito .general .cp input {background-color: var(--colorCremita);
+.carrito .general .cp input {
+  background-color: var(--colorCremita);
   padding: 0 10px;
   display: inline-block;
 }
@@ -245,7 +246,7 @@
 @media (min-width: 1024px) {
   .carrito h2 {
     margin-left: 30px;
-  } 
+  }
   .carrito .general {
     margin: 0 30px;
     justify-content: center;
