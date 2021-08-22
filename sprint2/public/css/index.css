@@ -1,295 +1,502 @@
-*{
-    font-family: 'Roboto';
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  font-family: "Roboto";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* -----------------------------------------  */
+:root {
+  --colorOnyx: #3a3637;
+  --colorNaranja: #fcb43a;
+  --colorNaranjaClaro: #f1c780;
+  --colorCremita: #fffef1;
+  --colorOnyxHover: rgb(58, 54, 55, 0.7);
+  --colorDarkVanilla: #dcc4a4;
+  --colorCremitaHover: rgb(252, 180, 58, 0.4);
+}
+
+/* ------------Carrusel--------------- */
 
 /* Slideshow container */
-.slideshow-container {
-    max-width: 100%;
-    position: relative;
-    margin: auto;
-  }
-  
-  /* Make the images invisible by default */
-  .Containers {
-    display: none;
-  }
-  
-  /* forward & Back buttons */
-  .Back, .forward {
-    cursor: pointer;
-    position: absolute;
-    top: 42%;
-    width: auto;
-    margin-top: -23px;
-    padding: 17px;
-    color: #3A3637;
-    font-weight: bold;
-    font-size: 40px;
-    transition: 0.4s ease;
-    user-select: none;
-  }
-  
-  /* Posicionar botón a la derecha */
-  .forward {
-    right: 0;
-  }
-  
-  /*Icono se agranda cuando se hace hover */
-  .Back:hover, .forward:hover {
-    /* background-color: rgba(0,0,0,0.8); */
-    font-size: 50px;
-  }
-  
-  /*Info fotos */
-  .Info {
-    font-family: 'Roboto', sans-serif;
-    color: #3A3637;
-    font-size: 16px;
-    padding: 10px 14px;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  /* Worknumbering (1/3 etc) */
-  .MessageInfo {
-    color: #f2f2f3;
-    font-size: 14px;
-    padding: 10px 14px;
-    position: absolute;
-    top: 0;
-  }
-  
-  /* Circulos */
-  .dots {
-    cursor: pointer;
-    height: 14px;
-    width: 14px;
-    margin: 0 3px;
-    background-color: #3A3637;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.5s ease;
-  }
-  
-  .enable, .dots:hover {
-    background-color: #FCB43A;
-  }
-  
-  /* Faint animation */
-  .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.4s;
-    animation-name: fade;
-    animation-duration: 1.4s;
-  }
-  
-  @-webkit-keyframes fade {
-    from {opacity: .5}
-    to {opacity: 2}
-  }
-  
-  @keyframes fade {
-    from {opacity: .5}
-    to {opacity: 2}
-  }
-
-/* ----------------------------------------- */
-
-:root{
-    --colorOnyx : #3A3637;
-    --colorNaranja: #FCB43A;
-    --colorNaranjaClaro:  #F1C780;
-    --colorCremita: #FFFEF1;
-    --colorOnyxHover: rgb(58, 54, 55, 0.7);
-    --colorDarkVanilla: #DCC4A4;
-    --colorCremitaHover: rgb(252, 180, 58, 0.4);
+.carrusel .slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
 }
 
-h2{
-    text-align: center;
-    margin-top: 25px;
-    padding-top: 25px;
-    border-top: 1px solid var(--colorDarkVanilla);
-    width: 100%;
+/* Make the images invisible by default */
+.carrusel .Containers {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row; 
 }
 
-.button {
-    background-color: var(--colorOnyx); 
-    border: none;
-    color: var(--colorNaranja);
-    padding: 5px 40px;
-    border-radius: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 20px;
-    margin-left: 50%;
-    transform: translateX(-50%);   
-     
-  }
+/* forward & Back buttons */
+.carrusel .Back, .forward {
+  background-color: rgb(58, 54, 55, 0.5);
+  border-radius: 10px 0 0 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 42%;
+  width: auto;
+  margin-top: -23px;
+  padding: 17px;
+  color: #fffff1;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.4s ease;
+  user-select: none;
+}
 
-.button:hover{
-    background-color: var(--colorOnyxHover);
+/* Posicionar botón a la derecha */
+.carrusel .forward {
+  right: 0;
+}
+
+/*Icono se agranda cuando se hace hover */
+.carrusel .Back:hover, .forward:hover {
+  /* background-color: rgba(0,0,0,0.8); */
+  font-size: 50px;
+}
+
+/*Info fotos */
+.carrusel .Info {
+  font-family: 'Roboto', sans-serif;
+  color: #fffff1;
+  background-color: rgb(58, 54, 55, 0.5);
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 20px 14px;
+  position: absolute;
+  bottom: 40px;
+  left: 30%;
+  width: 40%;
+  text-align: center;
+}
+
+/* Worknumbering (1/3 etc) */
+.carrusel .MessageInfo {
+  color: #f2f2f3;
+  font-size: 14px;
+  padding: 10px 14px;
+  position: absolute;
+  top: 0;
+}
+
+/* Circulos */
+.carrusel .dots {
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+  margin: 0 3px;
+  background-color: #3A3637;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.carrusel .enable, .dots:hover {
+  background-color: #FCB43A;
+}
+
+/* Faint animation */
+.carrusel .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+/* ------------Fin del Carrusel--------------- */
+
+
+
+.home {
+  background-color: var(--colorCremita);
+  margin-bottom: 40px;
+}
+
+.home h2 {
+  text-align: center;  
+  margin: 20px 10px 10px 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--colorDarkVanilla);
+}
+
+.home .button {
+  background-color: var(--colorOnyx);
+  border: none;
+  color: var(--colorNaranja);
+  padding: 5px 10px;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  width: 70%;   
+  text-align: center;
+  transform: translateX(22%);
+}
+
+.home .button a{
+  color: var(--colorNaranja);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.home .button:hover {
+  background-color: var(--colorOnyxHover);
 }
 
 /* Destacados */
 
-body .destacados .productos{
-    display: block;
-    margin-bottom: 40px;
-    text-align: center;
+.home .destacados .productos {
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-body .destacados .productos .productosCompleto{
-    display: none;
+.home .destacados .productos .prodGrupo {
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  width: 80vw;
+  margin: 0 auto;
 }
 
-body .destacados .productos .mobileProd{
-    text-align: center;
+/* .home .destacados .productos .mobileProd {
+  text-align: center;
+} */
+
+.home .destacados section .productos .prodGrupo .prodUnidad {
+  border: 1px solid var(--colorDarkVanilla);
+  margin: 10px 0;
+  padding-bottom: 15px;
+}
+.home .destacados section .productos .prodGrupo .prodUnidad:hover {
+  
 }
 
-body .destacados .productos .mobileProd a{
-    text-align: center; 
+.home .destacados .productos a {
 }
 
-.productos .button {
-    background-color: var(--colorCremita); 
-    border: 1px solid var(--colorOnyx);
-    color: var(--colorOnyx);
-    padding: 5px 25px;
-    margin-top: 10px;
-    border-radius: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-  }
-
-.productos .button:hover{
-    background-color: var(--colorCremitaHover);
-    font-weight: 400;
+.home .productos .button {
+  background-color: var(--colorCremita);
+  border: 1px solid var(--colorOnyx);
+  color: var(--colorOnyx);
+  margin-top: 10px;  
+  font-size: 12px;
+  width: 40%;
+  transform: translateX(0%);
 }
 
-body .destacados .productos img{
-    max-width: 30%;
-    justify-content: center;      
-    margin-top: 30px;
+.home .productos .button:hover {
+  background-color: var(--colorCremitaHover);
+  font-weight: 400;
 }
 
-body .destacados .hexagonos{
-    text-align: center;
+.home .destacados .productos img {
+  max-width: 40%;
+  justify-content: center;
 }
 
-body .hexaMobile{
-    margin-bottom: 30px;
+.home .hexaDisplay {  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-body .destacados .hexagonos p{
-    width: 374px;
-    margin: auto;
-    padding-top: 20px;
-    margin-bottom: 30px;
+.home .hexaDisplay div {
+ padding: 10px;
 }
 
-body .destacados .hexagonos .hexaDesktop{
-    display: none;
+.home .destacados .hexagonos {
+  text-align: center;
 }
 
-body .destacados p{
-    text-align: center;
+.home .destacados .hexagonos p {
+  width: 80vw;
+  margin: auto;
+  padding-top: 20px;
+  margin-bottom: 10px;  
 }
 
-body .destacados button{
-    justify-content: center;
+.home .destacados p {
+  text-align: center;
+}
+
+.home .destacados button {
+  justify-content: center;
 }
 
 /* Sobre Nosotros */
 
-body .sobreNosotros p{
-    max-width: 70%;
-    margin: auto;
-    text-align: center;
-    margin-bottom: 30px;
-    margin-top: 30px;
+.home .sobreNosotros p {
+  text-align: center;  
+  margin: 10px 30px 20px 30px ;
 }
 
-body .sobreNosotros{
-    display: block;
-    }
+.home .sobreNosotros {
+  display: block;
+}
 
-body .sobreNosotros img{
-    max-width: 100%;
-    margin: auto;
+.home  .sobreNosotros img {
+  width: 100vw;
+  margin: auto;
 }
 
 /* Salvemos a las abejas */
 
-body .cuidemosImagen{
-    text-align: center;   
+.home .cuidemosImagen .salvemos{
+  text-align: center;  
+  margin: 10px;  
 }
 
-body .cuidemosImagen p{
-    width: 70%;
+.home .cuidemosImagen p {
+  margin: 10px 30px 0 30px;
+  text-align: center;
+}
+
+.home .hexagonoInfo {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .home {
+    
+  }
+  .home h2{
+    padding: 20px;
+  }
+  .home .destacados .productos .prodGrupo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;         
+    justify-content: space-evenly;
+    width: 95%; 
+    margin: 10px auto; 
+  }
+  .home .destacados .productos .prodGrupo .prodUnidad{
+    margin: 10px;
+    width: 30%;     
+  }
+  .home .sobreNosotros {
+  }
+  .home .sobreNosotros .imagen {
+    display: flex;
+    align-items: center;
+  }
+  
+  .home .sobreNosotros .imagen p {
+    order: 2;
+  }
+  .home .cuidemosImagen p{
+    margin: 20px;
+  }
+  .home  .sobreNosotros img {
+    width: 60vw;
+    margin-left: 10px;
+  }
+  .home .hexagonoInfo {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    max-width: 80vw;
     margin: auto;
-}
-
-body .hexagonoInfo{
-    display: none;
-}
-
-body .hexagonoInfo p{    
     text-align: center;
+  }
+  
+  .home .hexagonoInfo p {
+    text-align: center;
+    border-top: 1px solid var(--colorDarkVanilla);
+    margin-top: 20px;
+    padding: 10px;
+  }
+  
+  .home .hexa {
+    max-width: 30%;
+    border: 1px solid var(--colorDarkVanilla);
+    padding: 10px;
+  }
 }
 
-body .hexa{
-    max-width: 20%;
+@media (min-width: 1024px) {
+  .home .sobreNosotros .imagen {
+    display: flex;
+    align-items: center;
+  }
+  .home .sobreNosotros p {
+    width: 100%;
+    padding: 0 30px;
+    order: 2;
+  }
+  .home .button{
+    width: 40%;
+   transform: translateX(75%);
+  }
 }
 
-@media (min-width: 768px){
-    body .destacados .productos .mobileProd{
-        display: none;
-    }
-    body .destacados .productos .productosCompleto{
-        display: flex;
-        justify-content: space-between;
-        margin-left: 90px;
-        margin-right: 90px;
-    }
-    body .destacados .hexagonos .hexaDesktop{
-        display: block;
-    }
-    body .destacados .hexagonos .hexaMobile{
-        display: none;
-    }
+
+
+/* ---------Footer-------- */
+
+.footer {
+  background-color: #3a3637;
+  border-radius: 10px 10px 0 0;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  margin-top: 30px;
 }
 
-@media (min-width: 1024px){
-    body .sobreNosotros .imagen{
-        display: flex;        
-        align-items: center;
-        }    
-    body .sobreNosotros p{
-        width: 100%;
-        padding: 0 30px;
-        order: 2;
-        
-        }
-    body .sobreNosotros img{
-        
-        
-        margin-top: 40px;        
-    }
-    body .hexagonoInfo{
-        margin-top: 40px;
-        display: flex;        
-        justify-content: center;
-    }
+.footer p {
+  padding: 5px;
+  color: var(--colorNaranjaClaro); 
+}
+
+.footer h4 {
+  color: var(--colorNaranja);
+  margin-bottom: 30px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--colorNaranja);
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.footer .logo {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer .columnas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer .contactanos {
+  text-align: center;
+  color: rgb(165, 165, 165);
+  margin-top: 30px;
+  width: 100%;
+}
+
+.footer .seguinos {
+  position: relative;
+  margin-top: 30px;
+}
+
+.footer .facebook i {
+  position: absolute;
+  right: 89px;
+  top: 57px;
+  font-size: 20px;
+}
+
+.footer .twitter i {
+  position: absolute;
+  right: 88px;
+  top: 120px;
+  font-size: 20px;
+}
+
+.footer .pinterest i {
+  position: absolute;
+  right: 155px;
+  top: 88px;
+  font-size: 20px;
+}
+
+.footer .instagram i {
+  position: absolute;
+  right: 23px;
+  top: 86px;
+  font-size: 20px;
+}
+
+.footer .instagram i:hover,
+.footer .facebook i:hover,
+.footer .pinterest i:hover,
+.footer .twitter i:hover {
+  font-size: 22px;
+  color: var(--colorNaranjaClaro);
+  transition: 0.3s ease;
+}
+
+.footer a:hover {
+  font-size: 17px;
+  color: var(--colorNaranjaClaro);
+  transition: 0.3s ease;
+}
+
+.footer .informacion {
+  margin-top: 30px;
+}
+
+.footer .informacion a {
+  padding: 3px;
+}
+
+.footer .copyright {
+  background-color: #514b4d;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  margin: 40px 20px 0 20px;
+  padding: 0;
+}
+
+.footer .copyright p {
+    color: rgb(180, 169, 169);
+  }
+
+@media (min-width: 768px) {
+  .footer .columnas {
+    width: 100%;
+  }
+  .footer .contactanos {
+    width: 28%;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer .columnas {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .footer .logo {
+    width: 20%;
+  }
+
+  .footer .contactanos {
+    width: 28%;
+    margin-right: 30px;
+  }
+
+  .footer .informacion {
+    padding: 0 40px;
+  }
+
+  .footer .copyright {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 20px;
+  }
 }
