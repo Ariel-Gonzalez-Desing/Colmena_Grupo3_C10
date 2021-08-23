@@ -1,26 +1,34 @@
-># Retrospectiva de Grupo 3
-***
-## Seguir haciendo:
-**Comunicarnos por whatsapp.**
-***
-## Hacer más:
-**Comunicarnos cuando tenemos alguna dificultad.**
->Actualizar el trello con los procesos.
-__Reuniones más efectivas.__
-*Más daylis.
-****
-## Empezar a hacer:
-*Poner fecha para terminar cada tarea.*
->*Hacer reunion de revision pre entrega.
-*Usar targetas de Trello para comunicar cosas importantes.
->*Hacer Checklist en Trello para avisar el visto de una actividad.
-***
-## Hacer menos:
->*Los opcionales antes que las tareas obligatorias de los sprint.*
-***
-## Dejar de hacer:
->*No preguntar o consultar si tenemos complicaciones con temas referidos al proyecto.*
-***
-### Captura Jamboard 
-![Screenshot] (Screenshot_estrella.jpg)
- 
+# Retrospectiva Grupo 3 - Comision 10
+
+## MIEL COLMENA :honey_pot: :bee:
+
+<br>
+
+>## :small_orange_diamond: *Seguir haciendo*
+>>* Comunicarnos por Whatsapp para comentar progresos y tomar algunas decisiones
+
+<br>
+
+>## :small_orange_diamond: *Hacer más*
+>>* Decirles a nuestros compañeros cuando tenemos alguna dificultad
+>>* Actualizar Trello con los progresos
+>>* Mas dailys
+>>* Hacer las reuniones mas efectivas, optimizar el tiempo.
+
+<br>
+
+>## :small_orange_diamond: *Empezar a hacer*
+>>* Hacer una reunión de revisión pre-entrega
+>>* Poner fecha para terminar cada tarea
+>>* Utilizar tarjetas de Trello para comunicar cosas importantes
+>>* Poner checklists en las tarjetas para avisar el visto de una tarea terminada 
+
+<br>
+
+>## :small_orange_diamond: *Hacer menos*
+
+<br>
+
+
+>## :small_orange_diamond: *Dejar de hacer*
+>>* Hacer opcionales antes que las tareas obligatorias del sprint
