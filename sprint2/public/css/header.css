@@ -33,6 +33,23 @@ header .navTabletDesktop{
     display: none;
 }
 
+header .barraBusquedaMobile{
+    /* display: inline-block; */
+    
+    display: flex;
+    justify-content: space-between;
+}
+header .searchBar{
+    display: inline-block;
+    position: relative;
+}
+header .barraBusquedaMobile .searchBar a{
+    display: inline-block; 
+    position: absolute;
+    right: 50px;
+}
+
+
 
 header .barraBusquedaMobile .searchBar input[type="text"]{
     border-radius: 5px;
@@ -43,7 +60,7 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
     padding-left: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
-    display: inline-block;
+   
     color: var(--colorNaranja);
 }
 
@@ -93,6 +110,7 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
         display: flex;
         justify-content: space-between;
         border-bottom: 1px solid rgb(58, 54, 55, 0.2);
+        align-items: center
     }
     header .iconos-TabletDesktop img{
         max-height: 55px; 
@@ -106,13 +124,10 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
         padding-right: 35px;
     }
 
-    .barraBusquedaMobile{
+    header .barraBusquedaMobile{
         display: none;
     }
-    header .iconos-TabletDesktop{
-        display: flex;
-        align-items: center
-    }
+    
     header .searchBarTabletDesktop{
         /* flex-basis: 30%; */
         display: inline-block;        
@@ -134,7 +149,8 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
     header .iconos-TabletDesktop .searchBarTabletDesktop a{
         display: inline-block; 
         position: absolute;
-        right: 10px;
+        right: 50px;
+
     }
 
 
