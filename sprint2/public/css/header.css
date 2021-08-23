@@ -109,17 +109,35 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
     .barraBusquedaMobile{
         display: none;
     }
-    header .iconos-TabletDesktop .searchBarTabletDesktop input[type="text"]{
+    header .iconos-TabletDesktop{
+        display: flex;
+        align-items: center
+    }
+    header .searchBarTabletDesktop{
+        /* flex-basis: 30%; */
+        display: inline-block;        
+    }
+    header .iconos-TabletDesktop .searchBarTabletDesktop input{
         border-radius: 5px;
         border-width: 2px;
         border-color: var(--colorNaranja);
         background: transparent;
-        width: 80%;
-        padding-left: 10px;
-        margin-bottom: 10px;
-        margin-left: 30px;
-        height: 22px;        
+        padding-left: 10px;       
+        display: inline-block;        
+        width: 90%
     }
+    header .searchBarTabletDesktop{
+        position: relative;
+        flex-basis: 50%;
+        /* flex-grow: 1; */
+    }
+    header .iconos-TabletDesktop .searchBarTabletDesktop a{
+        display: inline-block; 
+        position: absolute;
+        right: 10px;
+    }
+
+
     ::placeholder { 
         color:var(--colorOnyx);
         opacity: 1; /* para firefox */
