@@ -73,7 +73,7 @@ body main .box-texto h4{
 
 
 
-
+/*********** Tablet ***********/
 @media (min-width: 768px) {
     body main .box-texto h4{
         display:block;
@@ -93,11 +93,19 @@ body main .box-texto h4{
     .box-texto h3{
         font-size: 24px;
     }
-   
+
+    header nav ul li a:hover{
+        color: var(--colorNaranja);
+        transition: all 0.4s ease;
+        transform: scale(1.1);        
+    }
+    
 
 }
 
-
+/*********** Desktop ***********/
 @media (min-width: 1024px) {
-    
+    .desktopRegistro,.desktopContraseñas{
+        width: 100%;
+    }
 }
