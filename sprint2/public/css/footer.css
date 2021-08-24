@@ -1,137 +1,162 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-p{
-    padding: 10px;
+:root{
+  --colorOnyx : #3A3637;
+  --colorNaranja: #FCB43A;
+  --colorNaranjaClaro:  #F1C780;
+  --colorCremita: #FFFEF1;
+  --colorDarkVanilla : #DCC4A4;
 }
 
-h4{
-    color: #FCB43A;
-    margin-bottom: 30px;
+.footer {
+  background-color: #3a3637;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
 }
 
-a{
-    text-decoration: none;
-    color: #FCB43A;
-    display: block;
+.footer p {
+  padding: 5px;
+  color: var(--colorNaranjaClaro); 
 }
 
-footer{
-    background-color: #3A3637;
-    font-family: 'Roboto', sans-serif;
+.footer h4 {
+  color: var(--colorNaranja);
+  margin-bottom: 30px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--colorNaranja);
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.footer .logo {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer .columnas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer .contactanos {
+  text-align: center;
+  color: rgb(165, 165, 165);
+  margin-top: 30px;
+  width: 100%;
+}
+
+.footer .seguinos {
+  position: relative;
+  margin-top: 30px;
+}
+
+.footer .facebook i {
+  position: absolute;
+  right: 89px;
+  top: 57px;
+  font-size: 20px;
+}
+
+.footer .twitter i {
+  position: absolute;
+  right: 88px;
+  top: 120px;
+  font-size: 20px;
+}
+
+.footer .pinterest i {
+  position: absolute;
+  right: 155px;
+  top: 88px;
+  font-size: 20px;
+}
+
+.footer .instagram i {
+  position: absolute;
+  right: 23px;
+  top: 86px;
+  font-size: 20px;
+}
+
+.footer .instagram i:hover,
+.footer .facebook i:hover,
+.footer .pinterest i:hover,
+.footer .twitter i:hover {
+  font-size: 22px;
+  color: var(--colorNaranjaClaro);
+  transition: 0.3s ease;
+}
+
+.footer a:hover {
+  font-size: 17px;
+  color: var(--colorNaranjaClaro);
+  transition: 0.3s ease;
+}
+
+.footer .informacion {
+  margin-top: 30px;
+}
+
+.footer .informacion a {
+  padding: 3px;
+}
+
+.footer .copyright {
+  background-color: #514b4d;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  margin: 40px 20px 10px 20px;
+  padding: 0;
+}
+
+.footer .copyright p {
+    color: rgb(180, 169, 169);
+  }
+
+@media (min-width: 768px) {
+  .footer .columnas {
     width: 100%;
-    /* display: flex;
-    flex-wrap: wrap; */
-}
-
-footer .logo{
-    width: 100%;
-    text-align: center;
+  }
+  .footer .contactanos {
+    width: 28%;
     margin-top: 10px;
+  }
 }
 
-footer .columnas{
+@media (min-width: 1024px) {
+  .footer .columnas {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .footer .logo {
+    width: 20%;
+  }
+
+  .footer .contactanos {
+    width: 28%;
+    margin-right: 30px;
+  }
+
+  .footer .informacion {
+    padding: 0 40px;
+  }
+
+  .footer .copyright {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 20px;
+  }
 }
-
-footer .contactanos{
-    text-align: center;
-    color: rgb(180, 169, 169);
-    margin-top: 30px;
-    width: 100%;
-}
-
-footer .seguinos{
-    position: relative;
-    margin-top: 30px;
-}
-
-footer .facebook i{
-    position: absolute;
-    right: 89px;
-    top: 57px;
-    font-size: 20px;
-}
-
-footer .twitter i{
-    position: absolute;
-    right: 88px;
-    top: 120px;
-    font-size: 20px;
-}
-
-footer .pinterest i{
-    position: absolute;
-    right: 155px;
-    top: 88px;
-    font-size: 20px;
-}
-
-footer .instagram i{
-    position: absolute;
-    right: 23px;
-    top: 86px;
-    font-size: 20px;
-}
-
-footer .informacion{
-    margin-top: 30px;
-}
-
-footer .informacion a{
-    padding: 3px;
-}
-
-footer .copyright{
-    background-color: #514b4d;
-    border-radius: 10px 10px 0 0;
-    text-align: center;
-    margin: 40px 20px 10px 20px;
-    color: rgb(180, 169, 169);
-    padding: 0;
-}
-
-@media (min-width: 768px){  
-    footer .columnas{
-        align-items: center;
-        width: 100%;
-    }
-    
-    footer .contactanos{
-        width: 28%;
-}
-}
-
-@media (min-width: 1024px){  
-    footer .columnas{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;      
-    }
-
-    footer .logo{
-        width: 20%;
-    }
-    
-    footer .contactanos{
-        width: 28%;
-        margin-right: 30px;
-    }
-
-    footer .informacion{
-        padding: 0 40px;
-    }
-
-    footer .copyright{
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-        margin-top: 10px;
-    }
-}
-
