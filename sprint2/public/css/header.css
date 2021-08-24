@@ -1,3 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+    text-decoration: none; 
+}
+
+a{
+    text-decoration: none;
+    color: #FCB43A;
+    display: block;
+}
+
 header{
     background-color: var(--colorOnyx);
 }
@@ -139,7 +152,6 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
     /*     padding-left: 35px;
         padding-right: 35px; */
         text-align: center;
-
     }
 
     header .barraBusquedaMobile{
@@ -200,13 +212,23 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
     }
     header nav ul li a{
         transition: all .4s ease;  
+       
     }
     header nav ul li a:hover{
         color: var(--colorNaranja);       
-        transform: scale(1.05);      
+        transform: scale(1.05); 
        
     }
-    
+    /* header .iconos-TabletDesktop .changuito{
+        padding-right: 50px;
+    } */
+    header .iconos-TabletDesktop .changuito .linkChanguito{
+        transition: all .4s ease; 
+    }
+    header .iconos-TabletDesktop .changuito .linkChanguito:hover{
+        color: var(--colorNaranja);
+        transform: scale(1.05); 
+    }
 
 }
 
