@@ -17,34 +17,34 @@
 
 /* ------------Carrusel--------------- */
 
-/* Slideshow container */
+/* Container */
 .carrusel .slideshow-container {
   width: 100%;
   position: relative;
   margin: auto;
 }
 
-/* Make the images invisible by default */
+/* Imagenes invisibles */
 .carrusel .Containers {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
 }
 
-/* forward & Back buttons */
+/* Boton adelante y atras */
 .carrusel .Back,
 .forward {
   background-color: rgb(58, 54, 55, 0.5);
   border-radius: 10px 0 0 10px;
   cursor: pointer;
   position: absolute;
-  top: 42%;
+  top: 50%;
   width: auto;
   margin-top: -23px;
-  padding: 17px;
+  padding: 10px;
   color: #fffff1;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 10px;
   transition: 0.4s ease;
   user-select: none;
 }
@@ -68,24 +68,17 @@
   color: #fffff1;
   background-color: rgb(58, 54, 55, 0.5);
   border-radius: 10px;
-  font-size: 16px;
-  padding: 20px 14px;
+  font-size: 8px;
+  padding: 5px;
   position: absolute;
-  bottom: 40px;
-  left: 30%;
-  width: 40%;
+  bottom: 20%;
+  right: 20%;
+  width: 60%;
   text-align: center;
 }
-
-/* Worknumbering (1/3 etc) */
-.carrusel .MessageInfo {
-  color: #f2f2f3;
-  font-size: 14px;
-  padding: 10px 14px;
-  position: absolute;
-  top: 0;
+.carrusel .Info h4 {
+  display: none;
 }
-
 /* Circulos */
 .carrusel .dots {
   cursor: pointer;
@@ -103,7 +96,7 @@
   background-color: #fcb43a;
 }
 
-/* Faint animation */
+/* Animation */
 .carrusel .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.4s;
@@ -133,6 +126,7 @@
 
 .home {
   background-color: var(--colorCremita);
+  color: var(--colorOnyx);
 }
 
 .home h2 {
@@ -185,6 +179,7 @@
 
 .home .destacados section .productos .prodGrupo .prodUnidad {
   border: 1px solid var(--colorDarkVanilla);
+  border-radius: 10px;
   margin: 10px 0;
   padding-bottom: 15px;
 }
@@ -252,6 +247,7 @@
 .home .sobreNosotros img {
   width: 100vw;
   margin: auto;
+  border-radius: 10px;
 }
 
 /* Salvemos a las abejas */
@@ -286,12 +282,20 @@
     margin: 10px;
     width: 30%;
   }
+  .home .destacados section .productos .prodGrupo .prodUnidad:hover {
+    margin: 10px 0;
+    padding-bottom: 15px;
+    box-shadow: 0px 0px 5px rgb(105, 81, 41);
+  }
   .home .sobreNosotros .imagen {
     display: flex;
     align-items: center;
   }
   .home .sobreNosotros .imagen p {
     order: 2;
+    background-color: rgb(220, 196, 164, 0.3);
+    border-radius: 10px;
+    padding: 20px;
   }
   .home .cuidemosImagen p {
     margin: 10px 60px;
@@ -308,16 +312,34 @@
     margin: auto;
     text-align: center;
   }
-  .home .hexagonoInfo p {
+  .home .hexagonoInfo {
     text-align: center;
-    border-top: 1px solid var(--colorDarkVanilla);
+    background-color: rgb(220, 196, 164, 0.3);
+    border-radius: 10px;
     margin-top: 20px;
     padding: 10px;
   }
   .home .hexa {
     max-width: 30%;
-    border: 1px solid var(--colorDarkVanilla);
     padding: 10px;
+  }
+  .carrusel .Back,
+  .forward {
+    top: 46%;
+    margin-top: -23px;
+    padding: 13px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .carrusel .Info {
+    font-size: 13px;
+    padding: 15px 10px;
+    bottom: 25%;
+    left: 25%;
+    width: 50%;
+  }
+  .carrusel .Info h4 {
+    display: inline;
   }
 }
 
@@ -330,6 +352,7 @@
     width: 100%;
     padding: 0 30px;
     order: 2;
+    font-size: 23px;
   }
   .home .button {
     width: 40%;
@@ -337,6 +360,20 @@
   }
   .home .cuidemosImagen p {
     margin: 20px 100px;
+  }
+  .carrusel .Back,
+  .forward {
+    top: 42%;
+    margin-top: -23px;
+    padding: 17px;
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .carrusel .Info {
+    font-size: 16px;
+    padding: 20px 14px;
+    left: 25%;
+    width: 50%;
   }
 }
 
