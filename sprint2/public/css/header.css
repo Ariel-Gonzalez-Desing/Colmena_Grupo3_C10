@@ -1,5 +1,5 @@
 header{
-    background-color: var(--colorOnyx); 
+    background-color: var(--colorOnyx);
 }
 header .iconos-TabletDesktop{
     display: none;
@@ -15,6 +15,16 @@ header .boton-hamburguesa{
 }
 header .changuito{
     padding: 20px 20px 0 0;
+    margin-bottom: 5px;
+}
+header .changuito .linkChanguito:nth-child(odd){
+    border-left: 1px solid black;
+    padding-left: 5px;
+}
+header .iconos-TabletDesktop .changuito .linkChanguito{
+    background-color: var(--colorCremita);    
+    font-size: 12px;
+    display: inline;    
 }
 
 header .logo{
@@ -34,19 +44,24 @@ header .navTabletDesktop{
 }
 
 header .barraBusquedaMobile{
-    /* display: inline-block; */
-    
+    /* display: inline-block; */    
     display: flex;
+    
     justify-content: space-between;
 }
-header .searchBar{
+header .searchBar input[type="text"]{
     display: inline-block;
+    
+}
+header .barraBusquedaMobile .searchBar{
     position: relative;
 }
 header .barraBusquedaMobile .searchBar a{
     display: inline-block; 
     position: absolute;
-    right: 50px;
+    right: 5px;
+    top: 2px;
+    
 }
 
 
@@ -56,12 +71,13 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
     border-width: 2px;
     border-color: var(--colorNaranja);
     background: transparent;
-    width: 80%;
+    width: 80vw;
     padding-left: 10px;
     margin-bottom: 10px;
-    margin-left: 30px;
-   
+    margin-left: 30px;   
     color: var(--colorNaranja);
+       
+
 }
 
  ::placeholder { 
@@ -120,8 +136,10 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
     header .iconos-TabletDesktop .changuito a{
         background-color: var(--colorNaranja);
         color: var(--colorOnyx);
-        padding-left: 35px;
-        padding-right: 35px;
+    /*     padding-left: 35px;
+        padding-right: 35px; */
+        text-align: center;
+
     }
 
     header .barraBusquedaMobile{
@@ -142,15 +160,17 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
         width: 90%
     }
     header .searchBarTabletDesktop{
+        width: 450px;        
+    }
+    header .iconos-TabletDesktop .searchBarTabletDesktop{
         position: relative;
-        flex-basis: 50%;
-        /* flex-grow: 1; */
+
     }
     header .iconos-TabletDesktop .searchBarTabletDesktop a{
         display: inline-block; 
         position: absolute;
-        right: 50px;
-
+        right: 55px;
+        top: 2px;
     }
 
 
@@ -171,6 +191,22 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
     header nav ul li a{
         font-size: 14px;
     }
+    header .searchBarTabletDesktop{
+        width: 650px;        
+    }
+    header .iconos-TabletDesktop .searchBarTabletDesktop a{  
+        right: 75px;
+        top: 2px;
+    }
+    header nav ul li a{
+        transition: all .4s ease;  
+    }
+    header nav ul li a:hover{
+        color: var(--colorNaranja);       
+        transform: scale(1.05);      
+       
+    }
     
+
 }
 

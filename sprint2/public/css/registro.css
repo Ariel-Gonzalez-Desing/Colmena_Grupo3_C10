@@ -94,18 +94,18 @@ body main .box-texto h4{
         font-size: 24px;
     }
 
-    header nav ul li a:hover{
-        color: var(--colorNaranja);
-        transition: all 0.4s ease;
-        transform: scale(1.1);        
-    }
     
-
 }
 
 /*********** Desktop ***********/
 @media (min-width: 1024px) {
     .desktopRegistro,.desktopContraseñas{
         width: 100%;
+    }
+    .registro .box-formularios .yaTengoCuenta a:hover{
+        color: var(--colorNaranja);        
+    }
+    .box-formularios{
+        display: inline;
     }
 }
