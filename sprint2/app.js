@@ -10,6 +10,9 @@ app.get('/carrito',(req,res) => res.sendFile(path.join(__dirname,'views','carrit
 app.get('/detalle',(req,res) => res.sendFile(path.join(__dirname,'views','detalle.html')));
 app.get('/footer',(req,res) => res.sendFile(path.join(__dirname,'views','footer.html')));
 app.get('/header',(req,res) => res.sendFile(path.join(__dirname,'views','header.html')));
+app.get('/login',(req,res) => res.sendFile(path.join(__dirname,'views','login.html')));
+app.get('/registro',(req,res) => res.sendFile(path.join(__dirname,'views','registro.html')));
+
 
 
 app.listen(port, ()=> console.log(`Servidor corriendo en http://localhost:${port}`));
