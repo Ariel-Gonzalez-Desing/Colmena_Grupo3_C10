@@ -1,0 +1,23 @@
+{
+  "name": "Colmena_Grupo3_C10",
+  "version": "1.0.0",
+  "description": "Nuestra página ofrece miel orgánica de calidad premium y productos relacionados con la miel, como llaveros o utensilios.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ariel-Gonzalez-Desing/Colmena_Grupo3_C10.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ariel-Gonzalez-Desing/Colmena_Grupo3_C10/issues"
+  },
+  "homepage": "https://github.com/Ariel-Gonzalez-Desing/Colmena_Grupo3_C10#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
