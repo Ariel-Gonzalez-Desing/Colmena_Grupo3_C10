@@ -15,6 +15,243 @@
   --colorCremitaHover: rgb(252, 180, 58, 0.4);
 }
 
+/* Header */
+
+
+
+a{
+  text-decoration: none;
+  color: #FCB43A;
+  display: block;
+}
+
+header{
+  background-color: var(--colorOnyx);
+}
+header .iconos-TabletDesktop{
+  display: none;
+}
+
+header .boton-hamburguesa{
+  color: var(--colorNaranja);
+  background-color: var(--colorOnyx); 
+  padding: 20px 0 0 20px;
+  display: block;
+  width: 30px;    
+  border-radius: 5px;     
+}
+header .changuito{
+  padding: 20px 20px 0 0;
+  margin-bottom: 5px;
+}
+header .changuito .linkChanguito:nth-child(odd){
+  border-left: 1px solid black;
+  padding-left: 5px;
+}
+header .iconos-TabletDesktop .changuito .linkChanguito{
+  background-color: var(--colorCremita);    
+  font-size: 12px;
+  display: inline;    
+}
+
+header .logo{
+  width: 100%;
+  text-align: center;
+}
+header .iconos{
+  display: flex;
+  justify-content: space-between;
+}
+header .iconos i{
+  color: var(--colorNaranja);
+  background-color: var(--colorOnyx);
+}
+header .navTabletDesktop{
+  display: none;
+}
+
+header .barraBusquedaMobile{
+  /* display: inline-block; */    
+  display: flex;
+  
+  justify-content: space-between;
+}
+header .searchBar input[type="text"]{
+  display: inline-block;
+  
+}
+header .barraBusquedaMobile .searchBar{
+  position: relative;
+}
+header .barraBusquedaMobile .searchBar a{
+  display: inline-block; 
+  position: absolute;
+  right: 5px;
+  top: 2px;
+  
+}
+
+
+
+header .barraBusquedaMobile .searchBar input[type="text"]{
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: var(--colorNaranja);
+  background: transparent;
+  width: 80vw;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  margin-left: 30px;   
+  color: var(--colorNaranja);
+     
+
+}
+
+::placeholder { 
+  color:var(--colorNaranja);
+  opacity: 1; /* para firefox */
+}
+
+
+
+
+/*********** Tablet ***********/
+@media (min-width: 768px) {
+  header{
+      background-color: var(--colorCremita); 
+  }
+  header .navTabletDesktop{
+      display: flex;    
+      justify-content: center;
+      border-bottom: 1px solid rgb(58, 54, 55, 0.2);        
+  }
+  
+  header nav ul{
+      list-style-type: none
+  }
+  header nav ul li {              
+      padding-right: 9px;
+      padding-left: 9px;  
+      width:130px;
+      display:inline-block;
+      text-align:center;   
+
+      
+  }
+  header nav ul li a{        
+      padding: 3px;
+      color: var(--colorOnyx);
+      font-size: 12px;              
+  }
+
+
+
+  header .iconos{
+      display: none;
+  }
+  header .iconos-TabletDesktop{
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgb(58, 54, 55, 0.2);
+      align-items: center
+  }
+  header .iconos-TabletDesktop img{
+      max-height: 55px; 
+      width: 70px;
+      margin-left: 40px;     
+  }
+  header .iconos-TabletDesktop .changuito a{
+      background-color: var(--colorNaranja);
+      color: var(--colorOnyx);
+  /*     padding-left: 35px;
+      padding-right: 35px; */
+      text-align: center;
+  }
+
+  header .barraBusquedaMobile{
+      display: none;
+  }
+  
+  header .searchBarTabletDesktop{
+      /* flex-basis: 30%; */
+      display: inline-block;        
+  }
+  header .iconos-TabletDesktop .searchBarTabletDesktop input{
+      border-radius: 5px;
+      border-width: 2px;
+      border-color: var(--colorNaranja);
+      background: transparent;
+      padding-left: 10px;       
+      display: inline-block;        
+      width: 90%
+  }
+  header .searchBarTabletDesktop{
+      width: 450px;        
+  }
+  header .iconos-TabletDesktop .searchBarTabletDesktop{
+      position: relative;
+
+  }
+  header .iconos-TabletDesktop .searchBarTabletDesktop a{
+      display: inline-block; 
+      position: absolute;
+      right: 55px;
+      top: 2px;
+  }
+
+
+  ::placeholder { 
+      color:var(--colorOnyx);
+      opacity: 1; /* para firefox */
+    }
+}
+
+
+
+/*********** Desktop ***********/
+@media (min-width: 1024px){
+  header nav ul li{
+      width: 180px;
+  }
+
+  header nav ul li a{
+      font-size: 14px;
+  }
+  header .searchBarTabletDesktop{
+      width: 650px;        
+  }
+  header .iconos-TabletDesktop .searchBarTabletDesktop a{  
+      right: 75px;
+      top: 2px;
+  }
+  header nav ul li a{
+      transition: all .4s ease;  
+     
+  }
+  header nav ul li a:hover{
+      color: var(--colorNaranja);       
+      transform: scale(1.05); 
+     
+  }
+  /* header .iconos-TabletDesktop .changuito{
+      padding-right: 50px;
+  } */
+  header .iconos-TabletDesktop .changuito .linkChanguito{
+      transition: all .4s ease; 
+  }
+  header .iconos-TabletDesktop .changuito .linkChanguito:hover{
+      color: var(--colorNaranja);
+      transform: scale(1.05); 
+  }
+
+}
+
+
+
+
+
+
+
 /* ------------Carrusel--------------- */
 
 /* Container */
@@ -377,3 +614,153 @@
   }
 }
 
+
+/* Footer */
+.footer {
+  background-color: #3a3637;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+}
+
+.footer p {
+  padding: 5px;
+  color: var(--colorNaranjaClaro); 
+}
+
+.footer h4 {
+  color: var(--colorNaranja);
+  margin-bottom: 30px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--colorNaranja);
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.footer .logo {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer .columnas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer .contactanos {
+  text-align: center;
+  color: rgb(165, 165, 165);
+  margin-top: 30px;
+  width: 100%;
+}
+
+.footer .seguinos {
+  position: relative;
+  margin-top: 30px;
+}
+
+.footer .facebook i {
+  position: absolute;
+  right: 89px;
+  top: 57px;
+  font-size: 20px;
+}
+
+.footer .twitter i {
+  position: absolute;
+  right: 88px;
+  top: 120px;
+  font-size: 20px;
+}
+
+.footer .pinterest i {
+  position: absolute;
+  right: 155px;
+  top: 88px;
+  font-size: 20px;
+}
+
+.footer .instagram i {
+  position: absolute;
+  right: 23px;
+  top: 86px;
+  font-size: 20px;
+}
+
+.footer .instagram i:hover,
+.footer .facebook i:hover,
+.footer .pinterest i:hover,
+.footer .twitter i:hover {
+  font-size: 22px;
+  color: var(--colorNaranjaClaro);
+  transition: 0.3s ease;
+}
+
+.footer a:hover {
+  font-size: 17px;
+  color: var(--colorNaranjaClaro);
+  transition: 0.3s ease;
+}
+
+.footer .informacion {
+  margin-top: 30px;
+}
+
+.footer .informacion a {
+  padding: 3px;
+}
+
+.footer .copyright {
+  background-color: #514b4d;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  margin: 40px 20px 10px 20px;
+  padding: 0;
+}
+
+.footer .copyright p {
+    color: rgb(180, 169, 169);
+  }
+
+@media (min-width: 768px) {
+  .footer .columnas {
+    width: 100%;
+  }
+  .footer .contactanos {
+    width: 28%;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer .columnas {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .footer .logo {
+    width: 20%;
+  }
+
+  .footer .contactanos {
+    width: 28%;
+    margin-right: 30px;
+  }
+
+  .footer .informacion {
+    padding: 0 40px;
+  }
+
+  .footer .copyright {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 20px;
+  }
+}
