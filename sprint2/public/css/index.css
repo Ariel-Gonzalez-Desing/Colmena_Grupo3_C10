@@ -319,13 +319,14 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
 /* Circulos */
 .carrusel .dots {
   cursor: pointer;
-  height: 14px;
-  width: 14px;
+  height: 9px;
+  width: 9px;
   margin: 0 3px;
   background-color: #3a3637;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.5s ease;
+  margin-bottom: 20px;
 }
 
 .carrusel .enable,
@@ -368,7 +369,7 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
 
 .home h2 {
   text-align: center;
-  margin: 20px 10px 10px 10px;
+  margin: 0px 10px 10px 10px;
   padding-top: 10px;
   border-top: 1px solid var(--colorDarkVanilla);
 }
@@ -383,6 +384,7 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
   text-decoration: none;
   display: inline-block;
   margin-top: 20px;
+  margin-bottom: 20px;
   width: 70%;
   text-align: center;
   transform: translateX(22%);
@@ -479,6 +481,7 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
 
 .home .sobreNosotros {
   display: block;
+  margin-bottom: 20px;
 }
 
 .home .sobreNosotros img {
@@ -578,6 +581,10 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
   .carrusel .Info h4 {
     display: inline;
   }
+  .carrusel .dots {    
+    height: 12px;
+    width: 12px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -612,12 +619,16 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
     left: 25%;
     width: 50%;
   }
+  .carrusel .dots {    
+    height: 14px;
+    width: 14px;
+  }
 }
 
 
 /* Footer */
 .footer {
-  background-color: #3a3637;
+  background-color: var(--colorOnyx);
   font-family: "Roboto", sans-serif;
   width: 100%;
 }
@@ -719,7 +730,7 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
   background-color: #514b4d;
   border-radius: 10px 10px 0 0;
   text-align: center;
-  margin: 40px 20px 10px 20px;
+  margin: 40px 20px 0 20px;
   padding: 0;
 }
 
