@@ -70,11 +70,13 @@
         <article>            
             <div><img src="/images/frasco125grCar.png" alt=""></div>
             <div class="sumar"><p>Miel Orgánica 125gr.</p>                
-                <form action="">
-                    <button id='disminuir' onclick="disminuir()">-</button>
-                    <input type='text' id="cantidad" value="0">
-                    <button id='aumentar' onclick="aumentar()">+</button>
-                </form>
+                <div class="masMenos">
+                    <form action="">
+                        <button>-</button>
+                        <input type='text'value="0">
+                        <button>+</button>
+                    </form>
+                </div>
             </div>
         
             <div class="precio">
@@ -86,11 +88,13 @@
         <article>
             <div><img src="/images/remeras1.jpg" alt=""></div>
             <div class="sumar"><p>Remera Save The Bees</p>
-                <form action="">
-                    <button id='disminuir' onclick="disminuir()">-</button>
-                    <input type='text' id="cantidad" value="0">
-                    <button id='aumentar' onclick="aumentar()">+</button>
-                </form>                
+                <div class="masMenos">
+                    <form action="">
+                        <button>-</button>
+                        <input type='text'value="0">
+                        <button>+</button>
+                    </form> 
+                </div>               
             </div>
         
             <div class="precio">
@@ -108,14 +112,14 @@
     <section class="carritoResumen">
         <div class="recuadroResumen">
             <h3>RESUMEN</h3>
-        <div><a href=""><i class="fas fa-truck"></i></a><h4>Medios de envío</h4></div>
+        <div class="iconosResumen"><a href=""><i class="fas fa-truck"></i></a><h4>Medios de envío</h4></div>
 
         <form class="cp" action="">            
-            <input type="number" name="codigo postal" id="number" value="Tu código postal">
+            <input type="text" name="codigo postal" id="number" value="Tu código postal">
             <input type="button" value="CALCULAR">
         </form>
 
-        <div><a href=""><i class="fas fa-store"></i></a><h4>Nuestro local</h4></div>
+        <div class="iconosResumen"><a href=""><i class="fas fa-store"></i></a><h4>Nuestro local</h4></div>
         <div class="depositoGratis">
 
             <input type="radio" name="envio"><span>Depósito. ¡Te avisamos por mail cuando esté listo para retirar! - Carranza 826, Villa Lynch, San Martín - Atención de Lun. a Vie de 11 a 15hs. ¡Acordate tu número de pedido!</span>
