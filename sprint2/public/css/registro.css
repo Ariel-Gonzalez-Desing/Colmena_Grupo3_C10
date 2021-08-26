@@ -45,16 +45,16 @@ body main .box-texto h4{
     height: 22px;
 }
 
-.yaTengoCuenta{
+.registro .yaTengoCuenta{
     display: block;    
 }
-.yaTengoCuenta a{
+.registro .yaTengoCuenta a{
     text-decoration: none;
     font-weight: 700;
     color: var(--colorOnyx);
 }
 
-.botonAcceptCancel input[type="submit"], input[type="reset"]{
+.registro .botonAcceptCancel input[type="submit"], input[type="reset"]{
     background-color: var(--colorOnyx);
     border: none;
     color: var(--colorNaranja);
