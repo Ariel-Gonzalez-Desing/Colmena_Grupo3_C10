@@ -34,6 +34,7 @@
   display: block;
   font-size: 15px;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .footer .logo {
@@ -61,7 +62,8 @@
 }
 
 .footer i {
-  color: var(--colorNaranja);
+  color: var(--colorNaranja);  
+  transition: color 0.3s ease;
 }
 
 .footer .facebook i {
@@ -98,13 +100,11 @@
 .footer .twitter i:hover {
   font-size: 22px;
   color: var(--colorNaranjaClaro);
-  transition: 0.3s ease;
 }
 
 .footer a:hover {
   font-size: 17px;
   color: var(--colorNaranjaClaro);
-  transition: 0.3s ease;
 }
 
 .footer .informacion {
