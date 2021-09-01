@@ -5,29 +5,29 @@
     text-decoration: none; 
 }
 
-header a{
+a{
     text-decoration: none;
     color: #FCB43A;
     display: block;
 }
 
 header{
-    background-color: var(--colorOnyx);
+    background: color #3a3637;
 }
 header .iconos-TabletDesktop{
     display: none;
 }
 
 header .boton-hamburguesa{
-    color: var(--colorNaranja);
-    background-color: var(--colorOnyx); 
-    padding: 20px 0 0 20px;
+    color:#FCB43A;
+    background-color:#3a3637; 
+    padding: 22px 0 0 22px;
     display: block;
-    width: 30px;    
+    width: 32px;    
     border-radius: 5px;     
 }
 header .changuito{
-    padding: 20px 20px 0 0;
+    padding: 22px 22px 0 0;
     margin-bottom: 5px;
 }
 header .changuito .linkChanguito:nth-child(odd){
@@ -35,8 +35,8 @@ header .changuito .linkChanguito:nth-child(odd){
     padding-left: 5px;
 }
 header .iconos-TabletDesktop .changuito .linkChanguito{
-    background-color: var(--colorCremita);    
-    font-size: 12px;
+    background: color #f1c780;    
+    font-size: 14px;
     display: inline;    
 }
 
@@ -57,7 +57,7 @@ header .navTabletDesktop{
 }
 
 header .barraBusquedaMobile{
-    /* display: inline-block; */    
+      
     display: flex;
     
     justify-content: space-between;
@@ -82,29 +82,29 @@ header .barraBusquedaMobile .searchBar a{
 header .barraBusquedaMobile .searchBar input[type="text"]{
     border-radius: 5px;
     border-width: 2px;
-    border-color: var(--colorNaranja);
+    border-color:#FCB43A;
     background: transparent;
     width: 80vw;
     padding-left: 10px;
     margin-bottom: 10px;
     margin-left: 30px;   
-    color: var(--colorNaranja);
+    color:#fcb43a;
        
 
 }
 
  ::placeholder { 
-    color:var(--colorNaranja);
+    color:fcb43a;
     opacity: 1; /* para firefox */
   }
 
 
 
 
-/*********** Tablet ***********/
+        /**** Tablet****/
 @media (min-width: 768px) {
     header{
-        background-color: var(--colorCremita); 
+        background-color: #f1c780; 
     }
     header .navTabletDesktop{
         display: flex;    
@@ -126,7 +126,7 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
     }
     header nav ul li a{        
         padding: 3px;
-        color: var(--colorOnyx);
+        color:#3a3637;
         font-size: 12px;              
     }
 
@@ -147,8 +147,8 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
         margin-left: 40px;     
     }
     header .iconos-TabletDesktop .changuito a{
-        background-color: var(--colorNaranja);
-        color: var(--colorOnyx);
+        background-color: #FCB43A;
+        color: #3a3637;
     /*     padding-left: 35px;
         padding-right: 35px; */
         text-align: center;
@@ -165,7 +165,7 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
     header .iconos-TabletDesktop .searchBarTabletDesktop input{
         border-radius: 5px;
         border-width: 2px;
-        border-color: var(--colorNaranja);
+        border-color:#FCB43A;
         background: transparent;
         padding-left: 10px;       
         display: inline-block;        
@@ -187,21 +187,23 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
 
 
     ::placeholder { 
-        color:var(--colorOnyx);
+        color:#3a3637;
         opacity: 1; /* para firefox */
       }
 }
 
 
 
-/*********** Desktop ***********/
+         /**** Desktop ****/
 @media (min-width: 1024px){
     header nav ul li{
         width: 180px;
     }
-
+header{
+    background-color: #fffef1;
+}
     header nav ul li a{
-        font-size: 14px;
+        font-size: 16px;
     }
     header .searchBarTabletDesktop{
         width: 650px;        
@@ -215,20 +217,15 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
        
     }
     header nav ul li a:hover{
-        color: var(--colorNaranja);       
-        transform: scale(1.05); 
-       
+color:#FCB43A;
+transform: scale(1.05);
     }
-    /* header .iconos-TabletDesktop .changuito{
-        padding-right: 50px;
-    } */
+    
     header .iconos-TabletDesktop .changuito .linkChanguito{
         transition: all .4s ease; 
     }
-    header .iconos-TabletDesktop .changuito .linkChanguito:hover{
-        color: var(--colorNaranja);
-        transform: scale(1.05); 
+    header.iconos-TabletDesktop.changuito.linkChanguito:hover{
+        color:#FCB43A;
+        transform: scale(1.05);
     }
-
 }
-
