@@ -5,7 +5,9 @@
 <br>
 
 >## :small_orange_diamond: *Seguir haciendo*
->>* Comunicarnos por Whatsapp para comentar progresos y tomar algunas decisiones
+>>* Comunicarnos por Whatsapp para comentar progresos y tomar decisiones
+>>* Poner fecha para terminar cada tarea
+>>* Poner checklists en las tarjetas para avisar el visto de una tarea terminada 
 
 <br>
 
@@ -19,16 +21,15 @@
 
 >## :small_orange_diamond: *Empezar a hacer*
 >>* Hacer una reunión de revisión pre-entrega
->>* Poner fecha para terminar cada tarea
->>* Utilizar tarjetas de Trello para comunicar cosas importantes
->>* Poner checklists en las tarjetas para avisar el visto de una tarea terminada 
+>>* Respetar fechas de entrega
+>>* Utilizar tarjetas de Trello dejar asentadas cosas importantes
 
 <br>
 
 >## :small_orange_diamond: *Hacer menos*
-
+>>* 
 <br>
 
 
 >## :small_orange_diamond: *Dejar de hacer*
->>* Hacer opcionales antes que las tareas obligatorias del sprint
+>>* Confiarse con las entregas y dejar muchas tareas para justo antes de la entrega
