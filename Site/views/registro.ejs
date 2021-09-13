@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <script src="https://kit.fontawesome.com/018e74bdce.js" crossorigin="anonymous"></script>
+</head>
+<body> 
+    <header>  
+        <section class="iconos">
+            <div class="boton-hamburguesa">                
+                <a href=""><i class="fas fa-bars"></i></a>
+            </div>
+            <div class="logo">
+                <a href="/"><img src="/images/logoOscuroSinNombre.png" alt="logo"></a>
+             </div>
+            <div class="changuito">                
+                <a href=""><i class="fas fa-shopping-cart"></i></a>
+            </div>  
+        </section>
+        <section class="iconos-TabletDesktop">
+            <div class="logoSinNombre">
+                <a href="http://google.com.ar"><img src="/images/logoColmenaSinNombre.png" alt="logo"></a>
+            </div>
+            <div class="searchBarTabletDesktop">
+                <form action="">
+                    <input type="text" name="buscar" placeholder="Buscar">
+                    <!-- <button type="submit"><i class="fas fa-search"></i></button> -->
+                    <a href=""><i class="fas fa-search"></i></a>
+                </form>
+            </div>
+            <div>
+                <div class="changuito">                
+                    <a href=""><i class="fas fa-shopping-cart"></i>Carrito</a>
+                    <a class="linkChanguito" href="/registro">Crear cuenta</a> 
+                    <a class="linkChanguito" href="/login">Iniciar sesión</a>
+                </div> 
+            </div>
+        </section>
+        <section class="barraBusquedaMobile">
+            <div class="searchBar">
+                <form action="">
+                    <input type="text" name="buscar" placeholder="Buscar">
+                    <!-- <button type="submit"><i class="fas fa-search"></i></button> -->
+                    <a href=""><i class="fas fa-search"></i></a>
+                </form>
+            </div>
+        </section>
+        <section class="navTabletDesktop">            
+                <nav>
+                    <ul>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Contacto</a></li>
+                        <li><a href="">Ayudá a las abejas</a></li>
+                        <li><a href="">Ofertas</a></li>
+                    </ul>
+                </nav>                
+        </section>  
+    </header>
+    <main>
+         <div class="box-texto">
+                <h3>Formulario de registro</h3> 
+                <h4>Complete los siguientes campos para registrarse en nuestro sitio.</h4>  
+        </div>   
+        <div class="registro">           
+            <div class="box-formularios">
+                <form action="/registro" method="POST">
+                    <div class="desktopRegistro">
+                        <div>
+                            <label for="usuario">Nombre de usuario</label>
+                            <input type="text" name="usuario" placeholder="" id="usuario">                        
+                        </div>  
+                        <div>
+                            <label for="email">email</label>
+                            <input type="email" name="email" placeholder="" id="email">
+                        </div>     
+                    </div>      
+                    <div class="desktopContraseñas">
+                        <div>
+                            <label for="password">Contraseña</label>
+                            <input type="password" name="password" placeholder="" id="password">
+                        </div>   
+                        <div>
+                            <label for="password">Confirmar contraseña</label>
+                            <input type="password" name="password" placeholder="" id="password">
+                        </div>
+                    </div>
+                    <div class="yaTengoCuenta">
+                        <p>¿Ya tenés una cuenta? <a href="#">Iniciar sesión</a></p>
+                    </div>
+                    <div class="botonAcceptCancel">
+                        <input type="submit" name="" value="Registrarse">
+                        <input type="reset" name="" value="Cancelar">
+                    </div>
+                </form>  
+            </div>                      
+        </div>       
+    </main>
+    <footer class="footer">
+        
+        <div class="columnas">
+            <div class="logo">
+                <a href="/"><img src="/images/logoOscuro.png" alt="logo"></a>
+            </div>
+    
+            <div class="seguinos">
+                <h4>SEGUINOS EN LAS REDES</h4>
+                <div class="redes">
+                 <img src="/images/hexagonosRedes.png" alt="">
+                </div>
+                <div class="facebook"><a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></div>
+     
+                <div class="twitter"><a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></div>
+     
+                <div class="pinterest"><a href="https://www.pinterest.com"><i class="fab fa-pinterest"></i></a></div>
+     
+                <div class="instagram"><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></div>
+                 
+             </div>
+             <div class="informacion">
+                 <h4>INFORMACIÓN</h4>
+                 <a href="/">Inicio</a>
+                 <a href="/">Productos</a>
+                 <a href="/">Contacto</a>
+                 <a href="https://sada.org.ar">Ayudá a las abejas</a>
+             </div>
+         
+             <div class="contactanos">
+                 <img src="/images/abejaContacto.png" alt="">
+                 <p>+54 9 11 2619 3554</p> 
+                 <p>mielcolmena@gmail.com</p>
+                 <p>Atención al cliente de lunes a viernes de 9 a 18hs </p>    
+             </div>
+        </div>
+        <div class="copyright">
+            <p>Creado por Grupo3</p>
+            <p>Copyright Tienda online COLMENA - 2021. Todos los derechos reservados. Defensa de las y los consumidores.</p>
+        </div>
+    </footer>
+</body>
+</html>
