@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --colorOnyx: #3a3637;
+    --colorNaranja: #fcb43a;
+    --colorNaranjaClaro: #f1c780;
+    --colorCremita: #fffef1;
+    --colorOnyxHover: rgb(58, 54, 55, 0.7);
+    --colorDarkVanilla: #dcc4a4;
+    --colorCremitaHover: rgb(252, 180, 58, 0.4);
+  }
+
+.add {
+    background-color: var(--colorDarkVanilla);
+    color: var(--colorOnyx);
+}
+
+.add h3 {
+    padding: 10px;
+    background-color: var(--colorOnyx);
+    color: var(--colorNaranja);
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+.add .contenedor {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--colorCremita);
+    margin-top: 40px;
+    border-radius: 5px;
+}
+
+.add .contenedor .container-input-total input{
+    width: 98%;
+    margin: 15px 5px 10px 6px;
+    padding: 20px 0 20px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--colorDarkVanilla);
+    background-color: #fff;
+}
+
+.add .contenedor .container-input-total textarea{
+    width: 98%;
+    margin: 5px;
+    padding: 15px 0 40px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--colorDarkVanilla);
+}
+
+.add .contenedor .container-input-mitad{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 6px;
+}
+
+.add .contenedor .container-input-mitad input{
+    width: 49%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--colorDarkVanilla);
+    background-color: #fff;
+}
+
+.add .contenedor .container-input-mitad input[type=text]{
+    padding: 25px 15px;
+}
+
+.add .contenedor .container-input-mitad select{
+    width: 49%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--colorDarkVanilla);
+}
+
+.add .btn-add {
+    width: 98%;
+    background-color: var(--colorNaranja);
+    font-weight: bolder;
+    margin: 0 6px 10px 6px;
+    padding: 10px;
+    color: var(--colorOnyx);
+    border-radius: 5px;
+    border: 1px solid var(--colorDarkVanilla);
+    font-size: 16px;
+}
+
+
+/* Admin css */
+
+.admin {
+    background-color: var(--colorNaranjaClaro);
+    color: var(--colorOnyx);
+}
+
+.admin .cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 40px;
+  background-color: var(--colorOnyx);  
+  border-radius: 5px 5px 0 0; 
+  padding: 25px 0;
+}
+
+.admin .cabecera .btnAgregar {
+  text-decoration: none;
+  color: var(--colorOnyx);
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 25px;
+  background-color: var(--colorNaranja);
+  padding: 3px 25px;
+  border-radius: 5px;
+}
+
+.admin h3 {     
+    padding-left: 25px;
+    color: var(--colorNaranja);
+    border-radius: 5px 5px 0 0;    
+}
+
+.admin table {
+    table-layout: fixed;
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: var(--colorCremita);
+  }
+
+  .admin table th {    
+    border: 1px solid var(--colorDarkVanilla);
+  }
+
+  .admin thead th {
+    padding: 10px;
+    border-bottom: 1px solid var(--colorDarkVanilla);
+    text-align: start;
+  }
+
+  .admin thead th:nth-child(1) {
+    width: 5%;
+  }
+  .admin thead th:nth-child(2) {
+    width: 20%;
+  }
+  .admin thead th:nth-child(3) {
+    width: 20%;
+  }
+  .admin thead th:nth-child(4) {
+    width: 10%;
+  }.admin thead th:nth-child(5) {
+    width: 10%;
+  }
+.admin thead th:nth-child(6) {
+    width: 10%;
+  }
+ 
+  .admin tbody th {
+    padding: 10px;
+    border: 1px solid var(--colorDarkVanilla);
+    text-align: start;
+  }
+  .admin tbody td {
+    padding: 10px;
+    border: 1px solid var(--colorDarkVanilla);
+  }
+
+  .admin tbody td .iconos{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+  }
+
+  .admin tbody td i{
+    display: flex;
+    justify-content: space-between;    
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+  }
+
+  .admin tbody td i:nth-child(1){
+    background-color: rgb(43, 151, 43);    
+    
+  }
+
+  .admin tbody td i:nth-child(2){
+    background-color: rgb(231, 62, 62);   
+   
+  }
+
+ 

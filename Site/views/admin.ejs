@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('partials/head')%> <%-include('partials/header')%>
+<body class="admin">
+    <div class="cabecera">
+      <h3>Administrador</h3>    
+      <a class="btnAgregar" href="/products/add">Agregar</a>    
+    </div>
+    <table summary="Listado de productos">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Presentación</th>            
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% products.forEach((product, index) => { %>            
+          <tr>
+            <th scope="row"><%= index + 1 %></th>
+            <td><%= product.image %></td>
+            <td><%= product.name %></td>
+            <td><%= product.price %></td>
+            <td><%= product.presentation %></td>
+            <td><div class="iconos"><a href="/products/edit"><i class="fas fa-edit"></i></a><i class="fas fa-trash-alt"></i></div></td>
+          </tr>
+          <% }) %>
+        </tbody>
+        
+      </table>
+</body>
+</html>
