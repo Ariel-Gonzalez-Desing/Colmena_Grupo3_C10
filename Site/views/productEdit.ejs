@@ -4,7 +4,7 @@
   <body class="add">
     <main>
       <div class="contenedor">
-        <h3>Editar producto</h3>
+        <h3>Editar producto: <%= product.name.toUpperCase() %></h3>
 
         <form method="POST">
 
@@ -47,6 +47,7 @@
             aria-label="Floating label select example"
             name="category">
             <option value="" selected hidden>Selecciona la categoría</option>
+            
           </select>
           <label for="category"></label>
 
