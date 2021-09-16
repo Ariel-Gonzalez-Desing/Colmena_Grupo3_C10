@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%-include('partials/head')%> <%-include('partials/header')%>
+  <%-include('../partials/head')%> <%-include('../partials/header')%>
   <body class="add">
     <main>
       <div class="contenedor">
-        <h3>Agregar producto</h3>
+        <h3>Editar producto: <%= product.name.toUpperCase() %></h3>
 
         <form method="POST">
 
@@ -37,7 +37,8 @@
               type="text"
               placeholder="Presentacion"
               name="quantity"
-            /> </div>
+            /> 
+        </div>
           
             <div class="container-input-mitad">
           <select
@@ -46,6 +47,7 @@
             aria-label="Floating label select example"
             name="category">
             <option value="" selected hidden>Selecciona la categoría</option>
+            
           </select>
           <label for="category"></label>
 

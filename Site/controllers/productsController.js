@@ -7,24 +7,24 @@ const firstLetter = require('../utils/firstLetter');
 
 module.exports = {
     detalle : (req,res) => {
-        return res.render('detalle', {
+        return res.render('products/detalle', {
             title : 'Detalle de producto'
         });
     },
     carrito : (req,res) => {
-        return res.render('carrito', {
+        return res.render('products/carrito', {
             title : 'Carrito de compras'
         });
     },
     add : (req,res) => {
-        return res.render('productAdd', {
+        return res.render('products/productAdd', {
             title : 'Agregar producto',
             categories,
             firstLetter
         });
     },
     edit : (req,res) => {
-        return res.render('productEdit', {
+        return res.render('products/productEdit', {
             title : 'Editar producto',
             product : products.find(product => product.id === +req.params.id),
             firstLetter
