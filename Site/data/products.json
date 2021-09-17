@@ -3,7 +3,7 @@
        "id": 1,
        "name": "miel chica",
        "price": 300,
-       "category" : "comestible",
+       "category" : "destacados",
        "presentation" : "75gr",
        "description": "Miel en frasco pequeño, presentacion de 75 gr.",
        "image": "frasco75gr.jpg"
@@ -58,7 +58,7 @@
         "name": "frasco",
         "presentation" : "unidad",
         "price": 400,
-        "category" : "bazar",
+        "category" : "destacados",
         "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
         "image": "producto3.jpg"
     },
@@ -76,7 +76,7 @@
         "name": "remera save the bees",
         "presentation" : "talle unico",
         "price": 450,
-        "category" : "vestimenta",
+        "category" : "destacados",
         "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
         "image": "producto2.jpg"
     }  
