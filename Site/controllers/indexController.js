@@ -5,7 +5,8 @@ let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','prod
 module.exports = {
     index : (req,res) => {
         return res.render('main/index', { 
-            title: 'Colmena'            
+            title: 'Colmena',
+            destacados : products.filter(product => product.category === 'destacados'),            
         })
     },
     admin : (req,res) => {
