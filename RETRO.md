@@ -1,18 +1,51 @@
-Retrospectiva de Grupo 3.
+- [x] **Retrospectiva Grupo 3 - Comisión 10**
 
-Seguir haciendo:
-Comunicarnos por whatsapp.
-Hacer más Comunicarnos cuando tenemos alguna dificultad.
-Actualizar el trello con los procesos.
-Reuniones más efectivas.Más daylis.
+#  » MIEL COLMENA « 
 
-Empezar a hacer:
-Poner fecha para terminar cada tarea.
-Hacer reunion de revision pre entrega.
-Usar targetas de Trello para comunicar cosas importantes.
-Hacer Checklist en Trello para avisar el visto de una actividad.
-Hacer menos:
-Los opcionales antes que las tareas obligatorias de los sprint.
-Dejar de hacer.
+## Seguir haciendo
 
+- **Comunicarnos por Whatsapp para comentar progreso y tomar decisiones.**
+
+----
+
+>  Poner fecha para terminar cada tarea.
+
+----
+- Poner checklists en las tarjetas para avisar el visto de una tarea terminada.
+
+## Hacer más
+
+- **Decirles a nuestros compañeros cuando tenemos alguna dificultad.**
+----
+
+- Actualizar Trello con los avances.
+----
+
+> Mas dailys.
+
+----
+- Hacer las reuniones mas efectivas. optimizar el tiempo.
+
+## Empezar a hacer
+
+- Hacer una reunión de revisión pre-entrega.
+----
+
+> Respetar fechas de entrega.
+----
+
+**Utilizar tarjetas de Trello para dejar asentadas cosas importantes.**
+
+## Hacer menos
+
+> **Espaciar mucho las reuniones.
+----
+
+>Confiarse con los tiempos y dejar muchas tareas para justo antes de la entrega.
+
+
+## Dejar de hacer
+
+> ¯\_(ツ)_/¯**Olvidarse de actualizar el Trello.**
+----
 
