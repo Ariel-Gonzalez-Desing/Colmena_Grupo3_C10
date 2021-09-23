@@ -1,81 +1,47 @@
-- [x] **Retrospectiva Grupo 3 - Comisión 10**
+# ``Retrospectiva Grupo 3 - Comisión 10``
 
-#  » MIEL COLMENA « 
+-----
+ ># [x] Sprint 3.
+
+![myimage-alt-tag](/Design/Logo.png)
 ----
-> # Sprint numero 3
-----
-
-## Seguir haciendo
-
-- **Comunicarnos por Whatsapp para comentar progreso y tomar decisiones.**
+## ``MIEL COLMENA. ``
 
 ----
-
+## ``Seguir haciendo:``
+>- Comunicarnos por Whatsapp para comentar progreso y tomar decisiones.
+----
 >  Poner fecha para terminar cada tarea.
-
 ----
-- Poner checklists en las tarjetas para avisar el visto de una tarea terminada.
-
-## Hacer más
-
-- **Decirles a nuestros compañeros cuando tenemos alguna dificultad.**
+>- Poner checklists en las tarjetas para avisar el visto de una tarea terminada.
 ----
+## `` Hacer más:``
 
-- Actualizar Trello con los avances.
+>- **Decirles a nuestros compañeros cuando tenemos alguna dificultad.**
 ----
-
-> Mas dailys.
-
+><br> Actualizar Trello con los avances.<br>
 ----
-- Hacer las reuniones mas efectivas. optimizar el tiempo.
-
-## Empezar a hacer
-
-- Hacer una reunión de revisión pre-entrega.
+> - Mas dailys.
 ----
-
-> Respetar fechas de entrega.
+> - Hacer las reuniones mas efectivas, optimizar el tiempo.
 ----
-
-**Utilizar tarjetas de Trello para dejar asentadas cosas importantes.**
-
-## Hacer menos
-
-> **Espaciar mucho las reuniones.
+## ``Empezar a hacer:``
+> Hacer una reunión de revisión pre-entrega.
 ----
-
->Confiarse con los tiempos y dejar muchas tareas para justo antes de la entrega.
-
-
-## Dejar de hacer
-
-> ¯\_(ツ)_/¯**Olvidarse de actualizar el Trello.**
+>  Poner fecha para terminar cada tarea.
 ----
+>**Utilizar tarjetas de Trello para dejar asentadas cosas importantes.**
+----
+>- Poner checklists en las tarjetas para avisar el visto de una tarea terminada.
+----
+## ``Dejar de hacer:``
+>Hacer opcionales antes que las tareas obligatorias del sprint.
+----
+>**Olvidarse de actualizar el Trello.**
+----
+## ``Hacer menos:``
 
-
-
-Retrospectiva Grupo 3 - Comisión 10
-[x] Sprint 2.
-myimage-alt-tag
-MIEL COLMENA.
-Seguir haciendo:
-Comunicarnos por Whatsapp para comentar progreso y tomar decisiones.
-Hacer más:
-Decirles a nuestros compañeros cuando tenemos alguna dificultad.
-
-Actualizar Trello con los avances.
-
-Mas dailys.
-
-Hacer las reuniones mas efectivas. Optimizar el tiempo.
-Empezar a hacer:
-Hacer una reunión de revisión pre-entrega.
-
-Poner fecha para terminar cada tarea.
-
-Utilizar tarjetas de Trello para dejar asentadas cosas importantes.
-
-Poner checklists en las tarjetas para avisar el visto de una tarea terminada.
-Dejar de hacer:
-Hacer opcionales antes que las tareas obligatorias del sprint.
+> **Espaciar mucho las reuniones.**
+----
+> Confiarse con los tiempos y dejar muchas tareas para justo antes de la entrega.
 
