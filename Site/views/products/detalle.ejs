@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
   <%-include('../partials/head') %>
+  
   <body>
 
     <%-include('../partials/header') %>
 
     <main class="detalle">
       <div class="imagenProducto">
-        <img src="/images/miel.jpeg" alt="foto pote de miel" />
+        <img src="/images/<%= product.image %>" alt="foto pote de miel" />
       </div>
 
       <div class="detallesProducto">
-        <h2>Miel Líquida por 125gr.</h2>
+        <h2><%= product.name %></h2>
 
         <p>
-          Miel Líquida 100% miel de abeja de colmena de Sierra de la Ventana. Es
-          multifloral: de trébol, melilotus y cardo. Un proceso de calentado
-          permite obtener una miel líquida y cristalina, ideal para endulzar
-          infusiones, limonadas y licuados.
+          <%= product.description %>
         </p>
 
-        <h3>$900.-</h3>
-        <h4>12 cuotas de $86,50</h4>
+        <h3>$<%= product.price %>.-</h3>
+        <h4>12 cuotas de $<%= cuota (Math.round(product.price)).toFixed(2) %></h4>
 
         <div class="cantidad-boton">
           <div class="masMenos">

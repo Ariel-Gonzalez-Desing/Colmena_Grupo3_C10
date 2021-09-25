@@ -3,12 +3,18 @@ const path = require('path');
 let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'))
 let  categories = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categories.json'),'utf-8'));
 
+const cuota = require('../utils/cuota');
+
 const firstLetter = require('../utils/firstLetter');
 
 module.exports = {
     detalle : (req,res) => {
         return res.render('products/detalle', {
-            title : 'Detalle de producto'
+            title : 'Detalle de producto',           
+            product : products.find(product => product.id === +req.params.id),
+            cuota,
+            firstLetter,
+
         });
     },
     carrito : (req,res) => {
