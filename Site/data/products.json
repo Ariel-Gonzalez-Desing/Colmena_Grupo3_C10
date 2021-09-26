@@ -1,84 +1,83 @@
 [
-    {
-       "id": 1,
-       "name": "miel chica",
-       "price": 300,
-       "category" : "destacados",
-       "presentation" : "75gr",
-       "description": "Miel en frasco pequeño, presentacion de 75 gr.",
-       "image": "frasco75gr.jpg"
-    },
-    {
-        "id": 2,
-        "name": "miel mediana",
-        "presentation" : "175gr",
-        "price": 500,
-        "category" : "comestible",
-        "description": "Miel en frasco mediano, presentacion de 125 gr.",
-        "image": "frasco75gr.jpg"
-    },
-    {
-        "id": 3,
-        "name": "miel grande",
-        "presentation" : "200gr",
-        "price": 700,
-        "category" : "comestible",
-        "description": "Miel en frasco grande, presentacion de 200 gr.",
-        "image": "frasco200gr.jpg"
-    },
-    {
-        "id": 4,
-        "name": "panal",
-        "presentation" : "250gr",
-        "price": 1000,
-        "category" : "comestible",
-        "description": "Panal completo en cuadrado.",
-        "image": "frasco75gr.jpg"
-    },
-    {
-        "id": 5,
-        "name": "llavero",
-        "presentation" : "unidad",
-        "price": 200,
-        "category" : "deco",
-        "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
-        "image": "frasco75gr.jpg"
-    },
-    {
-        "id": 6,
-        "name": "palito mielero",
-        "presentation" : "unidad",
-        "price": 300,
-        "category" : "bazar",
-        "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
-        "image": "frasco75gr.jpg"
-    },
-    {
-        "id": 7,
-        "name": "frasco",
-        "presentation" : "unidad",
-        "price": 400,
-        "category" : "destacados",
-        "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
-        "image": "producto3.jpg"
-    },
-    {
-        "id": 8,
-        "name": "remera help-plant-clean",
-        "presentation" : "talle unico",
-        "price": 450,
-        "category" : "vestimenta",
-        "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
-        "image": "frasco75gr.jpg"
-    },
-    {
-        "id": 9,
-        "name": "remera save the bees",
-        "presentation" : "talle unico",
-        "price": 450,
-        "category" : "destacados",
-        "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
-        "image": "producto2.jpg"
-    }  
+   {
+      "id": 1,
+      "name": "miel pequeña",
+      "size": "75gr",
+      "price": 350,
+      "category": "destacados",
+      "description": "Miel en frasco pequeño, presentacion de 75 gr.",
+      "image": "frasco75gr.jpg"
+   },
+   {
+      "id": 2,
+      "name": "miel mediana",
+      "size": "175gr",
+      "price": 500,
+      "category": "comestible",
+      "description": "Miel en frasco mediano, presentacion de 125 gr.",
+      "image": "frasco75gr.jpg"
+   },
+   {
+      "id": 3,
+      "name": "miel grande",
+      "size": "200gr",
+      "price": 700,
+      "category": "comestible",
+      "description": "Miel en frasco grande, presentacion de 200 gr.",
+      "image": "frasco200gr.jpg"
+   },
+   {
+      "id": 4,
+      "name": "panal",
+      "size": "250gr",
+      "price": 1000,
+      "category": "comestible",
+      "description": "Panal completo en cuadrado.",
+      "image": "frasco75gr.jpg"
+   },
+   {
+      "id": 5,
+      "name": "llavero",
+      "size": "unidad",
+      "price": 200,
+      "category": "deco",
+      "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
+      "image": "frasco75gr.jpg"
+   },
+   {
+      "id": 6,
+      "name": "palito mielero",
+      "size": "unidad",
+      "price": 300,
+      "category": "bazar",
+      "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
+      "image": "frasco75gr.jpg"
+   },
+   {
+      "id": 7,
+      "name": "frasco",
+      "size": "unidad",
+      "price": 400,
+      "category": "destacados",
+      "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
+      "image": "producto3.jpg"
+   },
+   {
+      "id": 8,
+      "name": "remera help-plant-clean",
+      "size": "talle unico",
+      "price": 450,
+      "category": "vestimenta",
+      "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
+      "image": "frasco75gr.jpg"
+   },
+   {
+      "id": 9,
+      "name": "remera save the bees",
+      "size": "talle unico",
+      "price": 450,
+      "category": "destacados",
+      "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
+      "image": "producto2.jpg"
+   }
 ]
-    

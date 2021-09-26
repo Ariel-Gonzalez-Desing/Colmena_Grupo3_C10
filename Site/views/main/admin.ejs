@@ -9,7 +9,7 @@
    
     <div class="cabecera">
       <h3>Administrador</h3>    
-      <a class="btnAgregar" href="/products/add">Agregar</a>    
+      <a class="btnAgregar" href="/products/create">Agregar</a>    
     </div>
     <table summary="Listado de productos">
         <thead>
@@ -26,14 +26,14 @@
             <% products.forEach((product, index) => { %>            
           <tr>
             <th scope="row"><%= index + 1 %></th>
-            <td><img src="/images/<%= product.image %> " alt=""></td>
+            <td><a href="/products/detalle/<%= product.id %> "><img src="/images/products/<%= product.image %>" alt=""></a></td>
             <td><%= product.name %></td>
             <td><%= product.price %></td>
-            <td><%= product.presentation %></td>
+            <td><%= product.size %></td>
             <td><div class="iconos"><a href="/products/edit/<%= product.id %> "><i class="fas fa-edit"></i></a>
               
-              <form action="/products/destroy/<%= product.id %>?_method=DELETE" method="POST">
-              <i class="fas fa-trash-alt"></i>
+              <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+              <button><i class="fas fa-trash-alt"></i></button>
             </form>
             
             </div></td>
