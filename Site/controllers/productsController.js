@@ -1,5 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+
+const {dirname} = require('path');
+
 let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'))
 let  categories = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categories.json'),'utf-8'));
 
@@ -24,6 +27,7 @@ module.exports = {
         const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
         
             const {name, size, price, category, description} = req.body;
+            let images = req.files.map(image => image.filename);
 
             let product = {
                 id : products[products.length - 1].id + 1,
@@ -32,7 +36,7 @@ module.exports = {
                 price : +price,
                 category,
                 description : description.trim(),
-                image : req.file ? req.file.filename : 'default-image.png',
+                image : req.files.length !=0 ? images : ['default-image.png'],
             }
 
             products.push(product);
@@ -95,6 +99,14 @@ module.exports = {
     
     destroy : (req,res) => {
         const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
+
+        let product = products.find(product => product.id === +req.params.id);
+
+        product.image.forEach(img => {
+            fs.existsSync(path.join(__dirname,'../public/images/products',img)) ? fs.unlinkSync(path.join(__dirname,'../public/images/products',img)) : null
+
+        });
+
         let productsModified = products.filter(product => product.id !== +req.params.id);
 
         fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(productsModified,null,3),'utf-8');

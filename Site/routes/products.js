@@ -8,7 +8,7 @@ const {products, createForm, create, detalle, editForm, edit, carrito, destroy} 
 router
 .get('/', products)
 .get('/create', createForm)
-.post('/create', upload.single('image'), create)
+.post('/create', upload.array('image'), create)
 .get('/detalle/:id', detalle)
 .get('/edit/:id', editForm)
 .put('/edit/:id', edit)

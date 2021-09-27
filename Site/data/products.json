@@ -6,7 +6,9 @@
       "price": 350,
       "category": "destacados",
       "description": "Miel en frasco pequeño, presentacion de 75 gr.",
-      "image": "frasco75gr.jpg"
+      "image": [
+         "frasco75gr.jpg"
+      ]
    },
    {
       "id": 2,
@@ -15,7 +17,9 @@
       "price": 500,
       "category": "comestible",
       "description": "Miel en frasco mediano, presentacion de 125 gr.",
-      "image": "frasco75gr.jpg"
+      "image": [
+         "frasco75gr.jpg"
+      ]
    },
    {
       "id": 3,
@@ -24,7 +28,9 @@
       "price": 700,
       "category": "comestible",
       "description": "Miel en frasco grande, presentacion de 200 gr.",
-      "image": "frasco200gr.jpg"
+      "image": [
+         "frasco200gr.jpg"
+      ]
    },
    {
       "id": 4,
@@ -33,7 +39,9 @@
       "price": 1000,
       "category": "comestible",
       "description": "Panal completo en cuadrado.",
-      "image": "frasco75gr.jpg"
+      "image": [
+         "frasco75gr.jpg"
+      ]
    },
    {
       "id": 5,
@@ -42,7 +50,9 @@
       "price": 200,
       "category": "deco",
       "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
-      "image": "frasco75gr.jpg"
+      "image": [
+         "frasco75gr.jpg"
+      ]
    },
    {
       "id": 6,
@@ -51,7 +61,9 @@
       "price": 300,
       "category": "bazar",
       "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
-      "image": "frasco75gr.jpg"
+      "image": [
+         "frasco75gr.jpg"
+      ]
    },
    {
       "id": 7,
@@ -60,7 +72,9 @@
       "price": 400,
       "category": "destacados",
       "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
-      "image": "producto3.jpg"
+      "image": [
+         "producto3.jpg"
+      ]
    },
    {
       "id": 8,
@@ -69,7 +83,9 @@
       "price": 450,
       "category": "vestimenta",
       "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
-      "image": "frasco75gr.jpg"
+      "image": [
+         "frasco75gr.jpg"
+      ]
    },
    {
       "id": 9,
@@ -78,6 +94,8 @@
       "price": 450,
       "category": "destacados",
       "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
-      "image": "producto2.jpg"
+      "image": [
+         "producto2.jpg"
+      ]
    }
 ]
