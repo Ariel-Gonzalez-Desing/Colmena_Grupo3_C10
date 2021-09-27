@@ -18,7 +18,7 @@
             <th scope="col">Imagen</th>
             <th scope="col">Nombre</th>
             <th scope="col">Precio</th>
-            <th scope="col">Presentación</th>            
+            <th scope="col">Tamaño</th>            
             <th scope="col">Editar</th>
           </tr>
         </thead>
@@ -27,9 +27,9 @@
           <tr>
             <th scope="row"><%= index + 1 %></th>
             <td><a href="/products/detalle/<%= product.id %> "><img src="/images/products/<%= product.image %>" alt=""></a></td>
-            <td><%= product.name %></td>
+            <td><%= firstLetter(product.name) %></td>
             <td><%= product.price %></td>
-            <td><%= product.size %></td>
+            <td><%= firstLetter(product.size) %></td>
             <td><div class="iconos"><a href="/products/edit/<%= product.id %> "><i class="fas fa-edit"></i></a>
               
               <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">

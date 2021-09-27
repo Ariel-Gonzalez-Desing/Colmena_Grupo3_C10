@@ -54,7 +54,7 @@
                     <% destacados.forEach(product => { %>
                       <div class="prodUnidad">
                         <a href="/products/detalle/<%= product.id %>"><img src="/images/products/<%= product.image %>" alt="">
-                            <p><%= product.presentation %><br><%= product.name %></p>
+                            <p><%= firstLetter(product.size) %><br><%= firstLetter(product.name) %></p>
                             <a href="/products/detalle/<%= product.id %>" class="button">VER MAS</a></a>
                     </div>
                     <% }) %>
