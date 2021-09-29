@@ -70,7 +70,8 @@ module.exports = {
         const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
         const {name, size, price, category, description} = req.body;
 
-        let product = products.find(product => product.id === +req.params.id);           
+        let product = products.find(product => product.id === +req.params.id);  
+        let images = req.files.map(image => image.filename);         
 
         let productModified = {
             id : +req.params.id,
@@ -79,7 +80,7 @@ module.exports = {
             price : +price,
             category,            
             description : description.trim(),
-            image : product.image
+            image : req.files.length != 0 ? images : ['agregarImagen.png'],
         }
 
         let productsModified = products.map(product => product.id === +req.params.id ? productModified : product);

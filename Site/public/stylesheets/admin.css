@@ -151,7 +151,7 @@
 }
 
 .add .contenedor .carruselImages label input#image{
-   color:transparent;
+  cursor: pointer;
 }
 
 .add .contenedor .container-input-total input{
@@ -214,6 +214,7 @@
     border-radius: 5px;
     border: 1px solid var(--colorDarkVanilla);
     font-size: 16px;
+    cursor: pointer;
 }
 
 @media (min-width: 768px){

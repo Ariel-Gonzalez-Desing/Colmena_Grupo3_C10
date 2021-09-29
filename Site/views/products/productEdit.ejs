@@ -25,17 +25,17 @@
   <!-- Imagenes y mensajes -->
   <div class="Containers">
     <div class="MessageInfo"></div>
-    <img src="/images/products/agregarImagen.png">    
+    <img src="/images/products/<%= product.image.length !=0 ? product.image[0] : 'agregarImagen.png' %>">
   </div>
     
   <div class="Containers">
     <div class="MessageInfo"></div>
-    <img src="/images/products/producto1.jpg">    
+    <img src="/images/products/<%= product.image.length !=1 ? product.image[1] : 'agregarImagen.png' %>">   
   </div>
 
   <div class="Containers">
     <div class="MessageInfo"></div>
-    <img src="/images/products/producto2.jpg">    
+    <img src="/images/products/<%= product.image.length >=2 ? product.image[2] : 'agregarImagen.png' %>">   
   </div>
 
   <!-- Botones atrás y adelante -->
@@ -46,18 +46,14 @@
   </div>
   <!--------------Fin del Carrusel----------------->
 
-
-
-
             <label for="image">
-            <!-- <button class="btn-add">Agregar imagenes</button> -->
             <input class="image" type="file" id="image" name="image" multiple>
             </label>
             
           </div>     
 
           <div class="container-input-total">
-            <input type="text" placeholder="Nombre del producto" name="name" value="<%= product.name %>"/>
+            <input type="text" placeholder="Nombre del producto" name="name" value="<%= firstLetter(product.name) %>"/>
           </div>
 
           <div class="container-input-total">

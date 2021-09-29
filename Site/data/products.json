@@ -1,13 +1,16 @@
 [
    {
       "id": 1,
-      "name": "miel chica",
+      "name": "Miel chica",
       "size": "75gr",
       "price": 350,
       "category": "destacados",
       "description": "Miel en frasco pequeño, presentacion de 75 gr.",
       "image": [
-         "frasco75gr.jpg"
+         "img-1632932926953.jpg",
+         "img-1632932926956.png",
+         "img-1632932926971.jpg",
+         "img-1632932926974.jpg"
       ]
    },
    {
