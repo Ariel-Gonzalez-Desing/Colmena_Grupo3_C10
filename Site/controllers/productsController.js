@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const {dirname} = require('path');
+// const {dirname} = require('path');
 
 let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'))
 let  categories = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categories.json'),'utf-8'));
@@ -46,7 +46,7 @@ module.exports = {
             return res.redirect('/admin')
     },
 
-    detalle : (req,res) => {
+    detail : (req,res) => {
         const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
         return res.render('products/detalle', {
             title : 'Detalle de producto',           
@@ -67,30 +67,30 @@ module.exports = {
     },
 
     edit : (req,res) => {
-            const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
-            const {name, size, price, category, description} = req.body;
+        const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
+        const {name, size, price, category, description} = req.body;
 
-            let product = products.find(product => product.id === +req.params.id);
-    
-            let productEdited = {
-                id : +req.params.id,
-                name : name.trim(),
-                size: size.trim(),
-                price : +price,
-                category,
-                description : description.trim(),
-                image : product.image
-            }           
-    
-            let productsEdited = products.map(product => product.id === +req.params.id ? productEdited : product);
-    
-            fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(productsEdited,null,3),'utf-8');
-    
-            return res.redirect('/products/detalle/' + req.params.id),
-            firstLetter
+        let product = products.find(product => product.id === +req.params.id);           
+
+        let productModified = {
+            id : +req.params.id,
+            name : name.trim(),
+            size : size.trim(),
+            price : +price,
+            category,            
+            description : description.trim(),
+            image : product.image
+        }
+
+        let productsModified = products.map(product => product.id === +req.params.id ? productModified : product);
+
+        fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(productsModified,null,3),'utf-8');
+
+        return res.redirect('/admin'),
+        firstLetter
     },
 
-    carrito : (req,res) => {
+    cart : (req,res) => {
         return res.render('products/carrito', {
             title : 'Carrito de compras',
             firstLetter

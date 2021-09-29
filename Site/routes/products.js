@@ -2,17 +2,17 @@ var express = require('express');
 const router = express.Router();
 const upload = require('../middlewares/multer')
 
-const {products, createForm, create, detalle, editForm, edit, carrito, destroy} = require('../controllers/productsController');
+const {products, createForm, create, detail, editForm, edit, cart, destroy} = require('../controllers/productsController');
 
 /* /products */
 router
 .get('/', products)
 .get('/create', createForm)
 .post('/create', upload.array('image'), create)
-.get('/detalle/:id', detalle)
+.get('/detail/:id', detail)
 .get('/edit/:id', editForm)
-.put('/edit/:id', edit)
-.get('/carrito', carrito)
+.put('/edit/:id', upload.array('image'), edit)
+.get('/cart', cart)
 .delete('/delete/:id', destroy)
 
 module.exports = router;
