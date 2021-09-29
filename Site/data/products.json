@@ -5,7 +5,7 @@
        "price": 300,
        "category" : "destacados",
        "presentation" : "75gr",
-       "description": "Miel en frasco pequeño, presentacion de 75 gr.",
+       "description": "La miel COLMENA 100% miel de abeja proviene de colmenas Las Flores, Buenos Aires. Es multifloral: de trébol, melilotus y cardo. Un proceso de calentado permite obtener una miel líquida y cristalina, ideal para endulzar infusiones, limonadas y licuados.",
        "image": "frasco75gr.jpg"
     },
     {
@@ -14,7 +14,7 @@
         "presentation" : "175gr",
         "price": 500,
         "category" : "comestible",
-        "description": "Miel en frasco mediano, presentacion de 125 gr.",
+        "description": "Miel COLMENA 100% pura, proviene de flores silvestres que crecen en nuestro monte de la región del Gran Chaco, y así nace este exquisito blend. Algarrobo, Chañar, Sacha melón, Garabato , Poleo, Itin son algunas de flores autóctonas que, gracias al trabajo de las abejas, aportan escalonadamente su sabor, aroma y color para lograr esta miel única. Con un sabor más marcado y dulce que el común de las mieles, tienen una mayor persistencia en el paladar .",
         "image": "frasco75gr.jpg"
     },
     {
@@ -23,7 +23,7 @@
         "presentation" : "200gr",
         "price": 700,
         "category" : "comestible",
-        "description": "Miel en frasco grande, presentacion de 200 gr.",
+        "description": "Miel Colmena, 100% miel de abeja proviene de colmenas Las Flores, Buenos Aires. Es multifloral: de trébol, melilotus y cardo. Un proceso de calentado permite obtener una miel líquida y cristalina, ideal para endulzar infusiones, limonadas y licuados ",
         "image": "frasco200gr.jpg"
     },
     {
@@ -41,8 +41,8 @@
         "presentation" : "unidad",
         "price": 200,
         "category" : "deco",
-        "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
-        "image": "frasco75gr.jpg"
+        "description": "LLavero de  metal en forma de de 25mm. panal con abeja de Color plateado antiguo, colgante, joyería artesanal, 1 unidad",
+        "image": "llavero 9.png"
     },
     {
         "id": 6,
@@ -68,7 +68,7 @@
         "presentation" : "talle unico",
         "price": 450,
         "category" : "vestimenta",
-        "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
+        "description": "",
         "image": "frasco75gr.jpg"
     },
     {
@@ -77,7 +77,7 @@
         "presentation" : "talle unico",
         "price": 450,
         "category" : "destacados",
-        "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
+        "description": "La remera ABEJAS, es una prenda para niñas y niños y en #coloresuniversales Estampada a mano en el frente con una de nuestras ilustraciones ! El material es 100% algodón  y tiene broches en el escote para que el momento de vestirse sea más fácil! Es una prenda de esas que se heredan de generación en generación y pensada para usar en cualquier momento del año!",
         "image": "producto2.jpg"
     }  
 ] 
