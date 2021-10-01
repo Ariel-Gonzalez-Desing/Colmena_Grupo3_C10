@@ -1,7 +1,7 @@
 [
     {
        "id": 1,
-       "name": "miel chica",
+       "name": "Miel Chica",
        "price": 300,
        "category" : "destacados",
        "presentation" : "75gr",
@@ -10,16 +10,16 @@
     },
     {
         "id": 2,
-        "name": "miel mediana",
-        "presentation" : "175gr",
+        "name": "Miel Mediana",
+        "presentation" : "125gr",
         "price": 500,
         "category" : "comestible",
         "description": "Miel COLMENA 100% pura, proviene de flores silvestres que crecen en nuestro monte de la región del Gran Chaco, y así nace este exquisito blend. Algarrobo, Chañar, Sacha melón, Garabato , Poleo, Itin son algunas de flores autóctonas que, gracias al trabajo de las abejas, aportan escalonadamente su sabor, aroma y color para lograr esta miel única. Con un sabor más marcado y dulce que el común de las mieles, tienen una mayor persistencia en el paladar .",
-        "image": "frasco75gr.jpg"
+        "image": "frasco125grCar.png"
     },
     {
         "id": 3,
-        "name": "miel grande",
+        "name": "Miel Grande",
         "presentation" : "200gr",
         "price": 700,
         "category" : "comestible",
@@ -28,16 +28,16 @@
     },
     {
         "id": 4,
-        "name": "panal",
+        "name": "Panal",
         "presentation" : "250gr",
         "price": 1000,
         "category" : "comestible",
-        "description": "Panal completo en cuadrado.",
-        "image": "frasco75gr.jpg"
+        "description": "Panal Puro de Miel 100% Comestible (Sin contenido de parafina) Presentación: 350grs. Variedad: Melilotus Blend (Flor de Meliloto) Sabor fino con notas a Vainilla y Flores",
+        "image": "Panal.png"
     },
     {
         "id": 5,
-        "name": "llavero",
+        "name": "Llavero",
         "presentation" : "unidad",
         "price": 200,
         "category" : "deco",
@@ -46,25 +46,25 @@
     },
     {
         "id": 6,
-        "name": "palito mielero",
+        "name": "Palito Mielero",
         "presentation" : "unidad",
         "price": 300,
         "category" : "bazar",
-        "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
-        "image": "frasco75gr.jpg"
+        "description": "Palito Mielero realizado en madera natural con ranuras para poder sujetar la miel y que no gotee. Este utensilio permite servir y dosificar la cantidad de miel a emplear en nuestra comida o bebida favorita sin que se vierta.",
+        "image": "Palito Mielero.png"
     },
     {
         "id": 7,
-        "name": "frasco",
+        "name": "Frasco para Miel",
         "presentation" : "unidad",
         "price": 400,
         "category" : "destacados",
-        "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
+        "description": "Mielera de cristal con tapa, formato ideal para guardar nuestra miel Colmena, incluye tapa y recolector de miel.  MEDIDAS: Alto: 15,5 CM, Circunferencia: 8 CM, Capacidad: 220 ML",
         "image": "producto3.jpg"
     },
     {
         "id": 8,
-        "name": "remera help-plant-clean",
+        "name": "Remera Help-Plant-Clean",
         "presentation" : "talle unico",
         "price": 450,
         "category" : "vestimenta",
@@ -73,11 +73,11 @@
     },
     {
         "id": 9,
-        "name": "remera save the bees",
-        "presentation" : "talle unico",
+        "name": "Remera Save the Bees",
+        "presentation" : "todos los talles",
         "price": 450,
         "category" : "destacados",
-        "description": "La remera ABEJAS, es una prenda para niñas y niños y en #coloresuniversales Estampada a mano en el frente con una de nuestras ilustraciones ! El material es 100% algodón  y tiene broches en el escote para que el momento de vestirse sea más fácil! Es una prenda de esas que se heredan de generación en generación y pensada para usar en cualquier momento del año!",
-        "image": "producto2.jpg"
+        "description": "La remera ABEJAS, es una prenda en colores universales estampada a mano en el frente con una de nuestras ilustraciones!. El material es 100% algodón  y tiene broches en el escote para que al momento de vestirse sea más fácil! Es una prenda de esas que se heredan de generación en generación y pensada para usar en cualquier momento del año!",
+        "image": "remeras1.jpg"
     }  
 ] 
