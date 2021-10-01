@@ -8,64 +8,81 @@
     <%-include('../partials/header')%>
     
     <main>
+      <h3>Editar producto: <%= product.name.toUpperCase() %></h3>
+
       <div class="contenedor">
-        <h3>Editar producto: <%= product.name.toUpperCase() %></h3>
 
-        <form method="POST">
+        <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+
+          <div class="carruselImages">
+            
+            
+            <!-- /* ------------Carrusel--------------- */ -->
+    <div class="carrusel">
+      <!-- Container -->
+<div class="slideshow-container fade">
+
+  <!-- Imagenes y mensajes -->
+  <div class="Containers">
+    <div class="MessageInfo"></div>
+    <img src="/images/products/<%= product.image.length !=0 ? product.image[0] : 'agregarImagen.png' %>">
+  </div>
+    
+  <div class="Containers">
+    <div class="MessageInfo"></div>
+    <img src="/images/products/<%= product.image.length !=1 ? product.image[1] : 'agregarImagen.png' %>">   
+  </div>
+
+  <div class="Containers">
+    <div class="MessageInfo"></div>
+    <img src="/images/products/<%= product.image.length >=2 ? product.image[2] : 'agregarImagen.png' %>">   
+  </div>
+
+  <!-- Botones atrás y adelante -->
+  <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+  </div>
+  <!--------------Fin del Carrusel----------------->
+
+            <label for="image">
+            <input class="image" type="file" id="image" name="image" multiple>
+            </label>
+            
+          </div>     
 
           <div class="container-input-total">
-            <input
-              
-              type="text"
-              placeholder="Nombre del producto"
-              name="name"
-            />
+            <input type="text" placeholder="Nombre del producto" name="name" value="<%= firstLetter(product.name) %>"/>
           </div>
 
           <div class="container-input-total">
-            <textarea              
-              placeholder="Descripción"
-              id="floatingTextarea"
-              name="description"
-            ></textarea>
+            <textarea placeholder="Descripcion" id="floatingTextarea" name="description"><%= product.description %></textarea>
             <label for="floatingTextarea"></label>
+             <input type="text" placeholder="Tamaño" name="size" value="<%= product.size %>"/> 
           </div>
 
-          <div class="container-input-mitad">
-            <input              
-              type="number"
-              placeholder="Precio"
-              name="price"
-            />
-         
-            <input              
-              type="text"
-              placeholder="Presentacion"
-              name="quantity"
-            /> 
-        </div>
           
             <div class="container-input-mitad">
-          <select
-            class="form-select"
-            id="category"
-            aria-label="Floating label select example"
-            name="category">
-            <option value="" selected hidden>Selecciona la categoría</option>
-            
+              <input type="number" placeholder="Precio" name="price" value="<%= product.price %>"/>  
+          <select class="form-select" id="category" aria-label="Floating label select example" name="category">
+            <option value="" selected hidden>Selecciona la categoría</option> 
+            <% categories.forEach(category => { %>
+              <option value="<%= category %>" <%= product.category === category ? 'selected' : null%> ><%= firstLetter(category) %></option>
+             <% }) %>           
           </select>
-          <label for="category"></label>
 
-        
-          <input class="image" type="file" id="image" name="image">                
+          <label for="category"></label>                       
           </div>
-
           
-            <button class="btn-add" type="submit">Guardar</button>
+          <button class="btn-add" type="submit">Guardar</button>
 
         </form>
       </div>
      
     </main>
+    <%-include('../partials/footer') %>
+    <!-- Javascript para el carrusel -->
+    <%-include('../partials/scripts') %>
   </body>
 </html>

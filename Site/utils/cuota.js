@@ -1,1 +1,1 @@
-module.exports = (price) => (price / 12)
+module.exports = (price) => (Math.round(price) / 12);

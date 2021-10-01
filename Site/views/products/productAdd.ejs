@@ -8,62 +8,52 @@
     <%-include('../partials/header')%>
 
     <main>
-      <div class="contenedor">
-        <h3>Agregar producto</h3>
+        <h3>Agregar nuevo producto</h3>
 
-        <form method="POST">
+        <div class="contenedor">
+          
+          <form method="POST" enctype="multipart/form-data">
+
+          <div class="carruselImages">
+            <br>
+
+            <label for="image">
+            <input class="image" type="file" id="image" name="image" multiple>
+            </label>
+            
+          </div>     
 
           <div class="container-input-total">
-            <input
-              
-              type="text"
-              placeholder="Nombre del producto"
-              name="name"
-            />
+            <input type="text" placeholder="Nombre del producto" name="name"/>
           </div>
 
           <div class="container-input-total">
-            <textarea              
-              placeholder="Descripción"
-              id="floatingTextarea"
-              name="description"
-            ></textarea>
+            <textarea placeholder="Descripción" id="floatingTextarea" name="description"></textarea>
             <label for="floatingTextarea"></label>
-          </div>
-
-          <div class="container-input-mitad">
-            <input              
-              type="number"
-              placeholder="Precio"
-              name="price"
-            />
-         
-            <input              
-              type="text"
-              placeholder="Presentacion"
-              name="quantity"
-            /> </div>
+            <input type="text" placeholder="Tamaño" name="size"/> 
+          </div>        
           
             <div class="container-input-mitad">
-          <select
-            class="form-select"
-            id="category"
-            aria-label="Floating label select example"
-            name="category">
+              <input type="number" placeholder="Precio" name="price"/>
+          <select class="form-select" id="category" aria-label="Floating label select example" name="category">
             <option value="" selected hidden>Selecciona la categoría</option>
+            <% categories.forEach(category => { %>
+              <option value="<%= category %>" <%= locals.old && old.category === category  ? 'selected' : null%> ><%= firstLetter(category) %></option>
+             <% }) %>
           </select>
-          <label for="category"></label>
-
-        
-          <input class="image" type="file" id="image" name="image">                
+          <label for="category"></label>       
           </div>
-
-          
-            <button class="btn-add" type="submit">Guardar</button>
+        
+          <button class="btn-add" type="submit">Guardar</button>
 
         </form>
+      
       </div>
      
     </main>
+    
+    <%-include('../partials/footer') %>
+    <!-- Javascript para el carrusel -->
+    <%-include('../partials/scripts') %>
   </body>
 </html>
