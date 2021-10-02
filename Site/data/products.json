@@ -4,14 +4,14 @@
        "name": "Miel Chica",
        "price": 300,
        "category" : "destacados",
-       "presentation" : "75gr",
+       "size" : "75gr",
        "description": "La miel COLMENA 100% miel de abeja proviene de colmenas Las Flores, Buenos Aires. Es multifloral: de trébol, melilotus y cardo. Un proceso de calentado permite obtener una miel líquida y cristalina, ideal para endulzar infusiones, limonadas y licuados.",
        "image": "frasco75gr.jpg"
     },
     {
         "id": 2,
         "name": "Miel Mediana",
-        "presentation" : "125gr",
+        "size" : "125gr",
         "price": 500,
         "category" : "comestible",
         "description": "Miel COLMENA 100% pura, proviene de flores silvestres que crecen en nuestro monte de la región del Gran Chaco, y así nace este exquisito blend. Algarrobo, Chañar, Sacha melón, Garabato , Poleo, Itin son algunas de flores autóctonas que, gracias al trabajo de las abejas, aportan escalonadamente su sabor, aroma y color para lograr esta miel única. Con un sabor más marcado y dulce que el común de las mieles, tienen una mayor persistencia en el paladar .",
@@ -20,7 +20,7 @@
     {
         "id": 3,
         "name": "Miel Grande",
-        "presentation" : "200gr",
+        "size" : "200gr",
         "price": 700,
         "category" : "comestible",
         "description": "Miel Colmena, 100% miel de abeja proviene de colmenas Las Flores, Buenos Aires. Es multifloral: de trébol, melilotus y cardo. Un proceso de calentado permite obtener una miel líquida y cristalina, ideal para endulzar infusiones, limonadas y licuados ",
@@ -29,7 +29,7 @@
     {
         "id": 4,
         "name": "Panal",
-        "presentation" : "250gr",
+        "size" : "250gr",
         "price": 1000,
         "category" : "comestible",
         "description": "Panal Puro de Miel 100% Comestible (Sin contenido de parafina) Presentación: 350grs. Variedad: Melilotus Blend (Flor de Meliloto) Sabor fino con notas a Vainilla y Flores",
@@ -38,7 +38,7 @@
     {
         "id": 5,
         "name": "Llavero",
-        "presentation" : "unidad",
+        "size" : "unidad",
         "price": 200,
         "category" : "deco",
         "description": "LLavero de  metal en forma de de 25mm. panal con abeja de Color plateado antiguo, colgante, joyería artesanal, 1 unidad",
@@ -47,7 +47,7 @@
     {
         "id": 6,
         "name": "Palito Mielero",
-        "presentation" : "unidad",
+        "size" : "unidad",
         "price": 300,
         "category" : "bazar",
         "description": "Palito Mielero realizado en madera natural con ranuras para poder sujetar la miel y que no gotee. Este utensilio permite servir y dosificar la cantidad de miel a emplear en nuestra comida o bebida favorita sin que se vierta.",
@@ -56,7 +56,7 @@
     {
         "id": 7,
         "name": "Frasco para Miel",
-        "presentation" : "unidad",
+        "size" : "unidad",
         "price": 400,
         "category" : "destacados",
         "description": "Mielera de cristal con tapa, formato ideal para guardar nuestra miel Colmena, incluye tapa y recolector de miel.  MEDIDAS: Alto: 15,5 CM, Circunferencia: 8 CM, Capacidad: 220 ML",
@@ -65,7 +65,7 @@
     {
         "id": 8,
         "name": "Remera Help-Plant-Clean",
-        "presentation" : "talle unico",
+        "size" : "talle unico",
         "price": 450,
         "category" : "vestimenta",
         "description": "",
@@ -74,7 +74,7 @@
     {
         "id": 9,
         "name": "Remera Save the Bees",
-        "presentation" : "todos los talles",
+        "size" : "todos los talles",
         "price": 450,
         "category" : "destacados",
         "description": "La remera ABEJAS, es una prenda en colores universales estampada a mano en el frente con una de nuestras ilustraciones!. El material es 100% algodón  y tiene broches en el escote para que al momento de vestirse sea más fácil! Es una prenda de esas que se heredan de generación en generación y pensada para usar en cualquier momento del año!",
