@@ -1,6 +1,6 @@
 # Grupo 3 - Comision 10 - Proyecto COLMENA :honey_pot: :bee:
 
-# Retrospectiva del Sprint 2
+# Retrospectiva del Sprint 4
 
 <br>
 
