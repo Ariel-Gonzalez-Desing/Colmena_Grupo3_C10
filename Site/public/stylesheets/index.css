@@ -1,23 +1,23 @@
 /* ------------Carrusel--------------- */
 
 /* Container */
-.carrusel .slideshow-container {
+.home .carrusel .slideshow-container {
   width: 100%;
   position: relative;
   margin: auto;
 }
 
 /* Imagenes invisibles */
-.carrusel .Containers {
+.home .carrusel .Containers {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
 }
 
 /* Boton adelante y atras */
-.carrusel .Back,
+.home .carrusel .Back,
 .forward {
-  background-color: rgb(58, 54, 55, 0.5);
+  background-color: var(--colorOnyx);
   border-radius: 10px 0 0 10px;
   cursor: pointer;
   position: absolute;
@@ -27,18 +27,25 @@
   padding: 10px;
   color: #fffff1;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 30px;
   transition: 0.4s ease;
   user-select: none;
 }
 
 /* Posicionar botón a la derecha */
-.carrusel .forward {
+.home .carrusel .forward {
   right: 0;
 }
 
 /*Icono se agranda cuando se hace hover */
-.carrusel .Back:hover,
+.home .carrusel .Back:hover,
+.forward:hover {
+  background-color: var(--colorNaranjaClaro);
+  color: var(--colorOnyx);
+  font-size: 50px;
+}
+
+.home .carrusel 
 .forward:hover {
   background-color: var(--colorNaranjaClaro);
   color: var(--colorOnyx);
@@ -46,7 +53,7 @@
 }
 
 /*Info fotos */
-.carrusel .Info {
+.home .carrusel .Info {
   font-family: "Roboto", sans-serif;
   color: #fffff1;
   background-color: rgb(58, 54, 55, 0.5);
@@ -59,15 +66,15 @@
   width: 60%;
   text-align: center;
 }
-.carrusel .Info h1{
+.home .carrusel .Info h1{
   color: #fffff1;
 }
-.carrusel .Info h4 {
+.home .carrusel .Info h4 {
   display: none;
   color: #fffff1;
 }
 /* Circulos */
-.carrusel .dots {
+.home .carrusel .dots {
   cursor: pointer;
   height: 9px;
   width: 9px;
@@ -79,13 +86,13 @@
   margin-bottom: 20px;
 }
 
-.carrusel .enable,
+.home .carrusel .enable,
 .dots:hover {
   background-color: #fcb43a;
 }
 
 /* Animation */
-.carrusel .fade {
+.home .carrusel .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.4s;
   animation-name: fade;
@@ -171,6 +178,11 @@
   border-radius: 10px;
   margin: 10px 0;
   padding-bottom: 15px;
+}
+
+.home .destacados section .productos .prodGrupo .prodUnidad img{
+  height: 250px; 
+  object-fit: contain;
 }
 
 .home .destacados section .productos .prodGrupo .prodUnidad p{
@@ -326,25 +338,25 @@
     max-width: 30%;
     padding: 10px;
   }
-  .carrusel .Back,
+  .home .carrusel .Back,
   .forward {
-    top: 46%;
+    /* top: 46%;
     margin-top: -23px;
     padding: 13px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 20px; */
   }
-  .carrusel .Info {
+  .home .carrusel .Info {
     font-size: 13px;
     padding: 15px 10px;
     bottom: 25%;
     left: 25%;
     width: 50%;
   }
-  .carrusel .Info h4 {
+  .home .carrusel .Info h4 {
     display: inline;
   }
-  .carrusel .dots {
+  .home .carrusel .dots {
     height: 12px;
     width: 12px;
   }
@@ -368,7 +380,7 @@
   .home .cuidemosImagen p {
     margin: 20px 100px;
   }
-  .carrusel .Back,
+  .home .carrusel .Back,
   .forward {
     top: 42%;
     margin-top: -23px;
@@ -376,13 +388,21 @@
     font-weight: bold;
     font-size: 40px;
   }
-  .carrusel .Info {
+  .home .carrusel
+  .forward {
+    top: 42%;
+    margin-top: -23px;
+    padding: 17px;
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .home .carrusel .Info {
     font-size: 16px;
     padding: 20px 14px;
     left: 25%;
     width: 50%;
   }
-  .carrusel .dots {
+  .home .carrusel .dots {
     height: 14px;
     width: 14px;
   }

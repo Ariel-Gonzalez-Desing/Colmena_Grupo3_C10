@@ -1,13 +1,19 @@
 [
    {
       "id": 1,
-      "name": "Miel Chica",
+      "name": "Miel chica",
+      "size": "75gr",
       "price": 300,
       "category": "destacados",
-      "size": "75gr",
       "description": "La miel COLMENA 100% miel de abeja proviene de colmenas Las Flores, Buenos Aires. Es multifloral: de trébol, melilotus y cardo. Un proceso de calentado permite obtener una miel líquida y cristalina, ideal para endulzar infusiones, limonadas y licuados.",
       "image": [
-         "frasco75gr.jpg"
+         [
+            [
+               [
+                  "frasco75gr.jpg"
+               ]
+            ]
+         ]
       ]
    },
    {
@@ -84,8 +90,9 @@
       "category": "vestimenta",
       "description": "",
       "image": [
-         "img-1633255856164.jpg",
-         "img-1633255856178.jpg"
+         [
+            "img-1633359458724.jpg"
+         ]
       ]
    },
    {

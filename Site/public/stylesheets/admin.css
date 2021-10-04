@@ -49,6 +49,7 @@
   user-select: none;
 }
 
+
 /* Posicionar botón a la derecha */
 .add .contenedor .carruselImages .carrusel .forward {
   right: 0;
@@ -226,6 +227,8 @@
     padding: 10px 0;    
     margin: 0 auto;
     display: block;
+    height: 300px;
+    object-fit: contain;
   }
   .add .contenedor .carruselImages input{
        width: 98%;
@@ -257,6 +260,8 @@
 
 .admin table tbody td img {
   height: 70px;
+  width: 100%;
+  object-fit: contain;
 }
 
 .admin .cabecera {

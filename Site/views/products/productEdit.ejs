@@ -24,19 +24,19 @@
 
   <!-- Imagenes y mensajes -->
   <div class="Containers">
-    <div class="MessageInfo"></div>
+    <div class="MessageInfo">
     <img src="/images/products/<%= product.image.length !=0 ? product.image[0] : 'agregarImagen.png' %>">
-  </div>
+  </div></div>
     
   <div class="Containers">
-    <div class="MessageInfo"></div>
-    <img src="/images/products/<%= product.image.length !=1 ? product.image[1] : 'agregarImagen.png' %>">   
-  </div>
+    <div class="MessageInfo">
+    <img src="/images/products/<%= product.image[1] ? product.image[1] : 'agregarImagen.png' %>">   
+  </div></div>
 
   <div class="Containers">
-    <div class="MessageInfo"></div>
-    <img src="/images/products/<%= product.image.length >=2 ? product.image[2] : 'agregarImagen.png' %>">   
-  </div>
+    <div class="MessageInfo">
+    <img src="/images/products/<%= product.image[2] ? product.image[2] : 'agregarImagen.png' %>">   
+  </div></div>
 
   <!-- Botones atrás y adelante -->
   <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
