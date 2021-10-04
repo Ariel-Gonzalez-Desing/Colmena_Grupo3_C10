@@ -80,7 +80,7 @@ module.exports = {
             price : +price,
             category,            
             description : description.trim(),
-            image : req.files.length != 0 ? images : ['agregarImagen.png'],
+            image : req.files.length != 0 ? images : [product.image],
         }
 
         let productsModified = products.map(product => product.id === +req.params.id ? productModified : product);
