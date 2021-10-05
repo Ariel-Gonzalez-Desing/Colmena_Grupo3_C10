@@ -1,6 +1,6 @@
 # Grupo 3 - Comision 10 - Proyecto COLMENA :honey_pot: :bee:
 
-# Retrospectiva del Sprint 2
+# Retrospectiva del Sprint 1
 
 <br>
 
@@ -35,7 +35,7 @@
 
 -----------------------------------------------------------------
 
-# Retrospectiva del Sprint 3
+# Retrospectiva del Sprint 2
 
 <br>
 
@@ -72,9 +72,7 @@
 
 -----------------------------------------------------------------
 
-# Grupo 3 - Comision 10 - Proyecto COLMENA :honey_pot: :bee:
-
-# Retrospectiva del Sprint 4
+# Retrospectiva del Sprint 3
 
 <br>
 
@@ -108,3 +106,38 @@
 
 >## :small_orange_diamond: *Dejar de hacer*
 >>* Hacer opcionales antes que las tareas obligatorias del sprint
+
+-----------------------------------------------------------------
+
+# Retrospectiva del Sprint 4
+
+<br>
+
+>## :small_orange_diamond: *Seguir haciendo*
+>>* Comunicarnos por Whatsapp para comentar progresos y tomar algunas decisiones.
+>>* Ayudarnos entre nosotros.
+
+<br>
+
+>## :small_orange_diamond: *Hacer más*
+>>* Actualizar Trello con los progresos.
+>>* Más dailys.
+>>* Hacer las reuniones mas efectivas, optimizar el tiempo.
+
+<br>
+
+>## :small_orange_diamond: *Empezar a hacer*
+>>* Hacer una reunión de revisión pre-entrega.
+>>* Poner fecha para terminar cada tarea.
+>>* Avisar a los profes que las correciones.
+>>* Poner checklists en las tarjetas para avisar el visto de una tarea terminada.
+
+<br>
+
+>## :small_orange_diamond: *Hacer menos*
+>>* Crear demasiadas ramas en el repositorio de GitHub.
+<br>
+
+
+>## :small_orange_diamond: *Dejar de hacer*
+>>* Olvidarse de actualizar el Trello.
