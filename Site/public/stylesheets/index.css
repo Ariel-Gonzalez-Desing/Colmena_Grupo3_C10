@@ -340,11 +340,11 @@
   }
   .home .carrusel .Back,
   .forward {
-    /* top: 46%;
+    top: 46%;
     margin-top: -23px;
     padding: 13px;
     font-weight: bold;
-    font-size: 20px; */
+    font-size: 20px;
   }
   .home .carrusel .Info {
     font-size: 13px;

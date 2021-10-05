@@ -9,7 +9,33 @@
 
     <main class="detalle">
       <div class="imagenProducto">
-        <img src="/images/products/<%= product.image[0] %>" alt="foto producto" />
+        <div class="container">
+  
+          <ul class="slider">
+            <li id="slide1">
+              <img src="/images/products/<%= product.image.length !=0 ? product.image[0] : 'agregarImagen.png' %>">
+            </li>
+            <li id="slide2">
+              <img src="/images/products/<%= product.image[1] ? product.image[1] : 'agregarImagen.png' %>"> 
+            </li>
+            <li id="slide3">
+              <img src="/images/products/<%= product.image[2] ? product.image[2] : 'agregarImagen.png' %>">
+            </li>
+          </ul>
+          
+          <ul class="menu">
+            <li>
+              <a href="#slide1">1</a>
+            </li>
+            <li>
+              <a href="#slide2">2</a>
+            </li>
+             <li>
+              <a href="#slide3">3</a>
+            </li>
+          </ul>
+          
+        </div>
       </div>
 
       <div class="detallesProducto">
