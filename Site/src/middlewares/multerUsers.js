@@ -4,16 +4,15 @@ const multer = require('multer');
 /* configuración de multer */
 const storage = multer.diskStorage({
     destination : (req,file,callaback) => {
-        callaback(null,'./public/images/products')
+        callaback(null,'./public/images/users')
     },
     filename : (req,file,callaback) => {
-        callaback(null,'img-' + Date.now() + path.extname(file.originalname))
+        callaback(null,'avatar-' + Date.now() + path.extname(file.originalname))
     }
 })
 
 const upload = multer({
-    storage,
-    limits: {files: 3}
-});
+    storage
+})
 
 module.exports = upload;

@@ -14,16 +14,25 @@
         </div>   
         <div class="registro">           
             <div class="box-formularios">
-                <form action="/registro" method="POST">
+                <form action="" method="POST" enctype="multipart/form-data">
                     <div class="desktopRegistro">
                         <div>
-                            <label for="usuario">Nombre de usuario</label>
-                            <input type="text" name="usuario" placeholder="" id="usuario">                        
+                            <label for="name">Nombre</label>
+                            <input type="text" name="name" placeholder="" id="name">                        
                         </div>  
                         <div>
-                            <label for="email">email</label>
+                            <label for="lastname">Apellido</label>
+                            <input type="text" name="lastname" placeholder="" id="lastname">                        
+                        </div>  
+                        <div>
+                            <label for="email">Email</label>
                             <input type="email" name="email" placeholder="" id="email">
                         </div>     
+<br>
+                        <label for="image">Foto</label>
+                            <input class="image" type="file" id="image" name="image">
+                            
+
                     </div>      
                     <div class="desktopContraseñas">
                         <div>
@@ -31,12 +40,12 @@
                             <input type="password" name="password" placeholder="" id="password">
                         </div>   
                         <div>
-                            <label for="password">Confirmar contraseña</label>
-                            <input type="password" name="password" placeholder="" id="password">
+                            <label for="rePassword">Confirmar contraseña</label>
+                            <input type="rePassword" name="rePassword" placeholder="" id="rePassword">
                         </div>
                     </div>
                     <div class="yaTengoCuenta">
-                        <p>¿Ya tenés una cuenta? <a href="#">Iniciar sesión</a></p>
+                        <p>¿Ya tenés una cuenta? <a href="/users/login">Iniciar sesión</a></p>
                     </div>
                     <div class="botonAcceptCancel">
                         <input type="submit" name="" value="Registrarse">
