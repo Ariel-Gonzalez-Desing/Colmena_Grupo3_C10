@@ -14,13 +14,13 @@ module.exports = {
         const {name, lastname, email, password, rePassword} = req.body;
 
         let user = {
-            id : users.length != 0 ? users[users.length - 1].id + 1 : 1,
+            id : users.length !=0 ? users[users.length - 1].id + 1 : 1,
             name : name.trim(),
-            lasname : lastname.trim(),
+            lastname : lastname.trim(),
             email : email.trim(),
             password : bcrypt.hashSync(password,10),
             rePassword : bcrypt.hashSync(password,10),
-            image : 'default.jpg',
+            avatar : req.file ? req.file.filename : 'default.jpg',
             rol : "user"
         }
         users.push(user);
