@@ -18,30 +18,35 @@
                     <div class="desktopRegistro">
                         <div>
                             <label for="name">Nombre</label>
-                            <input type="text" name="name" placeholder="" id="name">                        
+                            <input type="text" name="name" placeholder="" id="name" value="<%= locals.old && old.name ? old.name : null %>">
+                            <span class="error"><%= locals.errores && errores.name ? errores.name.msg : null %></span>                        
                         </div>  
                         <div>
                             <label for="lastname">Apellido</label>
-                            <input type="text" name="lastname" placeholder="" id="lastname">                        
+                            <input type="text" name="lastname" placeholder="" id="lastname" value="<%= locals.old && old.lastname ? old.lastname : null %>"> 
+                            <span class="error"><%= locals.errores && errores.lastname ? errores.lastname.msg : null %></span>                       
                         </div>  
                         <div>
                             <label for="email">Email</label>
-                            <input type="email" name="email" placeholder="" id="email">
+                            <input type="email" name="email" placeholder="" id="email" value="<%= locals.old && old.email ? old.email : null %>">
+                            <span class="error"><%= locals.errores && errores.email ? errores.email.msg : null %></span>
                         </div>     
 <br>
                         <label for="image">Foto</label>
                             <input class="image" type="file" id="image" name="image">
-                            
+                            <span class="error"><%= locals.errores && errores.avatar ? errores.avatar.msg : null %></span>
+                    </div>  
 
-                    </div>      
                     <div class="desktopContraseñas">
                         <div>
                             <label for="password">Contraseña</label>
-                            <input type="password" name="password" placeholder="" id="password">
+                            <input type="password" name="password" placeholder="" id="password" value="<%= locals.old && old.password ? old.password : null %>">
+                            <span class="error"><%= locals.errores && errores.password ? errores.password.msg : null %></span>
                         </div>   
                         <div>
                             <label for="rePassword">Confirmar contraseña</label>
-                            <input type="rePassword" name="rePassword" placeholder="" id="rePassword">
+                            <input type="rePassword" name="rePassword" placeholder="" id="rePassword" value="<%= locals.old && old.rePassword ? old.rePassword : null %>">
+                            <span class="error"><%= locals.errores && errores.rePassword ? errores.rePassword.msg : null %></span>
                         </div>
                     </div>
                     <div class="yaTengoCuenta">

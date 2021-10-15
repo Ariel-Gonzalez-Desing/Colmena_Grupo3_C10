@@ -7,7 +7,7 @@
       "password": "3VXZ9IpH1C",
       "rePassword": "RYRyOTL",
       "avatar": "user_1.jpg",
-      "rol": ""
+      "rol": "user"
    },
    {
       "id": 2,
@@ -17,7 +17,7 @@
       "password": "HyAUUvDVF",
       "rePassword": "kjflVRXIMpL",
       "avatar": "user_2.jpg",
-      "rol": ""
+      "rol": "user"
    },
    {
       "id": 3,
@@ -27,7 +27,7 @@
       "password": "BlMzRgUV84S1",
       "rePassword": "nHxpx44AT4",
       "avatar": "user_3.jpg",
-      "rol": ""
+      "rol": "user"
    },
    {
       "id": 4,
@@ -37,7 +37,7 @@
       "password": "RuM62VXuEpT",
       "rePassword": "iAy0F8h",
       "avatar": "user_4.jpg",
-      "rol": ""
+      "rol": "user"
    },
    {
       "id": 5,
@@ -47,6 +47,6 @@
       "password": "g88deag",
       "rePassword": "7Q3Jj3uEFC",
       "avatar": "user_5.jpg",
-      "rol": ""
+      "rol": "user"
    }
 ]
