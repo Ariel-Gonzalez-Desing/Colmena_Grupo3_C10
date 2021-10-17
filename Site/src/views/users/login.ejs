@@ -8,11 +8,22 @@
     <%-include('../partials/header') %>
 
     <main>      
+        <!-- <% if (typeof errors != 'undefined') { %>
+            <p style="color: red">ERROR</p>
+            <ul>
+                <% for(let i = 0; i < errors.length; index++) { %>
+                    <li>
+                        <%=errors[i].msg%> 
+                    </li>
+                
+                <% } %>
+            </ul>         
+        <% } %> -->
         <div class="login">
             <form action="/users/login" method="POST">                
                     <div>
-                        <label for="usuario">Nombre de usuario</label>
-                        <input type="text" name="usuario" id="usuario">
+                        <label for="email">Email de usuario</label>
+                        <input type="email" name="email" id="email">
                     </div>
                     <div>
                         <label for="password">Contraseña</label>
