@@ -36,7 +36,7 @@ module.exports = {
                 price : +price,
                 category,
                 description : description.trim(),
-                image : req.files.length !=0 ? images : ['default-image.png'],
+                avatar : req.files.length !=0 ? images : ['default-image.png'],
             }
 
             products.push(product);
