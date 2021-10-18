@@ -15,9 +15,10 @@ body main .box-texto h4{
 }
 
 .registro span.error{
-    color: red;
+    color: rgb(235, 122, 47);
     font-size: 12px;
 }
+
 
 .box-texto h3{
     padding-bottom: 25px;
@@ -41,7 +42,7 @@ body main .box-texto h4{
 }
 
 .registro input[type="password"], input[type="text"], input[type="email"]{
-    border-radius: 15px;    
+    border-radius: 5px;    
     border-color: #DCC4A4;
     border-width: 1px;
     background: transparent;

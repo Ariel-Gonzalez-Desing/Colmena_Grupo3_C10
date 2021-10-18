@@ -48,5 +48,15 @@
       "rePassword": "7Q3Jj3uEFC",
       "avatar": "user_5.jpg",
       "rol": "user"
+   },
+   {
+      "id": 6,
+      "name": "Dani",
+      "lastname": "Deitu",
+      "email": "daniDeitu@yahoo.com.ar",
+      "password": "$2a$05$tp5YjK6jENypSvbBTKnGQu9OtYtrQPYBTTfShjmdh2NuXCWfKDN8W",
+      "rePassword": "$2a$05$viNi8aJTn0v9/Ke.Ur/0gOvBAlZfBE.b0pntgRZkf8mub.gDDNJh2",
+      "avatar": "default.jpg",
+      "rol": "user"
    }
 ]
