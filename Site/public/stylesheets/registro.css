@@ -19,6 +19,7 @@ body main .box-texto h4{
     font-size: 12px;
 }
 
+
 .box-texto h3{
     padding-bottom: 25px;
     text-align: center;
@@ -40,8 +41,13 @@ body main .box-texto h4{
     padding-top: 0px;
 }
 
+<<<<<<< HEAD
 .registro input[type="password"], input[for="rePassword"], input[type="text"], input[type="email"]{
     border-radius: 15px;    
+=======
+.registro input[type="password"], input[type="text"], input[type="email"]{
+    border-radius: 5px;    
+>>>>>>> 4f689f18f48f7c82966e25430a8aaed385fc1359
     border-color: #DCC4A4;
     border-width: 1px;
     background: transparent;

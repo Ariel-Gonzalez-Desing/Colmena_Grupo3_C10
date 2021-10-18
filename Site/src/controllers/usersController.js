@@ -50,10 +50,33 @@ module.exports = {
             title : 'Login usuario',
         })
     },
+    processLogin : (req,res) => {
+        let errors = validationResult(req);
+        
+        if(errors.isEmpty()){
+            let user = users.find(user => user.email === req.body.email);
+            req.session.userLogin = {
+                id : user.id,
+                name : user.name,
+                avatar : user.avatar,
+                rol : user.rol
+            }
+            if(req.body.remember){
+                res.cookie('craftsyForEver',req.session.userLogin,{maxAge : 1000 * 60})
+            }
+            return res.redirect('/')
+        }else{
+            return res.render('users/login',{
+                errores : errors.mapped()
+            })
+        }
+    },
     profile : (req,res) => {
         let users = JSON.parse(fs.readFileSync(path.join(__dirname,'../data/users.json'),'utf-8'));
         return res.render('profile',{
             user : users.find(user => user.id === req.session.userLogin.id)
         })
-    },
+    }
 }
+
+
