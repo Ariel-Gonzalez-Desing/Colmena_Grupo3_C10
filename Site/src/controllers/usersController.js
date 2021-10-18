@@ -29,7 +29,15 @@ module.exports = {
             users.push(user);
             fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(users,null,3),'utf-8');
                 
+            req.session.userLogin = {
+                id : user.id,
+                name : user.name,
+                avatar : user.avatar,
+                rol : user.rol
+            }
+
             return res.redirect('/')
+            // return res.redirect('/user/profile')
 
         }else{
         return res.render('users/registro',{
@@ -41,5 +49,11 @@ module.exports = {
         return res.render('users/login', {
             title : 'Login usuario',
         })
-    }
+    },
+    profile : (req,res) => {
+        let users = JSON.parse(fs.readFileSync(path.join(__dirname,'../data/users.json'),'utf-8'));
+        return res.render('profile',{
+            user : users.find(user => user.id === req.session.userLogin.id)
+        })
+    },
 }

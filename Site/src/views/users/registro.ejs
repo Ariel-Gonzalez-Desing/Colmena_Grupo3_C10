@@ -45,7 +45,7 @@
                         </div>   
                         <div>
                             <label for="rePassword">Confirmar contraseña</label>
-                            <input type="rePassword" name="rePassword" placeholder="" id="rePassword" value="<%= locals.old && old.rePassword ? old.rePassword : null %>">
+                            <input type="password" name="rePassword" placeholder="" id="rePassword" value="<%= locals.old && old.rePassword ? old.rePassword : null %>">
                             <span class="error"><%= locals.errores && errores.rePassword ? errores.rePassword.msg : null %></span>
                         </div>
                     </div>

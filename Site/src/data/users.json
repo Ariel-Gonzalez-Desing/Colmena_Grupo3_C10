@@ -48,5 +48,15 @@
       "rePassword": "7Q3Jj3uEFC",
       "avatar": "user_5.jpg",
       "rol": "user"
+   },
+   {
+      "id": 6,
+      "name": "fer",
+      "lastname": "elola",
+      "email": "elolafernanda@gmail.com",
+      "password": "$2a$05$xlnAuaKqpox686SABNlOWOurs8RBma4H2zODrNaLhWHrFTbXJ12Vu",
+      "rePassword": "$2a$05$FVihlHSQGfetizUKVw7bFuE2Qf.srZeCB4Y0QBfX.7ARnbW/kjz/e",
+      "avatar": "default.jpg",
+      "rol": "user"
    }
 ]
