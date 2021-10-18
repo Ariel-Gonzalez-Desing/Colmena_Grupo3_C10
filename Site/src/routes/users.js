@@ -3,24 +3,17 @@ const usersController = require('../controllers/usersController');
 var router = express.Router();
 
 const registerValidator = require('../validations/registerValidator');
+const loginValidator = require('../validations/loginValidator');
 const upload = require('../middlewares/multerUsers')
 
-const {registro, processRegistro, login} = require('../controllers/usersController')
+const {registro, processRegistro, login, processLogin} = require('../controllers/usersController')
 
 /* /users */
-<<<<<<< HEAD
-router.get('/registro', registro);
-router.get('/login', usersController.login, login);
-router.post('/login', [
-    check('email').isEmail().withMessage('Email inválido'),
-    check('password').isLength({min:8}).withMessage('La contraseña debe contener al menos 8 carácteres.')
-], usersController.processLogin);
-=======
 router
     .get('/registro', registro)
     .post('/registro', upload.single('image'), registerValidator, processRegistro)
     .get('/login', login)
->>>>>>> b9229b6e2e0d77a252585075f7d60c51dd20d8a0
+    .post('/login',loginValidator,processLogin)
 
 module.exports = router;
 

@@ -22,7 +22,10 @@ h3{
 .login input {
     width: 250px;
 }
-
+.login span.error{
+    color: rgb(235, 122, 47);
+    font-size: 12px;
+}
 
 
 .login label[for="usuario"], label[for="password"]{
@@ -33,7 +36,7 @@ h3{
 
 
 .login input[type="password"], input[type="text"]{
-    border-radius: 15px;    
+    border-radius: 5px;    
     border-color: #DCC4A4;
     border-width: 1px;
     background: transparent;
