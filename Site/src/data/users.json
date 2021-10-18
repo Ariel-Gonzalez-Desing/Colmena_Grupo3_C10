@@ -1,47 +1,52 @@
 [
-    {
-        "id":1,
-        "nombre":"Allianora",
-        "apellido":"Buckle",
-        "email":"abuckle0@fastcompany.com",
-        "contraseña":"3VXZ9IpH1C",
-        "confirmar":"RYRyOTL",
-        "avatar":"user_1.jpg"
-    },
-    {
-        "id":2,
-        "nombre":"Kirsten",
-        "apellido":"Rudgley",
-        "email":"krudgley1@loc.gov",
-        "contraseña":"HyAUUvDVF",
-        "confirmar":"kjflVRXIMpL",
-        "avatar":"user_2.jpg"
-    },
-    {
-        "id":3,
-        "nombre":"Cindra",
-        "apellido":"Ghilardi",
-        "email":"cghilardi2@cnet.com",
-        "contraseña":"BlMzRgUV84S1",
-        "confirmar":"nHxpx44AT4",
-        "avatar":"user_3.jpg"
-    },
-    {
-        "id":4,
-        "nombre":"Delmer",
-        "apellido":"Lewson",
-        "email":"dlewson3@msn.com",
-        "contraseña":"RuM62VXuEpT",
-        "confirmar":"iAy0F8h",
-        "avatar":"user_4.jpg"
-    },
-    {
-        "id":5,
-        "nombre":"Jase",
-        "apellido":"Killby",
-        "email":"jkillby4@theguardian.com",
-        "contraseña":"g88deag",
-        "confirmar":"7Q3Jj3uEFC",
-        "avatar":"user_5.jpg"
-    }
+   {
+      "id": 1,
+      "name": "Allianora",
+      "lastname": "Buckle",
+      "email": "abuckle0@fastcompany.com",
+      "password": "3VXZ9IpH1C",
+      "rePassword": "RYRyOTL",
+      "avatar": "user_1.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 2,
+      "name": "Kirsten",
+      "lastname": "Rudgley",
+      "email": "krudgley1@loc.gov",
+      "password": "HyAUUvDVF",
+      "rePassword": "kjflVRXIMpL",
+      "avatar": "user_2.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 3,
+      "name": "Cindra",
+      "lastname": "Ghilardi",
+      "email": "cghilardi2@cnet.com",
+      "password": "BlMzRgUV84S1",
+      "rePassword": "nHxpx44AT4",
+      "avatar": "user_3.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 4,
+      "name": "Delmer",
+      "lastname": "Lewson",
+      "email": "dlewson3@msn.com",
+      "password": "RuM62VXuEpT",
+      "rePassword": "iAy0F8h",
+      "avatar": "user_4.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 5,
+      "name": "Jase",
+      "lastname": "Killby",
+      "email": "jkillby4@theguardian.com",
+      "password": "g88deag",
+      "rePassword": "7Q3Jj3uEFC",
+      "avatar": "user_5.jpg",
+      "rol": "user"
+   }
 ]

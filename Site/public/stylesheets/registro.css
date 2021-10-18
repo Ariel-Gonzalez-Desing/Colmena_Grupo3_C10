@@ -7,7 +7,6 @@ body main .box-texto h4{
     display: none;
 }
 
-
 .registro{
     font-size: 16px;
     display: flex;  
@@ -15,12 +14,15 @@ body main .box-texto h4{
     flex-wrap: wrap;  
 }
 
+.registro span.error{
+    color: red;
+    font-size: 12px;
+}
 
 .box-texto h3{
     padding-bottom: 25px;
     text-align: center;
-    color: var(--colorOnyx);
-    
+    color: var(--colorOnyx);    
 }
 
 .registro input{
@@ -30,8 +32,12 @@ body main .box-texto h4{
 .registro div{
     padding-top: 25px;
 }
-.registro label[for="usuario"], label[for="password"], label[for="email"]{
+.registro label[for="name"], label[for="password"], label[for="email"], label[for="lastname"], label[for="image"]{
     padding-left: 15px;
+}
+
+.registro .desktopContraseñas {
+    padding-top: 0px;
 }
 
 .registro input[type="password"], input[type="text"], input[type="email"]{
