@@ -28,11 +28,6 @@ h3{
 }
 
 
-.login label[for="usuario"], label[for="password"]{
-    padding-left: 15px;
-
-    
-}
 
 
 .login input[type="password"], input[type="text"]{

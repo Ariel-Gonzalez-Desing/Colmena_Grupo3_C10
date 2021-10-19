@@ -91,7 +91,7 @@ module.exports = {
         firstLetter
     },
 
-    cart : (req,res) => {
+    carrito : (req,res) => {
         return res.render('products/carrito', {
             title : 'Carrito de compras',
             firstLetter
