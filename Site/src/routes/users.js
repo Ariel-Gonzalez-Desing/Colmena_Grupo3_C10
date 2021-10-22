@@ -12,7 +12,7 @@ const {registro, processRegistro, login, processLogin, profile, logout} = requir
 
 /* /users */
 router
-    .get('/registro', registro)
+    .get('/registro', loggedUser, registro)
     .post('/registro', upload.single('image'), registerValidator, processRegistro)
     .get('/login', loggedUser, login)
     .post('/login',loginValidator,processLogin)    
