@@ -5,8 +5,16 @@
     text-decoration: none; 
 }
 
-<<<<<<< HEAD
-  .dropdown {
+header .boton-changuito{
+    text-decoration: none;
+    color: #FCB43A;
+    display: block;
+}
+header .lupita{
+    color: #FCB43A;
+}
+
+.dropdown {
     float: right;
   }
   
@@ -33,19 +41,6 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
-
-header a{
-=======
-header .boton-changuito{
->>>>>>> 6ebddf9967fc970205dd67a848d472df6b5e6454
-    text-decoration: none;
-    color: #FCB43A;
-    display: block;
-}
-header .lupita{
-    color: #FCB43A;
-}
-
 
 header{
     background-color: var(--colorOnyx);
