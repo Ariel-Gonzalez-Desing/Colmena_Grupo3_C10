@@ -152,10 +152,8 @@ body main .box-texto h4{
     }
     .registro .box-formularios .box-3{
         display: flex;
-        padding-top: 20px;
+        padding-top: 50px;
         justify-content: space-evenly;
     }
-    .registro .box-formularios .box-3 .yaTengoCuenta, .botonAcceptCancel{
-        
-    }
+    
 }
