@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <%-include('../partials/head') %>
+  
+  <body>
+
+    <%-include('../partials/header') %>
+
+    <main class="productsList">
+      <h2>Listado de productos</h2>
+        <section>
+            <div class="productos">
+                <div class="prodGrupo">
+                    <% products.forEach(product => { %>
+                      <div class="prodUnidad">
+                        <a href="/products/detail/<%= product.id %>"><img src="/images/products/<%= product.image[0] %>" alt="imagen de producto">
+                            <p><%= firstLetter(product.size) %><br><%= firstLetter(product.name) %></p>
+                            <a href="/products/detail/<%= product.id %>" class="button">VER MAS</a></a>
+                    </div>
+                    <% }) %>
+                                     
+                </div>                
+            </div>
+            
+        </section>
+    </main>
+
+    <%-include('../partials/footer') %>
+  </body>
+</html>
