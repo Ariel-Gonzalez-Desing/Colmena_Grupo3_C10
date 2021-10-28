@@ -30,16 +30,22 @@ body main .box-texto h4{
     width: 100%;       
 }
 
-.registro div{
+/* .registro div{
     padding-top: 25px;
 }
-.registro label[for="name"], label[for="password"], label[for="email"], label[for="lastname"], label[for="image"]{
+.registro label[for="name"], label[for="password"], label[for="rePassword"], label[for="email"], label[for="lastname"], label[for="image"]{
     padding-left: 15px;
-}
+} */
+/* .registro div{
+    padding-top: 20px;
+} */
 
 .registro .desktopContraseñas {
     padding-top: 0px;
 }
+
+/* .registro input[type="password"], input[for="rePassword"], input[type="text"], input[type="email"]{
+    border-radius: 15px;   */
 
 .registro input[type="password"], input[type="text"], input[type="email"]{
     border-radius: 5px;    
@@ -82,6 +88,12 @@ body main .box-texto h4{
 
 /*********** Tablet ***********/
 @media (min-width: 768px) {
+    .registro .box-formularios .desktopContraseñas div{
+        padding-top: 15px;
+    }
+    .registro .box-formularios .desktopRegistro div{
+        padding-top: 15px;
+    }
     body main .box-texto h4{
         display:block;
         width: 70%;
@@ -98,21 +110,52 @@ body main .box-texto h4{
         color: var(--colorOnyx);
     }
     .box-texto h3{
+        padding-top: 15px;
         font-size: 24px;
     }
 
-    
+    .registro .box-formularios .box-3{
+       padding-top: 15px;
+    }
 }
 
 /*********** Desktop ***********/
 @media (min-width: 1024px) {
-    .desktopRegistro,.desktopContraseñas{
+    
+    .registro .box-formularios{
+        width: 80%;
+        padding-top: 30px;
+    }
+    .registro .box-formularios .desktopContraseñas div{
+        padding-top: 20px;
+    }
+    .registro .box-formularios .desktopRegistro div{
+        padding-top: 20px;
+    }
+    .registro .box-formularios .desktopRegistro, .desktopContraseñas{
+        width: 45%;        
+    }
+   
+    .registro .box-formularios form{
         width: 100%;
+        
+    }
+    .registro .box-formularios .box-2{
+        display: flex;
+        justify-content: space-around;
+    }
+    .registro .box-formularios .box-2 .desktopRegistro .desktopContraseñas{
+        width: 40%;
     }
     .registro .box-formularios .yaTengoCuenta a:hover{
-        color: var(--colorNaranja);        
+        color: var(--colorNaranja);   
     }
-    .box-formularios{
-        display: inline;
+    .registro .box-formularios .box-3{
+        display: flex;
+        padding-top: 20px;
+        justify-content: space-evenly;
+    }
+    .registro .box-formularios .box-3 .yaTengoCuenta, .botonAcceptCancel{
+        
     }
 }
