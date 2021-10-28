@@ -5,24 +5,19 @@ var router = express.Router();
 const registerValidator = require('../validations/registerValidator');
 const loginValidator = require('../validations/loginValidator');
 const upload = require('../middlewares/multerUsers')
+const userLoginCheck = require('../middlewares/userLoginCheck');
+const loggedUser = require('../middlewares/loggedUser')
 
-const {registro, processRegistro, login, processLogin} = require('../controllers/usersController')
+const {registro, processRegistro, login, processLogin, profile, logout} = require('../controllers/usersController')
 
 /* /users */
 router
-    .get('/registro', registro)
+    .get('/registro', loggedUser, registro)
     .post('/registro', upload.single('image'), registerValidator, processRegistro)
-    .get('/login', login)
-    .post('/login',loginValidator,processLogin)
+    .get('/login', loggedUser, login)
+    .post('/login',loginValidator,processLogin)    
+    .get('/profile', userLoginCheck, profile)
+    .get('/logout', logout)
 
 module.exports = router;
 
-
-
-// .get('/register',notEntry, register)
-//     .post('/register',registerValidator, processRegister)
-//     .get('/login',notEntry, login)
-//     .post('/login',loginValidator, processLogin)
-//     .get('/logout',logout)
-//     .get('/profile',userLoginCheck, profile)
-//     .post('/profile',upload.single('avatar'),profileValidator, update)

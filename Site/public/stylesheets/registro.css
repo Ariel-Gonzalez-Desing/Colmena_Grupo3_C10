@@ -31,12 +31,21 @@ body main .box-texto h4{
 }
 
 /* .registro div{
+    padding-top: 25px;
+}
+.registro label[for="name"], label[for="password"], label[for="rePassword"], label[for="email"], label[for="lastname"], label[for="image"]{
+    padding-left: 15px;
+} */
+/* .registro div{
     padding-top: 20px;
 } */
 
 .registro .desktopContraseñas {
     padding-top: 0px;
 }
+
+/* .registro input[type="password"], input[for="rePassword"], input[type="text"], input[type="email"]{
+    border-radius: 15px;   */
 
 .registro input[type="password"], input[type="text"], input[type="email"]{
     border-radius: 5px;    
@@ -143,10 +152,8 @@ body main .box-texto h4{
     }
     .registro .box-formularios .box-3{
         display: flex;
-        padding-top: 20px;
+        padding-top: 50px;
         justify-content: space-evenly;
     }
-    .registro .box-formularios .box-3 .yaTengoCuenta, .botonAcceptCancel{
-        
-    }
+    
 }
