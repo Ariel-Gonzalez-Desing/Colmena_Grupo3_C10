@@ -1,11 +1,13 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;   
+    box-sizing: border-box;
     text-decoration: none; 
 }
-
-header .boton-changuito{
+header a{
+    text-decoration: none;
+}
+header .boton-changuito{    
     text-decoration: none;
     color: #FCB43A;
     display: block;
@@ -116,6 +118,7 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
     }
     header .iconos-TabletDesktop .changuito .linkChanguito{
         font-size: 10px;
+        text-decoration: none;        
     }
 
     header{
@@ -211,6 +214,7 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
 @media (min-width: 1024px){
     header .iconos-TabletDesktop .changuito .linkChanguito{
         font-size: 12px;
+        text-decoration: none;
     }
     header .iconos-TabletDesktop img{
         margin-left: 15px;
