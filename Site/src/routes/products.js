@@ -14,7 +14,7 @@ router
 .get('/detail/:id', detail)
 .get('/edit/:id', adminUserCheck, editForm)
 .put('/edit/:id', upload.array('image'), edit)
-.get('/cart', cart)
+.get('/carrito', carrito)
 .delete('/delete/:id', destroy)
 
 module.exports = router;

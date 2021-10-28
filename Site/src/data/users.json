@@ -50,7 +50,7 @@
       "lastname": "Rodriguez",
       "email": "danirodriguez@yahoo.com.ar",
       "password": "$2a$05$tp5YjK6jENypSvbBTKnGQu9OtYtrQPYBTTfShjmdh2NuXCWfKDN8W",
-      "avatar": "default.jpg",
+      "avatar": "img1.png",
       "rol": "admin"
    },
    {
@@ -59,7 +59,7 @@
       "lastname": "elola",
       "email": "elolafernanda@yahoo.com.ar",
       "password": "$2a$05$tp5YjK6jENypSvbBTKnGQu9OtYtrQPYBTTfShjmdh2NuXCWfKDN8W",
-      "avatar": "default.jpg",
+      "avatar": "img4.png",
       "rol": "user"
    },
    {
@@ -68,7 +68,7 @@
       "lastname": "gonzalez",
       "email": "arielgonzalez@yahoo.com.ar",
       "password": "$2a$05$DCatfrj7ZIxnnsFY08sXp.2lMh04FeO7W.nkgiRF6mH.PgUjTHD3G",
-      "avatar": "avatar-1634653207237.png",
+      "avatar": "img3.png",
       "rol": "user"
    },
    {
@@ -77,7 +77,7 @@
       "lastname": "jurado",
       "email": "joeljurado@yahoo.com.ar",
       "password": "$2a$05$tp5YjK6jENypSvbBTKnGQu9OtYtrQPYBTTfShjmdh2NuXCWfKDN8W",
-      "avatar": "default.jpg",
+      "avatar": "img2.png",
       "rol": "admin"
    },
    {
