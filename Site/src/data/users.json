@@ -5,7 +5,6 @@
       "lastname": "Buckle",
       "email": "abuckle0@fastcompany.com",
       "password": "3VXZ9IpH1C",
-      "rePassword": "RYRyOTL",
       "avatar": "user_1.jpg",
       "rol": "user"
    },
@@ -15,7 +14,6 @@
       "lastname": "Rudgley",
       "email": "krudgley1@loc.gov",
       "password": "HyAUUvDVF",
-      "rePassword": "kjflVRXIMpL",
       "avatar": "user_2.jpg",
       "rol": "user"
    },
@@ -25,7 +23,6 @@
       "lastname": "Ghilardi",
       "email": "cghilardi2@cnet.com",
       "password": "BlMzRgUV84S1",
-      "rePassword": "nHxpx44AT4",
       "avatar": "user_3.jpg",
       "rol": "user"
    },
@@ -35,7 +32,6 @@
       "lastname": "Lewson",
       "email": "dlewson3@msn.com",
       "password": "RuM62VXuEpT",
-      "rePassword": "iAy0F8h",
       "avatar": "user_4.jpg",
       "rol": "user"
    },
@@ -45,18 +41,43 @@
       "lastname": "Killby",
       "email": "jkillby4@theguardian.com",
       "password": "g88deag",
-      "rePassword": "7Q3Jj3uEFC",
       "avatar": "user_5.jpg",
       "rol": "user"
    },
    {
       "id": 6,
-      "name": "Dani",
-      "lastname": "Deitu",
-      "email": "daniDeitu@yahoo.com.ar",
+      "name": "dani",
+      "lastname": "Rodriguez",
+      "email": "danirodriguez@yahoo.com.ar",
       "password": "$2a$05$tp5YjK6jENypSvbBTKnGQu9OtYtrQPYBTTfShjmdh2NuXCWfKDN8W",
-      "rePassword": "$2a$05$viNi8aJTn0v9/Ke.Ur/0gOvBAlZfBE.b0pntgRZkf8mub.gDDNJh2",
+      "avatar": "default.jpg",
+      "rol": "admin"
+   },
+   {
+      "id": 6,
+      "name": "fernanda",
+      "lastname": "elola",
+      "email": "elolafernanda@yahoo.com.ar",
+      "password": "$2a$05$tp5YjK6jENypSvbBTKnGQu9OtYtrQPYBTTfShjmdh2NuXCWfKDN8W",
       "avatar": "default.jpg",
       "rol": "user"
+   },
+   {
+      "id": 7,
+      "name": "ariel",
+      "lastname": "gonzalez",
+      "email": "arielgonzalez@yahoo.com.ar",
+      "password": "$2a$05$DCatfrj7ZIxnnsFY08sXp.2lMh04FeO7W.nkgiRF6mH.PgUjTHD3G",
+      "avatar": "avatar-1634653207237.png",
+      "rol": "user"
+   },
+   {
+      "id": 6,
+      "name": "joel",
+      "lastname": "jurado",
+      "email": "joeljurado@yahoo.com.ar",
+      "password": "$2a$05$tp5YjK6jENypSvbBTKnGQu9OtYtrQPYBTTfShjmdh2NuXCWfKDN8W",
+      "avatar": "default.jpg",
+      "rol": "admin"
    }
 ]

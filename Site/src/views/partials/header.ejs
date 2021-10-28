@@ -17,23 +17,26 @@
         <div class="searchBarTabletDesktop">
             <form action="">
                 <input type="text" name="buscar" placeholder="Buscar">
-                <!-- <button type="submit"><i class="fas fa-search"></i></button> -->
                 <a href=""><i class="fas fa-search"></i></a>
             </form>
         </div>
         <div>
             <div class="changuito">                
                 <a href="/products/carrito"><i class="fas fa-shopping-cart"></i>Carrito</a>
+                <% if (locals.userLogin) { %>
+                <a class="linkChanguito" href="/users/profile">Mi Perfil</a> 
+                <a class="linkChanguito" href="/users/logout">Cerrar sesión</a>   
+                <% }else{ %>
                 <a class="linkChanguito" href="/users/registro">Crear cuenta</a> 
                 <a class="linkChanguito" href="/users/login">Iniciar sesión</a>
-            </div> 
+                <% } %>
+             </div>  
         </div>
     </section>
     <section class="barraBusquedaMobile">
         <div class="searchBar">
             <form action="">
                 <input type="text" name="buscar" placeholder="Buscar">
-                <!-- <button type="submit"><i class="fas fa-search"></i></button> -->
                 <a href=""><i class="fas fa-search"></i></a>
             </form>
         </div>
@@ -45,7 +48,9 @@
                     <li><a href="">Productos</a></li>
                     <li><a href="">Contacto</a></li>
                     <li><a href="">Ayudá a las abejas</a></li>
+                    <% if (locals.userLogin && locals.userLogin.rol === 'admin'){ %>
                     <li><a href="/admin">Administrador</a></li>
+                    <% } %>
                 </ul>
             </nav>                
     </section>

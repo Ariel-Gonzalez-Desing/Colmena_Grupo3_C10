@@ -15,14 +15,13 @@ module.exports = {
         let errors = validationResult(req);
         
         if(errors.isEmpty()){
-            const {name, lastname, email, password, rePassword} = req.body;
+            const {name, lastname, email, password} = req.body;
             let user = {
                 id : users.length !=0 ? users[users.length - 1].id + 1 : 1,
                 name : name.trim(),
                 lastname : lastname.trim(),
                 email : email.trim(),
-                password : bcrypt.hashSync(password,5),
-                rePassword : bcrypt.hashSync(password,5),
+                password : bcrypt.hashSync(password,10),
                 avatar : req.file ? req.file.filename : 'default.jpg',
                 rol : "user"
             }
@@ -73,9 +72,13 @@ module.exports = {
     },
     profile : (req,res) => {
         let users = JSON.parse(fs.readFileSync(path.join(__dirname,'../data/users.json'),'utf-8'));
-        return res.render('profile',{
+        return res.render('users/profile',{
             user : users.find(user => user.id === req.session.userLogin.id)
         })
+    },
+    logout : (req,res) =>{
+        req.session.destroy()
+        res.redirect('/')
     }
 }
 
