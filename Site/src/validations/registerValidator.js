@@ -36,9 +36,6 @@ module.exports = [
             }else{
                 return true
             }
-        }).withMessage('Las contraseñas no coinciden'),
-
-    // check('terms')
-    //     .isString('on').withMessage('Debes aceptar los términos y condiciones')
+        }).withMessage('Las contraseñas no coinciden')
     
 ]

@@ -79,5 +79,14 @@
       "password": "$2a$05$tp5YjK6jENypSvbBTKnGQu9OtYtrQPYBTTfShjmdh2NuXCWfKDN8W",
       "avatar": "default.jpg",
       "rol": "admin"
+   },
+   {
+      "id": 7,
+      "name": "fer",
+      "lastname": "fer",
+      "email": "elolafernanda@gmail.com",
+      "password": "$2a$10$a/2iezQpwHt58UsUDTErCeZ3mCS58gAyYJoAvdAqLLVDPFaYqfSbq",
+      "avatar": "default.jpg",
+      "rol": "user"
    }
 ]
