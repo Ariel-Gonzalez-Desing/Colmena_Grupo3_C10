@@ -16,10 +16,10 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Imagen</th>
+            <th scope="col">Email</th>
             <th scope="col">Nombre</th>
-            <th scope="col">Apellido</th>
-            <th scope="col">Email</th>            
-            <th scope="col">Editar</th>
+            <th scope="col">Apellido</th>            
+            <th scope="col">Rol</th>
           </tr>
         </thead>
         <tbody>
@@ -27,12 +27,12 @@
           <tr>
             <th scope="row"><%= index + 1 %></th>
             <td><a href=""><img src="/images/users/<%= user.avatar%>" alt="imagen de usuario"></a></td>
+            <td><%= user.email %></td>
             <td><%= user.name %></td>
             <td><%= user.lastname %></td>
-            <td><%= user.email %></td>
-            <td><div class="iconos"><a href="/products/edit/<%= user.id %> "><i class="fas fa-edit"></i></a>
+            <td><div class="iconos"><a href=""><i class="fas fa-edit"></i></a>
               
-              <form action="/products/delete/<%= user.id %>?_method=DELETE" method="POST">
+              <form action="">
               <button><i class="fas fa-trash-alt"></i></button>
             </form>
             
