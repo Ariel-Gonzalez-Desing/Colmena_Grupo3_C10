@@ -61,7 +61,7 @@ module.exports = {
                 rol : user.rol
             }
             if(req.body.remember){
-                res.cookie('craftsyForEver',req.session.userLogin,{maxAge : 1000 * 60})
+                res.cookie('colmenaCookie', req.session.userLogin,{maxAge : 1000 * 60})
             }
             return res.redirect('/')
         }else{

@@ -1,15 +1,48 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;   
+    box-sizing: border-box;
     text-decoration: none; 
 }
-
 header a{
+    text-decoration: none;
+}
+header .boton-changuito{    
     text-decoration: none;
     color: #FCB43A;
     display: block;
 }
+header .lupita{
+    color: #FCB43A;
+}
+
+.dropdown {
+    float: right;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 4;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: var(--colorOnyx);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
 header{
     background-color: var(--colorOnyx);
@@ -27,7 +60,7 @@ header .boton-hamburguesa{
     border-radius: 5px;     
 }
 header .changuito{
-    padding: 20px 20px 0 0;
+    padding: 20px 20px 0 0;    
     margin-bottom: 5px;
 }
 header .changuito .linkChanguito:nth-child(odd){
@@ -102,7 +135,19 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
 
 
 /*********** Tablet ***********/
-@media (min-width: 768px) {
+@media (min-width: 768px) {    
+    header .changuito{
+        display: flex;        
+    }
+    header .changuito img{
+        max-width: 30px;
+        margin-right: 10px;        
+    }
+    header .iconos-TabletDesktop .changuito .linkChanguito{
+        font-size: 10px;
+        text-decoration: none;        
+    }
+
     header{
         background-color: var(--colorCremita); 
     }
@@ -146,11 +191,9 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
         width: 70px;
         margin-left: 40px;     
     }
-    header .iconos-TabletDesktop .changuito a{
+    header .iconos-TabletDesktop .changuito .boton-changuito{
         background-color: var(--colorNaranja);
-        color: var(--colorOnyx);
-    /*     padding-left: 35px;
-        padding-right: 35px; */
+        color: var(--colorOnyx);    
         text-align: center;
     }
 
@@ -196,6 +239,14 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
 
 /*********** Desktop ***********/
 @media (min-width: 1024px){
+    header .iconos-TabletDesktop .changuito .linkChanguito{
+        font-size: 12px;
+        text-decoration: none;
+    }
+    header .iconos-TabletDesktop img{
+        margin-left: 15px;
+    }
+
     header nav ul li{
         width: 180px;
     }

@@ -5,7 +5,7 @@
       "lastname": "Buckle",
       "email": "abuckle0@fastcompany.com",
       "password": "3VXZ9IpH1C",
-      "avatar": "user_1.jpg",
+      "avatar": "default.jpg",
       "rol": "user"
    },
    {
@@ -14,7 +14,7 @@
       "lastname": "Rudgley",
       "email": "krudgley1@loc.gov",
       "password": "HyAUUvDVF",
-      "avatar": "user_2.jpg",
+      "avatar": "default.jpg",
       "rol": "user"
    },
    {
@@ -23,7 +23,7 @@
       "lastname": "Ghilardi",
       "email": "cghilardi2@cnet.com",
       "password": "BlMzRgUV84S1",
-      "avatar": "user_3.jpg",
+      "avatar": "default.jpg",
       "rol": "user"
    },
    {
@@ -32,7 +32,7 @@
       "lastname": "Lewson",
       "email": "dlewson3@msn.com",
       "password": "RuM62VXuEpT",
-      "avatar": "user_4.jpg",
+      "avatar": "default.jpg",
       "rol": "user"
    },
    {
@@ -41,7 +41,7 @@
       "lastname": "Killby",
       "email": "jkillby4@theguardian.com",
       "password": "g88deag",
-      "avatar": "user_5.jpg",
+      "avatar": "default.jpg",
       "rol": "user"
    },
    {

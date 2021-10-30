@@ -46,6 +46,15 @@ module.exports = {
             return res.redirect('/admin')
     },
 
+    productsList : (req,res) => {
+        const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
+        return res.render('products/productsList', {
+            title : 'Listado de productos',           
+            products : JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8')),
+            firstLetter
+        });
+    },
+
     detail : (req,res) => {
         const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
         return res.render('products/detalle', {

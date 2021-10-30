@@ -17,18 +17,27 @@
         <div class="searchBarTabletDesktop">
             <form action="">
                 <input type="text" name="buscar" placeholder="Buscar">
-                <a href=""><i class="fas fa-search"></i></a>
+                <a class="lupita" href=""><i class="fas fa-search"></i></a>
             </form>
         </div>
         <div>
             <div class="changuito">                
-                <a href="/products/carrito"><i class="fas fa-shopping-cart"></i>Carrito</a>
+                
                 <% if (locals.userLogin) { %>
-                <a class="linkChanguito" href="/users/profile">Mi Perfil</a> 
-                <a class="linkChanguito" href="/users/logout">Cerrar sesión</a>   
-                <% }else{ %>
-                <a class="linkChanguito" href="/users/registro">Crear cuenta</a> 
-                <a class="linkChanguito" href="/users/login">Iniciar sesión</a>
+                    <div class="imagen-perfil">
+                        <a class="imagen-link" href="/users/profile"><img src="/images/users/<%= locals.userLogin.avatar %>" alt="imagen de usuario"></a> 
+                    </div> 
+                    <div>
+                        <a class="boton-changuito" href="/products/carrito"><i class="fas fa-shopping-cart"></i>Carrito</a>                    
+                        <a class="linkChanguito" href="/users/profile">Mi Perfil</a> 
+                        <a class="linkChanguito" href="/users/logout">Cerrar sesión</a>   
+                    </div>
+                <%  }else{ %>                    
+                    <div>
+                        <a class="boton-changuito" href="/products/carrito"><i class="fas fa-shopping-cart"></i>Carrito</a>                    
+                        <a class="linkChanguito" href="/users/registro">Crear cuenta</a> 
+                        <a class="linkChanguito" href="/users/login">Iniciar sesión</a>  
+                    </div>
                 <% } %>
              </div>  
         </div>
@@ -37,7 +46,7 @@
         <div class="searchBar">
             <form action="">
                 <input type="text" name="buscar" placeholder="Buscar">
-                <a href=""><i class="fas fa-search"></i></a>
+                <a class="lupita" href=""><i class="fas fa-search"></i></a>
             </form>
         </div>
     </section>
@@ -45,11 +54,18 @@
             <nav>
                 <ul>
                     <li><a href="/">Inicio</a></li>
-                    <li><a href="">Productos</a></li>
-                    <li><a href="">Contacto</a></li>
-                    <li><a href="">Ayudá a las abejas</a></li>
+                    <li><a href="/products/productsList">Productos</a></li>
+                    <li><a href="#footer">Contacto</a></li>
+                    <li><a href="https://sada.org.ar/protegeunacolmena/" target="_blank">Ayudá a las abejas</a></li>
                     <% if (locals.userLogin && locals.userLogin.rol === 'admin'){ %>
-                    <li><a href="/admin">Administrador</a></li>
+                    <!-- <li><a href="/admin">Administrador</a></li> -->
+                    <div class="dropdown">
+                        <li><a href="">Administrador</a>
+                        <div class="dropdown-content">
+                          <a href="/adminUsers">Usuarios</a>
+                          <a href="/adminProducts">Productos</a></li>
+                        </div>
+                      </div>
                     <% } %>
                 </ul>
             </nav>                
