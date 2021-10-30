@@ -136,8 +136,44 @@
 
 >## :small_orange_diamond: *Hacer menos*
 >>* Crear demasiadas ramas en el repositorio de GitHub.
+
 <br>
 
+>## :small_orange_diamond: *Dejar de hacer*
+>>* Olvidarse de actualizar el Trello.
+
+
+-----------------------------------------------------------------
+
+# Retrospectiva del Sprint 5
+
+<br>
+
+>## :small_orange_diamond: *Seguir haciendo*
+>>* Comunicarnos por Whatsapp para comentar progresos y tomar algunas decisiones.
+>>* Ayudarnos entre nosotros.
+>>* Hacer las reuniones mas efectivas, optimizar el tiempo.
+>>* Hacer una reunión de revisión pre-entrega.
+>>* Avisar a los profes que las correciones.
+
+<br>
+
+>## :small_orange_diamond: *Hacer más*
+>>* Actualizar Trello con los progresos.
+>>* Más dailys.
+
+<br>
+
+>## :small_orange_diamond: *Empezar a hacer*
+>>* Poner fecha para terminar cada tarea.
+>>* Poner checklists en las tarjetas para avisar el visto de una tarea terminada.
+
+<br>
+
+>## :small_orange_diamond: *Hacer menos*
+>>* Desaprovechar los días posteriores al inicio del sprint.
+
+<br>
 
 >## :small_orange_diamond: *Dejar de hacer*
 >>* Olvidarse de actualizar el Trello.
