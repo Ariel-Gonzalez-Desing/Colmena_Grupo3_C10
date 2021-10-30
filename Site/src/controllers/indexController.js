@@ -12,10 +12,16 @@ module.exports = {
             firstLetter            
         })
     },
-    admin : (req,res) => {
-        return res.render('main/admin', { 
+    adminProducts : (req,res) => {
+        return res.render('main/adminProducts', { 
             title: 'Admin Colmena',
             products : JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'))
         })
     },
+    adminUsers : (req,res) => {
+        return res.render('main/adminUsers', { 
+            title: 'Admin Colmena',
+            users : JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','users.json'),'utf-8'))
+        })
+    }
 }

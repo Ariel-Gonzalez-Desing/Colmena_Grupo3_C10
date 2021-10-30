@@ -3,11 +3,12 @@ var router = express.Router();
 
 const adminUserCheck = require('../middlewares/adminUserCheck');
 
-const {index, admin} = require('../controllers/indexController');
+const {index, adminProducts, adminUsers} = require('../controllers/indexController');
 
 /* GET home page. */
 router.get('/', index);
-router.get('/admin', adminUserCheck, admin);
+router.get('/adminProducts', adminUserCheck, adminProducts);
+router.get('/adminUsers', adminUserCheck, adminUsers);
 
 
 module.exports = router;

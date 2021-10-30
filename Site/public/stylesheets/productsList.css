@@ -1,0 +1,114 @@
+
+.productsList {
+    background-color: var(--colorCremita);
+    color: var(--colorOnyx);
+  }
+  
+  .productsList h2 {
+    text-align: center;
+    margin: 0px 10px 10px 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--colorDarkVanilla);
+  }
+
+  .productsList .button {
+    background-color: var(--colorOnyx);
+    border: none;
+    color: var(--colorNaranja);
+    padding: 5px 10px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+    text-align: center;
+  }
+  
+  .productsList .button a {
+    color: var(--colorNaranja);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .productsList .button:hover {
+    background-color: var(--colorOnyxHover);
+  }
+
+.productsList .productos {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+.productsList .productos .prodGrupo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+    margin: 0 auto;
+  }
+  
+.productsList section .productos .prodGrupo .prodUnidad {
+    border: 1px solid var(--colorDarkVanilla);
+    border-radius: 10px;
+    margin: 10px 0;
+    padding-bottom: 15px;
+  }
+  
+.productsList section .productos .prodGrupo .prodUnidad img{
+    height: 250px; 
+    object-fit: contain;
+  }
+  
+.productsList section .productos .prodGrupo .prodUnidad p{
+    color: var(--colorOnyx);
+  }
+  
+.productsList.button {
+    background-color: var(--colorCremita);
+    border: 1px solid var(--colorOnyx);
+    color: var(--colorOnyx);
+    margin-top: 20px;
+    font-size: 12px;
+    width: 50%;
+  }
+  
+.productsList.button:hover {
+    background-color: var(--colorCremitaHover);
+    font-weight: 600;
+  }
+  
+.productsList .productos img {
+    max-width: 40%;
+    justify-content: center;
+  }
+  
+  @media (min-width: 768px) {
+    .productsList h2 {
+      padding: 20px;
+    }
+    .productsList .productos .prodGrupo {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 95%;
+      margin: 10px auto;
+    }
+    .productsList .productos .prodGrupo .prodUnidad {
+      margin: 10px;
+      width: 30%;
+    }
+    .productsList section .productos .prodGrupo .prodUnidad:hover {
+      margin: 10px 0;
+      padding-bottom: 15px;
+      box-shadow: 0px 0px 5px rgb(105, 81, 41);
+    }
+    .productsList .button {
+        width: 50%;
+      }
+      
+  }
+  

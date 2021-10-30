@@ -5,6 +5,7 @@
   width: 100%;
   position: relative;
   margin: auto;
+  z-index: 3;
 }
 
 /* Imagenes invisibles */
