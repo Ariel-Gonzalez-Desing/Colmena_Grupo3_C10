@@ -58,6 +58,14 @@ h5{
     margin-bottom: 30px;
 }
 
+.login .remember input{
+    width: 20px;
+}
+
+.login .remember label{
+    font-size: 14px;
+}
+
 
 @media (min-width: 1024px){
     h3{

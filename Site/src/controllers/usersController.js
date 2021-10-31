@@ -77,8 +77,10 @@ module.exports = {
         })
     },
     logout : (req,res) =>{
-        req.session.destroy()
-        res.redirect('/')
+        req.session.destroy(function() {
+            res.clearCookie('colmenaCookie', { path: '/' });
+            res.redirect('/')
+          });
     }
 }
 
