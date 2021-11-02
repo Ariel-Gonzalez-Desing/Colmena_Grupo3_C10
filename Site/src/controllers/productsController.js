@@ -6,6 +6,9 @@ const path = require('path');
 let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'))
 let  categories = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categories.json'),'utf-8'));
 
+/* base de datos */
+const db = require('../database/models');
+
 const cuota = require('../utils/cuota');
 const firstLetter = require('../utils/firstLetter');
 
@@ -16,6 +19,7 @@ module.exports = {
     },
 
     createForm : (req,res) => {
+        db
         return res.render('products/productAdd', {
             title : 'Agregar producto',
             categories,
