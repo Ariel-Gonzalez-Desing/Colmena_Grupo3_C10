@@ -1,24 +1,131 @@
 'use strict';
 
-const faker = require('faker');
-const products = [];
+// const faker = require('faker');
+// const products = [];
 
-for (let i = 0; i < 20; i++) {
-  
-  var product = {
-    name : faker.commerce.productName(),
-    size : faker.datatype.number({min : 0,max : 30}),
-    price : faker.datatype.number({min:100,max:999}),
-    categoryId : faker.datatype.number({min:1,max:3}),
-    description : faker.commerce.productDescription(),
-    createdAt : new Date,
-    updatedAt : null,
-    deletedAt : null,
+// for (let i = 0; i < 20; i++) {  
+//   var product = {
+//     name : faker.commerce.productName(),
+//     size : faker.datatype.number({min : 0,max : 30}),
+//     price : faker.datatype.number({min:100,max:999}),
+//      : faker.datatype.number({min:1,max:3}),
+//     description : faker.commerce.productDescription(),
+//     createdAt : new Date,
+//     updatedAt : null,
+//     deletedAt : null,
+//   }
+//   products.push(product)  
+// }
+
+let products = [
+  {
+     name: "Miel chica",
+     size: "75gr",
+     price: 300,
+     categoryId: 1,
+     displayId: 1,
+     description: "La miel COLMENA 100% miel de abeja proviene de colmenas Las Flores, Buenos Aires. Es multifloral: de trébol, melilotus y cardo. Un proceso de calentado permite obtener una miel líquida y cristalina, ideal para endulzar infusiones, limonadas y licuados.",
+     image: ["frasco75gr.jpg????????"],
+     createdAt : new Date,
+     updatedAt : null,
+     deletedAt : null,   
+  },
+  {
+     name: "Miel Mediana",
+     size: "125gr",
+     price: 500,
+     categoryId: 1,
+     displayId: 2,
+     description: "Miel COLMENA 100% pura, proviene de flores silvestres que crecen en nuestro monte de la región del Gran Chaco, y así nace este exquisito blend. Algarrobo, Chañar, Sacha melón, Garabato , Poleo, Itin son algunas de flores autóctonas que, gracias al trabajo de las abejas, aportan escalonadamente su sabor, aroma y color para lograr esta miel única. Con un sabor más marcado y dulce que el común de las mieles, tienen una mayor persistencia en el paladar .",
+     image: ["frasco125grCar.png"],
+     createdAt : new Date,
+     updatedAt : null,
+     deletedAt : null,
+  },
+  {
+     name: "Miel Grande",
+     size: "200gr",
+     price: 700,
+     categoryId: 1,
+     displayId: 2,
+     description: "Miel Colmena, 100% miel de abeja proviene de colmenas Las Flores, Buenos Aires. Es multifloral: de trébol, melilotus y cardo. Un proceso de calentado permite obtener una miel líquida y cristalina, ideal para endulzar infusiones, limonadas y licuados ",
+     image: ["frasco200gr.jpg"],
+     createdAt : new Date,
+     updatedAt : null,
+     deletedAt : null,
+  },
+  {
+     name: "Panal",
+     size: "250gr",
+     price: 1000,
+     categoryId: 1,
+     description: "Panal Puro de Miel 100% Comestible (Sin contenido de parafina) Presentación: 350grs. Variedad: Melilotus Blend (Flor de Meliloto) Sabor fino con notas a Vainilla y Flores",
+     image: ["Panal.png"],
+     createdAt : new Date,
+     updatedAt : null,
+     deletedAt : null,
+  },
+  {
+     name: "Llavero",
+     size: "unidad",
+     price: 200,
+     categoryId: 2,
+     displayId: 2,
+     description: "LLavero de  metal en forma de de 25mm. panal con abeja de Color plateado antiguo, colgante, joyería artesanal, 1 unidad",
+     image: ["llavero 9.png"],
+     createdAt : new Date,
+     updatedAt : null,
+     deletedAt : null,
+  },
+  {
+     name: "Palito Mielero",
+     size: "unidad",
+     price: 300,
+     categoryId: 3,
+     displayId: 2,
+     description: "Palito Mielero realizado en madera natural con ranuras para poder sujetar la miel y que no gotee. Este utensilio permite servir y dosificar la cantidad de miel a emplear en nuestra comida o bebida favorita sin que se vierta.",
+     image: ["palito mielero.png"],
+     createdAt : new Date,
+     updatedAt : null,
+     deletedAt : null,
+  },
+  {
+     name: "Frasco para Miel",
+     size: "unidad",
+     price: 400,
+     categoryId: 3,
+     displayId: 1,
+     description: "Mielera de cristal con tapa, formato ideal para guardar nuestra miel Colmena, incluye tapa y recolector de miel.  MEDIDAS: Alto: 15,5 CM, Circunferencia: 8 CM, Capacidad: 220 ML",
+     image: ["producto3.jpg"],
+     createdAt : new Date,
+     updatedAt : null,
+     deletedAt : null,
+  },
+  {
+     name: "Remera help-plant-clean",
+     size: "talle unico",
+     price: 450,
+     categoryId: 4,
+     displayId: 2,
+     description: "La remera HELP-PLANT-CLEAN, es una prenda en colores universales estampada a mano en el frente con una de nuestras ilustraciones!. El material es 100% algodón  y tiene broches en el escote para que al momento de vestirse sea más fácil! Es una prenda de esas que se heredan de generación en generación y pensada para usar en cualquier momento del año!",
+     image: ["img-1633359458724.jpg"],
+     createdAt : new Date,
+     updatedAt : null,
+     deletedAt : null,
+  },
+  {
+     name: "Remera Save the Bees",
+     size: "todos los talles",
+     price: 450,
+     categoryId: 4,
+     displayId: 1,
+     description: "La remera ABEJAS, es una prenda en colores universales estampada a mano en el frente con una de nuestras ilustraciones!. El material es 100% algodón  y tiene broches en el escote para que al momento de vestirse sea más fácil! Es una prenda de esas que se heredan de generación en generación y pensada para usar en cualquier momento del año!",
+     image: ["remeras1.jpg"],
+     createdAt : new Date,
+     updatedAt : null,
+     deletedAt : null,
   }
-
-  products.push(product)
-  
-}
+]
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {    

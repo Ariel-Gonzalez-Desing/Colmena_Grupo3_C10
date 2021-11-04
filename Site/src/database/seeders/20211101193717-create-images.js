@@ -12,10 +12,8 @@ for (let i = 0; i < 20; i++) {
       createdAt : new Date,
       updatedAt : new Date
     }
-    images.push(image)
-    
-  }
-  
+    images.push(image)    
+  }  
 }
 
 module.exports = {
