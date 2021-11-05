@@ -23,44 +23,44 @@
 
 let users = [  
   {
-     firstName: "dani",
-     lastName: "Rodriguez",
-     email: "danirodriguez@yahoo.com.ar",
-     password : bcrypt.hashSync('123123',10),
-     avatar: "img1.png",
-     rolId: 2,
-     createdAt : new Date,
-     updatedAt : new Date
+     "firstName": "dani",
+     "lastName": "Rodriguez",
+     "email": "danirodriguez@yahoo.com.ar",
+     "password" : bcrypt.hashSync('123123',10),
+     "avatar": "img1.png",
+     "rolId": 2,
+     "createdAt" : new Date,
+     "updatedAt" : new Date
   },
   {
-     firstName: "fernanda",
-     lastName: "elola",
-     email: "elolafernanda@yahoo.com.ar",
-     password : bcrypt.hashSync('123123',10),
-     avatar: "img4.png",
-     rolId: 1,
-     createdAt : new Date,
-     updatedAt : new Date
+     "firstName": "fernanda",
+     "lastName": "elola",
+     "email": "elolafernanda@yahoo.com.ar",
+     "password" : bcrypt.hashSync('123123',10),
+     "avatar": "img4.png",
+     "rolId": 1,
+     "createdAt" : new Date,
+     "updatedAt" : new Date
   },
   {
-     firstName: "ariel",
-     lastName: "gonzalez",
-     email: "arielgonzalez@yahoo.com.ar",
-     password : bcrypt.hashSync('123123',10),
-     avatar: "img3.png",
-     rolId: 1,
-     createdAt : new Date,
-     updatedAt : new Date
+     "firstName": "ariel",
+     "lastName": "gonzalez",
+     "email": "arielgonzalez@yahoo.com.ar",
+     "password" : bcrypt.hashSync('123123',10),
+     "avatar": "img3.png",
+     "rolId": 1,
+     "createdAt" : new Date,
+     "updatedAt" : new Date
   },
   {
-     firstName: "joel",
-     lastName: "jurado",
-     email: "joeljurado@yahoo.com.ar",
-     password : bcrypt.hashSync('123123',10),
-     avatar: "img2.png",
-     rolId: 2,
-     createdAt : new Date,
-     updatedAt : new Date
+     "firstName": "joel",
+     "lastName": "jurado",
+     "email": "joeljurado@yahoo.com.ar",
+     "password" : bcrypt.hashSync('123123',10),
+     "avatar": "img2.png",
+     "rolId": 2,
+     "createdAt" : new Date,
+     "updatedAt" : new Date
   }
 ]
 
