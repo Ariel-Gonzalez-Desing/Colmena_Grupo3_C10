@@ -34,6 +34,16 @@ module.exports = {
           key : 'id'
         }
       },
+      displayId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model:{
+            tableName: "Displays"
+          },
+          key : 'id'
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
