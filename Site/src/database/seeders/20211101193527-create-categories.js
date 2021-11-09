@@ -5,22 +5,22 @@ module.exports = {
       
       await queryInterface.bulkInsert('Categories', [
         {
-          name : 'comestible',
+          name : 'Comestible',
           createdAt : new Date,
           updatedAt : new Date
          },
          { 
-          name : 'deco',
+          name : 'Deco',
           createdAt : new Date,
           updatedAt : new Date  
          },
          { 
-          name : 'bazar',
+          name : 'Bazar',
           createdAt : new Date,
           updatedAt : new Date  
          },
          { 
-          name : 'vestimenta',
+          name : 'Vestimenta',
           createdAt : new Date,
           updatedAt : new Date  
          }     

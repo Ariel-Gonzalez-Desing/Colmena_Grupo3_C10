@@ -1,10 +1,6 @@
 require('dotenv').config()
-<<<<<<< HEAD
 
 module.exports =  {
-=======
-module.exports= {
->>>>>>> a7da6f35754a018bafee0528dd713ae73901d358
   development: {
     username: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,

@@ -31,7 +31,8 @@ module.exports = {
           model:{
             tableName: "Categories"
           },
-          key : 'id'
+          key : 'id',
+          update : 'cascade'
         }
       },
       displayId: {
@@ -41,7 +42,8 @@ module.exports = {
           model:{
             tableName: "Displays"
           },
-          key : 'id'
+          key : 'id',
+          update : 'cascade'
         }
       },
       createdAt: {

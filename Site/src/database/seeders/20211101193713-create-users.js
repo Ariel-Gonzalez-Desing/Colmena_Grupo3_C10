@@ -1,4 +1,5 @@
 'use strict';
+const bcrypt = require('bcryptjs'); 
 
 // const faker = require('faker');
 // const users = [];
@@ -12,8 +13,8 @@
 //     password : faker.internet.password(),
 //     rolId : faker.datatype.number({min:1,max:3}),
 //     avatar: faker.image.avatar({min:1,max:3}),
-//     createdAt : new Date,
-//     updatedAt : null,
+//    createdAt: new Date,
+//    updatedAt: null,
 //     deletedAt : null,
 //   }
 
@@ -29,8 +30,8 @@ let users = [
      "password" : bcrypt.hashSync('123123',10),
      "avatar": "img1.png",
      "rolId": 2,
-     "createdAt" : new Date,
-     "updatedAt" : new Date
+     createdAt : new Date,
+     updatedAt : new Date
   },
   {
      "firstName": "fernanda",
@@ -39,8 +40,8 @@ let users = [
      "password" : bcrypt.hashSync('123123',10),
      "avatar": "img4.png",
      "rolId": 1,
-     "createdAt" : new Date,
-     "updatedAt" : new Date
+     createdAt : new Date,
+     updatedAt : new Date
   },
   {
      "firstName": "ariel",
@@ -49,8 +50,8 @@ let users = [
      "password" : bcrypt.hashSync('123123',10),
      "avatar": "img3.png",
      "rolId": 1,
-     "createdAt" : new Date,
-     "updatedAt" : new Date
+     createdAt : new Date,
+     updatedAt : new Date
   },
   {
      "firstName": "joel",
@@ -59,8 +60,8 @@ let users = [
      "password" : bcrypt.hashSync('123123',10),
      "avatar": "img2.png",
      "rolId": 2,
-     "createdAt" : new Date,
-     "updatedAt" : new Date
+     createdAt : new Date,
+     updatedAt : new Date
   }
 ]
 
