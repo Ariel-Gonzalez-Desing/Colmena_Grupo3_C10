@@ -1,10 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-// const {dirname} = require('path');
-
-let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'))
-let  categories = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categories.json'),'utf-8'));
+// let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'))
+// let  categories = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categories.json'),'utf-8'));
 
 /* base de datos */
 const db = require('../database/models');
@@ -15,14 +13,19 @@ const firstLetter = require('../utils/firstLetter');
 module.exports = {
     createForm : (req,res) => {
         
-        dg.Category.findAdd()
+        let categories = db.Category.findAll()
+        let displays = db.Display.findAll()
+
+        Promise.all(([categories, displays]))
             .then(categories => {
                 return res.render('products/productAdd', {
                     title : 'Agregar producto',
                     categories,
+                    displays,
                     firstLetter
                 })
-            })        
+            }) 
+            .catch(error => console.log(error))       
     },
 
     create : (req,res) => {
@@ -55,12 +58,18 @@ module.exports = {
     },
 
     productsList : (req,res) => {
-        const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
-        return res.render('products/productsList', {
-            title : 'Listado de productos',           
-            products : JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8')),
-            firstLetter
-        });
+
+        db.Product.findAll({
+            include: ['images']
+        })
+            .then(products => {
+                return res.render('products/productsList', {
+                    title : 'Listado de productos',           
+                    products,
+                    firstLetter
+                });
+            })
+            .catch(error => console.log(error))  
     },
 
     detail : (req,res) => {

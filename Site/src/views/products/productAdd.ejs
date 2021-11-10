@@ -30,18 +30,30 @@
           <div class="container-input-total">
             <textarea placeholder="Descripción" id="floatingTextarea" name="description"></textarea>
             <label for="floatingTextarea"></label>
+          </div>
+
+          <div class="container-input-mitad">
             <input type="text" placeholder="Tamaño" name="size"/> 
+            
+            <input type="number" placeholder="Precio" name="price"/>
           </div>        
           
-            <div class="container-input-mitad">
-              <input type="number" placeholder="Precio" name="price"/>
-          <select class="form-select" id="category" aria-label="Floating label select example" name="category">
-            <option value="" selected hidden>Selecciona la categoría</option>
-            <% categories.forEach(category => { %>
-              <option value="<%= category %>" <%= locals.old && old.category === category  ? 'selected' : null%> ><%= firstLetter(category) %></option>
-             <% }) %>
-          </select>
-          <label for="category"></label>       
+          <div class="container-input-mitad">
+            <select class="form-select" id="category" aria-label="Floating label select example" name="category">
+              <option value="" selected hidden>Selecciona la categoría</option>
+              <% categories.forEach(category => { %>
+                <option value="<%= category %>" <%= locals.old && old.categoryId.name === category.name  ? 'selected' : null%> ><%= category %></option>
+              <% }) %>
+            </select>
+            <label for="category"></label>  
+          
+            <select class="form-select" id="display" aria-label="Floating label select example" name="display">
+              <option value="" selected hidden>Selecciona el display</option>
+              <% categories.forEach(category => { %>
+                <option value="<%= category %>" <%= locals.old && old.category === category  ? 'selected' : null%> ><%= category %></option>
+              <% }) %>
+            </select>
+            <label for="display"></label> 
           </div>
         
           <button class="btn-add" type="submit">Guardar</button>

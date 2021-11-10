@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
-let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'));
+
+/* base de datos */
+const db = require('../database/models');
+
+// let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'));
 
 const firstLetter = require('../utils/firstLetter');
 
@@ -8,11 +12,11 @@ module.exports = {
     index : (req,res) => {
 
         db.Product.findAll({
-            include : ['category', 'images', 'display'],
+            include : ['images', 'display'],
             where : {
-                sectionId : 1, 
-                discount : 0 ('si agregamos otra seccion, que no se repitan los prod')
-            }
+                displayId : 1
+            },
+            limit : 3
         })
             .then(destacados => {
                 return res.render('main/index', { 
@@ -30,23 +34,23 @@ module.exports = {
         })
         let categories = db.Category.findAll()
 
-        Promise.All([products, categories])
+        Promise.all([products, categories])
             .then(([products, categories]) => {
                 return res.render('main/adminProducts', { 
                     title: 'Admin Colmena',
-                    products
+                    products, 
+                    categories
                 })
             })        
     },
     adminUsers : (req,res) => {
 
-        let users = cb.User.findAll({
-            include : ['rols']
+        let users = db.User.findAll({
+            include : ['roles']
         })
-        let rols = db.Rol.findAll()
 
-        Promise.All([users, rols])
-            .then(([users, rols]) => {
+        
+            .then(([users]) => {
                 return res.render('main/adminUsers', { 
                     title: 'Admin Colmena',
                     users
