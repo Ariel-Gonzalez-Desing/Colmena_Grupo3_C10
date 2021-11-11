@@ -30,7 +30,7 @@ module.exports = {
     adminProducts : (req,res) => {
 
         let products = db.Product.findAll({
-            include : ['images', 'category']
+            include : ['images']
         })
         let categories = db.Category.findAll()
 
@@ -45,16 +45,18 @@ module.exports = {
     },
     adminUsers : (req,res) => {
 
-        let users = db.User.findAll({
-            include : ['roles']
-        })
-
+        let users = db.User.findAll()
+        let rol = db.Rol.findAll()
         
-            .then(([users]) => {
+        Promise.all([users, rol])
+
+            .then(([users, rol]) => {
                 return res.render('main/adminUsers', { 
                     title: 'Admin Colmena',
-                    users
+                    users,
+                    rol
                 })
-            })        
+            })    
+            .catch(error => console.log(error))      
     }
 }

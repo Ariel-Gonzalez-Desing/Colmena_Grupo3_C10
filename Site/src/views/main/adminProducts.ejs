@@ -26,7 +26,7 @@
             <% products.forEach((product, index) => { %>            
           <tr>
             <th scope="row"><%= index + 1 %></th>
-            <td><a href="/products/detail/<%= product.id %> "><img src="/images/products/<%= product.images[0].file %>" alt=""></a></td>
+            <td><a href="/products/detail/<%= product.id %> "><img src="/images/products/<%= product.images[0].file ? product.images[0].file : 'agregarImagen.png'  %>" alt=""></a></td>
             <td><%= firstLetter(product.name) %></td>
             <td><%= product.price %></td>
             <td><%= firstLetter(product.size) %></td>
