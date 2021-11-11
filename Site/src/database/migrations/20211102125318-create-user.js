@@ -26,10 +26,16 @@ module.exports = {
       },
       rolId: {
         type: Sequelize.INTEGER,
+<<<<<<< HEAD
         allowNull: false,
         references: {
           model:{
             tableName: 'Roles'
+=======
+        references: {
+          model:{
+            tableName: 'Rols'
+>>>>>>> ea8c61df458ceff1e8132c0f5450430e3b813663
           },
           key: 'id'
         }
