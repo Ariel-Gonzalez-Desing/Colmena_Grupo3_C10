@@ -13,13 +13,13 @@
   
           <ul class="slider">
             <li id="slide1">
-              <img src="/images/products/<%= product.image.length !=0 ? product.image[0] : 'agregarImagen.png' %>">
+              <img src="/images/products/<%= product.images[0].file ? product.images[0].file : 'agregarImagen.png' %>">
             </li>
             <li id="slide2">
-              <img src="/images/products/<%= product.image[1] ? product.image[1] : 'agregarImagen.png' %>"> 
+              <img src="/images/products/<%= product.images[0].file ? product.images[0].file : 'agregarImagen.png' %>"> 
             </li>
             <li id="slide3">
-              <img src="/images/products/<%= product.image[2] ? product.image[2] : 'agregarImagen.png' %>">
+              <img src="/images/products/<%= product.images[0].file ? product.images[0].file : 'agregarImagen.png' %>">
             </li>
           </ul>
           
