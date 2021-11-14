@@ -9,19 +9,13 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
+     static associate(models) {
       // define association here
       User.belongsTo(models.Rol,{
-        as : 'rol',
-        foreignKey: 'userId'
+        as : 'rol'  
       }),
       User.hasMany(models.Order,{
-        as : 'orders',
-        foreignKey: 'userId'
-      }),
-      User.hasMany(models.Cart,{
-        as : 'cart',
-        key : 'userId'
+        as : 'orders'
       })
     }
   };

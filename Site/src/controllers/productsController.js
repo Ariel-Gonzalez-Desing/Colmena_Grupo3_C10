@@ -1,103 +1,150 @@
 const fs = require('fs');
 const path = require('path');
 
-// const {dirname} = require('path');
+// let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'))
+// let  categories = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categories.json'),'utf-8'));
 
-let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'))
-let  categories = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categories.json'),'utf-8'));
+/* base de datos */
+const db = require('../database/models');
 
 const cuota = require('../utils/cuota');
 const firstLetter = require('../utils/firstLetter');
 
 module.exports = {
-    products : (req, res) => {
-        return res.render('admin'),
-        firstLetter
-    },
-
     createForm : (req,res) => {
-        return res.render('products/productAdd', {
-            title : 'Agregar producto',
-            categories,
-            firstLetter
-        });
+        
+        let categories = db.Category.findAll()
+        let displays = db.Display.findAll()
+
+        Promise.all(([categories, displays]))
+
+            .then(([categories, displays]) => {
+                return res.render('products/productAdd', {
+                    title : 'Agregar producto',
+                    categories,
+                    displays,
+                    firstLetter
+                })
+            }) 
+            .catch(error => console.log(error))       
     },
 
     create : (req,res) => {
-        const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
-        
-            const {name, size, price, category, description} = req.body;
-            let images = req.files.map(image => image.filename);
+               
+        const {name, size, price, category, display, description} = req.body;
 
-            let product = {
-                id : products[products.length - 1].id + 1,
-                name : name.trim(),
-                size: size.trim(),
-                price : +price,
-                category,
-                description : description.trim(),
-                avatar : req.files.length !=0 ? images : ['default-image.png'],
-            }
+        db.Product.create({
+            name : name.trim(),
+            size: size.trim(),
+            price : +price,
+            categoryId: category,
+            displayId: display,
+            description : description.trim()
+        })
+            .then(product => {
+                if(req.files[0] != undefined) {
 
-            products.push(product);
-
-            fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(products,null,3),'utf-8');
-    
-            return res.redirect('/admin')
+                    let images = req.files.map(image => {
+                        let img = {
+                            file : image.filename,
+                            productId : product.id
+                        }
+                        return img
+                    });
+                    db.Image.bulkCreate(images, {validate : true})
+                        .then( () => console.log('imagenes agregadas'))
+                }
+                return res.redirect('/adminProducts')
+            })
+            .catch(error => console.log(error))        
     },
 
     productsList : (req,res) => {
-        const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
-        return res.render('products/productsList', {
-            title : 'Listado de productos',           
-            products : JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8')),
-            firstLetter
-        });
+
+        db.Product.findAll({
+            include: ['images']
+        })
+            .then(products => {
+                return res.render('products/productsList', {
+                    title : 'Listado de productos',           
+                    products,
+                    firstLetter
+                });
+            })
+            .catch(error => console.log(error))  
     },
 
     detail : (req,res) => {
-        const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
-        return res.render('products/detalle', {
-            title : 'Detalle de producto',           
-            product : products.find(product => product.id === +req.params.id),
-            cuota,
-            firstLetter
-        });
+
+        db.Product.findByPk(req.params.id, {
+            include: ['images']
+        })
+            .then(product => {
+                db.Category.findByPk(product.categoryId, {
+                    include: [
+                        {
+                            association: 'products',
+                            include: ['images'],
+                        }
+                    ]
+                })
+                    .then(category => {
+                        return res.render('products/detalle', {
+                            title : 'Detalle de producto',           
+                            product,
+                            products: category.products,
+                            cuota,
+                            firstLetter
+                        });
+                    })
+            })        
+            .catch(error => console.log(error))
     },
 
     editForm : (req,res) => {
-        const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
-        return res.render('products/productEdit', {
-            title : 'Editar producto',
-            product : products.find(product => product.id === +req.params.id),
-            firstLetter,
-            categories
-        });
+
+        let product = db.Product.findByPk(req.params.id, {
+            include: ['images']
+        })
+        let categories = db.Category.findAll()
+        let displays = db.Display.findAll()
+
+        Promise.all([product,categories, displays])
+        
+        .then(([product, categories, displays]) => {
+            return res.render('products/productEdit', {
+                title : 'Editar producto',
+                firstLetter,
+                categories,
+                product,
+                displays
+            });
+        })
+        .catch(error => console.log(error))
     },
 
-    edit : (req,res) => {
-        const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
-        const {name, size, price, category, description} = req.body;
+    edit : (req,res) => {       
 
-        let product = products.find(product => product.id === +req.params.id);  
-        let images = req.files.map(image => image.filename);         
+        const {name, size, price, category, display, description, file} = req.body;
 
-        let productModified = {
-            id : +req.params.id,
-            name : name.trim(),
-            size : size.trim(),
-            price : +price,
-            category,            
-            description : description.trim(),
-            image : req.files.length != 0 ? images : [product.image],
-        }
-
-        let productsModified = products.map(product => product.id === +req.params.id ? productModified : product);
-
-        fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(productsModified,null,3),'utf-8');
-
-        return res.redirect('/admin'),
-        firstLetter
+        db.Product.update(
+            {
+                name : name.trim(),
+                size : size.trim(),
+                price : +price,
+                categoryId: category,
+                displayId : display,          
+                description : description.trim(),
+                file : file
+            },
+            {
+                where : {id : req.params.id}
+            }
+        )
+            .then(() => {
+                return res.redirect('/adminProducts'),
+                firstLetter
+            })        
     },
 
     carrito : (req,res) => {
@@ -108,19 +155,13 @@ module.exports = {
     },   
     
     destroy : (req,res) => {
-        const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
 
-        let product = products.find(product => product.id === +req.params.id);
-
-        product.image.forEach(img => {
-            fs.existsSync(path.join(__dirname,'../public/images/products',img)) ? fs.unlinkSync(path.join(__dirname,'../public/images/products',img)) : null
-
-        });
-
-        let productsModified = products.filter(product => product.id !== +req.params.id);
-
-        fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(productsModified,null,3),'utf-8');
-
-        return res.redirect('/admin')    
+        db.Product.destroy({
+            where : {id: req.params.id}
+        })
+            .then(() => {
+                return res.redirect('/adminProducts')  
+            })
+            .catch(error => console.log(error))   
     }
 }

@@ -2,7 +2,10 @@ const bcrypt = require('bcryptjs');
 const path = require('path');
 const fs = require('fs');
 
-let users = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','users.json'),'utf-8'));
+/* base de datos */
+const db = require('../database/models');
+
+// let users = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','users.json'),'utf-8'));
 const {validationResult} = require('express-validator');
 
 module.exports = {
@@ -15,55 +18,65 @@ module.exports = {
         let errors = validationResult(req);
         
         if(errors.isEmpty()){
+            
             const {name, lastname, email, password} = req.body;
-            let user = {
-                id : users.length !=0 ? users[users.length - 1].id + 1 : 1,
-                name : name.trim(),
-                lastname : lastname.trim(),
-                email : email.trim(),
-                password : bcrypt.hashSync(password,10),
-                avatar : req.file ? req.file.filename : 'default.jpg',
-                rol : "user"
-            }
-            users.push(user);
-            fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(users,null,3),'utf-8');
-                
-            req.session.userLogin = {
-                id : user.id,
-                name : user.name,
-                avatar : user.avatar,
-                rol : user.rol
-            }
 
-            return res.redirect('/')
-            // return res.redirect('/user/profile')
+            db.User.create({
+                firstName: name.trim(),
+                lastName: lastname.trim(),
+                email: email.trim(),
+                password: bcrypt.hashSync(password, 10),
+                avatar : req.file ? req.file.filename : 'default.jpg',
+                rolId : 1
+            })
+                .then(user => {
+                    req.session.userLogin = {
+                        id : user.id,
+                        name : user.firstName,
+                        avatar : user.avatar,
+                        rol : user.rolId
+                    }
+
+                    return res.redirect('/') 
+                })                  
+                .catch(error => res.send(error))            
 
         }else{
+
         return res.render('users/registro',{
             errores : errors.mapped(),
             old : req.body
         })}
     },
     login : (req,res) => {
+
         return res.render('users/login', {
             title : 'Login usuario',
         })
     },
     processLogin : (req,res) => {
+
         let errors = validationResult(req);
         
         if(errors.isEmpty()){
-            let user = users.find(user => user.email === req.body.email);
-            req.session.userLogin = {
-                id : user.id,
-                name : user.name,
-                avatar : user.avatar,
-                rol : user.rol
+
+            db.User.findOne({
+                where: {email: req.body.email.trim()}
+            })
+                .then(user => {
+                    req.session.userLogin = {
+                    id : user.id,
+                    name : user.firstName,
+                    avatar : user.avatar,
+                    rol : user.rolId
             }
             if(req.body.remember){
                 res.cookie('colmenaCookie', req.session.userLogin,{maxAge : 1000 * 60})
             }
             return res.redirect('/')
+                })
+                .catch(error => console.log(error))
+            
         }else{
             return res.render('users/login',{
                 errores : errors.mapped()
@@ -71,17 +84,21 @@ module.exports = {
         }
     },
     profile : (req,res) => {
-        let users = JSON.parse(fs.readFileSync(path.join(__dirname,'../data/users.json'),'utf-8'));
-        return res.render('users/profile',{
-            user : users.find(user => user.id === req.session.userLogin.id)
+
+        db.User.findOne({
+            where: {id: req.session.userLogin.id}
         })
+            .then(user => {
+                return res.render('users/profile', user)
+            })  
+            .catch(error => console.log(error))      
     },
     logout : (req,res) =>{
+
         req.session.destroy(function() {
             res.clearCookie('colmenaCookie', { path: '/' });
             res.redirect('/')
           });
     }
 }
-
 
