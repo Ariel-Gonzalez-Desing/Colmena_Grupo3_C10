@@ -30,9 +30,22 @@
             <td><%= user.email %></td>
             <td><%= user.firstName %></td>
             <td><%= user.lastName %></td>
-            <td><div class="iconos"><a href=""><i class="fas fa-edit"></i></a>
-              
-              <form action="">
+            <td><div class="iconos">
+
+                <form action="/adminUsers/<%= user.id %>?_method=PUT" method="POST">
+                  <!-- Toggle admin/user -->
+                  <label class="switch">
+                  <input type="checkbox" id="togBtn" id="rolEdit">
+                  <div class="slider round">
+                  <!--ADDED HTML -->
+                  <span class="on">Admin</span>
+                  <span class="off">User</span>
+                  <!--END-->
+                  </div>
+                </label>
+              </form>
+
+            <form action="/delete/<%= user.id %>?_method=DELETE" method="POST">
               <button><i class="fas fa-trash-alt"></i></button>
             </form>
             
