@@ -93,6 +93,28 @@ module.exports = {
             })  
             .catch(error => console.log(error))      
     },
+    profileEdit : (req,res) => {
+
+        const {name, lastname, email, password, avatar} = req.body;
+
+        db.User.update(
+            {
+                firstName: name.trim(),
+                lastName: lastname.trim(),
+                email: email.trim(),
+                password: bcrypt.hashSync(password, 10),
+                avatar : req.file ? req.file.filename : 'default.jpg',
+                rol: rol
+            },
+            {
+                where : {id : req.params.id}
+            }
+            .then(() => {
+                return res.render('users/profile', user)
+            })  
+            .catch(error => console.log(error))
+        )
+    },
     logout : (req,res) =>{
 
         req.session.destroy(function() {

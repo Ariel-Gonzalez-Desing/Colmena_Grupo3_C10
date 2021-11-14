@@ -8,7 +8,7 @@ const upload = require('../middlewares/multerUsers')
 const userLoginCheck = require('../middlewares/userLoginCheck');
 const loggedUser = require('../middlewares/loggedUser')
 
-const {registro, processRegistro, login, processLogin, profile, logout} = require('../controllers/usersController')
+const {registro, processRegistro, login, processLogin, profile, profileEdit, logout} = require('../controllers/usersController')
 
 /* /users */
 router
@@ -17,6 +17,7 @@ router
     .get('/login', loggedUser, login)
     .post('/login',loginValidator,processLogin)    
     .get('/profile', userLoginCheck, profile)
+    .put('/profile/:id', upload.array('image'), profileEdit)
     .get('/logout', logout)
 
 module.exports = router;
