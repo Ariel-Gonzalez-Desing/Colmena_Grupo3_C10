@@ -46,7 +46,7 @@ let products = [
   },
   {
      "id": 8,
-     "image": ["img-1633359458724.jpg"]
+     "image": ["remera-help.jpg"]
   },
   {
      "id": 9,
