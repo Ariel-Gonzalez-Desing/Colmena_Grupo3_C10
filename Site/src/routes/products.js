@@ -2,6 +2,7 @@ var express = require('express');
 const router = express.Router();
 const upload = require('../middlewares/multerProducts');
 const adminUserCheck = require('../middlewares/adminUserCheck');
+const productValidator = require('../validations/productValidator');
 
 const {createForm, create, productsList, detail, editForm, edit, carrito, destroy} = require('../controllers/productsController');
 
@@ -9,7 +10,7 @@ const {createForm, create, productsList, detail, editForm, edit, carrito, destro
 /* /products */
 router
 .get('/create', adminUserCheck, createForm)
-.post('/create', upload.array('image'), create)
+.post('/create', upload.array('image'), productValidator, create)
 .get('/productsList', productsList)
 .get('/detail/:id', detail)
 .get('/edit/:id', adminUserCheck, editForm)

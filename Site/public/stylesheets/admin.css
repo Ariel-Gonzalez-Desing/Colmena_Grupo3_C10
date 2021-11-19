@@ -207,6 +207,19 @@ input:checked + .slider .off
     color: var(--colorOnyx);
 }
 
+.add span.error{
+  color: rgb(235, 122, 47);
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.add span.error-half{
+  color: rgb(235, 122, 47);
+  font-size: 12px;
+  padding-left: 10px;
+  display: flex;
+}
+
 .add h3 {
     padding: 10px;
     margin: 10px auto 0;

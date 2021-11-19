@@ -6,6 +6,7 @@ const path = require('path');
 
 /* base de datos */
 const db = require('../database/models');
+const {validationResult} = require('express-validator');
 
 const cuota = require('../utils/cuota');
 const firstLetter = require('../utils/firstLetter');
@@ -30,6 +31,10 @@ module.exports = {
     },
 
     create : (req,res) => {
+
+        let errors = validationResult(req);
+        
+        if(errors.isEmpty()){
                
         const {name, size, price, category, display, description} = req.body;
 
@@ -56,7 +61,25 @@ module.exports = {
                 }
                 return res.redirect('/adminProducts')
             })
-            .catch(error => console.log(error))        
+            .catch(error => console.log(error))    
+            
+        } else {
+
+            let categories = db.Category.findAll()
+            let displays = db.Display.findAll()
+
+            Promise.all([categories, displays])
+            .then(([categories, displays]) => {
+                return res.render('products/productAdd', {
+                    categories,
+                    displays,
+                    firstLetter,
+                    errores: errors.mapped(),
+                    old: req.body
+                })
+            })
+            .catch(error => console.log(error))
+        }
     },
 
     productsList : (req,res) => {

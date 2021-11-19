@@ -24,17 +24,21 @@
           </div>     
 
           <div class="container-input-total">
-            <input type="text" placeholder="Nombre del producto" name="name"/>
+            <input type="text" placeholder="Nombre del producto" name="name" value="<%= locals.old && old.name ? old.name : null %>">
+            <span class="error"><%= locals.errores && errores.name ? errores.name.msg : null %></span>
           </div>
 
           <div class="container-input-total">
-            <textarea placeholder="Descripción" id="floatingTextarea" name="description"></textarea>
+            <textarea placeholder="Descripción" id="floatingTextarea" name="description" value="<%= locals.old && old.description ? old.description : null %>"></textarea>
             <label for="floatingTextarea"></label>
+            <span class="error"><%= locals.errores && errores.description ? errores.description.msg : null %></span>
             </div>
 
           <div class="container-input-mitad">
-            <input type="text" placeholder="Tamaño" name="size"/>             
-            <input type="number" placeholder="Precio" name="price"/>
+            <input type="text" placeholder="Tamaño" name="size" value="<%= locals.old && old.size ? old.size : null %>"> 
+            <span class="error-half"><%= locals.errores && errores.size ? errores.size.msg : null %></span>         
+            <input type="number" placeholder="Precio" name="price" value="<%= locals.old && old.price ? old.price : null %>">
+            <span class="error-half"><%= locals.errores && errores.price ? errores.price.msg : null %></span>
           </div>        
           
             <div class="container-input-mitad">
@@ -46,6 +50,7 @@
               <% }) %>
             </select>
             <label for="category"></label>    
+            <span class="error-half"><%= locals.errores && errores.category ? errores.category.msg : null %></span>
           
             <select class="form-select" id="display" aria-label="Floating label select example" name="display">
               <option value="" selected hidden>Selecciona el display</option>
@@ -53,7 +58,8 @@
                 <option value="<%= display.id %>" <%= locals.old && old.displayId === display.id  ? 'selected' : null%>><%= firstLetter(display.name) %></option>
               <% }) %>
             </select>
-            <label for="display"></label>      
+            <label for="display"></label>  
+            <span class="error-half"><%= locals.errores && errores.display ? errores.display.msg : null %></span>    
           </div>
         
           <button class="btn-add" type="submit">Guardar</button>
