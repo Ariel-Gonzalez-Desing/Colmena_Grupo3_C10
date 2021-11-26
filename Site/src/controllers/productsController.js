@@ -74,7 +74,7 @@ module.exports = {
                     categories,
                     displays,
                     firstLetter,
-                    errores: errors.mapped(),
+                    errors: errors.mapped(),
                     old: req.body
                 })
             })
@@ -146,7 +146,11 @@ module.exports = {
         .catch(error => console.log(error))
     },
 
-    edit : (req,res) => {       
+    edit : (req,res) => {    
+
+    let errors = validationResult(req);
+        
+    if(errors.isEmpty()){   
 
         const {name, size, price, category, display, description, file} = req.body;
 
@@ -167,7 +171,27 @@ module.exports = {
             .then(() => {
                 return res.redirect('/adminProducts'),
                 firstLetter
-            })        
+            })   
+        
+        } else {
+
+            let product = db.Product.findByPk(req.params.id)
+            let categories = db.Category.findAll()
+            let display = db.Display.findAll()
+    
+            Promise.all([product, categories, display])
+    
+            .then(([product,categories, display]) => {
+                return res.render('products/productEdit', {
+                    categories,
+                    product,
+                    display,
+                    firstLetter,
+                    errors: errors.mapped(),
+                })
+            })
+            .catch(error => console.log(error))
+        }
     },
 
     carrito : (req,res) => {

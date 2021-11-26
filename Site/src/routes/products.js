@@ -14,7 +14,7 @@ router
 .get('/productsList', productsList)
 .get('/detail/:id', detail)
 .get('/edit/:id', adminUserCheck, editForm)
-.put('/edit/:id', upload.array('image'), edit)
+.put('/edit/:id', upload.array('image'), productValidator, edit)
 .get('/carrito', carrito)
 .delete('/delete/:id', destroy)
 

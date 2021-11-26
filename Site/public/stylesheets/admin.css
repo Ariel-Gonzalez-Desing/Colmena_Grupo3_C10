@@ -207,6 +207,12 @@ input:checked + .slider .off
     color: var(--colorOnyx);
 }
 
+.edit span.error{
+  color: rgb(235, 122, 47);
+  font-size: 12px;
+  padding-left: 10px;
+}
+
 .add span.error{
   color: rgb(235, 122, 47);
   font-size: 12px;
@@ -217,7 +223,6 @@ input:checked + .slider .off
   color: rgb(235, 122, 47);
   font-size: 12px;
   padding-left: 10px;
-  display: flex;
 }
 
 .add h3 {

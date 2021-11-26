@@ -7,13 +7,18 @@ module.exports = [
         .notEmpty().withMessage('Debes ingresar el nombre del producto'),
 
     check('description')
-        .notEmpty().withMessage('Debes ingresar una descripcion de al menos 20 caracteres'),        
+        .notEmpty().withMessage('Debes ingresar una descripcion').bail()
+        .isLength({
+            min : 20
+        }).withMessage('La descripción debe tener un mínimo de 20 caracteres'),       
 
     check('size')
         .notEmpty().withMessage('Debes ingresar tamaño del producto'), 
 
     check('price')
-        .notEmpty().withMessage('Debes ingresar precio dle producto'), 
+    .isDecimal({
+        min: 1
+    }).withMessage('Debe un número válido'),
 
     check('category')
     .notEmpty().withMessage('Debes ingresar una categoría'), 
