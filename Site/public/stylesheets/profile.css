@@ -110,7 +110,7 @@
   }
   
   .profile .datosUsuario P {
-    padding: 18px 0 18px 0;
+    padding: 18px 0 15px 0;
     /* border-bottom: 1px solid var(--colorDarkVanilla); */
     margin-bottom: 10px;
   }
@@ -166,6 +166,7 @@
   .profile .listProfile li{
     text-align: left;
     margin-top: 10px;
+    margin-bottom: 8px;
   }
   
   .profile .listProfile li a{
@@ -173,6 +174,7 @@
     color: var(--colorOnyx);
     font-weight: 700;  
     transition: all .4s ease; 
+    margin-left: 10px;
   }
   .profile .listProfile li a:hover{
     color: var(--colorNaranja);   
@@ -189,7 +191,12 @@
       justify-content: space-between;
       margin: 20px;
     }
-  
+    
+    .profile .container h2{
+      margin: 5px 0 5px;
+      
+    }
+
     .profile .imagenUsuario {
       width: 40%;
       margin: 0;
@@ -220,13 +227,13 @@
     }
   
     .profile .imagenUsuario img {
-      margin-top: 20px;
+      /* margin-top: 20px; */
       padding: 20px;
     }
   
     .profile .datosUsuario p {
       font-size: 19px;
-      padding: 40px 0;
+      padding: 25px 0;
     }
   
     .profile .datosUsuario h3 {
