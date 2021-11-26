@@ -177,3 +177,39 @@
 
 >## :small_orange_diamond: *Dejar de hacer*
 >>* Olvidarse de actualizar el Trello.
+
+-----------------------------------------------------------------
+
+# Retrospectiva del Sprint 6
+
+<br>
+
+>## :small_orange_diamond: *Seguir haciendo*
+>>* Ayudarnos entre nosotros.
+>>* Hacer las reuniones mas efectivas, optimizar el tiempo.
+>>* Avisar a los profes que las correciones.
+
+<br>
+
+>## :small_orange_diamond: *Hacer más*
+>>* Actualizar Trello con los progresos.
+>>* Comunicarnos por Whatsapp para comentar progresos y tomar algunas decisiones.
+
+<br>
+
+>## :small_orange_diamond: *Empezar a hacer*
+>>* Poner fecha para terminar cada tarea.
+>>* Más dailys.
+>>* Hacer una reunión de revisión pre-entrega.
+>>* Reunirse a hacer un brainstorming sobre mejoras que se puedan agregar al proyecto.
+
+<br>
+
+>## :small_orange_diamond: *Hacer menos*
+>>* Posponer las tareas no obligatorias del sprint.
+
+<br>
+
+>## :small_orange_diamond: *Dejar de hacer*
+>>* Olvidarse de actualizar el Trello.
+
