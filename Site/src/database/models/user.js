@@ -9,15 +9,6 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-<<<<<<< HEAD
-     static associate(models) {
-      // define association here
-      User.belongsTo(models.Rol,{
-        as : 'rol'  
-      }),
-      User.hasMany(models.Order,{
-        as : 'orders'
-=======
     static associate(models) {
       // define association here
       User.belongsTo(models.Rol,{
@@ -31,7 +22,6 @@ module.exports = (sequelize, DataTypes) => {
       User.hasMany(models.Cart,{
         as : 'cart',
         key : 'userId'
->>>>>>> ea8c61df458ceff1e8132c0f5450430e3b813663
       })
     }
   };
