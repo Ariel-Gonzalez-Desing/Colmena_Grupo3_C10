@@ -10,10 +10,6 @@ module.exports = {
       },
       userId: {
         type: Sequelize.INTEGER,
-<<<<<<< HEAD
-        allowNull: false,
-=======
->>>>>>> ea8c61df458ceff1e8132c0f5450430e3b813663
         references: {
           model: {
             tableName : 'Users'
@@ -23,10 +19,6 @@ module.exports = {
       },
       orderId: {
         type: Sequelize.INTEGER,
-<<<<<<< HEAD
-        allowNull: false,
-=======
->>>>>>> ea8c61df458ceff1e8132c0f5450430e3b813663
         references : {
           model : {
             tableName: 'Orders'
@@ -36,10 +28,6 @@ module.exports = {
       },
       productId: {
         type: Sequelize.INTEGER,
-<<<<<<< HEAD
-        allowNull: false,
-=======
->>>>>>> ea8c61df458ceff1e8132c0f5450430e3b813663
         references: {
           model: {
             tableName: 'Products'

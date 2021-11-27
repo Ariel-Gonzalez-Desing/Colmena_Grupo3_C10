@@ -1,11 +1,7 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-<<<<<<< HEAD
-    await queryInterface.createTable('Roles', {
-=======
     await queryInterface.createTable('Rols', {
->>>>>>> ea8c61df458ceff1e8132c0f5450430e3b813663
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -29,10 +25,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-<<<<<<< HEAD
-    await queryInterface.dropTable('Roles');
-=======
     await queryInterface.dropTable('Rols');
->>>>>>> ea8c61df458ceff1e8132c0f5450430e3b813663
   }
 };
