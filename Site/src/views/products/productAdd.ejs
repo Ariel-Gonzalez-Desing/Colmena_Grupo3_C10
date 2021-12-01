@@ -19,6 +19,7 @@
 
             <label for="image">
             <input class="image" type="file" id="image" name="image" multiple>
+            <span class="error"><%= locals.errors && errors.image ? errors.image.msg : null %></span>
             </label>
             
           </div>     

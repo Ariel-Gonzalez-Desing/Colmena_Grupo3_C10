@@ -15,11 +15,12 @@
                     <div>
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email">
+                        <span class="error"><%= locals.errores && errores.email ? errores.email.msg : null %> </span>
                     </div>
                     <div>
                         <label for="password">Contraseña</label>
                         <input type="password" name="password" id="password">
-                        <span class="error"><%= locals.errores && errores.email ? errores.email.msg : null %> </span>
+                        <span class="error"><%= locals.errores && errores.password ? errores.password.msg : null %> </span>
                     </div>
                        
                 <div class="remember"><input type="checkbox" id="" name="remember"> 

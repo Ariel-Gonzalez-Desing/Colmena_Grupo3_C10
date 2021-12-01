@@ -29,7 +29,7 @@
                             </div>  
                             <div>
                                 <label for="email">Email</label>
-                                <input type="email" name="email" placeholder="" id="email" value="<%= locals.old && old.email ? old.email : null %>">
+                                <input type="text" name="email" placeholder="" id="email" value="<%= locals.old && old.email ? old.email : null %>">
                                 <span class="error"><%= locals.errores && errores.email ? errores.email.msg : null %></span>
                             </div>  
                         </div> 
@@ -37,7 +37,7 @@
                             <div>
                                 <label for="image">Foto</label>
                                     <input class="image" type="file" id="image" name="image">
-                                    <span class="error"><%= locals.errores && errores.avatar ? errores.avatar.msg : null %></span>
+                                    <span class="error"><%= locals.errores && errores.image ? errores.image.msg : null %></span>
                             </div>
                             <div>
                                 <label for="password">Contraseña</label>

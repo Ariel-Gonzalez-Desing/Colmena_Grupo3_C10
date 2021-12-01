@@ -1,14 +1,17 @@
 const {body,check} = require('express-validator');
 // const users = require('../data/users.json');
 const db = require('../database/models');
+const path = require('path');
 
 module.exports = [
 
     check('name')
-        .notEmpty().withMessage('Debes ingresar tu nombre'),
+        .notEmpty().withMessage('Debes ingresar tu nombre').bail()
+        .isLength({min : 2}).withMessage('Mínimo 2 caracteres'),
 
     check('lastname')
-        .notEmpty().withMessage('Debes ingresar tu apellido'),        
+        .notEmpty().withMessage('Debes ingresar tu apellido').bail()
+        .isLength({min : 2}).withMessage('Mínimo 2 caracteres'),        
 
     check('email')
         .notEmpty().withMessage('Debes ingresar tu email').bail()
@@ -28,10 +31,7 @@ module.exports = [
         }),
 
     check('password')
-        .isLength({
-            min : 6,
-            max : 12
-        }).withMessage('La contraseña debe tener entre 6 y 12 caracteres'),
+        .matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/).withMessage('Mínimo 8 letras, y debe contener mayúscula, un número y un carácter especial.'),
     
     body('rePassword')
         .custom((value,{req}) => {
@@ -40,6 +40,21 @@ module.exports = [
             }else{
                 return true
             }
-        }).withMessage('Las contraseñas no coinciden')
+        }).withMessage('Las contraseñas no coinciden'),
+
+    body('image')
+        .custom((value, { req }) => {
+            let file = req.file;
+            let extensionesValidas = ['.jpg', '.jpeg', '.png', '.gif'];
+            if (!file) {
+                null;
+            } else {
+                let fileExtension = path.extname(file.originalname);
+                if (!extensionesValidas.includes(fileExtension)) {
+                    throw new Error('Solo se aceptan archivos JPG, JPEG, PNG y GIF');
+                }
+            }
+            return true;
+	})
     
 ]
