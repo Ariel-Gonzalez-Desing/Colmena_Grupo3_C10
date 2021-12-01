@@ -152,7 +152,7 @@ module.exports = {
         
     if(errors.isEmpty()){   
 
-        const {name, size, price, category, display, description, file} = req.body;
+        const {name, size, price, category, display, description} = req.body;
 
         db.Product.update(
             {
@@ -161,33 +161,57 @@ module.exports = {
                 price : +price,
                 categoryId: category,
                 displayId : display,          
-                description : description.trim(),
-                file : file
+                description : description.trim()
             },
             {
                 where : {id : req.params.id}
-            }
-        )
+            })
+
             .then(() => {
-                return res.redirect('/adminProducts'),
-                firstLetter
-            })   
-        
+                if(req.files[0] != undefined) {
+                    db.Image.destroy(
+                            {
+                                where: {
+                                    productId: req.params.id
+                                }
+                            }
+                        )
+                        .then(() => {
+                            let images = req.files.map(image => {
+                                let img = {
+                                    file: image.filename,
+                                    productId: req.params.id
+                                }
+                                return img
+                            })
+                            db.Image.bulkCreate(images, { validate: true })
+
+                                .then(() => {
+                                    return res.redirect('/adminProducts')
+                                })
+                                .catch(error => console.log(error))
+                        })
+                    } else {
+                        console.log('edicion sin imagen')
+                        return res.redirect('/adminProducts')
+                    }
+                })       
         } else {
 
             let product = db.Product.findByPk(req.params.id)
             let categories = db.Category.findAll()
-            let display = db.Display.findAll()
+            let displays = db.Display.findAll()
     
-            Promise.all([product, categories, display])
+            Promise.all([product, categories, displays])
     
-            .then(([product,categories, display]) => {
+            .then(([product,categories, displays]) => {
                 return res.render('products/productEdit', {
                     categories,
                     product,
-                    display,
+                    displays,
                     firstLetter,
                     errors: errors.mapped(),
+                    old: req.body
                 })
             })
             .catch(error => console.log(error))
