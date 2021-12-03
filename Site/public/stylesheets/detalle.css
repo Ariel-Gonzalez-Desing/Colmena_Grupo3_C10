@@ -176,6 +176,10 @@ ul.slider li:target {
     padding: 0;
   }
 
+  /* .detalle .imagenProducto img {
+    
+  } */
+
   .detalle .detallesProducto {
     width: 53%;
   }
