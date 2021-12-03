@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%-include('../partials/head') %>
+  
+  <body>
+
+    <%-include('../partials/header') %>
+
+    <main class="profile">    
+
+      <div class="imagenUsuario">
+        <div class="container">
+            <h2>Perfil de Usuario: <%= firstLetter(locals.userLogin.name) %></h2>
+            <img src="/images/users/<%= locals.userLogin.avatar %>" alt="imagen de perfil">
+           <button class="button-img">Cambiar imagen de perfil</button>
+        
+          <u class="listProfile">
+              <li><a href="">Wishlist</a></li>
+              <li><a href="/">Carrito</a></li>
+              <li><a href="">Cerrar sesión</a></li>
+          </u>
+        </div>
+      </div>
+
+      <div class="datosUsuario">
+          
+        <h2>Datos de <%= firstLetter(locals.userLogin.name) %></h2>
+
+        <form action="/users/edit/<%= locals.userLogin.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <p>
+           Nombre: <input type="text" placeholder="Nombre" name="name" value="<%= firstLetter(locals.userLogin.name) %>"/>           
+        </p>
+        <p>
+           Apellido: <input type="text" placeholder="Apellido" name="lastname" value="<%= firstLetter(locals.userLogin.lastName) %>"/>
+        </p>
+        <p>
+           E-mail: <input type="email" placeholder="E-mail" name="email" value="<%= firstLetter(locals.userLogin.email) %>"/>
+        </p>  
+
+        <!-- <label for="passwordEdit">Cambiar contraseña</label>
+        <input type="checkbox" id="passwordEdit">
+        <input type="password" id="password">
+        <script>
+        document.getElementById('passwordEdit').onchange = function() {
+        document.getElementById('password').disabled = this.checked;
+        };
+        </script>    -->
+
+        <!-- <p>
+            Contraseña anterior: <input type="password" placeholder="********" name="password"/><br><br>
+            Nueva contraseña: <input type="password" placeholder="********" name="password"/><br><br>
+            Reingrese la contraseña: <input type="password" placeholder="********" name="password"/>
+         </p>   -->
+
+        <button type="submit" class="button">Enviar datos</button>
+    </form>
+
+      </div>
+    </main>
+
+    <%-include('../partials/footer') %>
+  </body>
+</html>
+

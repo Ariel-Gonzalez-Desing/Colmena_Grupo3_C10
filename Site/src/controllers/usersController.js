@@ -1,6 +1,7 @@
 const bcrypt = require('bcryptjs');
 const path = require('path');
 const fs = require('fs');
+const firstLetter = require('../utils/firstLetter');
 
 /* base de datos */
 const db = require('../database/models');
@@ -67,6 +68,8 @@ module.exports = {
                     req.session.userLogin = {
                     id : user.id,
                     name : user.firstName,
+                    lastName: user.lastName,
+                    email: user.email,
                     avatar : user.avatar,
                     rol : user.rolId
             }
@@ -89,31 +92,44 @@ module.exports = {
             where: {id: req.session.userLogin.id}
         })
             .then(user => {
-                return res.render('users/profile', user)
+                return res.render('users/profile', {
+                    user,
+                    firstLetter
+                })
             })  
             .catch(error => console.log(error))      
     },
     profileEdit : (req,res) => {
 
-        const {name, lastname, email, password, avatar} = req.body;
+        db.User.findOne({
+            where: {id: req.session.userLogin.id}
+        })
+            .then(user => {
+                return res.render('users/edit', {
+                    user,
+                    firstLetter
+                })
+            })  
+            .catch(error => console.log(error))      
+    },
+    profileUpdate : (req,res) => {
+
+        const {name, lastname} = req.body;
+        console.log(name);
 
         db.User.update(
             {
-                firstName: name.trim(),
-                lastName: lastname.trim(),
-                email: email.trim(),
-                password: bcrypt.hashSync(password, 10),
-                avatar : req.file ? req.file.filename : 'default.jpg',
-                rol: rol
+                firstName: name,
+                lastName: lastname
             },
             {
-                where : {id : req.params.id}
-            }
+                where : {id: req.params.id}
+            })    
+
             .then(() => {
-                return res.render('users/profile', user)
+                return res.redirect('/users/profile')
             })  
             .catch(error => console.log(error))
-        )
     },
     logout : (req,res) =>{
 
