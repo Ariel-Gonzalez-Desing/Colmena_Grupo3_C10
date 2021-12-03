@@ -26,10 +26,7 @@ module.exports = [
     .notEmpty().withMessage('Debes ingresar una categoría'), 
     
     check('display')
-        .notEmpty().withMessage('Debes ingresar el display'),
-
-    check('image')
-        .matches(/^.*\.(jpg|JPG|gif|GIF|jpeg|JPEG|png|PNG)$/).withMessage('sobroldkjslkd')
+        .notEmpty().withMessage('Debes ingresar el display')
     
 ]
 
