@@ -13,7 +13,17 @@
         <div class="container">
             <h2>Perfil de Usuario: <%= firstLetter(locals.userLogin.name) %></h2>
             <img src="/images/users/<%= locals.userLogin.avatar %>" alt="imagen de perfil">
-           <button class="button-img">Cambiar imagen de perfil</button>
+           <button id="imageEdit" class="button-img">Cambiar imagen de perfil</button>
+
+           <!-- form edicion imagen perfil -->
+           <form action="/users/edit?_method=PUT" id="imageUpload" class="hide">  
+              <label for="image">
+              <input class="image" type="file" id="image" name="image" multiple>
+              <span id="error-image" class="error"><%= locals.errors && errors.image ? errors.image.msg : null %></span>
+              <span id="info-image" class="errorVF"></span>
+              </label>
+            </form>
+             <!-- form edicion imagen perfil -->
         
           <u class="listProfile">
               <li><a href="">Wishlist</a></li>
@@ -27,39 +37,41 @@
           
         <h2>Datos de <%= firstLetter(locals.userLogin.name) %></h2>
 
-        <form action="/users/edit/<%= locals.userLogin.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form action="/users/edit?_method=PUT" method="POST">
         <p>
-           Nombre: <input type="text" placeholder="Nombre" name="name" value="<%= firstLetter(locals.userLogin.name) %>"/>           
+           Nombre: <input type="text" placeholder="Nombre" name="name" value="<%= firstLetter(locals.userLogin.name) %>">           
         </p>
         <p>
-           Apellido: <input type="text" placeholder="Apellido" name="lastname" value="<%= firstLetter(locals.userLogin.lastName) %>"/>
+           Apellido: <input type="text" placeholder="Apellido" name="lastName" value="<%= firstLetter(locals.userLogin.lastName) %>">
         </p>
-        <p>
-           E-mail: <input type="email" placeholder="E-mail" name="email" value="<%= firstLetter(locals.userLogin.email) %>"/>
-        </p>  
 
-        <!-- <label for="passwordEdit">Cambiar contraseña</label>
+        <label for="passwordEdit">Cambiar contraseña</label>
         <input type="checkbox" id="passwordEdit">
-        <input type="password" id="password">
-        <script>
-        document.getElementById('passwordEdit').onchange = function() {
-        document.getElementById('password').disabled = this.checked;
-        };
-        </script>    -->
+        <div id="password" class="hide">        
 
-        <!-- <p>
-            Contraseña anterior: <input type="password" placeholder="********" name="password"/><br><br>
-            Nueva contraseña: <input type="password" placeholder="********" name="password"/><br><br>
-            Reingrese la contraseña: <input type="password" placeholder="********" name="password"/>
-         </p>   -->
+        <p>
+          Contraseña anterior: <input type="password" placeholder="********" name="passwordBefore"/><br>
+          <span id="error-image" class="error"><%= locals.errors && errors.image ? errors.image.msg : null %></span>
+              <span id="info-image" class="errorVF"></span><br>
+          Nueva contraseña: <input type="password" placeholder="********" name="password"/><br>
+          <span id="error-image" class="error"><%= locals.errors && errors.image ? errors.image.msg : null %></span>
+              <span id="info-image" class="errorVF"></span><br>
+          Reingrese la contraseña: <input type="password" placeholder="********" name="rePassword"/>
+          <span id="error-image" class="error"><%= locals.errors && errors.image ? errors.image.msg : null %></span>
+              <span id="info-image" class="errorVF"></span>
+       </p>  
+      </div>
 
-        <button type="submit" class="button">Enviar datos</button>
+        <button type="submit" class="button">Guardar cambios</button>
+        <a href="/" class="button">Cancelar</a>
+        </div>
     </form>
 
-      </div>
+      
     </main>
 
     <%-include('../partials/footer') %>
+    <script src="/javascripts/profileEdit.js"></script>
   </body>
 </html>
 

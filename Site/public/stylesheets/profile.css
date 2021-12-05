@@ -13,10 +13,32 @@
     --colorDarkVanilla: #dcc4a4;
     --colorCremitaHover: rgb(252, 180, 58, 0.4);
   }
+
+  .hide{
+    display: none;
+  }
+  .show{
+    display: inline;
+  }
   
+.profile .cancelar{
+  
+}
+
 .profile input {
   display: inline;
   width: 75%;
+}
+
+.profile input[type="password"]{
+  border-radius: 5px;    
+  border-color: #DCC4A4;
+  border-width: 1px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12px 0 12px 5px;
+  height: 20px;
 }
 
   .profile .container{
@@ -254,7 +276,7 @@
       margin: 0 0 0 100px;
     }
   
-    .profile .datosUsuario P {
+    .profile .datosUsuario p {
       font-size: 16px;
     }
   }

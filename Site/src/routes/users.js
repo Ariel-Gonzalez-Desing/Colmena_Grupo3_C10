@@ -6,7 +6,8 @@ const registerValidator = require('../validations/registerValidator');
 const loginValidator = require('../validations/loginValidator');
 const upload = require('../middlewares/multerUsers')
 const userLoginCheck = require('../middlewares/userLoginCheck');
-const loggedUser = require('../middlewares/loggedUser')
+const loggedUser = require('../middlewares/loggedUser');
+const profileValidator = require('../validations/profileValidator');
 
 const {registro, processRegistro, login, processLogin, profile, profileEdit, profileUpdate, logout} = require('../controllers/usersController')
 
@@ -18,7 +19,7 @@ router
     .post('/login',loginValidator,processLogin)    
     .get('/profile', userLoginCheck, profile)
     .get('/edit', userLoginCheck, profileEdit)
-    .put('/edit/:id', profileUpdate)
+    .put('/edit', profileValidator, profileUpdate)
     .get('/logout', logout)
 
 module.exports = router;

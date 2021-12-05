@@ -34,6 +34,8 @@ module.exports = {
                     req.session.userLogin = {
                         id : user.id,
                         name : user.firstName,
+                        lastName: user.lastName,
+                        email: user.email,
                         avatar : user.avatar,
                         rol : user.rolId
                     }
@@ -114,20 +116,54 @@ module.exports = {
     },
     profileUpdate : (req,res) => {
 
-        const {name, lastname} = req.body;
-        console.log(name);
+        const {name, lastName, password} = req.body;
+
+        console.log(req.body);
 
         db.User.update(
             {
                 firstName: name,
-                lastName: lastname
+                lastName: lastName,
+                
             },
             {
-                where : {id: req.params.id}
+                where : {id: req.session.userLogin.id}
             })    
 
             .then(() => {
-                return res.redirect('/users/profile')
+                if (password) {
+                    db.User.update(
+                        {
+                            password: bcrypt.hashSync(password.trim(), 10)
+                        },
+                        {
+                            where: {
+                                id: req.session.userLogin.id
+                            }
+                        }
+                    )
+                        .then(() => {
+                            req.session.destroy();
+                            return res.redirect('/users/login')
+                        })
+
+                } else {
+
+                    db.User.findByPk(req.session.userLogin.id)
+                        .then(user => {
+                            req.session.userLogin = {
+                                id : user.id,
+                                name : user.firstName,
+                                lastName: user.lastName,
+                                email: user.email,
+                                avatar : user.avatar,
+                                rol : user.rolId
+                            }
+                            res.locals.userLogin = req.session.userLogin
+
+                            return res.redirect('/users/profile')
+                        })
+                }
             })  
             .catch(error => console.log(error))
     },
