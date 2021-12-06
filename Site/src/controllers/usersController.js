@@ -115,6 +115,9 @@ module.exports = {
             .catch(error => console.log(error))      
     },
     profileUpdate : (req,res) => {
+        let errors = validationResult(req);
+        
+        if(errors.isEmpty()){
 
         const {name, lastName, password} = req.body;
 
@@ -166,6 +169,11 @@ module.exports = {
                 }
             })  
             .catch(error => console.log(error))
+        }else{
+            return res.render('users/edit',{
+                errors : errors.mapped()
+            })
+        }
     },
     logout : (req,res) =>{
 

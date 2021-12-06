@@ -198,6 +198,11 @@
     font-weight: 600;
   }
   
+.profile span.error{
+  color: rgb(235, 122, 47);
+  font-size: 12px;
+}
+  
   .profile .button {
     background-color: var(--colorCremita);
     border: 1px solid var(--colorOnyx);

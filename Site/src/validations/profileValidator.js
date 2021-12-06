@@ -3,8 +3,14 @@ const bcrypt = require('bcryptjs');
 const db = require('../database/models');
 
 module.exports = [
+    check('name')
+        .isLength({min : 2}).withMessage('Mínimo 2 caracteres'),
+
+    check('lastName')
+        .isLength({min : 5}).withMessage('Mínimo 2 caracteres'),
 
     body('passwordBefore')
+        .optional({ checkFalsy: true })        
         .custom((value,{req}) => {
             console.log(req.body)
             return db.User.findOne({
@@ -12,17 +18,19 @@ module.exports = [
                     id : req.session.userLogin.id
                 }
             }).then(user => {
-                if(!user || !bcrypt.compareSync(req.body.password,user.password)){
+                if(!user || !bcrypt.compareSync(req.body.passwordBefore,user.password)){
                     return Promise.reject()
                 }
             }).catch( () => Promise.reject('Contraseña incorrecta'))
+        
     }),   
 
     check('password')
-        .notEmpty().withMessage('Debes ingresar una nueva contraseña').bail()
+        .optional({ checkFalsy: true })
         .matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/).withMessage('Mínimo 8 letras, y debe contener mayúscula, un número y un carácter especial.'),
 
     body('rePassword')
+        .optional({ checkFalsy: true })
         .custom((value,{req}) => {
             if(value !== req.body.password){
                 return false
