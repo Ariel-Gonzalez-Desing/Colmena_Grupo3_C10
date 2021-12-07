@@ -14,37 +14,26 @@
 
         <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
-          <div class="carruselImages">
-            
-            
-            <!-- /* ------------Carrusel--------------- */ -->
-    <div class="carrusel">
-      <!-- Container -->
-<div class="slideshow-container fade">
-
-  <!-- Imagenes y mensajes -->
-  <div class="Containers">
-    <div class="MessageInfo">
-    <img src="/images/products/<%= product.images[0].file ? product.images[0].file : 'agregarImagen.png' %>">
-  </div></div>
-    
-  <div class="Containers">
-    <div class="MessageInfo">
-    <img src="/images/products/<%= product.images[0].file ? product.images[0].file : 'agregarImagen.png' %>">   
-  </div></div>
-
-  <div class="Containers">
-    <div class="MessageInfo">
-    <img src="/images/products/<%= product.images[0].file ? product.images[0].file : 'agregarImagen.png' %>">   
-  </div></div>
-
-  <!-- Botones atrás y adelante -->
-  <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="forward" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-  </div>
-  <!--------------Fin del Carrusel----------------->
+          <div class="carruselImages">  
+<!--------------Imagen----------------->          
+            <div class="carrusel">
+              <div class="slideshow-container fade">
+                <div class="editarImagen">
+                <% product.images.forEach((image,index) => { %>
+                  <div class="Containers">
+                    <div class="MessageInfo">
+                    <img src="/images/products/<%= image.file %>" alt="imagen producto">
+                      <div class="btn-eliminar-image">
+                        <a onclick="deleteImage('<%=image.id%>')">Eliminar</a>
+                      </div>
+                    </div>
+                  </div>
+                <% }) %>
+              </div>
+          </div>
+          <br>
+      </div>
+  <!--------------Fin Imagen----------------->
 
             <label for="image">
             <input class="image" type="file" id="image" name="image" multiple>
@@ -91,13 +80,12 @@
               </div>
           
           <button class="btn-add" type="submit">Guardar</button>
+          <!-- <a class="btn-add" href="/adminProducts">Cancelar</a> -->
 
+        </div>
         </form>
       </div>
-     
     </main>
     <%-include('../partials/footer') %>
-    <!-- Javascript para el carrusel -->
-    <%-include('../partials/scripts') %>
   </body>
 </html>
