@@ -17,6 +17,7 @@ const regExLetras = /^[_A-zA-Z]*((-|\s)*[_A-zA-Z])*$/;
 const regExExtension = /(.jpg|.jpeg|.png|.gif)$/i;
 const regExNumber = /^[0-9]+$/;
 
+
 // validacion imagen
 (image.value) ? image.value = "" : null
 
