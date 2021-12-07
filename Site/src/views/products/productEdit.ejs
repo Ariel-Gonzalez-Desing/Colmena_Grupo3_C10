@@ -18,7 +18,7 @@
 <!--------------Imagen----------------->          
             <div class="carrusel">
               <div class="slideshow-container fade">
-                <div class="editarImagen">
+                <div class="editarImagen" id="preview">
                 <% product.images.forEach((image,index) => { %>
                   <div class="Containers">
                     <div class="MessageInfo">
@@ -86,6 +86,7 @@
         </form>
       </div>
     </main>
-    <%-include('../partials/footer') %>
+    <%-include('../partials/footer') %>    
+    <script src="/javascripts/productEdit.js"></script>
   </body>
 </html>
