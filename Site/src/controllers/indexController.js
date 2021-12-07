@@ -62,18 +62,18 @@ module.exports = {
     rolEdit : (req,res) => {
 
         const {rolEdit} = req.body;
+        db.User.findByPk(req.params.id)
+        
+        .then(usuario => {
 
         db.User.update(
-            {
-                rol: rolEdit
-            },
-            {
-                where : {id : req.params.id}
-            }
+            {roleId: rolEdit},
+            {where : {id : usuario.id}}
         )
             .then(() => {
                 return res.redirect('/adminUsers')
             })
+        }).catch(error => console.log(error))
     },
     deleteUser : (req,res) => {
 
