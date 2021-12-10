@@ -30,14 +30,6 @@ $('email').addEventListener('blur', async function() {
         case !regExEmail.test(this.value) :
                 $('error-email').innerText = "Email inválido";
                 this.classList.add('is-invalid');
-                break;
-        case (this.value.length < 10) :
-            $('error-email').innerText = "El email debe tener como mínimo 10 carácteres";
-            this.classList.add('is-invalid');
-            break;
-        case await emailVerify(this.value) :
-            $('error-email').innerText = "El email ya está registrado!!";
-            this.classList.add('is-invalid');
             break; 
         default:
             $('error-email').innerText = null;
@@ -63,10 +55,10 @@ $('password').addEventListener('blur', function() {
             $('error-password').innerText = "La contraseña es requerida";
             this.classList.add('is-invalid')
             break;
-        case !regExPassword.test(this.value) :
+       /*  case !regExPassword.test(this.value) :
             $('error-password').innerText = "La contraseña puede llevar mayúsculas, minúsculas, números y caracteres especiales. de 8 a 16 caracteres";
-            this.classList.add('is-invalid');
-            break;
+            this.classList.add('is-invalid'); 
+            break;*/
         default:
             $('error-password').innerText = null;
             this.classList.remove('is-invalid');
