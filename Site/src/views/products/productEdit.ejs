@@ -87,7 +87,7 @@
                 <span id="error-display" class="error"><%= locals.errors && errors.display ? errors.display.msg : null %></span>  
                 <span id="info-display" class="errorVF"></span>   
               </div>
-          
+              <div><span id="errorEmpty" class="error-half"></span></div>
           <button class="btn-add" type="submit">Guardar</button>
           <!-- <a class="btn-add" href="/adminProducts">Cancelar</a> -->
 
@@ -97,6 +97,6 @@
     </main>
     <%-include('../partials/footer') %>    
     <script src="/javascripts/productEdit.js"></script>
-    <script src="/javascripts/productsValidator.js"></script>
+    <script src="/javascripts/productsEditValidator.js"></script>
   </body>
 </html>
