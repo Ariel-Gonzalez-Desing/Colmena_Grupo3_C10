@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%-include('../partials/head') %>
+  
+  <body>
+
+    <%-include('../partials/header') %>
+
+    <main class="profile">    
+
+      <div class="imagenUsuario">
+        <div class="container">
+            <h2>Perfil de Usuario: <%= firstLetter(locals.userLogin.name) %></h2>
+            <img src="/images/users/<%= locals.userLogin.avatar %>" alt="imagen de perfil">
+           <button id="imageEdit" class="button-img">Cambiar imagen de perfil</button>
+
+           <!-- form edicion imagen perfil -->
+           <form action="/users/edit?_method=PUT" id="imageUpload" class="hide">  
+              <label for="image">
+              <input class="image" type="file" id="image" name="image" multiple>
+              <span id="error-image" class="error"><%= locals.errors && errors.image ? errors.image.msg : null %></span>
+              <span id="info-image" class="errorVF"></span>
+              </label>
+            </form>
+             <!-- form edicion imagen perfil -->
+        
+          <u class="listProfile">
+              <li><a href="">Wishlist</a></li>
+              <li><a href="/">Carrito</a></li>
+              <li><a href="">Cerrar sesión</a></li>
+          </u>
+        </div>
+      </div>
+
+      <div class="datosUsuario">
+          
+        <h2>Datos de <%= firstLetter(locals.userLogin.name) %></h2>
+
+        <form action="/users/edit?_method=PUT" id="formEdit" method="POST">
+        <p>
+           Nombre: <input type="text" placeholder="Nombre" name="name" value="<%= firstLetter(locals.userLogin.name) %>"><br>
+           <span id="error-name" class="error"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+              <span id="info-name" class="errorVF"></span>     
+        </p>
+        <p>
+           Apellido: <input type="text" placeholder="Apellido" name="lastName" value="<%= firstLetter(locals.userLogin.lastName) %>"><br>
+           <span id="error-lastName" class="error"><%= locals.errors && errors.lastName ? errors.lastName.msg : null %></span>
+            <span id="info-lastName" class="errorVF"></span>
+        </p>
+
+        <label for="passwordEdit">Cambiar contraseña</label>
+        <input type="checkbox" id="passwordEdit">
+        <div id="passwordDiv" class="hide">     
+
+        <p>
+          Ingrese contraseña actual: <input type="password" placeholder="********" name="passwordBefore"/>
+          <span id="error-passwordBefore" class="error"><%= locals.errors && errors.passwordBefore ? errors.passwordBefore.msg : null %></span>
+              <span id="info-passwordBefore" class="errorVF"></span><br>
+          Nueva contraseña: <input type="password" placeholder="********" name="password"/>
+          <span id="error-password" class="error"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
+              <span id="info-password" class="errorVF"></span><br>
+          Reingrese nueva contraseña: <input type="password" placeholder="********" name="rePassword"/>
+          <span id="error-rePassword" class="error"><%= locals.errors && errors.rePassword ? errors.rePassword.msg : null %></span>
+              <span id="info-rePassword" class="errorVF"></span>
+       </p>  
+      </div>
+
+        <span id="error-empty" class="errorVF"></span> 
+
+        <button type="submit" class="button">Guardar cambios</button>
+        <a href="/" class="button">Cancelar</a>
+        </div>
+    </form>
+
+      
+    </main>
+
+    <%-include('../partials/footer') %>
+    <script src="/javascripts/profileEdit.js"></script>
+  </body>
+</html>
+

@@ -65,6 +65,17 @@ module.exports = {
             
         } else {
 
+            errors = errors.mapped()
+
+            if (req.fileValidationError) {
+                errors = {
+                    ...errors,
+                    image: {
+                        msg: req.fileValidationError,
+                    },
+                };
+            }
+
             let categories = db.Category.findAll()
             let displays = db.Display.findAll()
 
@@ -74,7 +85,7 @@ module.exports = {
                     categories,
                     displays,
                     firstLetter,
-                    errors: errors.mapped(),
+                    errors,
                     old: req.body
                 })
             })

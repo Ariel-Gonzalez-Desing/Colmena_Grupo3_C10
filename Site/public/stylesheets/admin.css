@@ -226,16 +226,39 @@ input:checked + .slider .off
     cursor: pointer;
 }
 
+.contenedor .editarImagen img{
+    width: 30%;
+    margin: 10px 35%;
+}
+
+.contenedor .btn-eliminar-image{
+    width: 30%;
+    background-color: var(--colorNaranja);
+    font-weight: bolder;
+    margin: 0 auto;
+    padding: 5px 10px;
+    color: var(--colorOnyx);
+    border-radius: 5px;
+    border: 1px solid var(--colorDarkVanilla);
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
 @media (min-width: 768px){
   .add h3 {    
     max-width: 600px;
   }
-  .add .contenedor .carruselImages img {
-    width: 40%;
+  .contenedor .editarImagen{
+    display: flex;
+    justify-content: space-around;
+}
+  .add .contenedor .MessageInfo img {
+    width: 60%;
     padding: 10px 0;    
     margin: 0 auto;
     display: block;
-    height: 300px;
+    height: 200px;
     object-fit: contain;
   }
   .add .contenedor .carruselImages input{
@@ -243,6 +266,9 @@ input:checked + .slider .off
    }
   .add .btn-add {
     width: 98%;
+  }
+  .contenedor .btn-eliminar-image {
+    width: 98px;
   }
   .add .contenedor .container-input-mitad select{
     width: 49%;
@@ -256,6 +282,9 @@ input:checked + .slider .off
 
 .add .contenedor .container-input-total textarea{
     width: 98%;
+}
+.contenedor .editarImagen{
+  display: flex;
 }
 } 
 
