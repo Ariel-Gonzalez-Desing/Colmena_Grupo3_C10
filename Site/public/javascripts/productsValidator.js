@@ -2,7 +2,7 @@ console.log('productValidator success');
 
 const $ = id => document.getElementById(id);
 
-const formulario = $('form-productAdd');
+const formulario = $('productAdd');
 
 const inputImage = $('image');
 const inputName = $('name');
@@ -59,6 +59,10 @@ inputName.addEventListener('blur', function() {
     }
 })
 
+inputName.addEventListener('keydown', function() {
+    this.classList = null;
+})
+
 // validacion descripcion
 inputDescription.addEventListener('blur', function() {
     switch (true) {
@@ -76,6 +80,9 @@ inputDescription.addEventListener('blur', function() {
             this.classList.add('is-valid');
             break;
     }
+})
+inputDescription.addEventListener('keydown', function() {
+    this.classList = null;
 })
 
 // validacion tamaño
@@ -95,6 +102,9 @@ inputSize.addEventListener('blur', function() {
             this.classList.add('is-valid');
             break;
     }
+})
+inputSize.addEventListener('keydown', function() {
+    this.classList = null;
 })
 
 // validacion precio
@@ -119,6 +129,9 @@ inputPrice.addEventListener('blur', function() {
             break;
     }
 })
+inputPrice.addEventListener('keydown', function() {
+    this.classList = null;
+})
 
 // validacion categoría
 inputCategory.addEventListener('blur', function() {
@@ -134,6 +147,9 @@ inputCategory.addEventListener('blur', function() {
             break;
     }
 })
+inputCategory.addEventListener('keydown', function() {
+    this.classList = null;
+})
 
 // validacion display
 inputDisplay.addEventListener('blur', function() {
@@ -148,4 +164,20 @@ inputDisplay.addEventListener('blur', function() {
             this.classList.add('is-valid');
             break;
     }
+})
+inputDisplay.addEventListener('keydown', function() {
+    this.classList = null;
+})
+
+formulario.addEventListener('submit', function(e) {
+    e.preventDefault();
+    let error = false;
+    for (let i = 0; i < this.elements.length - 1; i++) {
+        if(this.elements[i].classList.contains('is-invalid') || !this.elements[i].value){
+            error = true
+            this.elements[i].classList.add('is-invalid');
+            errorEmpty.innerHTML = "Los campos indicados son obligatorios"
+        }
+    }
+    !error && this.submit();
 })
