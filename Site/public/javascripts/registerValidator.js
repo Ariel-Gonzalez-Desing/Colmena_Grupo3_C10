@@ -40,6 +40,10 @@ $('name').addEventListener('blur', function() {
             this.classList.add('is-valid');
             break;
     }
+});
+$('name').addEventListener('keydown', function() {
+    this.classList = null;
+    $('info-name').innerText = null;
 })
 
 // validacion apellido
@@ -63,6 +67,10 @@ $('lastname').addEventListener('blur', function() {
             this.classList.add('is-valid');
             break;
     }
+});
+$('lastname').addEventListener('keydown', function() {
+    this.classList = null;
+    $('info-lastname').innerText = null;
 })
 
 // validacion email
@@ -90,9 +98,17 @@ $('email').addEventListener('blur', async function() {
             this.classList.add('is-valid');
             break;
     }
+});
+$('email').addEventListener('keydown', function() {
+    this.classList = null;
+    $('info-email').innerText = null;
 })
 
 // validación contraseña
+$('password').addEventListener('keydown', function() {
+    $('info-password').innerText = null;
+})
+
 $('password').addEventListener('blur', function() {
     switch (true) {
         case !this.value :
@@ -109,4 +125,71 @@ $('password').addEventListener('blur', function() {
             this.classList.add('is-valid');
             break;
     }
+});
+$('password').addEventListener('keydown', function() {
+    this.classList = null;
+    $('info-password').innerText = null;
 })
+
+/* confirmar password */
+$('rePassword').addEventListener('keyup', function() {
+    if(this.value === $('password').value){
+     console.log(this.value)
+         this.classList.remove('is-invalid')
+        this.classList.add('is-valid')
+    }else{
+     this.classList.remove('is-valid')
+     $('error-rePassword').innerText = null;
+    }
+ });
+
+ $('rePassword').addEventListener('blur', function() {
+    switch (true) {
+        case !this.value :
+            $('error-rePassword').innerText = "Debe confirmar su contraseña";
+            this.classList.add('is-invalid')
+            break;
+        case this.value !== $('password').value :
+            $('error-rePassword').innerText = "Las contraseñas no coinciden";
+            this.classList.add('is-invalid');
+            break;
+        default:
+            $('error-rePassword').innerText = null;
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+            break;
+    }
+});
+
+
+
+
+
+/* formulario.addEventListener('submit', e => {
+    
+    e.preventDefault();
+    
+    let error = false;
+    const elementos = formulario.elements;
+    
+    for (let i = 0; i < elementos.length - 2; i++) {
+        
+        if(!elementos[i].value){
+            elementos[i].classList.add('is-invalid');
+            $('error-empty').innerText = "Los campos señalados son obligatorios";
+            error = true;
+        }
+        
+    }
+
+    if(!terms.checked){
+        terms.classList.add('is-invalid');
+        $('error-terms').innerText = "Debes aceptar las bases y condiciones";
+        error = true
+    }
+
+    if(!error){
+        formulario.submit()
+    }
+
+}) */
