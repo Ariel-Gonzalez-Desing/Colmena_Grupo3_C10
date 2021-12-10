@@ -5,7 +5,6 @@ const $ = id => document.getElementById(id);
 const formulario = $('productAdd');
 
 const inputImage = $('image');
-const inputAvatar = $('avatar');
 const inputName = $('name');
 const inputDescription = $('description');
 const inputSize = $('size');
@@ -17,7 +16,6 @@ const inputDisplay = $('display');
 const regExLetras = /^[_A-zA-Z]*((-|\s)*[_A-zA-Z])*$/;
 const regExExtension = /(.jpg|.jpeg|.png|.gif)$/i;
 const regExNumber = /^[0-9]+$/;
-
 
 // validacion imagen
 (image.value) ? image.value = "" : null
@@ -37,29 +35,6 @@ const regExNumber = /^[0-9]+$/;
             $('error-image').innerHTML = '';
             image.classList.remove('is-invalid')
             image.classList.add('is-valid')            
-            break;
-    }
-})
-
-// validacion avatar
-// validacion imagen
-(avatar.value) ? avatar.value = "" : null
-
- avatar.addEventListener('change', (e) => {
-    switch (true) {
-        case !regExExtension.test(avatar.value):
-            $('error-avatar').innerHTML = 'Solo archivos JPG, JPEG, PNG ó GIF';
-            avatar.classList.add('is-invalid')
-            $('img1').src = "/avatars/productos/undefinedProduct.png"
-            break;
-        case avatar.files.length > 3:
-            $('error-avatar').innerHTML = "Se permiten máximo 3 imágenes"
-            avatar.classList.add('is-invalid')
-            break;
-        default:
-            $('error-avatar').innerHTML = '';
-            avatar.classList.remove('is-invalid')
-            avatar.classList.add('is-valid')            
             break;
     }
 })
@@ -199,7 +174,7 @@ inputDisplay.addEventListener('keydown', function() {
 formulario.addEventListener('submit', function(e) {
     e.preventDefault();
     let error = false;
-    for (let i = 0; i < this.elements.length - 1; i++) {
+    for (let i = 1; i < this.elements.length - 1; i++) {
         if(this.elements[i].classList.contains('is-invalid') || !this.elements[i].value){
             error = true
             this.elements[i].classList.add('is-invalid');

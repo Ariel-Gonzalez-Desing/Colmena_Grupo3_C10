@@ -207,26 +207,26 @@ module.exports = {
                         return res.redirect('/adminProducts')
                     }
                 })       
-        } else {
+    } else {
 
-            let product = db.Product.findByPk(req.params.id)
-            let categories = db.Category.findAll()
-            let displays = db.Display.findAll()
+        let product = db.Product.findByPk(req.params.id)
+        let categories = db.Category.findAll()
+        let displays = db.Display.findAll()
     
-            Promise.all([product, categories, displays])
+        Promise.all([product, categories, displays])
     
-            .then(([product,categories, displays]) => {
-                return res.render('products/productEdit', {
-                    categories,
-                    product,
-                    displays,
-                    firstLetter,
-                    errors: errors.mapped(),
-                    old: req.body
-                })
+        .then(([product,categories, displays]) => {
+            return res.render('products/productEdit', {
+                categories,
+                product,
+                displays,
+                firstLetter,
+                errors: errors.mapped(),
+                old: req.body
             })
-            .catch(error => console.log(error))
-        }
+        })
+        .catch(error => console.log(error))
+    }
     },
 
     carrito : (req,res) => {
