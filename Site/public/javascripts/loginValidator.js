@@ -52,13 +52,13 @@ $('password').addEventListener('keydown', function() {
 $('password').addEventListener('blur', function() {
     switch (true) {
         case !this.value :
-            $('error-password').innerText = "La contraseña es requerida";
+            $('error-password').innerText = "Debes ingresar tu contraseña";
             this.classList.add('is-invalid')
             break;
-       /*  case !regExPassword.test(this.value) :
-            $('error-password').innerText = "La contraseña puede llevar mayúsculas, minúsculas, números y caracteres especiales. de 8 a 16 caracteres";
+        case !regExPassword.test(this.value) :
+            $('error-password').innerText = "Debes ingresar una contraseña válida";
             this.classList.add('is-invalid'); 
-            break;*/
+            break;
         default:
             $('error-password').innerText = null;
             this.classList.remove('is-invalid');
