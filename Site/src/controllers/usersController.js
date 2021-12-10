@@ -18,41 +18,44 @@ module.exports = {
         let errors = validationResult(req);
         
         if(errors.isEmpty()){
+            
             const {name, lastname, email, password} = req.body;
-            let user = {
-                id : users.length !=0 ? users[users.length - 1].id + 1 : 1,
-                name : name.trim(),
-                lastname : lastname.trim(),
-                email : email.trim(),
-                password : bcrypt.hashSync(password,10),
-                avatar : req.file ? req.file.filename : 'default.jpg',
-                rol : "user"
-            }
-            users.push(user);
-            fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(users,null,3),'utf-8');
-                
-            req.session.userLogin = {
-                id : user.id,
-                name : user.name,
-                avatar : user.avatar,
-                rol : user.rol
-            }
 
-            return res.redirect('/')
-            // return res.redirect('/user/profile')
+            db.User.create({
+                firstName: name.trim(),
+                lastName: lastname.trim(),
+                email: email.trim(),
+                password: bcrypt.hashSync(password, 10),
+                avatar : req.file ? req.file.filename : 'default.jpg',
+                rolId : 1
+            })
+                .then(user => {
+                    req.session.userLogin = {
+                        id : user.id,
+                        name : user.firstName,
+                        avatar : user.avatar,
+                        rol : user.rolId
+                    }
+
+                    return res.redirect('/') 
+                })                  
+                .catch(error => res.send(error))            
 
         }else{
+
         return res.render('users/registro',{
             errores : errors.mapped(),
             old : req.body
         })}
     },
     login : (req,res) => {
+
         return res.render('users/login', {
             title : 'Login usuario',
         })
     },
     processLogin : (req,res) => {
+
         let errors = validationResult(req);
         
         if(errors.isEmpty()){
@@ -90,7 +93,30 @@ module.exports = {
             })  
             .catch(error => console.log(error))      
     },
+    profileEdit : (req,res) => {
+
+        const {name, lastname, email, password, avatar} = req.body;
+
+        db.User.update(
+            {
+                firstName: name.trim(),
+                lastName: lastname.trim(),
+                email: email.trim(),
+                password: bcrypt.hashSync(password, 10),
+                avatar : req.file ? req.file.filename : 'default.jpg',
+                rol: rol
+            },
+            {
+                where : {id : req.params.id}
+            }
+            .then(() => {
+                return res.render('users/profile', user)
+            })  
+            .catch(error => console.log(error))
+        )
+    },
     logout : (req,res) =>{
+
         req.session.destroy(function() {
             res.clearCookie('colmenaCookie', { path: '/' });
             res.redirect('/')

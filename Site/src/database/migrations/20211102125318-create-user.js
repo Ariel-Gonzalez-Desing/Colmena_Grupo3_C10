@@ -26,6 +26,10 @@ module.exports = {
       },
       rolId: {
         type: Sequelize.INTEGER,
+<<<<<<< HEAD
+=======
+        allowNull: false,
+>>>>>>> 46011eb4fd71fff2f319295141576e1b4469c9df
         references: {
           model:{
             tableName: 'Rols'

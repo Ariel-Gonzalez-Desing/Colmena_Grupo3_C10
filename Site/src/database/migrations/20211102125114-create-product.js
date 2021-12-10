@@ -31,7 +31,12 @@ module.exports = {
           model:{
             tableName: "Categories"
           },
+<<<<<<< HEAD
           key : 'id'
+=======
+          key : 'id',
+          update : 'cascade'
+>>>>>>> 46011eb4fd71fff2f319295141576e1b4469c9df
         }
       },
       displayId: {
@@ -41,7 +46,12 @@ module.exports = {
           model:{
             tableName: "Displays"
           },
+<<<<<<< HEAD
           key : 'id'
+=======
+          key : 'id',
+          update : 'cascade'
+>>>>>>> 46011eb4fd71fff2f319295141576e1b4469c9df
         }
       },
       createdAt: {

@@ -6,6 +6,7 @@ const path = require('path');
 
 /* base de datos */
 const db = require('../database/models');
+const {validationResult} = require('express-validator');
 
 const cuota = require('../utils/cuota');
 const firstLetter = require('../utils/firstLetter');
@@ -30,6 +31,10 @@ module.exports = {
     },
 
     create : (req,res) => {
+
+        let errors = validationResult(req);
+        
+        if(errors.isEmpty()){
                
         const {name, size, price, category, display, description} = req.body;
 
@@ -56,7 +61,25 @@ module.exports = {
                 }
                 return res.redirect('/adminProducts')
             })
-            .catch(error => console.log(error))        
+            .catch(error => console.log(error))    
+            
+        } else {
+
+            let categories = db.Category.findAll()
+            let displays = db.Display.findAll()
+
+            Promise.all([categories, displays])
+            .then(([categories, displays]) => {
+                return res.render('products/productAdd', {
+                    categories,
+                    displays,
+                    firstLetter,
+                    errors: errors.mapped(),
+                    old: req.body
+                })
+            })
+            .catch(error => console.log(error))
+        }
     },
 
     productsList : (req,res) => {
@@ -123,9 +146,13 @@ module.exports = {
         .catch(error => console.log(error))
     },
 
-    edit : (req,res) => {       
+    edit : (req,res) => {    
 
-        const {name, size, price, category, display, description, file} = req.body;
+    let errors = validationResult(req);
+        
+    if(errors.isEmpty()){   
+
+        const {name, size, price, category, display, description} = req.body;
 
         db.Product.update(
             {
@@ -134,17 +161,61 @@ module.exports = {
                 price : +price,
                 categoryId: category,
                 displayId : display,          
-                description : description.trim(),
-                file : file
+                description : description.trim()
             },
             {
                 where : {id : req.params.id}
-            }
-        )
+            })
+
             .then(() => {
-                return res.redirect('/adminProducts'),
-                firstLetter
-            })        
+                if(req.files[0] != undefined) {
+                    db.Image.destroy(
+                            {
+                                where: {
+                                    productId: req.params.id
+                                }
+                            }
+                        )
+                        .then(() => {
+                            let images = req.files.map(image => {
+                                let img = {
+                                    file: image.filename,
+                                    productId: req.params.id
+                                }
+                                return img
+                            })
+                            db.Image.bulkCreate(images, { validate: true })
+
+                                .then(() => {
+                                    return res.redirect('/adminProducts')
+                                })
+                                .catch(error => console.log(error))
+                        })
+                    } else {
+                        console.log('edicion sin imagen')
+                        return res.redirect('/adminProducts')
+                    }
+                })       
+        } else {
+
+            let product = db.Product.findByPk(req.params.id)
+            let categories = db.Category.findAll()
+            let displays = db.Display.findAll()
+    
+            Promise.all([product, categories, displays])
+    
+            .then(([product,categories, displays]) => {
+                return res.render('products/productEdit', {
+                    categories,
+                    product,
+                    displays,
+                    firstLetter,
+                    errors: errors.mapped(),
+                    old: req.body
+                })
+            })
+            .catch(error => console.log(error))
+        }
     },
 
     carrito : (req,res) => {

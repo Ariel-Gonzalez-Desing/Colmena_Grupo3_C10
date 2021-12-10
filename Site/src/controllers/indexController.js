@@ -58,5 +58,31 @@ module.exports = {
                 })
             })    
             .catch(error => console.log(error))      
+    },
+    rolEdit : (req,res) => {
+
+        const {rolEdit} = req.body;
+
+        db.User.update(
+            {
+                rol: rolEdit
+            },
+            {
+                where : {id : req.params.id}
+            }
+        )
+            .then(() => {
+                return res.redirect('/adminUsers')
+            })
+    },
+    deleteUser : (req,res) => {
+
+        db.User.destroy({
+            where : {id: req.params.id}
+        })
+            .then(() => {
+                return res.redirect('/adminUsers')  
+            })
+            .catch(error => console.log(error))   
     }
 }

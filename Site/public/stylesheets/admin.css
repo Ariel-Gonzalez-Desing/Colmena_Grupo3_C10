@@ -15,107 +15,115 @@
     --colorCremitaHover: rgb(252, 180, 58, 0.4);
   }
 
-/* ------------Carrusel--------------- */
+/* Toggle switch */
 
-/* Container */
-.add .contenedor .carruselImages .carrusel .slideshow-container {
-  width: 100%;
+.switch {
   position: relative;
-  margin: auto;
+  display: inline-block;
+  width: 40px;
+  height: 34px;
 }
 
-/* Imagenes invisibles */
-.add .contenedor .carruselImages .carrusel .Containers {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-}
+.switch input {display:none;}
 
-/* Boton adelante y atras */
-.add .contenedor .carruselImages .carrusel .Back,
-.forward {
-  background-color: var(--colorOnyx);
-  border-radius: 10px 0 0 10px;
+.slider {
+  position: absolute;
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -23px;
-  padding: 10px;
-  color: #fffff1;
-  font-weight: bold;
-  font-size: 30px;
-  transition: 0.4s ease;
-  user-select: none;
-}
-
-
-/* Posicionar botón a la derecha */
-.add .contenedor .carruselImages .carrusel .forward {
+  top: 0;
+  left: 0;
   right: 0;
+  bottom: 0;
+  background-color: #2196F3;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-/*Icono se agranda cuando se hace hover */
-.add .contenedor .carruselImages .carrusel .Back:hover,
-.forward:hover {
-  background-color: var(--colorOnyx);
-  color: var(--colorNaranjaClaro);
-  font-size: 30px;
-}
-
-/*Info fotos */
-.add .contenedor .carruselImages .carrusel .Info {
-  font-family: "Roboto", sans-serif;
-  color: #fffff1;
-  background-color: rgb(58, 54, 55, 0.5);
-  border-radius: 10px;
-  font-size: 8px;
-  padding: 5px;
+.slider:before {
   position: absolute;
-  bottom: 20%;
-  right: 20%;
-  width: 60%;
-  text-align: center;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 6px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
-.add .contenedor .carruselImages .carrusel .Info h1{
-  color: #fffff1;
+
+input:checked + .slider {
+  background-color: #2ab934;
 }
-.add .contenedor .carruselImages .carrusel .Info h4 {
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(55px);
+  -ms-transform: translateX(55px);
+  transform: translateX(55px);
+}
+
+.on
+{
   display: none;
-  color: #fffff1;
 }
 
-/* Animation */
-.add .contenedor .carruselImages .carrusel .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.4s;
-  animation-name: fade;
-  animation-duration: 1.4s;
+.on, .off
+{
+  color: white;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  font-size: 10px;
+  font-family: Verdana, sans-serif;
 }
 
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.5;
-  }
-  to {
-    opacity: 2;
-  }
+input:checked+ .slider .on
+{display: block;}
+
+input:checked + .slider .off
+{display: none;}
+
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
 }
 
-@keyframes fade {
-  from {
-    opacity: 0.5;
-  }
-  to {
-    opacity: 2;
+.slider.round:before {
+  border-radius: 50%;}
+
+@media (min-width: 768px){
+  .switch {
+    width: 90px;
   }
 }
+  /* Fin toggle switch */
 
-/* ------------Fin del Carrusel--------------- */
-
+  
 .add {
     background-color: var(--colorDarkVanilla);
     color: var(--colorOnyx);
+}
+
+.edit span.error{
+  color: rgb(235, 122, 47);
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.add span.error{
+  color: rgb(235, 122, 47);
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.add span.error-half{
+  color: rgb(235, 122, 47);
+  font-size: 12px;
+  padding-left: 10px;
 }
 
 .add h3 {
@@ -356,7 +364,6 @@
     border-radius: 5px;
     color: #fff;
     font-size: 14px;
-    display: block;
     text-align: center;
   }
 

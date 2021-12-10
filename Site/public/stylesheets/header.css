@@ -106,8 +106,7 @@ header .barraBusquedaMobile .searchBar a{
     display: inline-block; 
     position: absolute;
     right: 5px;
-    top: 2px;
-    
+    top: 2px;    
 }
 
 
@@ -121,8 +120,7 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
     padding-left: 10px;
     margin-bottom: 10px;
     margin-left: 30px;   
-    color: var(--colorNaranja);
-       
+    color: var(--colorNaranja);     
 
 }
 
@@ -130,6 +128,9 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
     color:var(--colorNaranja);
     opacity: 1; /* para firefox */
   }
+/*** Dark Mode***/
+
+
 
 
 
@@ -262,8 +263,7 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
         top: 2px;
     }
     header nav ul li a{
-        transition: all .4s ease;  
-       
+        transition: all .4s ease;         
     }
     header nav ul li a:hover{
         color: var(--colorNaranja);       
@@ -275,6 +275,7 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
     } */
     header .iconos-TabletDesktop .changuito .linkChanguito{
         transition: all .4s ease; 
+        color: var(--colorOnyx);
     }
     header .iconos-TabletDesktop .changuito .linkChanguito:hover{
         color: var(--colorNaranja);

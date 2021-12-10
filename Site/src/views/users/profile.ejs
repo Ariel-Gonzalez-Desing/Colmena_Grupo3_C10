@@ -1,10 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
+
     <%-include('../partials/head') %>
-<body>
-    <h1>Perfil de Usuario: <%= locals.userLogin.name %></h1>
-    <img src="/images/users/<%= locals.userLogin.avatar %>" alt="imagen de usuario">
-    <br>
-    <a href="/">Volver a Home</a>    
-</body>
+  
+  <body>
+
+    <%-include('../partials/header') %>
+
+    <main class="profile">
+      <div class="imagenUsuario">
+        <div class="container">
+            <h2>nombre usuario</h2>
+            <img src="/images/users/default.jpg" alt="imagen de perfil">
+           <a href="">Cambiar imagen de perfil</a>
+        
+          <u class="listProfile">
+              <li><a href="">Wishlist</a></li>
+              <li><a href="/">Carrito</a></li>
+              <li><a href="">Cerrar sesión</a></li>
+          </u>
+        </div>
+      </div>
+
+      <div class="datosUsuario">
+        <h2>Datos del usuario</h2>
+        <p>
+           Nombre: ejemplo
+        </p>
+        <p>
+           Apellido: ejemplo
+        </p>
+        <p>
+           e-mail: ejemplo@yahoo.com.ar
+        </p>  
+
+        <button class="button">Cambiar contraseña</button>
+        
+
+        <!-- <div class="cantidad-boton">
+          <div class="masMenos">
+            <form action="">
+              <button>-</button>
+              <input type="text" value="0" />
+              <button>+</button>
+            </form>
+          </div>
+          <button class="button">AGREGAR AL CARRITO</button>
+        </div> -->
+      </div>
+    </main>
+
+    <%-include('../partials/footer') %>
+  </body>
 </html>
