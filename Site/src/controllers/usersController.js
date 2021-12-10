@@ -95,6 +95,7 @@ module.exports = {
         })
             .then(user => {
                 return res.render('users/profile', {
+                    title: 'Perfil de Usuario',
                     user,
                     firstLetter
                 })
@@ -108,6 +109,7 @@ module.exports = {
         })
             .then(user => {
                 return res.render('users/edit', {
+                    title: 'Editar Perfil',
                     user,
                     firstLetter
                 })
