@@ -58,6 +58,9 @@ inputName.addEventListener('blur', function() {
             break;
     }
 })
+inputName.addEventListener('keydown', function() {
+    this.classList = null;
+})
 
 inputName.addEventListener('keydown', function() {
     this.classList = null;
