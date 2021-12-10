@@ -12,7 +12,7 @@
 
       <div class="contenedor">
 
-        <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" id="productAdd" enctype="multipart/form-data">
 
           <div class="carruselImages">  
 <!--------------Imagen----------------->          
@@ -41,21 +41,26 @@
                  
 
           <div class="container-input-total">
-            <input type="text" placeholder="Nombre del producto" name="name" value="<%= firstLetter(product.name) %>"/>
-            <span class="error"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+            <input type="text" placeholder="Nombre del producto" id="name" name="name" value="<%= firstLetter(product.name) %>"/>
+            <span id="error-name" class="error"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+            <span id="info-name" class="errorVF"></span>
           </div>
 
           <div class="container-input-total">
-            <textarea placeholder="Descripcion" id="floatingTextarea" name="description"><%= product.description %></textarea>
-            <label for="floatingTextarea"></label>
-            <span class="error"><%= locals.errors && errors.description ? errors.description.msg : null %></span>
+            <textarea placeholder="Descripcion" id="description" name="description"><%= product.description %></textarea>
+            <label for="description"></label>
+            <span id="error-description" class="error"><%= locals.errors && errors.description ? errors.description.msg : null %></span>
+            <span id="info-description" class="errorVF"></span>
           </div>
 
           <div class="container-input-mitad">
-            <input type="text" placeholder="Tamaño" name="size" value=<%= firstLetter(product.size) %>>             
-            <span class="error"><%= locals.errors && errors.size ? errors.size.msg : null %></span>
-            <input type="number" placeholder="Precio" name="price" value=<%= product.price %>>
-            <span class="error"><%= locals.errors && errors.price ? errors.price.msg : null %></span>
+            <input type="text" placeholder="Tamaño" id="size" name="size" value=<%= firstLetter(product.size) %>>             
+            <span id="error-size" class="error-half"><%= locals.errors && errors.size ? errors.size.msg : null %></span>   
+            <span id="info-size" class="errorVF"></span> 
+
+            <input type="number" placeholder="Precio" id="price" name="price" value=<%= product.price %>>
+            <span id="error-price" class="error-half"><%= locals.errors && errors.price ? errors.price.msg : null %></span>
+            <span id="info-price" class="errorVF"></span> 
           </div>  
 
               <div class="container-input-mitad">
@@ -67,7 +72,8 @@
                   <% }) %>
                 </select>
                 <label for="category"></label>    
-                <span class="error"><%= locals.errors && errors.category ? errors.category.msg : null %></span>
+                <span id="error-category" class="error-half"><%= locals.errors && errors.category ? errors.category.msg : null %></span>
+                <span id="info-category" class="errorVF"></span>
               
                 <select class="form-select" id="display" aria-label="Floating label select example" name="display">
                   <option value="" selected hidden>Selecciona el display</option>
@@ -76,7 +82,8 @@
                   <% }) %>
                 </select>
                 <label for="display"></label> 
-                <span class="error"><%= locals.errors && errors.display ? errors.display.msg : null %></span>     
+                <span id="error-display" class="error-half"><%= locals.errors && errors.display ? errors.display.msg : null %></span>
+                <span id="info-display" class="errorVF"></span>     
               </div>
           
           <button class="btn-add" type="submit">Guardar</button>
@@ -88,5 +95,6 @@
     </main>
     <%-include('../partials/footer') %>    
     <script src="/javascripts/productEdit.js"></script>
+    <script src="/javascripts/productsValidator.js"></script>
   </body>
 </html>

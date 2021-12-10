@@ -58,6 +58,9 @@ inputName.addEventListener('blur', function() {
             break;
     }
 })
+inputName.addEventListener('keydown', function() {
+    this.classList = null;
+})
 
 // validacion descripcion
 inputDescription.addEventListener('blur', function() {
@@ -77,6 +80,9 @@ inputDescription.addEventListener('blur', function() {
             break;
     }
 })
+inputDescription.addEventListener('keydown', function() {
+    this.classList = null;
+})
 
 // validacion tamaño
 inputSize.addEventListener('blur', function() {
@@ -95,6 +101,9 @@ inputSize.addEventListener('blur', function() {
             this.classList.add('is-valid');
             break;
     }
+})
+inputSize.addEventListener('keydown', function() {
+    this.classList = null;
 })
 
 // validacion precio
@@ -119,6 +128,9 @@ inputPrice.addEventListener('blur', function() {
             break;
     }
 })
+inputPrice.addEventListener('keydown', function() {
+    this.classList = null;
+})
 
 // validacion categoría
 inputCategory.addEventListener('blur', function() {
@@ -134,6 +146,9 @@ inputCategory.addEventListener('blur', function() {
             break;
     }
 })
+inputCategory.addEventListener('keydown', function() {
+    this.classList = null;
+})
 
 // validacion display
 inputDisplay.addEventListener('blur', function() {
@@ -148,4 +163,7 @@ inputDisplay.addEventListener('blur', function() {
             this.classList.add('is-valid');
             break;
     }
+})
+inputDisplay.addEventListener('keydown', function() {
+    this.classList = null;
 })
