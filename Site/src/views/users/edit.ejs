@@ -39,28 +39,28 @@
 
         <form action="/users/edit?_method=PUT" id="formEdit" method="POST">
         <p>
-           Nombre: <input type="text" placeholder="Nombre" name="name" value="<%= firstLetter(locals.userLogin.name) %>"><br>
+           Nombre: <input type="text" placeholder="Nombre" id="name" name="name" value="<%= firstLetter(locals.userLogin.name) %>"><br>
            <span id="error-name" class="error"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
               <span id="info-name" class="errorVF"></span>     
         </p>
         <p>
-           Apellido: <input type="text" placeholder="Apellido" name="lastName" value="<%= firstLetter(locals.userLogin.lastName) %>"><br>
+           Apellido: <input type="text" placeholder="Apellido" id="lastName" name="lastName" value="<%= firstLetter(locals.userLogin.lastName) %>"><br>
            <span id="error-lastName" class="error"><%= locals.errors && errors.lastName ? errors.lastName.msg : null %></span>
             <span id="info-lastName" class="errorVF"></span>
         </p>
 
         <label for="passwordEdit">Cambiar contraseña</label>
-        <input type="checkbox" id="passwordEdit">
+        <input type="checkbox" id="passwordEdit" name="passwordEdit">
         <div id="passwordDiv" class="hide">     
 
         <p>
-          Ingrese contraseña actual: <input type="password" placeholder="********" name="passwordBefore"/>
+          Ingrese contraseña actual: <input type="password" placeholder="********" id="passwordBefore" name="passwordBefore"/>
           <span id="error-passwordBefore" class="error"><%= locals.errors && errors.passwordBefore ? errors.passwordBefore.msg : null %></span>
               <span id="info-passwordBefore" class="errorVF"></span><br>
-          Nueva contraseña: <input type="password" placeholder="********" name="password"/>
+          Nueva contraseña: <input type="password" placeholder="********" id="password" name="password"/>
           <span id="error-password" class="error"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
               <span id="info-password" class="errorVF"></span><br>
-          Reingrese nueva contraseña: <input type="password" placeholder="********" name="rePassword"/>
+          Reingrese nueva contraseña: <input type="password" placeholder="********" id="rePassword" name="rePassword"/>
           <span id="error-rePassword" class="error"><%= locals.errors && errors.rePassword ? errors.rePassword.msg : null %></span>
               <span id="info-rePassword" class="errorVF"></span>
        </p>  
@@ -77,7 +77,7 @@
     </main>
 
     <%-include('../partials/footer') %>
-    <script src="/javascripts/profileEdit.js"></script>
+    <!-- <script src="/javascripts/profileEdit.js"></script> -->
   </body>
 </html>
 
