@@ -132,6 +132,7 @@ $('password').addEventListener('keydown', function() {
 })
 
 /* confirmar password */
+
 $('rePassword').addEventListener('keyup', function() {
     if(this.value === $('password').value){
      console.log(this.value)
@@ -153,6 +154,10 @@ $('rePassword').addEventListener('keyup', function() {
             $('error-rePassword').innerText = "Las contraseñas no coinciden";
             this.classList.add('is-invalid');
             break;
+        case !regExPassword.test(this.value) :
+            $('error-rePassword').innerText = "La contraseña puede llevar mayúsculas, minúsculas, números y caracteres especiales. de 8 a 16 caracteres";
+            this.classList.add('is-invalid');
+            break;
         default:
             $('error-rePassword').innerText = null;
             this.classList.remove('is-invalid');
@@ -165,12 +170,12 @@ $('rePassword').addEventListener('keyup', function() {
 
 
 
-/* formulario.addEventListener('submit', e => {
+$('form-register').addEventListener('submit', e => {
     
     e.preventDefault();
     
     let error = false;
-    const elementos = formulario.elements;
+    const elementos = $('form-register').elements;
     
     for (let i = 0; i < elementos.length - 2; i++) {
         
@@ -181,15 +186,7 @@ $('rePassword').addEventListener('keyup', function() {
         }
         
     }
-
-    if(!terms.checked){
-        terms.classList.add('is-invalid');
-        $('error-terms').innerText = "Debes aceptar las bases y condiciones";
-        error = true
-    }
-
     if(!error){
-        formulario.submit()
+        $('form-register').submit()
     }
-
-}) */
+})
