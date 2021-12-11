@@ -7,7 +7,7 @@ module.exports = [
         .isLength({min : 2}).withMessage('Mínimo 2 caracteres'),
 
     check('lastName')
-        .isLength({min : 5}).withMessage('Mínimo 2 caracteres'),
+        .isLength({min : 2}).withMessage('Mínimo 2 caracteres'),
 
     body('passwordBefore')
         .optional({ checkFalsy: true })        
