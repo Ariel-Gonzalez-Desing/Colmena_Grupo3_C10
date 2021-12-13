@@ -11,13 +11,13 @@
       <div class="imagenProducto">
         <div class="container">
 
-          <!-- <div class="Containers">
-            < product.images.forEach(image => { %>    
-               <img src="/images/products/<= image.file%>">    
-           < }) %>
-           </div>    -->
+          <div class="Containers">
+            <% product.images.forEach(image => { %>    
+               <img src="/images/products/<%= image.file%>">    
+           <% }) %>
+           </div>   
   
-          <ul class="slider">
+          <!-- <ul class="slider">
             <li id="slide1">
               <img src="/images/products/<%= product.images[0].file ? product.images[0].file : 'agregarImagen.png' %>">
             </li>
@@ -39,7 +39,7 @@
              <li>
               <a href="#slide3">3</a>
             </li>
-          </ul>
+          </ul> -->
           
         </div>
       </div>
