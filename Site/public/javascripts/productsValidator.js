@@ -41,29 +41,6 @@ const regExNumber = /^[0-9]+$/;
     }
 })
 
-// validacion avatar
-// validacion imagen
-(avatar.value) ? avatar.value = "" : null
-
- avatar.addEventListener('change', (e) => {
-    switch (true) {
-        case !regExExtension.test(avatar.value):
-            $('error-avatar').innerHTML = 'Solo archivos JPG, JPEG, PNG ó GIF';
-            avatar.classList.add('is-invalid')
-            $('img1').src = "/avatars/productos/undefinedProduct.png"
-            break;
-        case avatar.files.length > 3:
-            $('error-avatar').innerHTML = "Se permiten máximo 3 imágenes"
-            avatar.classList.add('is-invalid')
-            break;
-        default:
-            $('error-avatar').innerHTML = '';
-            avatar.classList.remove('is-invalid')
-            avatar.classList.add('is-valid')            
-            break;
-    }
-})
-
 // validacion nombre
 inputName.addEventListener('blur', function() {
     switch (true) {

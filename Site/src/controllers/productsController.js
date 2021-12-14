@@ -82,6 +82,7 @@ module.exports = {
             Promise.all([categories, displays])
             .then(([categories, displays]) => {
                 return res.render('products/productAdd', {
+                    title: 'Agregar producto',
                     categories,
                     displays,
                     firstLetter,
@@ -217,6 +218,7 @@ module.exports = {
     
         .then(([product,categories, displays]) => {
             return res.render('products/productEdit', {
+                title: 'Editar producto',
                 categories,
                 product,
                 displays,
