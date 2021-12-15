@@ -47,7 +47,8 @@ module.exports = {
         }else{
 
         return res.render('users/registro',{
-            errores : errors.mapped(),
+            title: 'Registro usuario',
+            errors : errors.mapped(),
             old : req.body
         })}
     },
@@ -84,7 +85,8 @@ module.exports = {
             
         }else{
             return res.render('users/login',{
-                errores : errors.mapped()
+                title: 'Login usuario',
+                errors : errors.mapped()
             })
         }
     },
@@ -95,6 +97,7 @@ module.exports = {
         })
             .then(user => {
                 return res.render('users/profile', {
+                    title: 'Perfil de Usuario',
                     user,
                     firstLetter
                 })
@@ -108,6 +111,7 @@ module.exports = {
         })
             .then(user => {
                 return res.render('users/edit', {
+                    title: 'Editar perfil',
                     user,
                     firstLetter
                 })
@@ -171,6 +175,7 @@ module.exports = {
             .catch(error => console.log(error))
         }else{
             return res.render('users/edit',{
+                title: 'Editar perfil',
                 errors : errors.mapped()
             })
         }

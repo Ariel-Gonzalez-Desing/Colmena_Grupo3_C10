@@ -62,6 +62,16 @@ let users = [
      "rolId": 2,
      createdAt : new Date,
      updatedAt : new Date
+  },
+  {
+     "firstName": "admin",
+     "lastName": "colmena",
+     "email": "admin@colmena.com.ar",
+     "password" : bcrypt.hashSync('123123',10),
+     "avatar": "img1.png",
+     "rolId": 2,
+     createdAt : new Date,
+     updatedAt : new Date
   }
 ]
 

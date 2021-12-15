@@ -31,7 +31,7 @@ module.exports = [
         }),
 
     check('password')
-        .matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/).withMessage('Mínimo 8 letras, y debe contener mayúscula, un número y un carácter especial.'),
+        .matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,16}$/).withMessage('Mínimo 8 letras, y debe contener mayúscula, un número y un carácter especial.'),
     
     body('rePassword')
         .custom((value,{req}) => {
