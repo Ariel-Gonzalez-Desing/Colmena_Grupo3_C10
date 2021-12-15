@@ -19,7 +19,7 @@ router
     .post('/login',loginValidator,processLogin)    
     .get('/profile', userLoginCheck, profile)
     .get('/edit', userLoginCheck, profileEdit)
-    .put('/edit', profileValidator, profileUpdate)
+    .put('/edit', upload.single('avatar'), profileValidator, profileUpdate)
     .get('/logout', logout)
 
 module.exports = router;

@@ -14,6 +14,8 @@
             <h2>Perfil de Usuario: <%= firstLetter(locals.userLogin.name) %></h2>
             <img src="/images/users/<%= locals.userLogin.avatar %>" alt="imagen de perfil">
            <!-- <button id="imageEdit" class="button-img">Cambiar imagen de perfil</button> -->
+           <form action="/users/edit?_method=PUT" id="formEdit" method="POST" enctype="multipart/form-data">
+           <input class="button-avatar" type="file" id="image" name="avatar" hidden>
 
            <!-- form edicion imagen perfil -->
            <!-- <form action="/users/edit?_method=PUT" id="imageUpload" class="hide">  
@@ -50,7 +52,7 @@
         </p>
 
         <label for="passwordEdit">Cambiar contraseña</label>
-        <input type="checkbox" id="passwordEdit" name="passwordEdit">
+        <input class="checkbox" type="checkbox" id="passwordEdit" name="passwordEdit">
         <div id="passwordDiv" class="hide">     
 
         <p>
@@ -78,6 +80,7 @@
 
     <%-include('../partials/footer') %>
     <script src="/javascripts/profileEdit.js"></script>
+    <script src="/javascripts/avatarEdit.js"></script>
   </body>
 </html>
 
