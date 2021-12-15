@@ -48,7 +48,7 @@ module.exports = {
 
         return res.render('users/registro',{
             title: 'Registro usuario',
-            errores : errors.mapped(),
+            errors : errors.mapped(),
             old : req.body
         })}
     },
@@ -86,7 +86,7 @@ module.exports = {
         }else{
             return res.render('users/login',{
                 title: 'Login usuario',
-                errores : errors.mapped()
+                errors : errors.mapped()
             })
         }
     },
