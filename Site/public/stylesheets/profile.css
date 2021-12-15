@@ -19,11 +19,12 @@
   }
   .show{
     display: inline;
+  }  
+
+  .profile .checkbox {
+    width: 20%;  
+    display: inline-block;
   }
-  
-.profile .cancelar{
-  
-}
 
 .profile input {
   display: inline;
@@ -193,6 +194,19 @@
     cursor: pointer;
   }
 
+  /* .profile .button-avatar {
+    width: 80%;
+    background-color: var(--colorNaranja);
+    font-weight: bolder;
+    margin: 0 6px 10px 6px;
+    padding: 10px;
+    color: var(--colorOnyx);
+    border-radius: 5px;
+    border: 1px solid var(--colorDarkVanilla);
+    font-size: 16px;
+    cursor: pointer;
+  } */
+
   .profile .button-img:hover {
     background-color: var(--colorCremitaHover);
     font-weight: 600;
@@ -244,6 +258,9 @@
     border-bottom: 1px dotted var(--colorDarkVanilla);
   }
   @media (min-width: 768px) {
+    .profile .checkbox {
+      width: 50%;  
+    }
     .profile input {
       display: inline;
       width: 50%;

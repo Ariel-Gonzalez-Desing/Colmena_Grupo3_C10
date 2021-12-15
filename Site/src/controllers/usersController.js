@@ -125,13 +125,11 @@ module.exports = {
 
         const {name, lastName, password} = req.body;
 
-        console.log(req.body);
-
         db.User.update(
             {
                 firstName: name,
                 lastName: lastName,
-                
+                avatar: req.file? req.file.filename : req.session.userLogin.avatar              
             },
             {
                 where : {id: req.session.userLogin.id}
@@ -144,15 +142,13 @@ module.exports = {
                             password: bcrypt.hashSync(password.trim(), 10)
                         },
                         {
-                            where: {
-                                id: req.session.userLogin.id
-                            }
+                            where: {id: req.session.userLogin.id}
                         }
-                    )
-                        .then(() => {
-                            req.session.destroy();
-                            return res.redirect('/users/login')
-                        })
+            )
+            .then(() => {
+                req.session.destroy();
+                return res.redirect('/users/login')
+            })
 
                 } else {
 
