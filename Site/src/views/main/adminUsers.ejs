@@ -68,7 +68,7 @@
           </form>
 
             <form action="/delete/<%= user.id %>?_method=DELETE" method="POST">
-              <button><i class="fas fa-trash-alt"></i></button>
+              <button onclick="return confirm('¿Desea eliminar el usuario permanentemente?');"><i class="fas fa-trash-alt"></i></button>
             </form>
             
             </div></td>
@@ -77,5 +77,6 @@
         </tbody>
         
       </table>
+      <script src="/javascripts/admin.js"></script>
 </body>
 </html>

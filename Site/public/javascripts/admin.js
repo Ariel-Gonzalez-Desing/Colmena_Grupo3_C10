@@ -1,5 +1,6 @@
 const { rolEdit } = require("../../src/controllers/indexController");
 
+
 console.log('avatarEdit.js success');
 
 let buttonEditRol = document.getElementById('buttonEditRol'); 
@@ -17,3 +18,4 @@ buttonEditRol.forEach(item => {
   if(user.rol){   
     document.getElementById('rolEdit').checked = 1;
 }
+

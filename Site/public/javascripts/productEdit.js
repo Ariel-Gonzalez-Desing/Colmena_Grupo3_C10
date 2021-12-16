@@ -51,6 +51,5 @@ const addImage = async (id,files) => {
     }
 }
 
-function alertDelete() {
-    alert("¿Desea eliminar el producto permanentemente?");
-  }
+  
+

@@ -57,9 +57,9 @@ module.exports = {
                         return img
                     });
                     db.Image.bulkCreate(images, {validate : true})
-                        .then( () => {return res.redirect('/adminProducts')})
+                        .then( () => console.log('imagenes agregadas'))
                 }
-                
+                z
             })
             .catch(error => console.log(error))    
             
