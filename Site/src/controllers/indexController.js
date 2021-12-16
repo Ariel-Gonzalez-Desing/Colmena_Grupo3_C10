@@ -54,7 +54,8 @@ module.exports = {
                 return res.render('main/adminUsers', { 
                     title: 'Admin Colmena',
                     users,
-                    rol
+                    rol,
+                    firstLetter
                 })
             })    
             .catch(error => console.log(error))      
