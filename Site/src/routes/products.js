@@ -4,7 +4,7 @@ const upload = require('../middlewares/multerProducts');
 const adminUserCheck = require('../middlewares/adminUserCheck');
 const productValidator = require('../validations/productValidator');
 
-const {createForm, create, productsList, detail, editForm, edit, carrito, destroy} = require('../controllers/productsController');
+const {createForm, create, productsList, detail, search, editForm, edit, carrito, destroy} = require('../controllers/productsController');
 
 
 /* /products */
@@ -17,5 +17,6 @@ router
 .put('/edit/:id', upload.array('image'), productValidator, edit)
 .get('/carrito', carrito)
 .delete('/delete/:id', destroy)
+.get('/search',search)
 
 module.exports = router;

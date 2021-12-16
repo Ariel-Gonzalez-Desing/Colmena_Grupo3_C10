@@ -7,6 +7,7 @@ const path = require('path');
 /* base de datos */
 const db = require('../database/models');
 const {validationResult} = require('express-validator');
+const { Op } = require('sequelize')
 
 const cuota = require('../utils/cuota');
 const firstLetter = require('../utils/firstLetter');
@@ -247,5 +248,28 @@ module.exports = {
                 return res.redirect('/adminProducts')  
             })
             .catch(error => console.log(error))   
+    },
+    search : (req,res) =>{
+        let products = db.Product.findAll({
+            where: {
+                name: {
+                    [Op.substring]: req.query.buscar
+                }
+            },
+            include: ['images', 'category']
+        })
+        let categories = db.Category.findAll()
+
+        Promise.all([products, categories])
+
+            .then(([products, categories]) => {
+                /* return res.send(products) */
+                return res.render('./products/productsList', {
+                    products,
+                    categories,
+                    title: 'Resultado de la búsqueda'
+                })
+            })
+            .catch(error => console.log(error))
     }
 }

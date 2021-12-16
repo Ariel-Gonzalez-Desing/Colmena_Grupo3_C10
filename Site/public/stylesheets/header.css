@@ -14,6 +14,8 @@ header .boton-changuito{
 }
 header .lupita{
     color: #FCB43A;
+    border: none;
+    background-color: var(--colorOnyx);
 }
 
 .dropdown {
@@ -52,8 +54,7 @@ header .iconos-TabletDesktop{
 }
 
 header .boton-hamburguesa{
-    color: var(--colorNaranja);
-    background-color: var(--colorOnyx); 
+    color: var(--colorNaranja);    
     padding: 20px 0 0 20px;
     display: block;
     width: 30px;    
@@ -137,13 +138,18 @@ header .barraBusquedaMobile .searchBar input[type="text"]{
     header .changuito{
         display: flex;        
     }
+    header .lupita{
+        border: none;
+        background-color: var(--colorCremita);
+    }
     header .changuito img{
         max-width: 30px;
         margin-right: 10px;        
     }
     header .iconos-TabletDesktop .changuito .linkChanguito{
         font-size: 10px;
-        text-decoration: none;        
+        text-decoration: none;
+        color: var(--colorOnyx)
     }
 
     header{
