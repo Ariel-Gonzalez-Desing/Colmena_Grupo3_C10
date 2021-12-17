@@ -39,7 +39,7 @@
           
         <h2>Datos de <%= firstLetter(locals.userLogin.name) %></h2>
 
-        <form action="/users/edit?_method=PUT" id="formEdit" method="POST">
+        <!-- <form action="/users/edit?_method=PUT" id="formEdit" method="POST"> -->
         <p>
            Nombre: <input type="text" placeholder="Nombre" id="name" name="name" value="<%= firstLetter(locals.userLogin.name) %>"><br>
            <span id="error-name" class="error"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
@@ -59,6 +59,7 @@
           Ingrese contraseña actual: <input type="password" placeholder="********" id="passwordBefore" name="passwordBefore"/>
           <span id="error-passwordBefore" class="error"><%= locals.errors && errors.passwordBefore ? errors.passwordBefore.msg : null %></span>
               <span id="info-passwordBefore" class="errorVF"></span><br>
+
           Nueva contraseña: <input type="password" placeholder="********" id="password" name="password"/>
           <span id="error-password" class="error"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
               <span id="info-password" class="errorVF"></span><br>
@@ -71,7 +72,7 @@
         <span id="error-empty" class="errorVF"></span> 
 
         <button type="submit" class="button">Guardar cambios</button>
-        <a href="/" class="button">Cancelar</a>
+        <a href="/users/profile" class="button">Cancelar</a>
         </div>
     </form>
 
@@ -80,7 +81,6 @@
 
     <%-include('../partials/footer') %>
     <script src="/javascripts/profileEdit.js"></script>
-    <script src="/javascripts/avatarEdit.js"></script>
   </body>
 </html>
 
