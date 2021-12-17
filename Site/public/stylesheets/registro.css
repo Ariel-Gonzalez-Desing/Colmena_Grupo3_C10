@@ -16,7 +16,7 @@ body main .box-texto h4{
 
 .registro span.error{
     color: rgb(235, 122, 47);
-    font-size: 12px;
+    font-size: 10px;
 }
 
 
@@ -86,6 +86,9 @@ body main .box-texto h4{
 
 /*********** Tablet ***********/
 @media (min-width: 768px) {
+    .registro span.error{
+        font-size: 12px;
+    }
     .registro .box-formularios .desktopContraseñas div{
         padding-top: 15px;
     }

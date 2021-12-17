@@ -226,6 +226,10 @@ input:checked + .slider .off
     cursor: pointer;
 }
 
+.buttonEditRol{
+  display: none;
+}
+
 .contenedor .editarImagen img{
     width: 30%;
     margin: 10px 35%;

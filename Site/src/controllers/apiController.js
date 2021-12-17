@@ -79,5 +79,32 @@ module.exports = {
             })
         }
     }
+    // changeAvatar : async (req,res) => {
+    //     try {
+    //         let image = await db.User.findOne({
+    //             where: {id: req.session.userLogin.id}
+    //         })
 
+    //         await db.User.update(
+    //             {
+    //                 avatar: image.file               
+    //             },
+    //             {
+    //                 where : {id: req.session.userLogin.id}
+    //             })    
+            
+    //             let response = {
+    //             status : 200,
+    //             message : 'Imagen editada',
+    //             images
+    //         }
+    //         return res.status(201).json(response)
+        
+    //     } catch (error) {
+    //         return res.status(400).json({
+    //             status : 400,
+    //             message : error
+    //         })
+    //     }
+    // }
 }

@@ -2,7 +2,6 @@ console.log('productEdit.js success');
 
 const preview = document.getElementById('preview');
 
-
 const showPreview = array => {
     preview.innerHTML = null;
     array.forEach(image => {
@@ -50,3 +49,24 @@ const addImage = async (id,files) => {
         
     }
 }
+
+// const $ = id => document.querySelectorAll(id);  
+
+// $('imgDetalle').addEventListener('mouseover', function() {
+//     $('imgDetalle').classList.add('imgZoom');   
+// })
+
+// $('imgDetalle').addEventListener('mouseout', function() {
+//     $('imgDetalle').classList.remove('imgZoom');   
+// })
+  
+  
+
+
+// function imageEnlarge() {
+//     $('imgDetalle').classList.add(imgZoom);    
+//     }
+   
+//    function imageReset()   { 
+//     $('imgDetalle').classList.remove(imgZoom);
+//    }
