@@ -12,7 +12,8 @@
         <div class="container">
             <h2>Perfil de Usuario: <%= firstLetter(locals.userLogin.name) %></h2>
             <img src="/images/users/<%= locals.userLogin.avatar %>" alt="imagen de perfil">
-           <!-- <button class="button-img">Cambiar imagen de perfil</button> -->
+           <!-- <button id="imageEdit" class="button-img">Cambiar imagen de perfil</button> -->
+           <!-- <a onclick="changeAvatar('<=userLogin.avatar%>')">Cambiar imagen de perfil</a> -->
         
           <u class="listProfile">
               <li><a href="">Wishlist</a></li>
@@ -40,5 +41,6 @@
     </main>
 
     <%-include('../partials/footer') %>
+    <script src="/javascripts/avatarEdit.js"></script>
   </body>
 </html>

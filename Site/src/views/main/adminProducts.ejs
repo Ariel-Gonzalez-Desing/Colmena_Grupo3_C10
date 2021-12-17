@@ -33,7 +33,7 @@
             <td><div class="iconos"><a href="/products/edit/<%= product.id %> "><i class="fas fa-edit"></i></a>
               
               <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-              <button><i class="fas fa-trash-alt"></i></button>
+              <button onclick="return confirm('¿Desea eliminar el producto permanentemente?');"><i class="fas fa-trash-alt"></i></button>
             </form>
             
             </div></td>
@@ -42,5 +42,6 @@
         </tbody>
         
       </table>
+      <script src="/javascripts/productEdit.js"></script>
 </body>
 </html>

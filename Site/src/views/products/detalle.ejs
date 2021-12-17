@@ -13,7 +13,7 @@
 
           <div class="Containers">
             <% product.images.forEach(image => { %>    
-               <img src="/images/products/<%= image.file%>">    
+               <img id="imgDetalle" src="/images/products/<%= image.file%>">    
            <% }) %>
            </div>   
   
@@ -68,5 +68,6 @@
     </main>
 
     <%-include('../partials/footer') %>
+    <script src="/javascripts/productEdit.js"></script>
   </body>
 </html>
