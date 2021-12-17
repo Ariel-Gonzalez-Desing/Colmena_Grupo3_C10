@@ -36,12 +36,7 @@
                                 <span id="info-email" class="small text-info"></span>                          
                             </div>  
                         </div> 
-                        <div class="desktopContraseñas">
-                            <div>
-                                <label for="image">Foto</label>
-                                    <input class="image" type="file" id="image" name="image">
-                                    <span class="error"><%= locals.errores && errores.image ? errores.image.msg : null %></span>
-                            </div>
+                        <div class="desktopContraseñas">                            
                             <div>
                                 <label for="password">Contraseña</label>
                                 <input type="password" name="password" placeholder="" id="password" value="<%= locals.old && old.password ? old.password : null %>">                               
@@ -53,6 +48,11 @@
                                 <input type="password" name="rePassword" placeholder="" id="rePassword" value="<%= locals.old && old.rePassword ? old.rePassword : null %>">                                
                                 <span id="error-rePassword" class="error"><%= locals.errors && errors.rePassword ? errors.rePassword.msg : null %></span>
                                 <span id="info-rePassword" class="small text-info"></span>   
+                            </div>
+                            <div>
+                                <label for="image">Foto</label>
+                                    <input class="image" type="file" id="image" name="image">
+                                    <span class="error"><%= locals.errores && errores.image ? errores.image.msg : null %></span>
                             </div>
                         </div>
                     </div>
