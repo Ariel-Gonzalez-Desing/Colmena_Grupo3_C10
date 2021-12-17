@@ -83,6 +83,27 @@ body main .box-texto h4{
     background-color: var(--colorOnyxHover);
     color: var(--colorCremitaHover);
 }
+.campo{
+    position: relative;
+}
+.campo label{
+    width: 100%;
+}
+.campo input{
+    width: 100%;
+    padding: 7px;
+}
+.campo span{
+    position: absolute;
+    right: 5px;
+    top: 39px;
+    text-transform: uppercase;
+    cursor:pointer;
+    padding: 2px 10px;
+    background-color: var(--colorNaranja);
+    border-radius: 15px;
+    font-size: 13px;
+}
 
 
 
