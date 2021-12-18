@@ -32,13 +32,13 @@
             <td><%= user.lastName %></td>
             <td><div class="iconos">
 
-                <form action="/adminUsers/ <%= user.id %>?_method=PUT" method="POST">
+                <form action="/adminUsers/<%= user.id %>?_method=PUT" method="POST">
                   <!-- Toggle admin/user -->
                    <label class="switch"> 
                     <% if (user.rolId === 2) { %>
-                      <input type="checkbox" id="rolEdit" id="rolEdit" checked>              
+                      <input type="checkbox" name="rol" id="rolEdit" checked>              
                    <% } else { %>
-                    <input type="checkbox" id="rolEdit" id="rolEdit">   
+                    <input type="checkbox" name="rol" id="rolEdit">   
                      <% } %>  
                   <div class="slider round"> 
                   <!--ADDED HTML -->
@@ -47,25 +47,8 @@
                   <!--END-->
                   </div>
                 </label>
+                <button class="buttonEditRol" id="buttonEditRol">Guardar</button>
               </form>             
-
-              <!-- <form action="/adminUsers/<%= user.id %>?_method=PUT" method="POST">  
-                <% if (user.rolId === 1) { %>
-                   <input type="radio" name="rolEdit" id="rolEdit" value="1" checked> User </input><br><br>                 
-                <% } else { %>
-                   <input type="radio" name="rolEdit" id="rolEdit" value="1" > User </input><br><br>
-                  <% } %>  
-
-                <% if (user.rolId === 2) { %>
-                    <input type="radio" name="rolEdit" id="rolEdit" value="1" checked> Admin </input>
-                   
-                <% } else { %>
-                    <input type="radio" name="rolEdit" id="rolEdit" value="1" > Admin </input>
-                    <% } %>  
-                              -->
-                         
-            <button class="buttonEditRol" id="buttonEditRol">Cambiar Rol</button>
-          </form>
 
             <form action="/delete/<%= user.id %>?_method=DELETE" method="POST">
               <button onclick="return confirm('¿Desea eliminar el usuario permanentemente?');"><i class="fas fa-trash-alt"></i></button>
@@ -77,6 +60,6 @@
         </tbody>
         
       </table>
-      <script src="/javascripts/admin.js"></script>
+      <!-- <script src="/javascripts/admin.js"></script> -->
 </body>
 </html>

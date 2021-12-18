@@ -132,6 +132,10 @@ inputPassword.addEventListener('keydown', function() {
 
 })
 
+inputPassword.addEventListener('keydown', function() {
+  this.classList = null;
+})
+
 inputPasswordBefore.addEventListener('blur', function() {
   switch (true) {
     case !this.value :
@@ -150,6 +154,10 @@ inputPassword.addEventListener('keydown', function() {
 
 })
 
+inputPasswordBefore.addEventListener('keydown', function() {
+  this.classList = null;
+})
+
 inputRePassword.addEventListener('blur', function() {
   switch (true) {
       case !this.value :
@@ -166,11 +174,11 @@ inputRePassword.addEventListener('blur', function() {
           this.classList.add('is-valid');
           break;
   }
-  inputPassword.addEventListener('keydown', function() {
-    this.classList = null;
-  })
-  
-});
+})
+
+inputRePassword.addEventListener('keydown', function() {
+  this.classList = null;
+})
 
 
 formEdit.addEventListener('submit', e => {
@@ -194,13 +202,12 @@ formEdit.addEventListener('submit', e => {
     if(formEdit.elements[1].classList.contains('is-invalid') || !formEdit.elements[1].value || 
     formEdit.elements[2].classList.contains('is-invalid') || !formEdit.elements[2].value){
       error = true
-      formEdit.elements[i].classList.add('is-invalid');
+      formEdit.elements[1].classList.add('is-invalid');
       $('error-empty').innerHTML = "Los campos indicados son obligatorios" 
       console.log('error');  
       }
     }
     !error && formEdit.submit(); 
-
     })
 
 

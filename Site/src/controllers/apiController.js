@@ -79,6 +79,25 @@ module.exports = {
             })
         }
     }
+    // getPassword : async (req,res) => {
+    //     try {
+    //         let result = await db.User.findOne({
+    //             where : {
+    //                 email : req.query.email
+    //             }
+    //         }).then(user => {
+    //     if(!user || !bcrypt.compareSync(req.body.passwordBefore,user.password)){
+    //         return Promise.reject()
+    //     }
+    // })
+    //         return result ? res.status(200).json(true) : res.status(200).json(false)
+           
+    //     } catch (error) {
+    //         console.log(error)
+    //         return res.status(500).json(error)
+    //     }
+    // }
+}
     // changeAvatar : async (req,res) => {
     //     try {
     //         let image = await db.User.findOne({
@@ -107,4 +126,3 @@ module.exports = {
     //         })
     //     }
     // }
-}

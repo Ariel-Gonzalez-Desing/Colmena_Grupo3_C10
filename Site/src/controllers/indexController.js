@@ -62,19 +62,35 @@ module.exports = {
     },
     rolEdit : (req,res) => {
 
-        const {rolEdit} = req.body;
-        db.User.findByPk(req.params.id)
-        
-        .then(usuario => {
+        const {rol} = req.body;
 
-        db.User.update(
-            {roleId: rolEdit},
-            {where : {id : usuario.id}}
-        )
-            .then(() => {
-                return res.redirect('/adminUsers')
-            })
-        }).catch(error => console.log(error))
+        console.log(rol)
+        db.User.findByPk(req.params.id)
+       
+        .then(user => {
+            if(rol === 'on'){
+                db.User.update(
+                    {
+                        rolId: 2       
+                    },
+                    {
+                        where : {id: user.id}
+                    })    
+                    .then(() => {
+                        return res.redirect('/adminUsers')
+                    })
+            } else {
+                db.User.update(
+                    {
+                        rolId: 1       
+                    },
+                    {
+                        where : {id: user.id}
+                    })    
+                    .then(() => {
+                        return res.redirect('/adminUsers')
+                    }).catch(error => console.log(error))          
+            }})
     },
     deleteUser : (req,res) => {
 

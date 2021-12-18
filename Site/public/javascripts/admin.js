@@ -1,21 +1,9 @@
-const { rolEdit } = require("../../src/controllers/indexController");
+// console.log('avatarEdit.js success');
 
+// let rolEdit = document.querySelectorAll('#buttonEditRol'); 
+// let buttonEditRol = document.querySelectorAll('#buttonEditRol'); 
 
-console.log('avatarEdit.js success');
-
-let buttonEditRol = document.getElementById('buttonEditRol'); 
-
-// function editRol() {
-//     buttonEditRol.style.display = "block";    
+  
+// function buttonRol() {
+//     buttonEditRol.style.display = "inline";    
 //   }
-
-buttonEditRol.forEach(item => {
-    item.addEventListener('click', item => {
-        buttonEditRol.style.display = "block"; 
-    })
-  })
-
-  if(user.rol){   
-    document.getElementById('rolEdit').checked = 1;
-}
-
