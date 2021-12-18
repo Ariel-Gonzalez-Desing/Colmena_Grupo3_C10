@@ -1,22 +1,22 @@
 console.log('avatarEdit.js success');
 
-const changeAvatar = async id => {
-    try {
-        let response = await fetch('/api/change-avatar/' + id, {
-            method: 'PUT',
-        })
-        let result = await response.json()
-        console.log(result);
-    } catch (error) {
-        console.log(error)
-    }
-}
+// const changeAvatar = async id => {
+//     try {
+//         let response = await fetch('/api/change-avatar/' + id, {
+//             method: 'PUT',
+//         })
+//         let result = await response.json()
+//         console.log(result);
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
 
-const $ = id => document.getElementById(id); 
+// const $ = id => document.getElementById(id); 
 
-$('imageEdit').addEventListener('click', function() {
-    changeAvatar()
-  })
+// $('imageEdit').addEventListener('click', function() {
+//     changeAvatar()
+//   })
 // const addImage = async (id,files) => {
 //     let data = new FormData()
 //     for (const file of files) {

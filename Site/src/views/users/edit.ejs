@@ -16,16 +16,6 @@
            <!-- <button id="imageEdit" class="button-img">Cambiar imagen de perfil</button> -->
            <form action="/users/edit?_method=PUT" id="formEdit" method="POST" enctype="multipart/form-data">
            <input class="button-avatar" type="file" id="image" name="avatar" hidden>
-
-           <!-- form edicion imagen perfil -->
-           <!-- <form action="/users/edit?_method=PUT" id="imageUpload" class="hide">  
-              <label for="image">
-              <input class="image" type="file" id="image" name="image" multiple>
-              <span id="error-image" class="error">< %= locals.errors && errors.image ? errors.image.msg : null %></span>
-              <span id="info-image" class="errorVF"></span>
-              </label>
-            </form> -->
-             <!-- form edicion imagen perfil -->
         
           <u class="listProfile">
               <li><a href="">Wishlist</a></li>
@@ -39,7 +29,6 @@
           
         <h2>Datos de <%= firstLetter(locals.userLogin.name) %></h2>
 
-        <!-- <form action="/users/edit?_method=PUT" id="formEdit" method="POST"> -->
         <p>
            Nombre: <input type="text" placeholder="Nombre" id="name" name="name" value="<%= firstLetter(locals.userLogin.name) %>"><br>
            <span id="error-name" class="error"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
@@ -68,8 +57,8 @@
               <span id="info-rePassword" class="errorVF"></span>
        </p>  
       </div>
-
-        <span id="error-empty" class="errorVF"></span> 
+      <br>
+        <span id="error-empty" class="error"></span> 
 
         <button type="submit" class="button">Guardar cambios</button>
         <a href="/users/profile" class="button">Cancelar</a>

@@ -215,6 +215,7 @@
 .profile span.error{
   color: rgb(235, 122, 47);
   font-size: 12px;
+  display: block;
 }
   
   .profile .button {

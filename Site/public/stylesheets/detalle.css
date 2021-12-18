@@ -175,14 +175,16 @@ ul.slider li:target {
   .detalle .imagenProducto {
     width: 40%;
     margin: 0;
-    padding: 0;
+    padding: 0;    
+    cursor:zoom-in;
   }
 
-  /* .detalle .imgZoom{
+  .detalle .imgZoom{
     width: 100% !important;
     height: 100% !important;
-    position: absolute !important;
-  } */
+    position: relative !important;
+    cursor: zoom-out;
+  }
 /* 
   .detalle .imagenProducto img:hover{
     width: 100%;
