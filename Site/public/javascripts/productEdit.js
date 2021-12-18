@@ -49,60 +49,9 @@ const addImage = async (id,files) => {
         
     }
 }
-
-// document.querySelectorAll("[id^='this_div_id']")
-   
-
-const $ = id => document.getElementById(id);  
-let images = document.querySelectorAll('.imgDetalle');
-
-// $('imgDetalle').addEventListener('click', function() {
-//     $('imgDetalle').classList.toggle('imgZoom');   
-// })
-
-images.forEach((item) => {
-    item.addEventListener('click', () => { 
-        $('imgDetalle').classList.toggle('imgZoom');
-    });
-})
-
-
-// const $ = id => document.getElementById(id);  
-
-// const imgs = document.querySelectorAll('#imgDetalle')
-
-// var div_list = document.querySelectorAll('Containers'); // returns NodeList
-// var div_array = [...div_list]; // converts NodeList to Array
-
-// div_array.forEach(imgs => {
-
-// imgs.addEventListener('click', function() {
-//     imgs.classList.toggle('imgZoom');   
-
-// })
-// })
-
-// -------------------
-
-// $('imgDetalle').addEventListener('change', function() {
-//     $('imgDetalle').classList.remove('imgZoom');   
-// })
-  
-  
-
-// const $ = id => document.querySelectorAll('#id');  
-// const imgDetalle = document.getElementById('#imgDetalle')
-// const img = document.getElementById('#img')
-
-// imgDetalle.addEventListener('click', function() {
-//     img.classList.toggle('.imgZoom');   
-// })
-
-
-// function imageEnlarge() {
-//     $('imgDetalle').classList.add(imgZoom);    
-//     }
-   
-//    function imageReset()   { 
-//     $('imgDetalle').classList.remove(imgZoom);
-//    }
+      const rotateImage = (id, event) => {
+        const img = event.target.id;
+        const srcImg = document.getElementById('imgDetalle0').src
+        document.getElementById('imgDetalle0').setAttribute('src',event.target.src);
+        event.target.src = srcImg
+      }

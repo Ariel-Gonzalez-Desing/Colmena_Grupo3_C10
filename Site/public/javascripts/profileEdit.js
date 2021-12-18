@@ -90,7 +90,7 @@ inputName.addEventListener('keydown', function() {
 inputLastName.addEventListener('blur', function() {
   switch (true) {
       case !this.value :
-          $('error-lastName').innerText = "El nombre es requerido";
+          $('error-lastName').innerText = "El apellido es requerido";
           this.classList.add('is-invalid');
           break;
       case (this.value.length < 2) :

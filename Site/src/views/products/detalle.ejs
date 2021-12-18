@@ -12,10 +12,10 @@
         <div class="container">
 
           <div class="Containers">
-            <% product.images.forEach(image => { %>    
-               <img id="imgDetalle" class="imgDetalle" src="/images/products/<%= image.file%>">    
+            <% product.images.forEach((image,index) => { %>    
+               <img id="imgDetalle<%= index %>" src="/images/products/<%= image.file%>" onclick="rotateImage('imgDetalle<%= index %>', event)">    
            <% }) %>
-           </div>   
+           </div>
   
           <!-- <ul class="slider">
             <li id="slide1">

@@ -176,21 +176,7 @@ ul.slider li:target {
     width: 40%;
     margin: 0;
     padding: 0;    
-    cursor:zoom-in;
   }
-
-  .detalle .imgZoom{
-    width: 100% !important;
-    height: 100% !important;
-    position: relative !important;
-    cursor: zoom-out;
-  }
-/* 
-  .detalle .imagenProducto img:hover{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  } */
 
   .detalle .Containers img {
     width: 130px;
@@ -224,11 +210,7 @@ ul.slider li:target {
     text-align: left;
     padding: 0;
   }
-/* .detalle .imagenProducto img {  
-  height: 150px; 
-  width: 50%;
-  padding: 10px;
-} */
+  
   .detalle .imagenProducto img:first-child {
     height: 240px; 
     width: 100%;
