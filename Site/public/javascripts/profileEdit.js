@@ -128,10 +128,14 @@ inputPassword.addEventListener('blur', function() {
 }
 })
 
+inputPassword.addEventListener('keydown', function() {
+  this.classList = null;
+})
+
 inputPasswordBefore.addEventListener('blur', function() {
   switch (true) {
     case !this.value :
-        $('error-passwordBefore').innerText = "La contraseña anterior es requerida";
+        $('error-passwordBefore').innerText = "La contraseña actual es requerida";
         this.classList.add('is-invalid')
         break;
     default:      
@@ -140,6 +144,10 @@ inputPasswordBefore.addEventListener('blur', function() {
         this.classList.add('is-valid');
         break;
 }
+})
+
+inputPasswordBefore.addEventListener('keydown', function() {
+  this.classList = null;
 })
 
 inputRePassword.addEventListener('blur', function() {
@@ -158,7 +166,11 @@ inputRePassword.addEventListener('blur', function() {
           this.classList.add('is-valid');
           break;
   }
-});
+})
+
+inputRePassword.addEventListener('keydown', function() {
+  this.classList = null;
+})
 
 
 formEdit.addEventListener('submit', e => {
@@ -182,13 +194,12 @@ formEdit.addEventListener('submit', e => {
     if(formEdit.elements[1].classList.contains('is-invalid') || !formEdit.elements[1].value || 
     formEdit.elements[2].classList.contains('is-invalid') || !formEdit.elements[2].value){
       error = true
-      formEdit.elements[i].classList.add('is-invalid');
+      formEdit.elements[1].classList.add('is-invalid');
       $('error-empty').innerHTML = "Los campos indicados son obligatorios" 
       console.log('error');  
       }
     }
     !error && formEdit.submit(); 
-
     })
 
 
