@@ -177,7 +177,7 @@ $('form-register').addEventListener('submit', e => {
     let error = false;
     const elementos = $('form-register').elements;
     
-    for (let i = 0; i < elementos.length - 2; i++) {
+    for (let i = 0; i < elementos.length - 3; i++) {
         
         if(!elementos[i].value){
             elementos[i].classList.add('is-invalid');

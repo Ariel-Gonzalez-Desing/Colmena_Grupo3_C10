@@ -13,9 +13,6 @@ const emailVerify = async email => {
 }
 
 /* expresiones regulares */
-const regExLetras = /^[_A-zA-Z]*((-|\s)*[_A-zA-Z])*$/;
-const regExExtension = /(.jpg|.jpeg|.png|.gif)$/i;
-const regExNumber = /^[0-9]+$/;
 const regExEmail = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 const regExPassword = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/ 
 

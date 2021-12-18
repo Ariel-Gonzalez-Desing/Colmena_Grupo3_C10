@@ -30,22 +30,14 @@ body main .box-texto h4{
     width: 90%;       
 }
 
-/* .registro div{
-    padding-top: 25px;
+.registro label{
+    margin: 10px 0;
 }
-.registro label[for="name"], label[for="password"], label[for="rePassword"], label[for="email"], label[for="lastname"], label[for="image"]{
-    padding-left: 15px;
-} */
-/* .registro div{
-    padding-top: 20px;
-} */
-
 .registro .desktopContraseñas {
     padding-top: 0px;
 }
 
-/* .registro input[type="password"], input[for="rePassword"], input[type="text"], input[type="email"]{
-    border-radius: 15px;   */
+
 
 .registro input[type="password"], input[type="text"], input[type="email"]{
     border-radius: 5px;    
@@ -55,11 +47,12 @@ body main .box-texto h4{
     display: flex;
     flex-wrap: wrap;
     padding-left: 5px;
-    height: 22px;
+    height: 22px;    
 }
 
 .registro .yaTengoCuenta{
     display: block;    
+    margin: 10px 0 10px;
 }
 .registro .yaTengoCuenta a{
     text-decoration: none;
@@ -84,7 +77,12 @@ body main .box-texto h4{
     color: var(--colorCremitaHover);
 }
 
-
+.registro .box-formularios .desktopRegistro div{
+    padding-top: 15px;
+}
+.registro .box-formularios .desktopContraseñas div{
+    padding-top: 15px;
+}
 
 /*********** Tablet ***********/
 @media (min-width: 768px) {
@@ -158,5 +156,7 @@ body main .box-texto h4{
         padding-top: 50px;
         justify-content: space-evenly;
     }
-    
+    .registro .yaTengoCuenta{           
+        margin: 0;
+    }
 }

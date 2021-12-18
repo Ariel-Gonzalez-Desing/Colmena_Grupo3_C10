@@ -126,6 +126,10 @@ inputPassword.addEventListener('blur', function() {
         this.classList.add('is-valid');
         break;
 }
+inputPassword.addEventListener('keydown', function() {
+  this.classList = null;
+})
+
 })
 
 inputPassword.addEventListener('keydown', function() {
@@ -144,6 +148,10 @@ inputPasswordBefore.addEventListener('blur', function() {
         this.classList.add('is-valid');
         break;
 }
+inputPassword.addEventListener('keydown', function() {
+  this.classList = null;
+})
+
 })
 
 inputPasswordBefore.addEventListener('keydown', function() {

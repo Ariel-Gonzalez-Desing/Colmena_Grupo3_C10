@@ -27,7 +27,11 @@ h3{
     font-size: 12px;
 }
 
-
+.login .crearCuenta a{
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--colorOnyx);
+}
 
 
 .login input[type="password"], input[type="text"]{
