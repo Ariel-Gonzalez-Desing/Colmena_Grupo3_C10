@@ -191,7 +191,7 @@ input:checked + .slider .off
 }
 
 .add .contenedor .container-input-mitad input{
-    width: 49%;
+    width: 49% !important;
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 5px;

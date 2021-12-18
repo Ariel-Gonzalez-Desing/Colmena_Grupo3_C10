@@ -15,7 +15,7 @@
                     <% products.forEach(product => { %>
                       <div class="prodUnidad">
                         <a href="/products/detail/<%= product.id %>"><img src="/images/products/<%= product.images[0].file %>" alt="imagen de producto">
-                            <p><%= firstLetter(product.size) %><br><%= firstLetter(product.name) %></p>
+                            <p><%= firstLetter(product.name) %><br><%= firstLetter(product.size.name) %></p>
                             <a href="/products/detail/<%= product.id %>" class="button">VER MAS</a></a>
                     </div>
                     <% }) %>

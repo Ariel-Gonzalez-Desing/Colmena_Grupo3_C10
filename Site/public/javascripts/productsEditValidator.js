@@ -94,10 +94,6 @@ inputSize.addEventListener('blur', function() {
             $('error-size').innerText = "El tamaño es requerido";
             this.classList.add('is-invalid')
             break;
-            case (this.value.length < 2) :
-                $('error-size').innerText = "Mínimo 2 caracteres";
-                this.classList.add('is-invalid');
-                break;
         default:
             $('error-size').innerText = null;
             this.classList.remove('is-invalid');

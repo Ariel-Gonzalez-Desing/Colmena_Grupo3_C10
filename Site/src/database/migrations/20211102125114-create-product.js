@@ -20,10 +20,6 @@ module.exports = {
         type: Sequelize.DECIMAL(8,2),
         allowNull: false,
       },
-      size:{
-        type: Sequelize.STRING(50),
-        allowNull: false,
-      },
       categoryId: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -45,7 +41,18 @@ module.exports = {
           key : 'id',
           update : 'cascade'
         }
-      },
+      },      
+      sizeId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model:{
+            tableName: "Sizes"
+          },
+          key : 'id',
+          update : 'cascade'
+        }
+      }, 
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

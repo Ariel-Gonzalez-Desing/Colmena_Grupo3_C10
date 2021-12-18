@@ -20,7 +20,7 @@
 let products = [
    {
      "name": "Miel chica",
-     "size": "75gr",
+     "sizeId": 1,
      "price": 300,   
      "categoryId": 1,     
      "displayId": 1,
@@ -29,7 +29,7 @@ let products = [
   },
   {
      "name": "Miel Mediana",
-     "size": "125gr",
+     "sizeId": 2,
      "price": 500,   
      "categoryId": 1,     
      "displayId": 1,
@@ -38,7 +38,7 @@ let products = [
   },
   {
      "name": "Miel Grande",
-     "size": "200gr",
+     "sizeId": 3,
      "price": 700,   
      "categoryId": 1,     
      "displayId": 2,
@@ -47,7 +47,7 @@ let products = [
   },
   {
      "name": "Panal",
-     "size": "250gr",
+     "sizeId": 4,
      "price": 1000,   
      "categoryId": 1,     
      "displayId": 2,
@@ -56,7 +56,7 @@ let products = [
   },
   {
      "name": "Llavero",
-     "size": "unidad",
+     "sizeId": 6,
      "price": 200,   
      "categoryId": 2,     
      "displayId": 2,
@@ -65,7 +65,7 @@ let products = [
   },
   {
      "name": "Palito Mielero",
-     "size": "unidad",
+     "sizeId": 6,
      "price": 300,   
      "categoryId": 3,     
      "displayId": 2,
@@ -74,7 +74,7 @@ let products = [
   },
   {
      "name": "Frasco para Miel",
-     "size": "unidad",
+     "sizeId": 6,
      "price": 400,   
      "categoryId": 3,     
      "displayId": 2,
@@ -83,7 +83,7 @@ let products = [
   },
   {
      "name": "Remera help-plant-clean",
-     "size": "talle unico",
+     "sizeId": 5,
      "price": 450,   
      "categoryId": 4,     
      "displayId":2,
@@ -92,7 +92,7 @@ let products = [
   },
   {
      "name": "Remera Save the Bees",
-     "size": "todos los talles",
+     "sizeId": 5,
      "price": 450,   
      "categoryId": 4,     
      "displayId": 1,
