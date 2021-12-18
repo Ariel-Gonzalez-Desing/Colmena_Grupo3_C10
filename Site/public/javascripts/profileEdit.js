@@ -126,12 +126,16 @@ inputPassword.addEventListener('blur', function() {
         this.classList.add('is-valid');
         break;
 }
+inputPassword.addEventListener('keydown', function() {
+  this.classList = null;
+})
+
 })
 
 inputPasswordBefore.addEventListener('blur', function() {
   switch (true) {
     case !this.value :
-        $('error-passwordBefore').innerText = "La contraseña anterior es requerida";
+        $('error-passwordBefore').innerText = "La contraseña actual es requerida";
         this.classList.add('is-invalid')
         break;
     default:      
@@ -140,6 +144,10 @@ inputPasswordBefore.addEventListener('blur', function() {
         this.classList.add('is-valid');
         break;
 }
+inputPassword.addEventListener('keydown', function() {
+  this.classList = null;
+})
+
 })
 
 inputRePassword.addEventListener('blur', function() {
@@ -158,6 +166,10 @@ inputRePassword.addEventListener('blur', function() {
           this.classList.add('is-valid');
           break;
   }
+  inputPassword.addEventListener('keydown', function() {
+    this.classList = null;
+  })
+  
 });
 
 
