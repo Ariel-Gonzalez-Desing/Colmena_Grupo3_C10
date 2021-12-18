@@ -56,7 +56,15 @@
           </div>
 
           <div class="container-input-mitad">
-            <input type="text" placeholder="Tamaño" id="size" name="size" value=<%= firstLetter(product.size) %>>             
+            <!-- <input type="text" placeholder="Tamaño" id="size" name="size" value=< %= firstLetter(product.size) %>>              -->
+
+            <select class="form-select" id="size" aria-label="Floating label select example" name="size">
+              <option value="" selected hidden>Selecciona el tamaño</option>
+              <% sizes.forEach(size => { %>
+                <option value="<%= size.id %>" <%= product.sizeId === size.id ? 'selected' : null%>><%= firstLetter(size.name) %></option>
+              <% }) %>
+            </select>
+
             <span id="error-size" class="error-half"><%= locals.errors && errors.size ? errors.size.msg : null %></span>   
             <span id="info-size" class="errorVF"></span> 
 

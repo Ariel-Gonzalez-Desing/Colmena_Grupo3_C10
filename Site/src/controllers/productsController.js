@@ -17,14 +17,16 @@ module.exports = {
         
         let categories = db.Category.findAll()
         let displays = db.Display.findAll()
+        let sizes = db.Size.findAll()
 
-        Promise.all(([categories, displays]))
+        Promise.all(([categories, displays, sizes]))
 
-            .then(([categories, displays]) => {
+            .then(([categories, displays, sizes]) => {
                 return res.render('products/productAdd', {
                     title : 'Agregar producto',
                     categories,
                     displays,
+                    sizes,
                     firstLetter
                 })
             }) 
@@ -41,7 +43,7 @@ module.exports = {
 
         db.Product.create({
             name : name.trim(),
-            size: size.trim(),
+            sizeId: size.trim(),
             price : +price,
             categoryId: category,
             displayId: display,
@@ -79,13 +81,15 @@ module.exports = {
 
             let categories = db.Category.findAll()
             let displays = db.Display.findAll()
+            let sizes = db.Size.findAll()
 
-            Promise.all([categories, displays])
-            .then(([categories, displays]) => {
+            Promise.all([categories, displays, sizes])
+            .then(([categories, displays, sizes]) => {
                 return res.render('products/productAdd', {
                     title: 'Agregar producto',
                     categories,
                     displays,
+                    sizes,
                     firstLetter,
                     errors,
                     old: req.body
@@ -96,14 +100,16 @@ module.exports = {
     },
 
     productsList : (req,res) => {
-
-        db.Product.findAll({
-            include: ['images']
+        let size = db.Size.findAll()
+        let products = db.Product.findAll({
+            include: ['images', 'size']
         })
-            .then(products => {
+        Promise.all([products, size])
+            .then(([products, size]) => {
                 return res.render('products/productsList', {
                     title : 'Listado de productos',           
                     products,
+                    size,
                     firstLetter
                 });
             })
@@ -144,16 +150,18 @@ module.exports = {
         })
         let categories = db.Category.findAll()
         let displays = db.Display.findAll()
+        let sizes = db.Size.findAll()
 
-        Promise.all([product,categories, displays])
+        Promise.all([product,categories, displays, sizes])
         
-        .then(([product, categories, displays]) => {
+        .then(([product, categories, displays, sizes]) => {
             return res.render('products/productEdit', {
                 title : 'Editar producto',
                 firstLetter,
                 categories,
                 product,
-                displays
+                displays,
+                sizes
             });
         })
         .catch(error => console.log(error))
@@ -214,15 +222,17 @@ module.exports = {
         let product = db.Product.findByPk(req.params.id)
         let categories = db.Category.findAll()
         let displays = db.Display.findAll()
+        let sizes = db.Size.findAll()
     
-        Promise.all([product, categories, displays])
+        Promise.all([product, categories, displays, sizes])
     
-        .then(([product,categories, displays]) => {
+        .then(([product,categories, displays, sizes]) => {
             return res.render('products/productEdit', {
                 title: 'Editar producto',
                 categories,
                 product,
                 displays,
+                sizes,
                 firstLetter,
                 errors: errors.mapped(),
                 old: req.body
@@ -259,14 +269,16 @@ module.exports = {
             include: ['images', 'category']
         })
         let categories = db.Category.findAll()
+        let sizes = db.Size.findAll()
 
-        Promise.all([products, categories])
+        Promise.all([products, categories, sizes])
 
-            .then(([products, categories]) => {
+            .then(([products, categories, sizes]) => {
                 /* return res.send(products) */
                 return res.render('./products/productsList', {
                     products,
                     categories,
+                    sizes,
                     title: 'Resultado de la búsqueda'
                 })
             })

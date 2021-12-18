@@ -10,36 +10,39 @@ const firstLetter = require('../utils/firstLetter');
 
 module.exports = {
     index : (req,res) => {
-
-        db.Product.findAll({
-            include : ['images', 'display'],
+        let size = db.Size.findAll()
+        let destacados = db.Product.findAll({
+            include : ['images', 'display', 'size'],
             where : {
                 displayId : 1
             },
             limit : 3
         })
-            .then(destacados => {
+        Promise.all([destacados, size])
+            .then(([destacados, size]) => {
                 return res.render('main/index', { 
                     title: 'Colmena',
                     destacados,
+                    size,
                     firstLetter            
                 })
             })
             .catch(error => console.log(error))               
     },
     adminProducts : (req,res) => {
-
+        let size = db.Size.findAll()
         let products = db.Product.findAll({
-            include : ['images']
+            include : ['images', 'size']
         })
         let categories = db.Category.findAll()
 
-        Promise.all([products, categories])
-            .then(([products, categories]) => {
+        Promise.all([products, categories, size])
+            .then(([products, categories, size]) => {
                 return res.render('main/adminProducts', { 
                     title: 'Admin Colmena',
                     products, 
-                    categories
+                    categories,
+                    size
                 })
             })        
     },

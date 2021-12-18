@@ -23,14 +23,18 @@ module.exports = (sequelize, DataTypes) => {
       Product.belongsTo(models.Display,{
         as : 'display',
         foreignKey : 'displayId'
-      })
+      }),
+      Product.belongsTo(models.Size,{
+        as : 'size',
+        foreignKey : 'sizeId'
+      })    
     }
   };
   Product.init({
     name: DataTypes.STRING,
     description: DataTypes.STRING,
     price: DataTypes.DECIMAL,
-    size: DataTypes.STRING,
+    sizeId: DataTypes.STRING,
     categoryId: DataTypes.INTEGER,
     displayId: DataTypes.INTEGER
   }, {
