@@ -16,7 +16,11 @@
            <!-- <button id="imageEdit" class="button-img">Cambiar imagen de perfil</button> -->
            <form action="/users/edit?_method=PUT" id="formEdit" method="POST" enctype="multipart/form-data">
            <input class="button-avatar" type="file" id="image" name="avatar" hidden>
-
+           
+           <form id="uploadForm" action="upload.php" method="post">
+             <input type="file" name="imagen" id="imagen"/>
+             <imput type= "submit"/>
+           </form>
            <!-- form edicion imagen perfil -->
            <!-- <form action="/users/edit?_method=PUT" id="imageUpload" class="hide">  
               <label for="image">
@@ -80,7 +84,24 @@
     </main>
 
     <%-include('../partials/footer') %>
+    
     <script src="/javascripts/profileEdit.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+    <script type="text/javascript">
+      (function(){
+        function filePreview(input){
+         if (input.files && input.files[0]){
+           var reader = new FileReader();
+           reader.onload = function (e){
+             $('#imagePreview').html("<img src='"+e.target.result+"' />");
+           }
+           reader.readAsDataURL(input.files[0]);
+         }
+        }
+        $('#imagen').change(function(){
+          filePreview(this)
+        });
+      })();
+    </script>
   </body>
 </html>
-

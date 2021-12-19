@@ -1,92 +1,128 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%-include('../partials/head') %>
+<%-include('../partials/head') %><!-- Los partials tienen un espacio luego de los 2 puntos, quitarselo -->
 
-<body> 
+    <body>
 
-    <%-include('../partials/header') %>
-    
-    <main>
-         <div class="box-texto">
-                <h3>Formulario de registro</h3> 
-                <h4>Complete los siguientes campos para registrarse en nuestro sitio.</h4>  
-        </div>   
-        <div class="registro">           
-            <div class="box-formularios">
-                <form action="" method="POST" id="form-register" enctype="multipart/form-data">
-                    <div class="box-2">
-                        <div class="desktopRegistro">
-                            <div>
-                                <label for="name">Nombre</label>
-                                <input type="text" name="name" placeholder="" id="name" value="<%= locals.old && old.name ? old.name : null %>">
-                                <span id="error-name" class="error"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
-                                <span id="info-name" class="small text-info"></span>                  
-                            </div>  
-                            <div>
-                                <label for="lastname">Apellido</label>
-                                <input type="text" name="lastname" placeholder="" id="lastname" value="<%= locals.old && old.lastname ? old.lastname : null %>">                                 
-                                <span id="error-lastname" class="error"><%= locals.errors && errors.lastname ? errors.lastname.msg : null %></span>
-                                <span id="info-lastname" class="small text-info"></span>                           
-                            </div>  
-                            <div>
-                                <label for="email">Email</label>
-                                <input type="text" name="email" placeholder="" id="email" value="<%= locals.old && old.email ? old.email : null %>">
-                                <span id="error-email" class="error"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
-                                <span id="info-email" class="small text-info"></span>                          
-                            </div>  
-                        </div> 
-                        <div class="desktopContraseñas">
-                            <div>
-                                <label for="image">Foto</label>
-                                    <input class="image" type="file" id="image" name="image">
-                                    <span class="error"><%= locals.errores && errores.image ? errores.image.msg : null %></span>
-                            </div>
-                            <div class="campo">
-                                <label for="password">Contraseña</label>
-                                <input type="password" name="password" placeholder="" id="password" value="<%= locals.old && old.password ? old.password : null %>">                               
-                                <span id="error-password" class="error"><%= locals.errors && errors.password ? errors.password.msg : null %></span> 
-                                <span id="info-password" class="small text-info"></span>
-                              <span>Mostrar</span>
-                            </div>   
-                            
-                            <div class="campo">
-                                <label for="password">Confirmar Contraseña</label>
-                                <input type="password" name="password" id="password">
-                                <span id="error-rePassword" class="error"><%= locals.errors && errors.rePassword ? errors.rePassword.msg : null %></span>
-                                <span id="info-rePassword" class="small text-info"></span>
-                                <span>Mostrar</span>
-                            </div>
+        <%-include('../partials/header') %><!-- Los partials tienen un espacio luego de los 2 puntos, quitarselo -->
+
+            <main>
+                <div class="box-texto">
+                    <h3>Formulario de registro</h3>
+                    <h4>Complete los siguientes campos para registrarse en nuestro sitio.</h4>
+                </div>
+
+                 <!-- contenedor de la imagen -->
+                 <div style="height: 40px; width: 40px;">
+                    <img id="showImage" class="w-100" src="/images/users/default.jpg" alt="Imagen de perfil">
+                </div>
+                
+                <div class="registro">
                     
-                    <div class="box-3">
-                        <div class="yaTengoCuenta">
-                            <p>¿Ya tenés una cuenta? <a href="/users/login">Iniciar sesión</a></p>
-                        </div>
-                        <div class="botonAcceptCancel">
-                            <input type="reset" name="" value="Cancelar">
-                            <input type="submit" name="" value="Registrarse">                            
-                        </div>
+                    <div class="box-formularios">
+                        
+                        <form action="" method="POST" id="form-register" enctype="multipart/form-data">
+                            <div class="box-2">
+                                <div class="desktopRegistro">
+                                    <div>
+                                        <label for="name">Nombre</label>
+                                        <input type="text" name="name" placeholder="" id="name"
+                                            value="<%= locals.old && old.name ? old.name : null %>">
+                                        <span id="error-name" class="error">
+                                            <%= locals.errors && errors.name ? errors.name.msg : null %>
+                                        </span>
+                                        <span id="info-name" class="small text-info"></span>
+                                    </div>
+                                    <div>
+                                        <label for="lastname">Apellido</label>
+                                        <input type="text" name="lastname" placeholder="" id="lastname"
+                                            value="<%= locals.old && old.lastname ? old.lastname : null %>">
+                                        <span id="error-lastname" class="error">
+                                            <%= locals.errors && errors.lastname ? errors.lastname.msg : null %>
+                                        </span>
+                                        <span id="info-lastname" class="small text-info"></span>
+                                    </div>
+                                    <div>
+                                        <label for="email">Email</label>
+                                        <input type="text" name="email" placeholder="" id="email"
+                                            value="<%= locals.old && old.email ? old.email : null %>">
+                                        <span id="error-email" class="error">
+                                            <%= locals.errors && errors.email ? errors.email.msg : null %>
+                                        </span>
+                                        <span id="info-email" class="small text-info"></span>
+                                    </div>
+                                </div>
+                               
+                                <div class="desktopContraseñas">
+                                    <!-- INPUT FILE -->
+                                    <div>
+                                        <label for="image">Foto</label>
+                                        <input class="image" type="file" id="image" name="image">
+                                        <span class="error">
+                                            <%= locals.errores && errores.image ? errores.image.msg : null %>
+                                        </span>
+                                    </div>
+
+
+                                    <div class=""><!-- quite class campo que rompia el mensaje -->
+                                        <label for="password">Contraseña</label>
+                                        <input type="password" name="password" placeholder="" id="password"
+                                            value="<%= locals.old && old.password ? old.password : null %>">
+                                        <span id="error-password" class="error">
+                                            <%= locals.errors && errors.password ? errors.password.msg : null %>
+                                        </span>
+                                        <span id="info-password" class="small text-info"></span>
+                                        <!-- hice un evento onClick en la etiqueta y le pase los parametros (evento y id o clase para capturar el input deseado) -->
+                                        <span onclick="passWatch(event,'#password')">Mostrar</span>
+                                        <!-- hay que darle estilo para que parezca un boton -->
+                                    </div>
+
+                                    <div class="">
+                                        <label for="password">Confirmar Contraseña</label>
+                                        <input type="password" name="password" id="rePassword">
+                                       <!-- id de input debe ser rePassword (la validacion lo espera asi) -->
+                                        <span id="error-rePassword" class="error">
+                                            <%= locals.errors && errors.rePassword ? errors.rePassword.msg : null %>
+                                        </span>
+                                        <span id="info-rePassword" class="small text-info"></span>
+                                        <!-- hice un evento onClick en la etiqueta y le pase los parametros (evento y id o clase para capturar el input deseado) -->
+                                        <span onclick="passWatch(event,'#rePassword')">Mostrar</span>
+                                        <!-- hay que darle estilo para que parezca un boton -->
+                                    </div>
+
+                                    <div class="box-3">
+                                        <div class="yaTengoCuenta">
+                                            <p>¿Ya tenés una cuenta? <a href="/users/login">Iniciar sesión</a></p>
+                                        </div>
+                                        <div class="botonAcceptCancel">
+                                            <input type="reset" name="" value="Cancelar">
+                                            <input type="submit" name="" value="Registrarse">
+                                        </div>
+                                    </div>
+                        </form>
+
                     </div>
-                </form>  
-            </div>                      
-        </div>       
-    </main>
-    <%-include('../partials/footer') %>
-    
-    <script src="/javascripts/registerValidator.js"></script>
-    <script>
-        document.querySelector('.campo').addEventListener('click', e => {
-    const passwordInput = document.querySelector('#password');
-    if(e.target.classList.contains('show')) {
-        e.target.classList.remove('show');
-        e.target.textContent = 'Ocultar';
-        passwordInput.type = 'text';
-    } else {
-        e.target.classList.add('show');
-        e.target.textContent = 'Mostrar';
-        passwordInput.type = 'password';
-    }
-});
-    </script>
-</body>
+                </div>
+            </main>
+            <%-include('../partials/footer') %><!-- Los partials tienen un espacio luego de los 2 puntos, quitarselo -->
+            
+                <script src="/javascripts/registerValidator.js"></script>
+                <script>
+                    // como tiene 2 inputs con la misma logica hicimos una funcion, reconocimos que tiene que cambiar en cada caso y lo pusimos por parametro en la funcion
+                    function passWatch(e, idClass) {//necesita el evento y el id o clase que va a capturar el query selector
+                        const passwordInput = document.querySelector(idClass);
+                        if (e.target.classList.contains('show')) {
+                            e.target.classList.remove('show');
+                            e.target.innerHTML = 'Ocultar';
+                            passwordInput.type = 'text';
+                        } else {
+                            e.target.classList.add('show');
+                            e.target.innerHTML = 'Mostrar';
+                            passwordInput.type = 'password';
+                        }
+                    }
+                </script>
+    </body>
+
 </html>

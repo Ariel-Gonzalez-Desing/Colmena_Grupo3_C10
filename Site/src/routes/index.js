@@ -12,5 +12,8 @@ router.get('/adminUsers', adminUserCheck, adminUsers);
 router.put('/adminUsers/:id', rolEdit);
 router.delete('/delete/:id', deleteUser);
 
+/* Consulta*/
+router.post('/consult', consultValidator);
+
 
 module.exports = router;

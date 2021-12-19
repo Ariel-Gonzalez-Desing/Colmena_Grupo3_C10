@@ -9,9 +9,10 @@ body main .box-texto h4{
 
 .registro{
     font-size: 16px;
-    display: flex;  
+    display: flow-root;
     justify-content: center;
-    flex-wrap: wrap;  
+    flex-wrap: wrap;
+    margin-top: 100px;
 }
 
 .registro span.error{
