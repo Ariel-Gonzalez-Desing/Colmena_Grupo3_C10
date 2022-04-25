@@ -1,0 +1,83 @@
+[
+   {
+      "id": 1,
+      "name": "Allianora",
+      "lastname": "Buckle",
+      "email": "abuckle0@fastcompany.com",
+      "password": "3VXZ9IpH1C",
+      "avatar": "default.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 2,
+      "name": "Kirsten",
+      "lastname": "Rudgley",
+      "email": "krudgley1@loc.gov",
+      "password": "HyAUUvDVF",
+      "avatar": "default.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 3,
+      "name": "Cindra",
+      "lastname": "Ghilardi",
+      "email": "cghilardi2@cnet.com",
+      "password": "BlMzRgUV84S1",
+      "avatar": "default.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 4,
+      "name": "Delmer",
+      "lastname": "Lewson",
+      "email": "dlewson3@msn.com",
+      "password": "RuM62VXuEpT",
+      "avatar": "default.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 5,
+      "name": "Jase",
+      "lastname": "Killby",
+      "email": "jkillby4@theguardian.com",
+      "password": "g88deag",
+      "avatar": "default.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 6,
+      "name": "dani",
+      "lastname": "Rodriguez",
+      "email": "danirodriguez@yahoo.com.ar",
+      "password": "$2a$05$tp5YjK6jENypSvbBTKnGQu9OtYtrQPYBTTfShjmdh2NuXCWfKDN8W",
+      "avatar": "img1.png",
+      "rol": "admin"
+   },
+   {
+      "id": 6,
+      "name": "fernanda",
+      "lastname": "elola",
+      "email": "elolafernanda@yahoo.com.ar",
+      "password": "$2a$05$tp5YjK6jENypSvbBTKnGQu9OtYtrQPYBTTfShjmdh2NuXCWfKDN8W",
+      "avatar": "img4.png",
+      "rol": "user"
+   },
+   {
+      "id": 7,
+      "name": "ariel",
+      "lastname": "gonzalez",
+      "email": "arielgonzalez@yahoo.com.ar",
+      "password": "$2a$05$DCatfrj7ZIxnnsFY08sXp.2lMh04FeO7W.nkgiRF6mH.PgUjTHD3G",
+      "avatar": "img3.png",
+      "rol": "user"
+   },
+   {
+      "id": 6,
+      "name": "joel",
+      "lastname": "jurado",
+      "email": "joeljurado@yahoo.com.ar",
+      "password": "$2a$05$tp5YjK6jENypSvbBTKnGQu9OtYtrQPYBTTfShjmdh2NuXCWfKDN8W",
+      "avatar": "img2.png",
+      "rol": "admin"
+   }
+]

@@ -1,0 +1,266 @@
+.carrito {
+  background-color: var(--colorCremita);
+}
+
+.carrito .button {
+  background-color: var(--colorOnyx);
+  border: none;
+  color: var(--colorNaranja);
+  padding: 5px 40px;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.carrito .button:hover {
+  background-color: var(--colorOnyxHover);
+}
+
+.carrito a {
+  text-decoration: none;
+  color: var(--colorOnyx);
+}
+
+.carrito h2 {
+  padding: 15px 0;
+  margin-left: 10px;
+}
+
+.carrito .general p {
+  font-size: 14px;
+}
+
+.carrito .general {
+  margin: 0 10px;
+}
+.carrito .general .carritoProductos {
+  border-top: 1px solid var(--colorDarkVanilla);
+}
+
+.carrito .general .carritoProductos article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carrito .general .carritoProductos article i {
+  margin-bottom: 12px;
+}
+
+.carrito .general .carritoProductos article img {
+  width: 70px;
+}
+
+.carrito .general .carritoProductos article div {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.carrito .general form {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid var(--colorDarkVanilla);
+  border-radius: 10px;
+  padding: 5px;
+  margin: auto;
+}
+
+.carrito .general form input {
+  border: none;
+  text-align: center; 
+}
+
+.carrito .general form input:focus {
+  outline: none;
+}
+
+.carrito .general form button {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.carrito .general .sumar {
+  position: absolute;
+  left: 30%;
+}
+.carrito .general .sumar input {
+  width: 40px;
+}
+
+.carrito .general .sumar .masMenos{
+  max-width: 100px;
+  margin: 0 auto;
+}
+
+.carrito .general .sumar p {
+  margin-bottom: 10px;
+}
+
+.carrito .general .subtotal {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--colorDarkVanilla);
+  padding-bottom: 15px;
+}
+
+.carrito .general .carritoResumen h3 {
+  display: none;
+}
+
+.carrito .general .carritoResumen h4 {
+  display: inline-block;
+  padding: 20px;
+}
+
+.carrito .general .recuadroResumen {
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.carrito .general .recuadroResumen .iconosResumen a{
+  display: inline;
+}
+
+.carrito .general .recuadroResumen .iconosResumen {
+  padding-top: 20px;
+}
+
+.carrito .general .recuadroResumen h4 {
+  padding: 0 10px 10px 10px;
+}
+
+.carrito .general .cp input {
+  background-color: var(--colorCremita);
+  padding: 0 10px;
+  display: inline-block;
+  color: #666163;
+}
+
+.carrito .general .cp input:last-child {
+  border-left: 1px solid var(--colorDarkVanilla);
+}
+
+.carrito .general .depositoGratis {
+  display: flex;
+  border-bottom: 1px solid var(--colorDarkVanilla);
+}
+
+.carrito .general .depositoGratis span {
+  padding: 0 10px;
+  font-size: 13px;
+  margin-bottom: 20px;
+  margin-right: 30px;
+}
+
+.carrito .general .total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carrito .general .finalizar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carrito .general .finalizar .verMas {
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .carrito h2 {
+    margin-left: 10px;
+  }
+  .carrito .general .carritoResumen h3 {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--colorDarkVanilla);
+  }
+  .carrito .general {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+  }
+  .carrito .general .carritoResumen {
+    width: 37%;
+    margin-right: 20px;
+    padding-bottom: 0;
+  }
+  .carrito .general .carritoResumen .recuadroResumen {
+    border: 1px solid var(--colorDarkVanilla);
+    padding: 0 10px;
+  }
+  .carrito .general .carritoProductos {
+    width: 55%;
+  }
+  .carrito .general .carritoProductos article {
+    display: flex;
+    justify-content: space-between;
+  }
+  .carrito .general .depositoGratis {
+    border-top: 1px solid var(--colorDarkVanilla);
+    padding-top: 15px;
+  }
+  .carrito .general .total h4 {
+    padding: 10px;
+  }
+  .carrito .button {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .carrito .general .carritoProductos article img {
+    width: 90px;
+  }
+  .carrito .general .carritoProductos article div {
+    margin: 47px 0;
+    text-align: center;
+  }
+  .carrito .general .carritoProductos p {
+    font-size: 16px;
+  }
+  .carrito .general .subtotal {
+    border-bottom: none;
+    border-top: 1px solid var(--colorDarkVanilla);
+    padding-top: 15px;
+  }
+  .carrito .general .sumar {
+    position: absolute;
+    left: 150px;
+  }
+  .carrito .general .recuadroResumen h4 {
+    padding: 0 15px 15px 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carrito h2 {
+    margin-left: 30px;
+  }
+  .carrito .general {
+    margin: 0 30px;
+    justify-content: center;
+  }
+  .carrito .general .carritoProductos {
+    margin-right: 50px;
+    margin-right: 50px;
+  }
+  .carrito .general .sumar {
+    position: absolute;
+    left: 180px;
+  }
+  .carrito .general .recuadroResumen h4 {
+    padding: 0 20px 20px 20px;
+  }
+}

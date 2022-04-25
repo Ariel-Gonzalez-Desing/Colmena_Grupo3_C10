@@ -1,0 +1,32 @@
+* {
+    font-family: "Roboto";
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --colorOnyx: #3a3637;
+    --colorNaranja: #fcb43a;
+    --colorNaranjaClaro: #f1c780;
+    --colorCremita: #fffef1;
+    --colorOnyxHover: rgb(58, 54, 55, 0.7);
+    --colorDarkVanilla: #dcc4a4;
+    --colorCremitaHover: rgb(252, 180, 58, 0.4);
+  }
+  
+  .is-invalid{
+    border: solid 1px red !important;
+    background-color: rgb(245, 182, 182) !important;
+   }
+  .is-valid{
+     border: solid 1px rgb(18, 182, 18) !important;
+     background-color: rgb(198, 219, 198) !important;
+    }
+
+  
+span.errorVF{
+  color: black;
+  font-size: 12px;
+  padding-left: 10px;
+}

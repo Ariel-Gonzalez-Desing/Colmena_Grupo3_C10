@@ -1,0 +1,370 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --colorOnyx: #3a3637;
+    --colorNaranja: #fcb43a;
+    --colorNaranjaClaro: #f1c780;
+    --colorCremita: #fffef1;
+    --colorOnyxHover: rgb(58, 54, 55, 0.7);
+    --colorDarkVanilla: #dcc4a4;
+    --colorCremitaHover: rgb(252, 180, 58, 0.4);
+  }
+
+  .hide{
+    display: none;
+  }
+  .show{
+    display: inline;
+  }  
+
+  .profile .checkbox {
+    width: 20%;  
+    display: inline-block;
+  }
+
+.profile input {
+  display: inline;
+  width: 75%;
+}
+
+.profile input[type="password"]{
+  border-radius: 5px;    
+  border-color: #DCC4A4;
+  border-width: 1px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12px 0 12px 5px;
+  height: 20px;
+}
+
+  .profile .container{
+    margin: auto; 
+    width: 85%;
+    border-radius: 20px;
+    border: 1px solid var(--colorDarkVanilla);
+  }
+  
+  ul, li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+  }
+  
+  ul.slider{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+  
+  ul.slider li {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      opacity: 0;
+      width: inherit;
+      height: inherit;
+      transition: opacity .5s;
+      background:var(--colorCremita);
+  }
+  
+  ul.slider li img{
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+  }
+  
+  ul.slider li:first-child {
+      opacity: 1; /*Mostramos el primer <li>*/
+  }
+  
+  ul.slider li:target {
+      opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+  }
+  
+  .menu{
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .menu li{
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .menu li a{
+    display: inline-block;
+    color: var(--colorNaranja);
+    text-decoration: none;
+    background-color: var(--colorOnyx);
+    padding: 10px;
+    width: 30px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    margin: 10px;
+  }
+  
+  .profile {
+    background-color: var(--colorCremita);
+  }
+  
+  .profile .imagenUsuario {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--colorCremita);
+  }
+  
+  .profile .imagenUsuario img {
+    width: 80%;
+    max-width: 300px;
+    align-items: center;
+  }
+  .profile .container a{
+    color: var(--colorOnyx);
+    transition: all .4s ease;
+  }
+  .profile .container a:hover{
+    color: var(--colorNaranja);   
+    transform: scale(1.05); 
+  }
+  .profile .datosUsuario {
+    margin: 15px;
+  }
+  
+  .profile .datosUsuario p {
+    padding: 18px 0 15px 0;
+    /* border-bottom: 1px solid var(--colorDarkVanilla); */
+    margin-bottom: 10px;
+    border-bottom: 1px dotted var(--colorDarkVanilla);
+  }
+
+  .profile .datosUsuario p:last-child {
+    border-bottom: none;
+  }
+
+  .profile .cantidad-boton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile .cantidad-boton form {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid var(--colorDarkVanilla);
+    border-radius: 10px;
+    padding: 5px;
+    margin: auto;
+    width: 100px;
+  }
+  
+  .profile .cantidad-boton form input {
+    border: none;
+    text-align: center;
+    width: 50px;
+  }
+  
+  .profile .cantidad-boton form input:focus {
+    outline: none;
+  }
+  
+  .profile .cantidad-boton form button {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  .profile .button-img {
+    background-color: var(--colorCremita);
+    border: 1px solid var(--colorOnyx);
+    color: var(--colorOnyx);
+    margin-top: 20px;
+    font-size: 15px;
+    width: 90%;
+    transform: translateX(0%);
+    border-radius: 5px;
+    transition: all .4s ease;  
+    cursor: pointer;
+  }
+
+  /* .profile .button-avatar {
+    width: 80%;
+    background-color: var(--colorNaranja);
+    font-weight: bolder;
+    margin: 0 6px 10px 6px;
+    padding: 10px;
+    color: var(--colorOnyx);
+    border-radius: 5px;
+    border: 1px solid var(--colorDarkVanilla);
+    font-size: 16px;
+    cursor: pointer;
+  } */
+
+  .profile .button-img:hover {
+    background-color: var(--colorCremitaHover);
+    font-weight: 600;
+  }
+  
+.profile span.error{
+  color: rgb(235, 122, 47);
+  font-size: 12px;
+  display: block;
+}
+  
+  .profile .button {
+    background-color: var(--colorCremita);
+    border: 1px solid var(--colorOnyx);
+    color: var(--colorOnyx);
+    margin-top: 20px;
+    font-size: 15px;
+    width: 50%;
+    transform: translateX(50%);
+    border-radius: 5px;
+    transition: all .4s ease;  
+    cursor: pointer;
+  }
+
+  .profile .button:hover {
+    background-color: var(--colorCremitaHover);
+    font-weight: 600;
+  }
+  .profile .listProfile li{
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+  
+  .profile .listProfile li a{
+    text-decoration: none;
+    color: var(--colorOnyx);
+    font-weight: 700;  
+    transition: all .4s ease; 
+    margin-left: 10px;
+  }
+  .profile .listProfile li a:hover{
+    color: var(--colorNaranja);   
+    transform: scale(1.05); 
+  }
+
+  .profile .datosUsuario h2{
+    border-top: 2px solid var(--colorDarkVanilla);
+    padding: 15px 0;
+    border-bottom: 1px dotted var(--colorDarkVanilla);
+  }
+  @media (min-width: 768px) {
+    .profile .checkbox {
+      width: 50%;  
+    }
+    .profile input {
+      display: inline;
+      width: 50%;
+      height: 30px;
+      background-color: white;
+    }
+    .profile {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 50px;
+    }
+    
+    .profile .container h2{
+      margin: 5px 0 5px;      
+    }
+
+    .profile .datosUsuario h2{
+      border-top: none;
+      padding-bottom: 16px;
+    }
+
+    .profile .imagenUsuario {
+      width: 40%;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .profile .button {
+      width: 50%;
+      transform: translateX(0%);
+    }
+  
+    .profile .datosUsuario {
+      width: 53%;
+      margin: 0 0 0 100px;
+    }
+  
+    .profile .datosUsuario p {
+      font-size: 16px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    /* .profile {
+      margin-right: 40px;
+    } */
+  
+    .profile .datosUsuario {
+      font-size: 21px;
+      width: 70%;
+    }
+  
+    .profile .imagenUsuario img {
+      /* margin-top: 20px; */
+      padding: 20px;
+    }
+  
+    .profile .datosUsuario p {
+      font-size: 19px;
+      padding: 25px 0;
+    }
+  
+    .profile .datosUsuario h3 {
+      padding-top: 20px;
+    }
+  
+    .profile .datosUsuario h4 {
+      padding-bottom: 40px;
+    }
+  
+    .profile .cantidad-boton {
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 40px 50px;
+    }
+  
+    .profile .cantidad-boton .button {
+      margin: 0;
+    }
+  
+    .profile .button {
+      padding: 5px 30px;
+      width: 40%;
+      transform: translateX(0%);
+    }
+
+    .profile .button-img {
+      padding: 5px 30px;
+      margin-top: 0;
+    }
+
+    .profile .cantidad-boton form {
+      padding: 10px;
+      width: 150px;
+    }
+  
+    .profile .cantidad-boton form input {
+      font-size: 20px;
+      width: 50px;
+    }
+  
+    .profile .cantidad-boton form button {
+      font-size: 20px;
+    }
+  }
+  

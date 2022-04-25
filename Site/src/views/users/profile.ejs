@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%-include('../partials/head') %>
+  
+  <body>
+
+    <%-include('../partials/header') %>
+
+    <main class="profile">
+      <div class="imagenUsuario">
+        <div class="container">
+            <h2>Perfil de Usuario: <%= firstLetter(locals.userLogin.name) %></h2>
+            <img src="/images/users/<%= locals.userLogin.avatar %>" alt="imagen de perfil">
+           <!-- <button id="imageEdit" class="button-img">Cambiar imagen de perfil</button> -->
+           <!-- <a onclick="changeAvatar('<=userLogin.avatar%>')">Cambiar imagen de perfil</a> -->
+        
+          <u class="listProfile">
+              <!-- <li><a href="">Wishlist</a></li>
+              <li><a href="/">Carrito</a></li> -->
+              <li><a href="">Cerrar sesión</a></li>
+          </u>
+        </div>
+      </div>
+
+      <div class="datosUsuario">
+        <h2>Datos de <%= firstLetter(locals.userLogin.name) %></h2>
+        <p>
+           Nombre: <%= firstLetter(locals.userLogin.name) %>
+        </p>
+        <p>
+           Apellido: <%= firstLetter(locals.userLogin.lastName) %>
+        </p>
+        <p>
+           E-mail: <%= locals.userLogin.email %>
+        </p>  
+        
+        <a href="/users/edit"><button class="button">Editar mis datos</button></a>
+
+      </div>
+    </main>
+
+    <%-include('../partials/footer') %>
+    <script src="/javascripts/avatarEdit.js"></script>
+  </body>
+</html>

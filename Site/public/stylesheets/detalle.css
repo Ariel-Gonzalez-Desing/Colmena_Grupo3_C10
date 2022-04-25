@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --colorOnyx: #3a3637;
+  --colorNaranja: #fcb43a;
+  --colorNaranjaClaro: #f1c780;
+  --colorCremita: #fffef1;
+  --colorOnyxHover: rgb(58, 54, 55, 0.7);
+  --colorDarkVanilla: #dcc4a4;
+  --colorCremitaHover: rgb(252, 180, 58, 0.4);
+}
+
+.container{
+  margin: auto;
+  width: 270px;  
+  border-radius: 20px;
+  border: 1px solid var(--colorDarkVanilla);
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.slider{
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+ul.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background:var(--colorCremita);
+}
+
+ul.slider li img{
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
+
+ul.slider li:first-child {
+    opacity: 1; /*Mostramos el primer <li>*/
+}
+
+ul.slider li:target {
+    opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+.menu{
+  text-align: center;
+  margin: 20px;
+}
+
+.menu li{
+  display: inline-block;
+  text-align: center;
+}
+
+.menu li a{
+  display: inline-block;
+  color: var(--colorNaranja);
+  text-decoration: none;
+  background-color: var(--colorOnyx);
+  padding: 10px;
+  width: 30px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.detalle {
+  background-color: var(--colorCremita);
+}
+
+.detalle .imagenProducto {
+  text-align: center;
+  margin: 20px;
+}
+
+.detalle .imagenProducto img {  
+  height: 150px; 
+  width: 50%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.detalle .detallesProducto {
+  margin: 15px;
+}
+
+.detalle .detallesProducto P {
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid var(--colorDarkVanilla);
+  margin-bottom: 20px;
+}
+
+.detalle .detallesProducto h4 {
+  border-bottom: 1px solid var(--colorDarkVanilla);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.detalle .cantidad-boton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detalle .cantidad-boton form {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid var(--colorDarkVanilla);
+  border-radius: 10px;
+  padding: 5px;
+  margin: auto;
+  width: 100px;
+}
+
+.detalle .cantidad-boton form input {
+  border: none;
+  text-align: center;
+  width: 50px;
+}
+
+.detalle .cantidad-boton form input:focus {
+  outline: none;
+}
+
+.detalle .cantidad-boton form button {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.detalle .button {
+  background-color: var(--colorOnyx);
+  border: none;
+  color: var(--colorNaranja);
+  padding: 5px 40px;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.detalle .button:hover {
+  background-color: var(--colorOnyxHover);
+}
+
+@media (min-width: 768px) {
+  .detalle {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+
+  .detalle .imagenProducto {
+    width: 40%;
+    margin: 0;
+    padding: 0;    
+  }
+
+  .detalle .Containers img {
+    width: 130px;
+    display: inline-block;
+  }
+
+  .detalle .Containers img:first-child {
+    width: 250px;
+  }
+
+  .detalle .detallesProducto {
+    width: 53%;
+  }
+
+  .detalle .detallesProducto P {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .detalle {
+    margin-right: 40px;
+  }
+
+  .detalle .detallesProducto {
+    font-size: 22px;
+    width: 70%;
+  }
+
+  .detalle h3 {
+    text-align: left;
+    padding: 0;
+  }
+  
+  .detalle .imagenProducto img:first-child {
+    height: 240px; 
+    width: 100%;
+  object-fit:scale-down;
+  }
+
+  .detalle .detallesProducto p {
+    font-size: 20px;
+    padding: 40px 0;
+  }
+
+  .detalle .detallesProducto h4 {
+    padding-bottom: 40px;
+  }
+
+  .detalle .cantidad-boton {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 40px 50px;
+  }
+
+  .detalle .cantidad-boton .button {
+    margin: 0;
+  }
+
+  .detalle .button {
+    padding: 10px 60px;
+    font-size: 20px;
+  }
+
+  .detalle .cantidad-boton form {
+    padding: 10px;
+    width: 150px;
+  }
+
+  .detalle .cantidad-boton form input {
+    font-size: 20px;
+    width: 50px;
+  }
+
+  .detalle .cantidad-boton form button {
+    font-size: 20px;
+  }
+}

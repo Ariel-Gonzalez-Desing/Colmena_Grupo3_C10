@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%-include('../partials/head') %>
+
+<body class="home">     
+
+    <%-include('../partials/header') %>
+
+    <!-- /* ------------Carrusel--------------- */ -->
+    <div class="carrusel">
+        <!-- Container -->
+  <div class="slideshow-container fade">
+  
+    <!-- Imagenes y mensajes -->
+    <div class="Containers">
+      <div class="MessageInfo"></div>
+      <img src="/images/carrusel1.png" style="width:100%">
+      <div class="Info"><h1>Miel pura y orgánica</h1><h4>Descubrí su sabor único</h4></div>
+    </div>
+      
+    <div class="Containers">
+      <div class="MessageInfo"></div>
+      <img src="/images/carrusel2.png" style="width:100%">
+      <div class="Info"><h1>Cosechado con cuidado</h1><h4>De la colmena a tu mesa</h4></div>
+    </div>
+  
+    <div class="Containers">
+      <div class="MessageInfo"></div>
+      <img src="/images/carrusel3.png" style="width:100%">
+      <div class="Info"><h1>Cuidamos a las abejas</h1><h4>Ayudalas comprando productos relacionados</h4></div>
+    </div>
+  
+    <!-- Botones atrás y adelante -->
+    <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- Círculos -->
+  <div style="text-align:center">
+    <span class="dots" onclick="currentSlide(1)"></span>
+    <span class="dots" onclick="currentSlide(2)"></span>
+    <span class="dots" onclick="currentSlide(3)"></span>
+  </div> 
+    </div>
+    <!--------------Fin del Carrusel----------------->
+
+    <article class="destacados">
+        <h2>Destacados</h2>
+        <section>
+            <div class="productos">
+                <div class="prodGrupo">
+                    <% destacados.forEach(product => { %>
+                      <div class="prodUnidad">
+                        <a href="/products/detail/<%= product.id %>"><img src="/images/products/<%= product.images[0].file %>" alt="imagen de producto">
+                            <p><%= firstLetter(product.name) %><br><%= firstLetter(product.size.name) %></p>
+                            <a href="/products/detail/<%= product.id %>" class="button">VER MAS</a></a>
+                    </div>
+                    <% }) %>
+                                     
+                </div>                
+            </div>
+            <div class="hexagonos">
+                <h2>Miel COLMENA</h2>
+                <div class="hexaDisplay">
+                    <div><img src="/images/hexagono1.png" alt=""></div>
+                    <div><img src="/images/hexagono2.png" alt=""></div>
+                    <div><img src="/images/hexagono3.png" alt=""></div>
+                    <div><img src="/images/hexagono4.png" alt=""></div>
+                </div>
+                <p>Ofrecemos la mejor miel en diferentes presentaciones, utensilios e indumentaria, chequeá nuestra sección de productos.</p>
+            </div>
+        </section>
+        <div class="button"><a href="/products/productsList">VER TODOS LOS PRODUCTOS</a></div>
+    </article>
+
+    <article class="sobreNosotros">
+        <h2>Sobre Nosotros</h2>
+        <div class="imagen">
+            <p>Nos ocupamos de llevar a tu mesa un producto natural y orgánico, con la energía vibrante de Sierra de la Ventana. <br> <br>
+                Tambien nos apasiona la sustentabilidad y el respeto por la naturaleza.</p>
+        <div><img src="/images/trajePanal4.jpg" alt="panal y trajes"></div>
+        </div>        
+    </article>
+
+    <article>
+        <h2>Cuidemos a las abejas</h2>
+        <div class="cuidemosImagen">
+            <div class="salvemos"><img src="/images/salvemosAbejas.png" alt=""></div>
+        <p>Las abejas desempeñan un papel imprescindible para el equilibrio ecológico en la naturaleza y para la vida humana, por su papel como polinizadoras y por su capacidad para producir miel, jalea real, cera y propóleo.</p>
+        </div>
+        <section class="hexagonoInfo">
+            <div class="hexa">
+                <img src="/images/abejas1.png" alt="">
+                <p>Los cientificos dicen que las abejas son responsables de uno de cada tres bocados de alimento que ingerimos.</p>
+            </div>
+            <div class="hexa">
+                <img src="/images/abejas2.png" alt="">
+                <p>Su presencia favorece la biodiversidad y contribuye a la preservación y estabilidad ecológica de los espacios naturales.</p>
+            </div>
+            <div class="hexa">
+                <img src="/images/abejas3.png" alt="">
+                <p>Muchos frutos y hortalizas necesitan polinización para su cultivo, las abejas son responsables del 80% de la polinización.</p>
+            </div>
+        </section>
+        <div class="button"><a href="https://sada.org.ar/protegeunacolmena/" target="_blank">QUIERO AYUDAR A LAS ABEJAS</a></div>
+    </article>
+</main>
+
+<%-include('../partials/footer') %>
+
+<!-- Javascript para el carrusel -->
+
+<%-include('../partials/scripts') %>
+</body>
+</html>

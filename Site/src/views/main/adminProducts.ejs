@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%-include('../partials/head')%>
+
+<body class="admin">
+
+   <%-include('../partials/header')%>
+   
+    <div class="cabecera">
+      <h3>Administrador de Productos</h3>    
+      <a class="btnAgregar" href="/products/create">Agregar</a>    
+    </div>
+    <table summary="Listado de productos">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Tamaño</th>            
+            <th scope="col">Editar</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% products.forEach((product, index) => { %>            
+          <tr>
+            <th scope="row"><%= index + 1 %></th>
+            <td><a href="/products/detail/<%= product.id %> "><img src="/images/products/<%= product.images[0].file ? product.images[0].file : 'agregarImagen.png' %>" alt=""></a></td>
+            <td><%= firstLetter(product.name) %></td>
+            <td><%= product.price %></td>
+            <td><%= firstLetter(product.size.name) %></td>
+            <td><div class="iconos"><a href="/products/edit/<%= product.id %> "><i class="fas fa-edit"></i></a>
+              
+              <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+              <button onclick="return confirm('¿Desea eliminar el producto permanentemente?');"><i class="fas fa-trash-alt"></i></button>
+            </form>
+            
+            </div></td>
+          </tr>
+          <% }) %>
+        </tbody>
+        
+      </table>
+      <script src="/javascripts/productEdit.js"></script>
+</body>
+</html>

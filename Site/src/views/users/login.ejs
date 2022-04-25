@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%-include('../partials/head') %>
+
+<body> 
+
+    <%-include('../partials/header') %>
+
+    <main>            
+        <div class="login">
+            <form action="/users/login" method="POST">
+                <h3>Formulario de login</h3> 
+                <!-- <h4>Complete los siguientes campos para loguearse en nuestro sitio.</h4>  -->
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" value="<%= locals.old && old.email ? old.email : null %>">                        
+                        <span id="error-email" class="error"><%= locals.errors && errors.email ? errors.email.msg : null %></span></span>
+                    </div>
+                    <div>
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" id="password">
+                        <span id="error-password" class="error"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
+                    </div>
+                       
+                <div class="remember"><input type="checkbox" id="" name="remember"> 
+                    <label for="remember">Recordarme</label></div>
+
+                    <div class="crearCuenta">
+                        <p>¿No tenés una cuenta? <a href="/users/registro">Create una </a></p>
+                    </div>
+
+                <div class="botonAcceptCancel">
+                    <input type="reset" name="" value="Cancelar">
+                    <input type="submit" name="" value="Iniciar sesión">                    
+                </div>
+            </form>   
+        </div>                
+    </main>
+
+    <%-include('../partials/footer') %>
+    <script src="/javascripts/loginValidator.js"></script>    
+</body>
+</html>

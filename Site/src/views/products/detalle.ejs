@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <%-include('../partials/head') %>
+  
+  <body>
+
+    <%-include('../partials/header') %>
+
+    <main class="detalle">
+      <div class="imagenProducto">
+        <div class="container">
+
+          <div class="Containers">
+            <% product.images.forEach((image,index) => { %>    
+               <img id="imgDetalle<%= index %>" src="/images/products/<%= image.file%>" onclick="rotateImage('imgDetalle<%= index %>', event)">    
+           <% }) %>
+           </div>
+  
+          <!-- <ul class="slider">
+            <li id="slide1">
+              <img src="/images/products/<%= product.images[0].file ? product.images[0].file : 'agregarImagen.png' %>">
+            </li>
+            <li id="slide2">
+              <img src="/images/products/<%= product.images[0].file ? product.images[0].file : 'agregarImagen.png' %>"> 
+            </li>
+            <li id="slide3">
+              <img src="/images/products/<%= product.images[0].file ? product.images[0].file : 'agregarImagen.png' %>">
+            </li>
+          </ul>
+          
+          <ul class="menu">
+            <li>
+              <a href="#slide1">1</a>
+            </li>
+            <li>
+              <a href="#slide2">2</a>
+            </li>
+             <li>
+              <a href="#slide3">3</a>
+            </li>
+          </ul> -->
+          
+        </div>
+      </div>
+
+      <div class="detallesProducto">
+        <h2><%= firstLetter(product.name) %></h2>
+
+        <p>
+          <%= firstLetter(product.description) %>
+        </p>
+
+        <h3>$<%= product.price %>.-</h3>
+        <h4>12 cuotas de $<%= cuota (product.price).toFixed(2) %></h4>
+
+        <div class="cantidad-boton">
+          <div class="masMenos">
+            <form action="">
+              <button>-</button>
+              <input type="text" value="0" />
+              <button>+</button>
+            </form>
+          </div>
+          <button class="button">AGREGAR AL CARRITO</button>
+        </div>
+      </div>
+    </main>
+
+    <%-include('../partials/footer') %>
+    <script src="/javascripts/productEdit.js"></script>
+  </body>
+</html>

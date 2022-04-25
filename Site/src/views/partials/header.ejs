@@ -1,0 +1,74 @@
+<header>
+    <section class="iconos">
+        <div class="boton-hamburguesa">                
+            <a href=""><i class="fas fa-bars"></i></a>
+        </div>
+        <div class="logo">
+            <a href="/"><img src="/images/logoOscuroSinNombre.png" alt="logo"></a>
+         </div>
+        <div class="changuito">                
+            <a href="/products/carrito"><i class="fas fa-shopping-cart"></i></a>
+        </div>  
+    </section>
+    <section class="iconos-TabletDesktop">
+        <div class="logoSinNombre">
+            <a href="/"><img src="/images/logoColmenaSinNombre.png" alt="logo"></a>
+        </div>
+        <div class="searchBarTabletDesktop">
+            <form action="/products/search" id="buscar">
+                <input type="text" name="buscar" placeholder="Buscar">
+                <button type="submit" class="lupita" href=""><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div>
+            <div class="changuito">                
+                
+                <% if (locals.userLogin) { %>
+                    <div class="imagen-perfil">
+                        <a class="imagen-link" href="/users/profile"><img src="/images/users/<%= locals.userLogin.avatar %>" alt="imagen de usuario"></a> 
+                    </div> 
+                    <div>
+                        <a class="boton-changuito" href="/products/carrito"><i class="fas fa-shopping-cart"></i>Carrito</a>                    
+                        <a class="linkChanguito" href="/users/profile">Mi Perfil</a> 
+                        <a class="linkChanguito" href="/users/logout">Cerrar sesión</a>   
+                    </div>
+                <%  }else{ %>                    
+                    <div>
+                        <a class="boton-changuito" href="/products/carrito"><i class="fas fa-shopping-cart"></i>Carrito</a>                    
+                        <a class="linkChanguito" href="/users/registro">Crear cuenta</a> 
+                        <a class="linkChanguito" href="/users/login">Iniciar sesión</a>  
+                    </div>
+                <% } %>
+             </div>  
+        </div>
+    </section>
+    <section class="barraBusquedaMobile">
+        <div class="searchBar">
+            <form action="/products/search">
+                <input type="text" name="buscar" placeholder="Buscar">
+                <button type="submit" class="lupita"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </section>
+    <section class="navTabletDesktop">            
+            <nav>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/products/productsList">Productos</a></li>
+                    <li><a href="#footer">Contacto</a></li>
+                    <li><a href="https://sada.org.ar/protegeunacolmena/" target="_blank">Ayudá a las abejas</a></li>
+                    <% if (locals.userLogin && locals.userLogin.rol === 2){ %>
+                    <!-- <li><a href="/admin">Administrador</a></li> -->
+                    <div class="dropdown">
+                        <li><a href="">Administrador</a>
+                        <div class="dropdown-content">
+                          <a href="/adminUsers">Usuarios</a>
+                          <a href="/adminProducts">Productos</a></li>
+                        </div>
+                      </div>
+                    <% } %>
+                </ul>
+            </nav>                
+    </section>
+    <script src="/javascripts/searchBar.js"></script>
+</header>

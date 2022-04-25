@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%-include('../partials/head')%>
+
+<body class="admin">
+
+   <%-include('../partials/header')%>
+   
+    <div class="cabecera">
+      <h3>Administrador de Usuarios</h3>    
+       
+    </div>
+    <table summary="Listado de usuarios">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Email</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>            
+            <th scope="col">Rol</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% users.forEach((user, index) => { %>            
+          <tr>
+            <th scope="row"><%= index + 1 %></th>
+            <td><a href=""><img src="/images/users/<%= user.avatar%>" alt="imagen de usuario"></a></td>
+            <td><%= user.email %></td>
+            <td><%= user.firstName %></td>
+            <td><%= user.lastName %></td>
+            <td><div class="iconos">
+
+                <form action="/adminUsers/<%= user.id %>?_method=PUT" method="POST">
+                  <!-- Toggle admin/user -->
+                   <label class="switch"> 
+                    <% if (user.rolId === 2) { %>
+                      <input type="checkbox" name="rol" id="rolEdit" checked>              
+                   <% } else { %>
+                    <input type="checkbox" name="rol" id="rolEdit">   
+                     <% } %>  
+                  <div class="slider round"> 
+                  <!--ADDED HTML -->
+                   <span class="on">Admin</span>
+                  <span class="off">User</span>
+                  <!--END-->
+                  </div>
+                </label>
+                <button class="buttonEditRol" id="buttonEditRol">Guardar</button>
+              </form>             
+
+            <form action="/delete/<%= user.id %>?_method=DELETE" method="POST">
+              <button onclick="return confirm('¿Desea eliminar el usuario permanentemente?');"><i class="fas fa-trash-alt"></i></button>
+            </form>
+            
+            </div></td>
+          </tr>
+          <% }) %>
+        </tbody>
+        
+      </table>
+      <!-- <script src="/javascripts/admin.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,111 @@
+body{
+    background-color: #FFFEF1;
+    font-family: Roboto;
+}
+
+body main .box-texto h4{
+    display: none;
+}
+
+
+.registro{
+    font-size: 16px;
+    display: flex;  
+    justify-content: center;
+    flex-wrap: wrap;  
+}
+
+
+.box-texto h3{
+    padding-bottom: 25px;
+    text-align: center;
+    color: var(--colorOnyx);
+    
+}
+
+.registro input{
+    width: 100%;       
+}
+
+.registro div{
+    padding-top: 25px;
+}
+.registro label[for="usuario"], label[for="password"], label[for="email"]{
+    padding-left: 15px;
+}
+
+.registro input[type="password"], input[type="text"], input[type="email"]{
+    border-radius: 15px;    
+    border-color: #DCC4A4;
+    border-width: 1px;
+    background: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5px;
+    height: 22px;
+}
+
+.registro .yaTengoCuenta{
+    display: block;    
+}
+.registro .yaTengoCuenta a{
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--colorOnyx);
+}
+
+.registro .botonAcceptCancel input[type="submit"], input[type="reset"]{
+    background-color: var(--colorOnyx);
+    border: none;
+    color: var(--colorNaranja);
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 140px;
+    height: 25px;
+    margin-bottom: 30px;
+}
+.botonAcceptCancel  input[type="submit"]:hover, input[type="reset"]:hover{
+    background-color: var(--colorOnyxHover);
+    color: var(--colorCremitaHover);
+}
+
+
+
+/*********** Tablet ***********/
+@media (min-width: 768px) {
+    body main .box-texto h4{
+        display:block;
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .box-formularios{
+        display: flex;
+    }
+    
+    .box-texto h4{
+        font-size: 16px;
+        font-weight: normal;
+        color: var(--colorOnyx);
+    }
+    .box-texto h3{
+        font-size: 24px;
+    }
+
+    
+}
+
+/*********** Desktop ***********/
+@media (min-width: 1024px) {
+    .desktopRegistro,.desktopContraseñas{
+        width: 100%;
+    }
+    .registro .box-formularios .yaTengoCuenta a:hover{
+        color: var(--colorNaranja);        
+    }
+    .box-formularios{
+        display: inline;
+    }
+}

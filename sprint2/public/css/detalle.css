@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --colorOnyx: #3a3637;
+  --colorNaranja: #fcb43a;
+  --colorNaranjaClaro: #f1c780;
+  --colorCremita: #fffef1;
+  --colorOnyxHover: rgb(58, 54, 55, 0.7);
+  --colorDarkVanilla: #dcc4a4;
+  --colorCremitaHover: rgb(252, 180, 58, 0.4);
+}
+
+.detalle {
+  background-color: var(--colorCremita);
+}
+
+.detalle .imagenProducto {
+  text-align: center;
+  margin: 20px;
+}
+
+.detalle .imagenProducto img {
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid var(--colorDarkVanilla);
+  border-radius: 20px;
+  padding: 30px 60px;
+}
+
+.detalle .detallesProducto {
+  margin: 15px;
+}
+
+.detalle .detallesProducto P {
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid var(--colorDarkVanilla);
+  margin-bottom: 20px;
+}
+
+.detalle .detallesProducto h4 {
+  border-bottom: 1px solid var(--colorDarkVanilla);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.detalle .cantidad-boton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detalle .cantidad-boton form {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid var(--colorDarkVanilla);
+  border-radius: 10px;
+  padding: 5px;
+  margin: auto;
+  width: 100px;
+}
+
+.detalle .cantidad-boton form input {
+  border: none;
+  text-align: center;
+  width: 50px;
+}
+
+.detalle .cantidad-boton form input:focus {
+  outline: none;
+}
+
+.detalle .cantidad-boton form button {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.detalle .button {
+  background-color: var(--colorOnyx);
+  border: none;
+  color: var(--colorNaranja);
+  padding: 5px 40px;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.detalle .button:hover {
+  background-color: var(--colorOnyxHover);
+}
+
+@media (min-width: 768px) {
+  .detalle {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+
+  .detalle .imagenProducto {
+    width: 40%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .detalle .imagenProducto img {
+    margin: 10px;
+    padding: 40px;
+  }
+
+  .detalle .detallesProducto {
+    width: 53%;
+  }
+
+  .detalle .detallesProducto P {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .detalle {
+    margin-right: 40px;
+  }
+
+  .detalle .detallesProducto {
+    font-size: 22px;
+    width: 70%;
+  }
+
+  .detalle .imagenProducto img {
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .detalle .detallesProducto p {
+    font-size: 20px;
+    padding: 40px 0;
+  }
+
+  .detalle .detallesProducto h3 {
+    padding-top: 20px;
+  }
+
+  .detalle .detallesProducto h4 {
+    padding-bottom: 40px;
+  }
+
+  .detalle .cantidad-boton {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 40px 50px;
+  }
+
+  .detalle .cantidad-boton .button {
+    margin: 0;
+  }
+
+  .detalle .button {
+    padding: 10px 60px;
+    font-size: 20px;
+  }
+
+  .detalle .cantidad-boton form {
+    padding: 10px;
+    width: 150px;
+  }
+
+  .detalle .cantidad-boton form input {
+    font-size: 20px;
+    width: 50px;
+  }
+
+  .detalle .cantidad-boton form button {
+    font-size: 20px;
+  }
+}

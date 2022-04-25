@@ -1,0 +1,162 @@
+body{
+    background-color: #FFFEF1;
+    font-family: Roboto;
+}
+
+body main .box-texto h4{
+    display: none;
+}
+
+.registro{
+    font-size: 16px;
+    display: flex;  
+    justify-content: center;
+    flex-wrap: wrap;  
+}
+
+.registro span.error{
+    color: rgb(235, 122, 47);
+    font-size: 10px;
+}
+
+
+.box-texto h3{
+    padding-bottom: 25px;
+    text-align: center;
+    color: var(--colorOnyx);    
+}
+
+.registro input{
+    width: 90%;       
+}
+
+.registro label{
+    margin: 10px 0;
+}
+.registro .desktopContraseñas {
+    padding-top: 0px;
+}
+
+
+
+.registro input[type="password"], input[type="text"], input[type="email"]{
+    border-radius: 5px;    
+    border-color: #DCC4A4;
+    border-width: 1px;
+    background: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5px;
+    height: 22px;    
+}
+
+.registro .yaTengoCuenta{
+    display: block;    
+    margin: 10px 0 10px;
+}
+.registro .yaTengoCuenta a{
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--colorOnyx);
+}
+
+.registro .botonAcceptCancel input[type="submit"], input[type="reset"]{
+    background-color: var(--colorOnyx);
+    border: none;
+    color: var(--colorNaranja);
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 140px;
+    height: 25px;
+    margin-bottom: 30px;
+}
+.botonAcceptCancel  input[type="submit"]:hover, input[type="reset"]:hover{
+    background-color: var(--colorOnyxHover);
+    color: var(--colorCremitaHover);
+}
+
+.registro .box-formularios .desktopRegistro div{
+    padding-top: 15px;
+}
+.registro .box-formularios .desktopContraseñas div{
+    padding-top: 15px;
+}
+
+/*********** Tablet ***********/
+@media (min-width: 768px) {
+    .registro span.error{
+        font-size: 12px;
+    }
+    .registro .box-formularios .desktopContraseñas div{
+        padding-top: 15px;
+    }
+    .registro .box-formularios .desktopRegistro div{
+        padding-top: 15px;
+    }
+    body main .box-texto h4{
+        display:block;
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .box-formularios{
+        display: flex;
+    }
+    
+    .box-texto h4{
+        font-size: 16px;
+        font-weight: normal;
+        color: var(--colorOnyx);
+    }
+    .box-texto h3{
+        padding-top: 15px;
+        font-size: 24px;
+    }
+
+    .registro .box-formularios .box-3{
+       padding-top: 15px;
+    }
+}
+
+/*********** Desktop ***********/
+@media (min-width: 1024px) {
+    
+    .registro .box-formularios{
+        width: 80%;
+        padding-top: 30px;
+    }
+    .registro .box-formularios .desktopContraseñas div{
+        padding-top: 20px;
+    }
+    .registro .box-formularios .desktopRegistro div{
+        padding-top: 20px;
+    }
+    .registro .box-formularios .desktopRegistro, .desktopContraseñas{
+        width: 45%;        
+    }
+   
+    .registro .box-formularios form{
+        width: 100%;
+        
+    }
+    .registro .box-formularios .box-2{
+        display: flex;
+        justify-content: space-around;
+    }
+    .registro .box-formularios .box-2 .desktopRegistro .desktopContraseñas{
+        width: 40%;
+    }
+    .registro .box-formularios .yaTengoCuenta a:hover{
+        color: var(--colorNaranja);   
+    }
+    .registro .box-formularios .box-3{
+        display: flex;
+        padding-top: 50px;
+        justify-content: space-evenly;
+    }
+    .registro .yaTengoCuenta{           
+        margin: 0;
+    }
+}

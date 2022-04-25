@@ -1,0 +1,493 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --colorOnyx: #3a3637;
+    --colorNaranja: #fcb43a;
+    --colorNaranjaClaro: #f1c780;
+    --colorCremita: #fffef1;
+    --colorOnyxHover: rgb(58, 54, 55, 0.7);
+    --colorDarkVanilla: #dcc4a4;
+    --colorCremitaHover: rgb(252, 180, 58, 0.4);
+  }
+
+/* Toggle switch */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196F3;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 6px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2ab934;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(55px);
+  -ms-transform: translateX(55px);
+  transform: translateX(55px);
+}
+
+.on
+{
+  display: none;
+}
+
+.on, .off
+{
+  color: white;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  font-size: 10px;
+  font-family: Verdana, sans-serif;
+}
+
+input:checked+ .slider .on
+{display: block;}
+
+input:checked + .slider .off
+{display: none;}
+
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;}
+
+@media (min-width: 768px){
+  .slider:before {
+    position: absolute;
+  }
+  
+  .switch {
+    width: 90px;
+  }
+}
+  /* Fin toggle switch */
+
+  
+.add {
+    background-color: var(--colorDarkVanilla);
+    color: var(--colorOnyx);
+}
+
+.edit span.error{
+  color: rgb(235, 122, 47);
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.add span.error{
+  color: rgb(235, 122, 47);
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.add span.error-half{
+  color: rgb(235, 122, 47);
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.add h3 {
+    padding: 10px;
+    margin: 10px auto 0;
+    width: 96%;
+    background-color: var(--colorOnyx);
+    color: var(--colorNaranja);
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.add .contenedor {
+    max-width: 96%;
+    margin: 0 auto;
+    background-color: var(--colorCremita);
+    border-radius: 5px;    
+    margin-bottom: 40px;
+}
+
+.add .contenedor .carruselImages img {
+  max-width: 99%;
+  border-radius: 5px;    
+}
+
+.add .contenedor .carruselImages input{
+ /* display: none; */
+    width: 96%;
+    margin: 0px 5px 10px 6px;
+    padding: 10px 0 10px 10px;
+    border-radius: 5px;
+    background-color: var(--colorNaranja);
+}
+
+.add .contenedor .carruselImages label input#image{
+  cursor: pointer;
+}
+
+.add .contenedor .container-input-total input{
+    width: 96%;
+    margin: 0px 5px 10px 6px;
+    padding: 20px 0 20px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--colorDarkVanilla);
+    background-color: #fff;
+}
+
+.add .contenedor .container-input-total textarea{
+    width: 96%;
+    margin: 5px;
+    padding: 15px 0 40px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--colorDarkVanilla);    
+    resize: none;
+}
+
+.add .contenedor .container-input-mitad{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 6px;
+}
+
+.add .contenedor .container-input-mitad input{
+    width: 49% !important;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--colorDarkVanilla);
+    background-color: #fff;
+}
+
+.add .contenedor ::placeholder{
+  color: var(--colorOnyx);
+}
+
+.add .contenedor .container-input-mitad input[type=text]{
+    padding: 25px 15px;
+}
+
+.add .contenedor .container-input-mitad select{
+    width: 49%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--colorDarkVanilla);
+    background-color: #fff;
+}
+
+.add .btn-add {
+    width: 96%;
+    background-color: var(--colorNaranja);
+    font-weight: bolder;
+    margin: 0 6px 10px 6px;
+    padding: 10px;
+    color: var(--colorOnyx);
+    border-radius: 5px;
+    border: 1px solid var(--colorDarkVanilla);
+    font-size: 16px;
+    cursor: pointer;
+}
+/* 
+.buttonEditRol{
+  display: none;
+} */
+
+.contenedor .editarImagen img{
+    width: 30%;
+    margin: 10px 35%;
+}
+
+.contenedor .btn-eliminar-image{
+    width: 30%;
+    background-color: var(--colorNaranja);
+    font-weight: bolder;
+    margin: 0 auto;
+    padding: 5px 10px;
+    color: var(--colorOnyx);
+    border-radius: 5px;
+    border: 1px solid var(--colorDarkVanilla);
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+@media (min-width: 768px){
+  .add h3 {    
+    max-width: 600px;
+  }
+  .contenedor .editarImagen{
+    display: flex;
+    justify-content: space-around;
+}
+  .add .contenedor .MessageInfo img {
+    width: 60%;
+    padding: 10px 0;    
+    margin: 0 auto;
+    display: block;
+    height: 200px;
+    object-fit: contain;
+  }
+  .add .contenedor .carruselImages input{
+       width: 98%;
+   }
+  .add .btn-add {
+    width: 98%;
+  }
+  .contenedor .btn-eliminar-image {
+    width: 98px;
+  }
+  .add .contenedor .container-input-mitad select{
+    width: 49%;
+  }
+  .add .contenedor {
+    max-width: 600px;
+  }
+  .add .contenedor .container-input-total input{
+    width: 98%;
+}
+
+.add .contenedor .container-input-total textarea{
+    width: 98%;
+}
+.contenedor .editarImagen{
+  display: flex;
+}
+} 
+
+/* Admin css */
+
+.admin {
+    background-color: var(--colorNaranjaClaro);
+    color: var(--colorOnyx);
+}
+
+.admin table tbody td img {
+  height: 70px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.admin .cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--colorOnyx);  
+  padding: 25px 0;
+}
+
+.admin .cabecera .btnAgregar {
+  text-decoration: none;
+  color: var(--colorOnyx);
+  font-size: 15px;
+  font-weight: 600;
+  background-color: var(--colorNaranja);
+  padding: 3px 25px;
+  border-radius: 5px;
+}
+
+.admin .cabecera .btnUsers {
+  text-decoration: none;
+  color: var(--colorOnyx);
+  font-size: 15px;
+  font-weight: 600;
+  background-color: var(--colorNaranja);
+  padding: 3px 25px;
+  border-radius: 5px;
+}
+
+.admin h3 {     
+    color: var(--colorNaranja);
+}
+
+.admin table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--colorCremita);
+  }
+
+  .admin table th {    
+    border: 1px solid var(--colorDarkVanilla);
+  }
+
+  .admin thead th {
+    padding: 5px;
+    border-bottom: 1px solid var(--colorDarkVanilla);
+    text-align: start;
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
+  }
+
+  .admin thead th:nth-child(1) {
+    width: 1.3%;
+  }
+  .admin thead th:nth-child(2) {
+    width: 4.5%;
+  }
+  .admin thead th:nth-child(3) {
+    width: 4.4%;
+  }
+  .admin thead th:nth-child(4) {
+    width: 4%;
+  }.admin thead th:nth-child(5) {
+    width: 3%;
+  }
+.admin thead th:nth-child(6) {
+    width: 3%;
+  }
+ 
+  .admin tbody th {
+    padding: 3px;
+    border: 1px solid var(--colorDarkVanilla);
+  }
+  .admin tbody td {
+    padding: 3px;
+    border: 1px solid var(--colorDarkVanilla);   
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis; 
+  } 
+
+  .admin button {
+    border: none;
+    cursor: pointer;
+  }
+
+  .admin tbody td i{
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .admin tbody td i:nth-child(1){
+    background-color: rgb(43, 151, 43);    
+    margin-bottom: 6px;
+  }
+
+  .admin tbody td .iconos form i{
+    background-color: rgb(231, 62, 62);  
+  }
+
+  @media (min-width: 768px){
+    .admin .cabecera {      
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 40px;       
+      border-radius: 5px 5px 0 0; 
+      padding: 25px 0;
+    }
+    .admin table tbody td img {
+      height: 120px;
+    }    
+    .admin .cabecera .btnAgregar {      
+      margin-right: 25px;   
+    }    
+    .admin h3 {     
+        padding-left: 25px;
+        color: var(--colorNaranja);
+        border-radius: 5px 5px 0 0;    
+    }    
+    .admin table {
+        width: 90%;
+        margin: 0 auto;
+      }    
+      .admin thead th {
+        padding: 10px;        
+      }    
+      .admin thead th:nth-child(1) {
+        width: 3%;
+      }
+      .admin thead th:nth-child(2) {
+        width: 10%;
+      }
+      .admin thead th:nth-child(3) {
+        width: 15%;
+      }
+      .admin thead th:nth-child(4) {
+        width: 10%;
+      }.admin thead th:nth-child(5) {
+        width: 10%;
+      }
+    .admin thead th:nth-child(6) {
+        width: 10%;
+      }    
+      .admin tbody td .iconos{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 15px;
+      }    
+      .admin tbody td i{
+        display: flex;
+        justify-content: space-between;    
+        padding: 10px;   
+        font-size: 16px   
+      }    
+      .admin tbody td i:nth-child(1){
+        margin-bottom: 0;         
+        max-width: 100px;
+      }    
+  }
+
+  @media (min-width: 1024px){
+    .admin table tbody td img {
+      height: 150px;
+    }  
+    .admin tbody td .iconos{
+      margin: 0 20px;
+    }    
+    .admin tbody td i{
+      display: flex;
+      justify-content: space-between;    
+      padding: 10px;   
+      font-size: 18px   
+    }  
+    .admin tbody td .iconos{
+      margin: 35px;
+    } 
+  }
+
+ 

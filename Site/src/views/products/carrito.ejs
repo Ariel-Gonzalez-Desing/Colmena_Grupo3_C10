@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%-include('../partials/head') %>
+
+<body class="carrito">
+
+    <%-include('../partials/header') %>
+
+
+    <h2>CARRITO DE COMPRAS</h2>
+    <div class="general">
+    <section class="carritoProductos">
+        <article>            
+            <div><img src="/images/products/frasco125grCar.png" alt=""></div>
+            <div class="sumar"><p>Miel Orgánica 125gr.</p>                
+                <div class="masMenos">
+                    <form action="">
+                        <button>-</button>
+                        <input type='text'value="0">
+                        <button>+</button>
+                    </form>
+                </div>
+            </div>
+        
+            <div class="precio">
+                <a href=""><i class="fas fa-trash"></i></a>
+                <p>$900.-</p>
+            </div>
+        </article>
+
+        <article>
+            <div><img src="/images/products/remeras1.jpg" alt=""></div>
+            <div class="sumar"><p>Remera Save The Bees</p>
+                <div class="masMenos">
+                    <form action="">
+                        <button>-</button>
+                        <input type='text'value="0">
+                        <button>+</button>
+                    </form> 
+                </div>               
+            </div>
+        
+            <div class="precio">
+                <a href=""><i class="fas fa-trash"></i></a>
+                <p>$1200.-</p>
+            </div>
+        </article>
+
+        <div class="subtotal">
+            <h4>Subtotal(sin envío):</h4>
+        <h4>$2100.-</h4>
+        </div>
+    </section>
+
+    <section class="carritoResumen">
+        <div class="recuadroResumen">
+            <h3>RESUMEN</h3>
+        <div class="iconosResumen"><a href=""><i class="fas fa-truck"></i></a><h4>Medios de envío</h4></div>
+
+        <form class="cp" action="">            
+            <input type="text" name="codigo postal" id="number" value="Tu código postal">
+            <input type="button" value="CALCULAR">
+        </form>
+
+        <div class="iconosResumen"><a href=""><i class="fas fa-store"></i></a><h4>Nuestro local</h4></div>
+        <div class="depositoGratis">
+
+            <input type="radio" name="envio"><span>Depósito. ¡Te avisamos por mail cuando esté listo para retirar! - Carranza 826, Villa Lynch, San Martín - Atención de Lun. a Vie de 11 a 15hs. ¡Acordate tu número de pedido!</span>
+        <h4>Gratis!</h4>
+        </div>
+        </div>
+        <div class="total">
+            <h4>Total:</h4>
+            <h4>$2100.-</h4>
+        </div>
+        <div class="finalizar"><button class="button">FINALIZAR COMPRA</button>
+            <div class="verMas"><a href="">Ver mas productos</a></div>
+        </div>
+    </section>
+</div>
+
+    <%-include('../partials/footer') %>
+
+</body>
+</html>
